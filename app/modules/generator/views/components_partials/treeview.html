@@ -1,0 +1,70 @@
+<div class="section">
+    <h6>Design</h6>
+    <div class="form-group">
+        <!--<label >Style</label>-->
+        <div class="input-group" >
+            <input class="form-control"  type="text" ng-model="currentComponent.style" placeholder="component Style" />
+        </div>
+    </div>
+    <div>
+        <!--<label >Class</label>-->
+        <div class="input-group ">
+            <input class="form-control" type="text" ng-model="currentComponent.class" placeholder="component css class" />
+        </div>
+    </div>
+    <div class="checkbox-inline">
+        <label>
+            <input type="checkbox" ng-model="currentComponent.dynamic_class"> dynamic css class
+        </label>
+    </div>
+</div>
+
+<div class="section">
+    <h6>View</h6>
+    <div class="form-group">
+        <!--<label  class="input-group-addon" id="basic-addon1" for="" title="" >Id</label>-->
+        <div class="input-group">
+            <input class="form-control" type="text" placeholder="TreeView id" ng-model="currentComponent.treeid" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <!--<label  class="input-group-addon" id="basic-addon1" for="" title="" >Id</label>-->
+        <div class="input-group">
+            <input class="form-control" type="text" placeholder="Node id" ng-model="currentComponent.nodeid" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <!--<label  class="input-group-addon" id="basic-addon1" for="" title="" >Id</label>-->
+        <div class="input-group">
+            <input class="form-control" type="text" placeholder="Node children" ng-model="currentComponent.nodechildren" />
+        </div>
+    </div>
+
+</div>
+
+<div class="section">
+    <h6>Controller</h6>
+    <hr>
+    <div class="form-group">
+        <!--<label   class="input-group-addon" id="basic-addon1" for="" title="" >Label</label>-->
+        <div class="input-group">
+            <input  class="form-control" type="text" placeholder="TreeView model" ng-model="currentComponent.treemodel" />
+        </div>
+    </div>
+    <div class="form-group">
+        <!--<label   class="input-group-addon" id="basic-addon1" for="" title="" >Label</label>-->
+        <div class="input-group">
+            <input  class="form-control" type="text" placeholder="Actions collection" ng-model="currentComponent.treeaction" />
+        </div>
+    </div>
+    <div class="form-group">
+        <!--<label   class="input-group-addon" id="basic-addon1" for="" title="" >Label</label>-->
+        <div class="input-group">
+            <input  class="form-control" type="text" placeholder="node click" ng-model="currentComponent.onclick" />
+        </div>
+    </div>
+
+</div>
+

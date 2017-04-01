@@ -1,0 +1,42 @@
+<div class="section">
+    <h6>Design</h6>
+    <div class="form-group">
+        <!--<label >Style</label>-->
+        <div class="input-group" >
+            <input class="form-control"  type="text" ng-model="currentComponent.style" placeholder="component Style" />
+        </div>
+    </div>
+    <div>
+        <!--<label >Class</label>-->
+        <div class="input-group ">
+            <input class="form-control" type="text" ng-model="currentComponent.class" placeholder="component css class" />
+        </div>
+    </div>
+    <div class="checkbox-inline">
+        <label>
+            <input type="checkbox" ng-model="currentComponent.dynamic_class"> dynamic css class
+        </label>
+    </div>
+</div>
+
+<div class="section">
+    <h6>View</h6>
+    <div class="form-group">
+        <!--<label  class="input-group-addon" id="basic-addon1" for="" title="" >Id</label>-->
+        <div class="input-group">
+            <input class="form-control" type="text" placeholder="component id" ng-model="currentComponent.id" />
+        </div>
+    </div>
+</div>
+
+
+<div class="section">
+    <h6>Controller</h6>
+    <div class="form-group">
+        <!--<label  class="" for="model" title="" >model</label>-->
+        <div class="input-group" >
+            <input  id="model" class="form-control" type="text" ng-model="currentComponent.stepsCollection" />
+            <!-- <ng-include src="currentComponent.controllerfile"></ng-include> -->
+        </div>
+    </div>
+</div>

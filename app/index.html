@@ -1,0 +1,142 @@
+<!--<div class="container-fluid" id="wrapper">-->
+<nav class="navbar navbar-inverse navcustum navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div  class="navbar-brand">
+                    <span id="menu-toggle"  data-ng-click="changeLayout()" class="fa fa-bars btn-menu toggle">
+                    </span>
+                <span href="#" class="navbar-text stateTitle ">{{moduleName[0]}}</span>
+            </div>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul style="margin-right: 10px;" class="nav navbar-nav navbar-right">
+                <li class=" dropdown nav-options " uib-dropdown on-toggle="toggled(open)">
+                    <a href id="simple-dropdownr" uib-dropdown-toggle>
+                        <span class=" glyphicon glyphicon-th"></span>
+                    </a>
+                    <ul class="dropdown-menu1" template-url="modules.html" uib-dropdown-menu aria-labelledby="dropdownMenu3"></ul>
+                </li>
+                <li class="dropdown nav-options">
+                    <a href id="simple-dropdownr"   uib-dropdown-toggle>
+                        <span class="glyphicon glyphicon-envelope"> </span>
+                        <span class="option-label-message option-label" >14</span>
+                    </a>
+                </li>
+                <li class="dropdown nav-options  " uib-dropdown on-toggle="toggled(open)">
+                    <a href id="simple-dropdownr" uib-dropdown-toggle>
+                        <span class=" glyphicon glyphicon-bell"></span>
+                        <span class="option-label-notif option-label" >13</span>
+                    </a>
+                    <ul class="dropdown-menu" template-url="notifications.html" uib-dropdown-menu aria-labelledby="dropdownMenu3"></ul>
+                </li>
+                <li class="dropdown nav-options  " uib-dropdown on-toggle="toggled(open)">
+                    <a href id="simple-dropdownr" uib-dropdown-toggle>
+                        <span class=" glyphicon glyphicon-tasks"></span>
+                        <span class="option-label-task option-label" >9</span>
+                    </a>
+                    <ul class="dropdown-menu" template-url="notifications.html" uib-dropdown-menu aria-labelledby="dropdownMenu3"></ul>
+                </li>
+                <li style="background-image: url('app/assets/images/2.jpg')" class="dropdown nav-options" uib-dropdown on-toggle="toggled(open) ">
+                    <a href="#" id="simple-dropdownr" uib-dropdown-toggle></a>
+                    <ul class="dropdown-menu " template-url="profile.html" uib-dropdown-menu aria-labelledby="dropdownMenu3"></ul>
+                </li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+<!--&lt;!&ndash; <div class="col-md-12" >-->
+<!-- Page content -->
+<div id="wrapper" >
+    <!--Sidebar -->
+    <div id="sidebar-wrapper" ng-class="sidebar_layout"   >
+        <ul class="item">
+            <li>
+                <a ui-sref="root.generator.dashboard" >
+                    <i class="glyphicon glyphicon-dashboard" style="padding-right: 15px ">
+                    </i>
+                    Dashboard
+                </a>
+            </li>
+        </ul>
+        <ul class="item" >
+            <!--&lt;!&ndash;ng-show="showSidebarItems==true"&ndash;&gt;            ui-sref="{{item.state}}"-->
+            <li ng-repeat="item in items">
+                <a ui-sref="{{item.state}}">
+                    <i class="{{item.icon}}" style="padding-right:15px "></i>
+                    {{item.name}}
+                </a>
+            </li>
+        </ul>
+        <ul >
+            <li ng-repeat="lnkm in item.lnkModule">
+                <a href="#anch2">
+                    <i class="lnkm.icon" style="padding-right:15px "></i>
+                    lnkm.name
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div id="page-content-wrapper" ng-class="layout" style="margin-bottom: 50px;    height: 100%; overflow-y: scroll;">
+        <!--operation bar-->
+        <div class=" operation-bar col-md-10 col-md-offset-1" style="margin-bottom: 15px">
+            <span >Location{{location}}</span>
+            <ul >
+                <li style="padding: 3px;" ng-repeat="item in actions"><span class="{{item.icon}}" ng-click="doAction(item)"></span></li>
+            </ul>
+        </div>
+        <div ui-view></div>
+    </div>
+    <!--</div>-->
+</div>
+
+<!--modules dropdown template script-->
+<script type="text/ng-template" id="modules.html">
+    <ul  class="m-dd floatingPanel dropdown-menu position2" uib-dropdown-menu role="menu" aria-labelledby="button-template-url">
+        <li role="menuitem" ng-repeat="item in modules">
+            <a ui-sref="{{item.link}}">
+                <div class="Gl" >
+                    <div class="gc" style="display: flex; margin: 7px; width: 88px; float: left; text-align: center; ">
+                        <div style="margin-right: 25px"><img src="app/assets/images/gears-512.png" alt="" style="width:40px"></div>
+                        <div style="padding: 10px;"><span>{{item.name}}</span></div>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</script>
+<!-- Notifications dropdown script-->
+<script type="text/ng-template" id="notifications.html">
+    <ul  class="m-dd floatingPanel dropdown-menu position1" uib-dropdown-menu role="menu" aria-labelledby="button-template-url">
+        <li role="menuitem" ng-repeat="item in modules">
+            <a ui-sref="{{item.link}}">
+                <div class="Gl" >
+                    <div class="gc" style="display: flex; margin: 7px; width: 88px; float: left; text-align: center; ">
+                        <div style="margin-right: 25px"><img src="app/assets/images/gears-512.png" alt="" style="width:40px"></div>
+                        <div style="padding: 10px;"><span>moi meme</span></div>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</script>
+<!-- profile dropdown script-->
+<script type="text/ng-template" id="profile.html">
+    <ul  class="m-dd floatingPanel dropdown-menu position3" uib-dropdown-menu role="menu" aria-labelledby="button-template-url">
+        <li role="menuitem" ng-repeat="item in modules">
+            <a ui-sref="{{item.link}}">
+                <div class="Gl" >
+                    <div class="gc" style="display: flex; margin: 7px; width: 88px; float: left; text-align: center; ">
+                        <div style="margin-right: 25px"><img src="app/assets/images/2.jpg" alt="" style="width:40px"></div>
+                        <div style="padding: 10px;"><span>nav-options</span></div>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</script>

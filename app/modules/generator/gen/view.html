@@ -1,0 +1,206 @@
+<!-- Generated html file -->
+<div id="racine"  style="margin-left: 49px;"  class="racine"> <!-- racine begins-->
+<div id="recepteur"  style=""  class="floatingPanel recepteur col-md-7 "> <!-- recepteur begins-->
+<uib-tabset >
+<uib-tab index="13"  heading="treeview"> <!--begins-->
+<div id="group132"  style="padding-right:0px"  class=" col-md-12 "> <!-- group132 begins-->
+<div class="col-md-7"
+data-angular-treeview="true"
+data-tree-id="tree1"
+data-tree-model="components.children"
+data-node-id="num"
+data-node-click="null"
+data-node-children="children"
+data-tree-actions="treeActions"
+>
+</div>
+<div id="group134"  ui-view="" style="border-left:1px solid gainsboro; max-width:230px; border-right:1px solid gainsboro;"  class=" col-md-5 "> <!-- group134 begins-->
+</div> <!-- group134 ends-->
+</div> <!-- group132 ends-->
+</uib-tab> <!--end-->
+<uib-tab index="14"  heading="functions"> <!--begins-->
+<div class="form-group">
+<label for="input17">Name</label>
+<input class=" form-control"  placeholder="name" name="input17" id="input17" type="text" ng-model="function.name"/>
+</div> <!-- div id:input17 -->
+<div class="form-group" >
+<label for="textarea18">content</label>
+<div>
+<textarea id="textarea18" class="form-control" name="textarea18" ui-codemirror="cmOption" ng-model="function.content"></textarea>
+</div>
+</div>
+<div id="action"  class=""> <!-- action begins-->
+<button  class="floatingPanel" ng-click="clear()">Clear</button>
+<button  class="floatingPanel" ng-click="add()">Add</button>
+</div> <!-- action ends-->
+<ul >
+<li  ng-repeat='item in currentComponent.functions'>
+<a >
+{{item.name}}</a>
+</li>
+</ul>
+</uib-tab> <!--end-->
+<uib-tab index="15"  heading="operations"> <!--begins-->
+<div id="group117"  style="border-right: 1px solid #aaa"  class=" col-md-6 "> <!-- group117 begins-->
+<div id="data"  class=""> <!-- data begins-->
+<div class="form-group">
+<label for="input23">Name</label>
+<input class=" form-control"  placeholder="name" name="input23" id="input23" type="text" ng-model="operation.name"/>
+</div> <!-- div id:input23 -->
+<div class="form-group">
+<label for="input24">Icon</label>
+<input class=" form-control"  placeholder="icon" name="input24" id="input24" type="text" ng-model="operation.icon"/>
+</div> <!-- div id:input24 -->
+<div class="form-group" >
+<label for="textarea27">Action</label>
+<div>
+<textarea id="textarea27" class="form-control" name="textarea27" ui-codemirror="cmOption" ng-model="operation.action"></textarea>
+</div>
+</div>
+</div> <!-- data ends-->
+<div id="actions"  class=""> <!-- actions begins-->
+<button  class="floatingPanel" ng-click="clear()">clear</button>
+<button  class="floatingPanel" ng-click="addoperation()">add operation</button>
+<button  class="floatingPanel" ng-click="delOperation()">delete</button>
+</div> <!-- actions ends-->
+<ul >
+<li  ng-repeat='item in currentComponent.operations'>
+<a  ng-click='setoperation(item)'>
+{{item.name}}</a>
+</li>
+</ul>
+</div> <!-- group117 ends-->
+<div id="group118"  class=" col-md-6 "> <!-- group118 begins-->
+<div class="form-group">
+<label for="input119">dependence</label>
+<input class=" form-control"  placeholder="dependence" name="input119" id="input119" type="text" ng-model="dependence"/>
+</div> <!-- div id:input119 -->
+<button  ng-click="null()">add depeendence</button>
+</div> <!-- group118 ends-->
+</uib-tab> <!--end-->
+<uib-tab index="16"  heading="variables"> <!--begins-->
+<div class="form-group">
+<label for="input29">Name</label>
+<input class=" form-control"  placeholder="name" name="input29" id="input29" type="text" ng-model="variable.name"/>
+</div> <!-- div id:input29 -->
+<div >
+<label for="input30">resolve</label>
+<input class=" "  placeholder="resolve" name="input30" id="input30" type="checkbox" ng-model="variable.resolve"/>
+</div> <!-- div id:input30 -->
+<div class="form-group" >
+<label for="textarea124">value</label>
+<div>
+<textarea id="textarea124" class="form-control" name="textarea124" ng-model="variable.value"></textarea>
+</div>
+</div>
+<div id="action"  class=""> <!-- action begins-->
+<button  ng-click="addv()">Add</button>
+<button  class="floatingPanel" ng-click="delv()">delete</button>
+<button  class="floatingPanel" ng-click="clear()">Clear</button>
+</div> <!-- action ends-->
+<ul >
+<li  ng-repeat='item in components.variables'>
+<a  ng-click='setv(item)'>
+{{item.name}}</a>
+</li>
+</ul>
+</uib-tab> <!--end-->
+<uib-tab index="77"  heading="configs"> <!--begins-->
+<span  style="margin-bottom:10px; font-size:25px; color:#1A7CB9"  class="">state configurations
+</span>
+<div id="group82"  class=" col-md-12 "> <!-- group82 begins-->
+<div id="group93"  style="border-right: 1px solid #aaa"  class=" col-md-6"> <!-- group93 begins-->
+<div class="form-group">
+<label for="input78">state</label>
+<input class=" form-control"  placeholder="state" name="input78" id="input78" type="text" ng-model="currentComponent.state"/>
+</div> <!-- div id:input78 -->
+<div class="form-group">
+<label for="input105">url</label>
+<input class=" form-control"  placeholder="url" name="input105" id="input105" type="text" ng-model="currentComponent.url"/>
+</div> <!-- div id:input105 -->
+<div  >
+<label for="radio111">template type</label>
+<div  class="spacer">
+<label class=" radio-inline">
+<input id="radio111" type="radio" value="static" ng-model="currentComponent.templatetype"> static
+</label>
+<label class=" radio-inline">
+<input id="radio111" type="radio" value="function" ng-model="currentComponent.templatetype"> function
+</label>
+</div>
+</div> <!-- div id:radio111 -->
+<div class="form-group" >
+<label for="textarea110">templateUrl</label>
+<div>
+<textarea id="textarea110" class="form-control" name="textarea110" ui-codemirror="cmOption" ng-model="currentComponent.templateUrl"></textarea>
+</div>
+</div>
+</div> <!-- group93 ends-->
+<div id="group112"  class=" col-md-6 "> <!-- group112 begins-->
+<div class="form-group" >
+<label for="textarea122">onEnter</label>
+<div>
+<textarea id="textarea122" class="form-control" name="textarea122" ui-codemirror="cmOption" ng-model="currentComponent.onEnter"></textarea>
+</div>
+</div>
+<div class="form-group">
+<label for="input113">dependence</label>
+<input class=" form-control"  placeholder="dependence" name="input113" id="input113" type="text" ng-model="dependence"/>
+</div> <!-- div id:input113 -->
+<button  class="floatingPanel" ng-click="addDpdence()">add dependence</button>
+</div> <!-- group112 ends-->
+</div> <!-- group82 ends-->
+</uib-tab> <!--end-->
+</uib-tabset>
+</div> <!-- recepteur ends-->
+<div id="composant"  style="position: fixed; left: 947px; top: 120px;"  class=" row floatingPanel composants col-md-2 "> <!-- composant begins-->
+<uib-tabset >
+<uib-tab index="5"  heading="components"> <!--begins-->
+<div id="simple"  class=""> <!-- simple begins-->
+<h4> Simple </h4>
+<hr>
+<div  class="components" ng-repeat='item in HTMLcomponents.simple'>
+<a ui-sref="root.views.properties({label:item.label, type:item.type, num:currentComponent.num})" ng-click='add(item)'>
+<div id="group39"  class="sizer col-md-6 "> <!-- group39 begins-->
+<span >{{item.type}}</span>
+<span  class="{{item.img}}"></span>
+</div> <!-- group39 ends-->
+</a>
+</div>
+</div> <!-- simple ends-->
+<div id="container"  class=""> <!-- container begins-->
+<h4> Containers </h4>
+<hr>
+<div  class="components" ng-repeat='item in HTMLcomponents.container'>
+<a ui-sref="root.views.properties({label:item.label, type:item.type, num:currentComponent.num})" ng-click='add(item)'>
+<div id="group50"  class="sizer col-md-6 "> <!-- group50 begins-->
+<span >{{item.type}}</span>
+<span  class="{{item.img}}"></span>
+</div> <!-- group50 ends-->
+</a>
+</div>
+</div> <!-- container ends-->
+<div id="widget"  class=""> <!-- widget begins-->
+<h4> Widgets </h4>
+<hr>
+<div  class="components" ng-repeat='item in HTMLcomponents.widget'>
+<a ui-sref="root.views.properties({label:item.label, type:item.type, num:currentComponent.num})" ng-click='add(item)'>
+<div id="group55"  class="sizer col-md-6 "> <!-- group55 begins-->
+<span >{{item.type}}</span>
+<span  class="{{item.img}}">{{item.views}}</span>
+</div> <!-- group55 ends-->
+</a>
+</div>
+</div> <!-- widget ends-->
+</uib-tab> <!--end-->
+<uib-tab index="9"  heading="views"> <!--begins-->
+<ul  class="list">
+<li  ng-repeat='item in models'>
+<a ui-sref="root.generator.views.properties({label:item.label, type:item.type, num:currentComponent.num})" ng-click='setModel(item)'>
+{{item.label}}</a>
+</li>
+</ul>
+</uib-tab> <!--end-->
+</uib-tabset>
+</div> <!-- composant ends-->
+</div> <!-- racine ends-->

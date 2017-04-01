@@ -1,0 +1,77 @@
+<div class="section">
+  <h6>Design</h6>
+  <div class="form-group">
+    <!--<label >Style</label>-->
+    <div class="input-group" >
+      <input class="form-control"  type="text" ng-model="currentComponent.style" placeholder="component Style" />
+    </div>
+  </div>
+  <div>
+    <!--<label >Class</label>-->
+    <div class="input-group ">
+      <input class="form-control" type="text" ng-model="currentComponent.class" placeholder="component css class" />
+    </div>
+  </div>
+  <div class="checkbox-inline">
+    <label>
+      <input type="checkbox" ng-model="currentComponent.dynamic_class"> dynamic css class
+    </label>
+  </div>
+</div>
+
+<div class="section">
+  <h6>View</h6>
+  <div class="form-group">
+    <!--<label  class="input-group-addon" id="basic-addon1" for="" title="" >Id</label>-->
+    <div class="input-group">
+      <input class="form-control" type="text" placeholder="component id" ng-model="currentComponent.id" />
+    </div>
+  </div>
+  <div class="form-group">
+    <!--<label   class="input-group-addon" id="basic-addon1" for="" title="" >Label</label>-->
+    <div class="input-group">
+      <input  class="form-control" type="text" placeholder="component label" ng-model="currentComponent.label" />
+    </div>
+  </div>
+
+  <div class="checkbox-inline">
+    <label style="margin-right: 30px;">  <div class=""><input type="checkbox" ng-model="currentComponent.required" ></div> required </label>
+  </div>
+
+
+</div>
+
+<div class="section">
+  <h6>Controller</h6>
+  <div class="form-group">
+    <!--<label  class="" for="model" title="" >model</label>-->
+    <div class="input-group" >
+      <input  id="model" class="form-control" type="text" ng-model="currentComponent.model" placeholder="component model "/>
+      <!-- <ng-include src="currentComponent.controllerfile"></ng-include> -->
+    </div>
+  </div>
+
+  <div class="form-group">
+    <!--<label  class="" for="model" title="" >model</label>-->
+    <div class="input-group" >
+      <input  id="collection" class="form-control" type="text" ng-model="currentComponent.collection" placeholder="component collection "/>
+      <!-- <ng-include src="currentComponent.controllerfile"></ng-include> -->
+    </div>
+  </div>
+  <div class="form-group">
+    <!--<label  class="" for="model" title="" >model</label>-->
+    <div class="input-group" >
+      <input  id="rvalue" class="form-control" type="text" ng-model="currentComponent.rvalue" placeholder="returned value"/>
+      <!-- <ng-include src="currentComponent.controllerfile"></ng-include> -->
+    </div>
+  </div>
+  <div class="form-group">
+    <!--<label  class="" for="model" title="" >model</label>-->
+    <div class="input-group" >
+      <input  id="dvalue" class="form-control" type="text" ng-model="currentComponent.dvalue" placeholder="displayed value "/>
+      <!-- <ng-include src="currentComponent.controllerfile"></ng-include> -->
+    </div>
+  </div>
+
+
+</div>
