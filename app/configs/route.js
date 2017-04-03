@@ -57,14 +57,11 @@ define(['./app'
                     url: '/:module',
                     controller:function ($state,$stateParams) {
                         var route = 'root.'+$stateParams.module + '.init';
-                        console.log(route);
                         $state.go(route);
                     },
                     resolve: {
                         lazyConfig: ['$q', '$rootScope','$stateParams', function($q, $rootScope, $stateParams){
                             var deferred = $q.defer();
-                            console.log('statparams');
-                            console.log($stateParams);
                             var filename = 'modules/'+$stateParams.module+'/services/config';
                             require([filename], function () {
                                 $rootScope.$apply(function () {

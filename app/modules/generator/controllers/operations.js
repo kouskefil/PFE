@@ -3,18 +3,8 @@
  */
 define(['configs/app'], function (app) {
     'use strict';
-    app.register.controller('operations', ['$scope', '$state', 'operationsFactory', function ($scope, $state, operationsFactory) {
+    app.register.controller('operations', ['$scope', '$state', 'globalVarFactory', function ($scope, $state, globalVarFactory) {
             //variables to be adding in the model
-            $scope.operation_Tab = [
-                {
-                    "label":"sql",
-                    "anchor":"sql"
-                },
-                {
-                    "label":"inputs",
-                    "anchor":"inputs"
-                }
-            ];
             $scope.opCommand = [
                 {
                     "dvalue":"insert",
@@ -115,30 +105,16 @@ define(['configs/app'], function (app) {
                     "rvalue":"module"
                 }
             ];
-            $scope.stepsCollection = [
-                    {
-                        "stepNum":1,
-                        "stepTitle":"operation"
-                    },
-                    {
-                        "stepNum":2,
-                        "stepTitle":"sql"
-                    },{
-                        "stepNum":3,
-                        "stepTitle":"inputs"
-                    }
-
-                ];
             //end
             /*********functions to be added to the model **/
-            $scope.operations = operationsFactory.operations();
-            $scope.currentOp = operationsFactory.skeleton();
+            $scope.operations = globalVarFactory.getOperations();
+            $scope.currentOp = globalVarFactory.skeleton();
 
-            $scope.getOp = function (opName) {
-                $scope.currentOp = operationsFactory.lookup(opName);
-            };
+            // $scope.getOp = function (opName) {
+            //     $scope.currentOp = operationsFactory.lookup(opName);
+            // };
 
-            $scope.inputAdd = function (input) {
+            $scope.AddInput = function (input) {
                 $scope.currentOp.inputs.push(currentOp.input);
             };
             /**********************************************/
@@ -147,4 +123,4 @@ define(['configs/app'], function (app) {
             }
 
         }])
-})
+});

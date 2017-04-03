@@ -11,12 +11,11 @@ define(['angular'], function (angular) {
             $scope.actions = layoutFactory.getOperations();
 
             //     to get current location
-            $scope.location = layoutFactory.getCurrentLocation()[0];
+            $scope.location = layoutFactory.getCurrentLocation();
             $log.info('location'+ $scope.location);
 
             //    to perform operation's action
             $scope.doAction = function (item) {
-                console.log(item);
                 item.action();
             };
              $scope.go = function () {
@@ -57,4 +56,4 @@ define(['angular'], function (angular) {
             }
 
         }])
-})
+})         ;

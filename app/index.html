@@ -85,7 +85,7 @@
     <div id="page-content-wrapper" ng-class="layout" style="margin-bottom: 50px;    height: 100%; overflow-y: scroll;">
         <!--operation bar-->
         <div class=" operation-bar col-md-10 col-md-offset-1" style="margin-bottom: 15px">
-            <span >Location{{location}}</span>
+            <span >{{location[0]}}</span>
             <ul >
                 <li style="padding: 3px;" ng-repeat="item in actions"><span class="{{item.icon}}" ng-click="doAction(item)"></span></li>
             </ul>

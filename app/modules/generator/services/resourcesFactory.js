@@ -59,8 +59,6 @@ define(['configs/app'], function (app){
             }
             return RscParent;
         };
-
-
         var resourcesFactory = {
 
             resources : function () {
@@ -69,7 +67,7 @@ define(['configs/app'], function (app){
             parent : function () {
                 return  getParents(resources);
             },
-            skeleton : function () {
+            rscSkeleton : function () {
                 currentRsc =  {};
                 return currentRsc;
             },
@@ -97,7 +95,7 @@ define(['configs/app'], function (app){
         }
 
 
-    }
+    };
     return resourcesFactory;
 
 

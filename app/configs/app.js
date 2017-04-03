@@ -11,9 +11,6 @@ define(["angular",
     var app = angular.module("myapp", ['ui.router', 'ui.bootstrap','layoutModule', 'layoutCtrlModule']);
     app.init = function() {
         angular.bootstrap(document, ["myapp"]);
-        console.log("init function");
-
-
     };
     return app;
 });

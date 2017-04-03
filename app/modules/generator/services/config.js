@@ -143,7 +143,7 @@ define(['configs/app',
                 },
                 onEnter:function (globalVarFactory,layoutFactory, fileFactory, $state) {
 
-                    layoutFactory.setLocation('View Modeling');
+                    layoutFactory.setLocation('View');
                     layoutFactory.setOperations(
                         [
                             {
@@ -185,18 +185,16 @@ define(['configs/app',
         .state('root.generator.operations',{
             url:'/generator/operations',
             templateUrl:'app/modules/generator/views/operations.html',
-            onEnter:function (globalVarFactory,layoutFactory, fileFactory,operationsFactory) {
+            onEnter:function (globalVarFactory,layoutFactory, fileFactory) {
 
-                layoutFactory.setLocation('Operations definition');
+                layoutFactory.setLocation('Operations');
                 layoutFactory.setOperations(
                     [
                         {
                             name:"new",
                             icon:"glyphicon glyphicon-edit",
                             action:function () {
-
-                                operationsFactory.addop();
-                                console.log(operationsFactory.operations());
+                                globalVarFactory.AddOperation();
                             }
                         },
                         {
@@ -215,18 +213,17 @@ define(['configs/app',
         .state('root.generator.resources',{
             url:'/generator/resources',
             templateUrl:'app/modules/generator/views/resources.html',
-            onEnter:function (globalVarFactory,layoutFactory,resourcesFactory, fileFactory,operationsFactory) {
+            onEnter:function (globalVarFactory,layoutFactory, fileFactory,operationsFactory) {
 
-                layoutFactory.setLocation('Operations definition');
+                layoutFactory.setLocation('Resources');
                 layoutFactory.setOperations(
                     [
                         {
                             name:"new",
                             icon:"glyphicon glyphicon-edit",
                             action:function () {
-
-                                resourcesFactory.resourceAdd();
-                                console.log(resourcesFactory.resources());
+                                globalVarFactory.AddResource();
+                                console.log(globalVarFactory.getResources());
                             }
                         },
                         {
@@ -247,7 +244,7 @@ define(['configs/app',
             templateUrl:'app/modules/generator/views/menus.html',
             onEnter:function (globalVarFactory,layoutFactory,resourcesFactory, fileFactory,operationsFactory,mnsFactory) {
 
-                layoutFactory.setLocation('Operations definition');
+                layoutFactory.setLocation('Menus');
                 layoutFactory.setOperations(
                     [
                         {

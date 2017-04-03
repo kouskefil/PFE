@@ -5,7 +5,6 @@ define(['configs/app'], function (app) {
     'use strict';
     app.register.controller('dashboard', ['$scope', 'layoutFactory','globalVarFactory', function ($scope, layoutFactory,globalVarFactory) {
 
-            console.log(globalVarFactory.getModule());
             $scope.treeActions = [
                 {
                     name: "edit",
