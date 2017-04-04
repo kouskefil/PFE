@@ -7,6 +7,13 @@ body{
 .form-control{
   border-radius: 0 !important;
 }
+.form-control:focus {
+    border: 3px solid darkgrey !important;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
 button{
     color: #fff;
     background-color: #518FF5 !important;
@@ -46,13 +53,13 @@ textarea{
     margin: 5px;
 }
 
-.form-control.focus {
-    border-color: #273135;
-    border: 3px solid darkgray;
-    outline: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
+/*.form-control.focus {*/
+    /*border-color: #273135;*/
+    /*border: 3px solid darkgray;*/
+    /*outline: 0;*/
+    /*-webkit-box-shadow: none;*/
+    /*box-shadow: none;*/
+/*}*/
 
 .an i:hover {
     color: #ff6600;
@@ -60,7 +67,7 @@ textarea{
 /***********************************/
 
 .form-control{
-    padding: 0px 6px !important;
+    padding: 0 6px !important;
     height: 25px !important;
 }
 
@@ -88,7 +95,7 @@ label {
 
 .content-wrapper {
     left: 0;
-    padding: 60px 0px 0px 0px;
+    padding: 60px 0 0 0;
     width: 100%;
     position: relative;
 }
@@ -141,7 +148,7 @@ label {
     border: 1px solid  lightgray;
     height: 44px;
     width: /*48%*/ 100px;
-    margin: 3px 0px 3px 0px;
+    margin: 3px 0 3px 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
@@ -156,7 +163,7 @@ label {
 
 .sizer{
     width: 100%;
-    padding: 0px 0px 0px 10px;
+    padding: 0  0  0  10px;
     padding-top: 8px;
     font-size: 12px;
 }
@@ -172,15 +179,15 @@ label {
 }
 .components_label{
     width: auto;
-    /*padding-left: 0px;*/
-    padding-right: 0px;
+    /*padding-left: 0 ;*/
+    padding-right: 0 ;
 }
 .components #icon{
     float: left;
     margin: 2px;
 }
 .composant-body h4{
-    margin: 15px 0px 10px 0px;
+    margin: 15px 0 10px 0;
     text-align: center;
     background-color: #ECEFF1 !important ;
     color: #0084bf;
@@ -267,7 +274,7 @@ label {
 }
 
 .contentSeul{
-    margin-left: 0px;
+    margin-left: 0 ;
     transition: all 0.3s ease 0s;
 }
 
@@ -276,7 +283,7 @@ label {
 }
 
 .sidebarVisible{
-    margin-left: 0px;
+    margin-left: 0 ;
 }
 
 
@@ -293,7 +300,7 @@ label {
 }
 #sidebar-wrapper ul{
      list-style: none;
-     padding: 10px 0px 10px 0px;
+     padding: 10px 0 10px 0;
      margin: 0;
 }
 #sidebar-wrapper li{
@@ -312,7 +319,7 @@ label {
 }
 #sidebar-wrapper a{
      display: block;
-     padding: 0px;
+     padding: 0 ;
      color: #444;
      text-decoration: none;
 }
@@ -766,8 +773,8 @@ label {
 .section {
     clear: both;
     /*width: 1080px;*/
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     display: flex;
     align-items: flex-start;
     flex-flow: row wrap ;
@@ -851,7 +858,7 @@ label {
 }
 
 .md #ul{
-    padding-left: 0px;
+    padding-left: 0 ;
     list-style: none;
 }
 .li-b{
@@ -860,7 +867,7 @@ label {
 }
 
 .li-b .b-t{
-    margin:15px 0px 10px 0px;
+    margin:15px 0  10px 0 ;
     background-color: #ECEFF1;
     color: #0084bf;
 }
@@ -902,7 +909,7 @@ label {
 
 }
 .b-t-body{
-    background-color: #fff; padding: 10px; margin: 15px 0px 15px 0px;
+    background-color: #fff; padding: 10px; margin: 15px 0  15px 0 ;
     /*max-height: 50px;*/
     color: dimgrey;
     font-family: "Open Sans";
@@ -911,11 +918,11 @@ label {
 
 .d-c ul{
     list-style: none;
-    padding-left: 0px;
+    padding-left: 0 ;
 }
 
 .d-c hr{
-    margin: 6px 0px 6px 0px;
+    margin: 6px 0  6px 0 ;
 }
 
 .f-i{
@@ -929,7 +936,7 @@ label {
     color: darkcyan;
     font-size: 20px;
     height: 35px;
-    padding-left: 0px;
+    padding-left: 0 ;
     /*margin-top: 70px;*/
     /*margin-left: 20px;*/
     /*margin-bottom: 20px;*/
@@ -945,7 +952,7 @@ label {
     text-align: center;
     border-radius: 50px;
     font-size: 18px;
-    margin: 0px 15px;
+    margin: 0  15px;
 }
 .operation-bar li:hover{
    background-color: lightgrey;
@@ -969,11 +976,11 @@ label {
 .m-dd{
     width: 250px;
     left: -150px;
-    border-radius:0px;
+    border-radius:0 ;
     padding: 15px 0 0 0
 }
 .m-dd li{
-    padding: 0px 15px 0px 15px;
+    padding: 0  15px 0  15px;
     border-bottom: 1px solid lightgrey;
 }
 .mdd{
@@ -1136,13 +1143,13 @@ ul.nav.nav-tabs {
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover { border-width: 0; }
 .nav-tabs > li > a { border: none; color: #666; }
 .nav-tabs > li.active > a, .nav-tabs > li > a:hover { border: none; color: #4285F4 !important; background: transparent; }
-.nav-tabs > li > a::after { content: ""; background: #4285F4; height: 2px; position: absolute; width: 100%; left: 0px; bottom: -1px; transition: all 250ms ease 0s; transform: scale(0); }
+.nav-tabs > li > a::after { content: ""; background: #4285F4; height: 2px; position: absolute; width: 100%; left: 0 ; bottom: -1px; transition: all 250ms ease 0s; transform: scale(0); }
 .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after { transform: scale(1); }
 .tab-nav > li > a::after { background: #21527d none repeat scroll 0% 0%; color: #fff; }
 .tab-pane { padding: 15px 0; }
 .tab-content{padding:20px}
 
-/*.card {background: #FFF none repeat scroll 0% 0%; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3); margin-bottom: 30px; }*/
+/*.card {background: #FFF none repeat scroll 0% 0%; box-shadow: 0  1px 3px rgba(0, 0, 0, 0.3); margin-bottom: 30px; }*/
 .items{
     padding: 15px 15px 0 15px;
     list-style: none;
@@ -1158,13 +1165,19 @@ ul.nav.nav-tabs {
 .item-label{
     line-height: 30px;
     color: rgba(0,0,0,.7);
-    font-size: 17px;
+    font-size: 13px;
 }
 .action-item{
     padding: 4px 4px;
 }
 .action{
     float: right; font-size: 12px;
+}
+.action-delete{
+    color: #F76506;
+}
+.action-edit{
+    color: #0084bf;
 }
 .action span{
     cursor: pointer;

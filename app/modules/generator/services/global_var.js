@@ -188,18 +188,7 @@
                     newpath = rsc.path;
                 RscParent.push(newpath);
             },
-
-
-
-
-
-
-
-
-
-
             /*resource methods end*/
-
             /*module methods*/
             getModule : function () {
                 return module;
@@ -234,9 +223,12 @@
             },
             setcurrentContainer : function (comp) {
                 componentSet.setcurrentContainer(comp);
+            },
+            /*global methods*/
+            gDelete : function (collection, obj) {
+                var pos = collection.indexOf(obj);
+                collection.splice(pos, 1);
             }
-
-
         };
 
         return global;

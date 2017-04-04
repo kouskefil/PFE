@@ -114,7 +114,14 @@ define(['configs/app'], function (app) {
          
             $scope.AddInput = function () {
                 $scope.currentOp.inputs.push($scope.input);
-                console.log($scope.currentOp);
+                $scope.input = {};
+            };
+            $scope.editInput = function(input){
+                $scope.input = input;
+            };
+            $scope.delInput = function (input) {
+                globalVarFactory.gDelete($scope.inputs, input);
+                $scope.currentInput = {};
             };
             /**********************************************/
             $scope.cclick = function(selectedNode){

@@ -1,42 +1,52 @@
 <!-- Generated html file -->
 <div id="content"  style="padding: 0; "  class="row content-inner col-md-10 col-md-offset-1 "> <!-- content begins-->
  <div id=""  style="padding:0; margin-bottom: 150px"  class=" col-md-7 "> <!-- path begins-->
-  <div class="floatingPanel col-md-12" style="margin-bottom: 15px; padding: 15px">
+  <div class="floatingPanel col-md-12" style="margin-bottom: 15px; padding:0">
    <div id="definition"  style="padding:0;"  class=" col-md-12 "> <!-- definition begins-->
-    <div class="form-group">
-     <label for="input5"></label>
-     <input class=" form-control"  placeholder="operation" name="input5" id="input5" type="text" ng-model="currentOp.name"/>
-    </div> <!-- div id:input5 -->
-    <div  class="form-group">
-     <label for="select6">operation cmd</label>
-     <select name="select6" id="select6" ng-model="currentOp.command" class="form-control" ><option ng-repeat='item in opCommand' value="{{item.rvalue}}"> {{item.dvalue}}
-     </option>
-     </select>
-    </div>
-    <div class="form-group">
-     <label for="input7"></label>
-     <input class=" form-control"  placeholder="output" name="input7" id="input7" type="text" ng-model="currentOp.out"/>
-    </div> <!-- div id:input7 -->
-    <div class="form-group" >
-     <label for="textarea11">sql</label>
-     <div>
-      <textarea id="textarea11" class="form-control" name="textarea11" ui-codemirror="cmOption" ng-model="currentOp.sql.text"></textarea>
+    <div style="height: 35px; border-bottom: 1px solid lightgray; margin-bottom: 5px">
+     <div class="header" style="padding: 10px 15px; margin: 0">
+         <span class="glyphicon glyphicon-cog" style="padding-right: 10px;"></span>
+         <span style="font-size: small; color: #0084bf;">Operation Definition</span>
      </div>
     </div>
+    <div style="padding: 15px 15px">
+     <div class="form-group">
+      <label for="input5"></label>
+      <input class=" form-control"  placeholder="operation" name="input5" id="input5" type="text" ng-model="currentOp.name"/>
+     </div> <!-- div id:input5 -->
+     <div  class="form-group">
+      <label for="select6">operation cmd</label>
+      <select name="select6" id="select6" ng-model="currentOp.command" class="form-control" ><option ng-repeat='item in opCommand' value="{{item.rvalue}}"> {{item.dvalue}}
+      </option>
+      </select>
+     </div>
+     <div class="form-group">
+      <label for="input7"></label>
+      <input class=" form-control"  placeholder="output" name="input7" id="input7" type="text" ng-model="currentOp.out"/>
+     </div> <!-- div id:input7 -->
+     <div class="form-group" >
+      <label for="textarea11">sql</label>
+      <div>
+       <textarea id="textarea11" class="form-control" name="textarea11" ui-codemirror="cmOption" ng-model="currentOp.sql.text"></textarea>
+      </div>
+     </div>
+    </div>
+
    </div>
 
   </div>
 
-   <!--inputs-->
+  <!--inputs-->
   <div class="col-md-12 floatingPanel " style="padding: 0; min-height:302px">
    <div style="height: 35px; border-bottom: 1px solid lightgray; margin-bottom: 5px">
-    <div class="header" style="padding: 10px 15px; margin: 0">
-     <span style="font-size: small;">Input</span>
-     <ul style="list-style: none; float: right; font-size: xx-small; display: flex;    margin-bottom: 0px; width: 60px;height: 20px;padding-left: 50px;">
-      <li style="margin: 0" >
-       <span style="z-index: 1005"  class="glyphicon glyphicon-plus "></span>
-      </li>
-     </ul>
+        <div class="header" style="padding: 10px 15px; margin: 0">
+            <span class="glyphicon glyphicon-log-in" style="padding-right: 10px;"></span>
+            <span style="font-size: small; color: #0084bf;">Operation Input Params</span>
+            <ul style="list-style: none; float: right; font-size: xx-small; display: flex;    margin-bottom: 0px; width: 60px;height: 20px;padding-left: 50px;">
+                <li style="margin: 0" >
+                 <span style="z-index: 1005"  class="glyphicon glyphicon-plus "></span>
+                </li>
+            </ul>
     </div>
    </div>
    <div class="col-md-12 row" style="padding: 0">
@@ -44,15 +54,15 @@
     <div class="col-md-4" style="padding: 0 8px;" >
      <ul class="items">
       <li ng-repeat="item in inputs" >
-          <div class="col-md-12">
-              <div class="col-md-9 item-label-g input-item-label" >
-                  <span class="item-label">{{item.name}}</span>
-              </div>
-              <div class="col-md-3 action" style="padding-top: 8px;" >
-                  <span class="glyphicon glyphicon-edit action-item" data-ng-click="getInputs(item)" ></span>
-                  <span class="glyphicon glyphicon-trash action-item" data-ng-click="delInput(item)"></span>
-              </div>
-          </div>
+       <div class="col-md-12">
+        <div class="col-md-9 item-label-g input-item-label" >
+         <span class="item-label">{{item.name}}</span>
+        </div>
+        <div class="col-md-3 action" style="padding-top: 8px;" >
+         <span class="glyphicon glyphicon-edit action-item action-edit" data-ng-click="editInput(item)" ></span>
+         <span class="glyphicon glyphicon-trash action-item action-delete" data-ng-click="delInput(item)"></span>
+        </div>
+       </div>
       </li>
      </ul>
     </div>
@@ -92,19 +102,26 @@
   </div>
  </div>
  <div id="group27" class="floatingPanel col-md-3 " style="padding:0; min-height:465px;max-height:465px;margin-left:15px"  > <!-- group27 begins-->
-    <ul class="items">
-        <li ng-repeat="item in operations" >
-            <div class="col-md-12">
-                <div class="col-md-9 item-label-g" >
-                    <span class="item-label">{{item.name}}</span>
-                </div>
-                <div class="col-md-3 action" >
-                 <span class="glyphicon glyphicon-edit action-item" data-ng-click="cclick(item)" ></span>
-                 <span class="glyphicon glyphicon-trash action-item" data-ng-click="delOperation(item)"></span>
-             </div>
-            </div>
-        </li>
-    </ul>
+     <div style="height: 35px; border-bottom: 1px solid lightgray; margin-bottom: 5px">
+         <div class="header" style="padding: 10px 15px; margin: 0">
+             <span class="fa fa-gears" style="padding-right: 10px;"></span>
+             <span style="font-size: small; color: #0084bf;">Module Operations</span>
+         </div>
+     </div>
+     
+     <ul class="items">
+   <li ng-repeat="item in operations" >
+    <div class="col-md-12">
+     <div class="col-md-9 item-label-g" >
+      <span class="item-label">{{item.name}}</span>
+     </div>
+     <div class="col-md-3 action" >
+      <span class="glyphicon glyphicon-edit action-item action-edit" data-ng-click="cclick(item)" ></span>
+      <span class="glyphicon glyphicon-trash action-item action-delete" data-ng-click="delOperation(item)"></span>
+     </div>
+    </div>
+   </li>
+  </ul>
  </div>
 </div> <!-- group27 ends-->
 
