@@ -105,21 +105,25 @@ define(['configs/app'], function (app) {
                     "rvalue":"module"
                 }
             ];
+
             //end
             /*********functions to be added to the model **/
             $scope.operations = globalVarFactory.getOperations();
             $scope.currentOp = globalVarFactory.skeleton();
-
-            // $scope.getOp = function (opName) {
-            //     $scope.currentOp = operationsFactory.lookup(opName);
-            // };
-
-            $scope.AddInput = function (input) {
-                $scope.currentOp.inputs.push(currentOp.input);
+           
+         
+            $scope.AddInput = function () {
+                $scope.currentOp.inputs.push($scope.input);
+                console.log($scope.currentOp);
             };
             /**********************************************/
             $scope.cclick = function(selectedNode){
                 $scope.currentOp = selectedNode;
+                $scope.inputs = $scope.currentOp.inputs;
+            };
+            $scope.delOperation = function ( op) {
+                globalVarFactory.gDelete($scope.operations,op) ;
+                $scope.currentOp = {};
             }
 
         }])

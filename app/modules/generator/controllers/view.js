@@ -43,14 +43,14 @@ define(['configs/app'], function (app){
        $scope.operation = operation;
        $scope.currentoperation = operation;
       };
-      $scope.delOperation = function () {
-       if ($scope.currentoperation !== null) {
-        var pos = $scope.currentComponent.operations.indexOf($scope.currentoperation);
-        $scope.currentComponent.operations.splice(pos, 1);
-        $scope.operation = {};
-        $scope.currentoperation = null;
-       }
-      };
+      // $scope.delOperation = function () {
+      //  if ($scope.currentoperation !== null) {
+      //   var pos = $scope.currentComponent.operations.indexOf($scope.currentoperation);
+      //   $scope.currentComponent.operations.splice(pos, 1);
+      //   $scope.operation = {};
+      //   $scope.currentoperation = null;
+      //  }
+      // };
 
       //    Variables  functions
 

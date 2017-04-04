@@ -1,6 +1,6 @@
 <!-- Generated html file -->
-<div id="content"  style="padding: 0; /*min-height: 465px; max-height: 465px;*/"  class="row content-inner col-md-10 col-md-offset-1 "> <!-- content begins-->
-    <div id=""  style="padding:0; /*min-height:465px;max-height:465px;*/"  class=" col-md-7 "> <!-- path begins-->
+<div id="content"  style="padding: 0; "  class="row content-inner col-md-10 col-md-offset-1 "> <!-- content begins-->
+    <div id=""  style="padding:0; "  class=" col-md-7 "> <!-- path begins-->
         <div class="floatingPanel col-md-12" style="margin-bottom: 15px; padding: 15px">
             <div  class="form-group">
                 <label for="select9">parent</label>
@@ -28,16 +28,18 @@
             <div class="col-md-12 row" style="padding: 0">
                 <div class="col-md-4" style=" padding: 15px">
                     <ul style="padding: 0 15px; list-style: none;">
-                        <li ng-repeat="item in methods">
-                            <span>{{item.id}}</span>
-                            <div class="actions" style="float: right;">
-                                <span class="glyphicon glyphicon-plus" ></span>
+                        <li ng-repeat="item in methods" >
+                            <span data-ng-click="getMethod(item)">{{item.id}}</span>
+                            <div class="actions" style="float: right;" class="dropdown nav-options" uib-dropdown auto-close="disabled" on-toggle="toggled(open) ">
+                                <span class="glyphicon glyphicon-plus" id="simple-dropdownr" uib-dropdown-toggle data-ng-click="getMethod(item)"></span>
+                                <ul class="dropdown-menu " template-url="response.html" uib-dropdown-menu aria-labelledby="dropdownMenu3"></ul>
                                 <span class="glyphicon glyphicon-edit" style="padding: 0 10px;"></span>
                                 <span class="glyphicon glyphicon-trash"></span>
-                            </div>                        
+                            </div>
                         </li>
                     </ul>
                 </div>
+                <!--viewing responses & requests-->
                 <div class="col-md-8" style=" padding: 0 0px 6px 15px;border-left: 1px solid lightgray;">
                     <uib-tabset id="methodParam">
                         <uib-tab index="14"  heading="request"> <!--begins-->
@@ -51,23 +53,13 @@
                             </table>
                         </uib-tab> <!--end-->
                         <uib-tab index="15"  heading="response"> <!--begins-->
-                            <!--<div  class="form-group">-->
-                                <!--<label for="select21">mediatype</label>-->
-                                <!--<select name="select21" id="select21" ng-model="currentRsc.response.mediatype" class="form-control" ><option ng-repeat='item in mediatype' value="{{item.rvalue}}"> {{item.dvalue}}-->
-                                <!--</option>-->
-                                <!--</select>-->
-                            <!--</div>-->
-                            <!--<div  class="form-group">-->
-                                <!--<label for="select25">response name</label>-->
-                                <!--<select name="select25" id="select25" ng-model="currentRsc.response.name" class="form-control" ><option ng-repeat='item in null' value="{{item.rvalue}}"> {{item.dvalue}}-->
-                                <!--</option>-->
-                                <!--</select>-->
-                            <!--</div>-->
-                            <!--<div class="form-group">-->
-                                <!--<label for="input22">param value</label>-->
-                                <!--<input class=" form-control"  placeholder="paramValue" name="input22" id="input22" type="text" ng-model="currentRsc.response.value"/>-->
-                            <!--</div> &lt;!&ndash; div id:input22 &ndash;&gt;-->
-                            <!--<button  class="floatingPanel" ng-click="addrsps()">add response</button>-->
+                            <div class="response-view">
+                                <ul>
+                                    <li ng-repeat="item in currentMtd.responses">
+                                        {{item.mediatype}}
+                                    </li>
+                                </ul>
+                            </div>
                         </uib-tab> <!--end-->
                     </uib-tabset>
                 </div>
@@ -111,5 +103,27 @@
                 </div> <!-- div id:input18 -->
                 <button  class="floatingPanel" ng-click="addMethod()">add method</button>
             </div >
+    </div>
+</script>
+<!--script for adding response-->
+<script type="text/ng-template" id="response.html">
+    <div class=" dropdown-menu responsedropdown floatingPanel">
+        <div  class="form-group ">
+            <label for="select21">mediatype</label>
+            <select name="select21" id="select21" ng-model="currentRsc.response.mediatype" class="form-control" ><option ng-repeat='item in mediatype' value="{{item.rvalue}}"> {{item.dvalue}}
+            </option>
+            </select>
+        </div>
+        <div  class="form-group">
+            <label for="select25">response name</label>
+            <select name="select25" id="select25" ng-model="currentRsc.response.name" class="form-control" ><option ng-repeat='item in null' value="{{item.rvalue}}"> {{item.dvalue}}
+            </option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="input22">param value</label>
+            <input class=" form-control"  placeholder="paramValue" name="input22" id="input22" type="text" ng-model="currentRsc.response.value"/>
+        </div> <!-- div id:input22 -->
+        <button  class="floatingPanel" data-ng-click="addResponse()">add response</button>
     </div>
 </script>

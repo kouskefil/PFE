@@ -49,7 +49,7 @@
                 $scope.RscParent = globalVarFactory.getParent();
                 $scope.currentRsc = globalVarFactory.rscSkeleton();
                 $scope.ids = globalVarFactory.getOperations();
-               
+
                 $scope.setCurrentRsc = function (rsc) {
                    globalVarFactory.setCurrentRsc(rsc);
                 };
@@ -65,14 +65,27 @@
                     globalVarFactory.addMethod($scope.currentRsc.method);
                     console.log(globalVarFactory.getModule());
                 };
+                $scope.getMethod = function (method) {
+                    $scope.currentMtd = method;
+                    console.log('method');
+                    console.log($scope.currentMtd );
+                };
+               
+                $scope.addResponse = function () {
+                    if($scope.currentMtd.responses){
+                        $scope.currentMtd.responses.push($scope.currentRsc.response);
+                    }
+                    else{
+                        $scope.currentMtd.responses = [];
+                        $scope.currentMtd.responses.push($scope.currentRsc.response);
+                    }
+                    $scope.currentRsc.response = {};
+                };
                 // $scope.toggled = function(open) {
                 //     $log.log('Dropdown is now: ', open);
                 // };
 
-                $scope.addrsps = function () {
-                    $scope.currentRsc.responses.push($scope.currentRsc.response);
-                    $scope.currentRsc.response = {};
-                };
+
 
                 $scope.respAdd = function(){
                     var i, found = -1;
