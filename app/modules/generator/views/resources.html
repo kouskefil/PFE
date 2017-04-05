@@ -1,22 +1,31 @@
 <!-- Generated html file -->
 <div id="content"  style="padding: 0; "  class="row content-inner col-md-10 col-md-offset-1 "> <!-- content begins-->
     <div id=""  style="padding:0; "  class=" col-md-7 "> <!-- path begins-->
-        <div class="floatingPanel col-md-12" style="margin-bottom: 15px; padding: 15px">
-            <div  class="form-group">
-                <label for="select9">parent</label>
-                <select name="select9" id="select9" ng-model="currentRsc.parent" class="form-control" >
-                    <option ng-repeat='itemp in RscParent' value="{{itemp}}"> {{itemp}} </option>
-                </select>
+        <div class="floatingPanel col-md-12" style="margin-bottom: 15px; padding: 0">
+            <div style="height: 35px; border-bottom: 1px solid lightgray; margin-bottom: 5px">
+                <div class="header" style="padding: 10px 15px; margin: 0">
+                    <span class="glyphicon glyphicon-cog" style="padding-right: 10px;"></span>
+                    <span style="font-size: small; color: #0084bf;">Resource Definition</span>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="input10">path</label>
-                <input class=" form-control"  placeholder="path" name="input10" id="input10" type="text" ng-model="currentRsc.path"/>
-            </div> <!-- div id:input10 -->
+            <div style="padding: 15px 15px">
+                <div  class="form-group">
+                    <label for="select9">parent</label>
+                    <select name="select9" id="select9" ng-model="currentRsc.parent" class="form-control" >
+                        <option ng-repeat='itemp in RscParent' value="{{itemp}}"> {{itemp}} </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="input10">path</label>
+                    <input class=" form-control"  placeholder="path" name="input10" id="input10" type="text" ng-model="currentRsc.path"/>
+                </div> <!-- div id:input10 -->
+            </div>
         </div>
         <div class="col-md-12 floatingPanel " style="padding: 0; min-height:302px">
             <div style="height: 35px; border-bottom: 1px solid lightgray; margin-bottom: 5px">
                 <div class="header" style="padding: 10px 15px; margin: 0">
-                    <span style="font-size: x-small;">Methods</span>
+                    <span class="glyphicon glyphicon-cog" style="padding-right: 10px;"></span>
+                    <span style="font-size: small; color: #0084bf;">Resource Methods</span>
                     <ul style="list-style: none; float: right; font-size: xx-small; display: flex;    margin-bottom: 0px; width: 60px;height: 20px;padding-left: 50px;">
                         <li style="margin: 0" class="dropdown nav-options" uib-dropdown auto-close="disabled" on-toggle="toggled(open) ">
                             <span style="z-index: 1005" id="simple-dropdownr" uib-dropdown-toggle class="glyphicon glyphicon-plus "></span>
@@ -24,6 +33,7 @@
                         </li>
                     </ul>
                 </div>
+
             </div>
             <div class="col-md-12 row" style="padding: 0">
                 <div class="col-md-4" style=" padding: 15px">
@@ -67,7 +77,13 @@
 
         </div>
     </div>
-    <div id="group27" class="floatingPanel col-md-3 " style="padding:0; min-height:465px;max-height:465px;margin-left:15px"  > <!-- group27 begins-->
+    <div id="group27" class="floatingPanel col-md-3 " style="padding:0; min-height:465px;max-height:465px;margin-left:15px"  >
+        <div style="height: 35px; border-bottom: 1px solid lightgray; margin-bottom: 5px">
+            <div class="header" style="padding: 10px 15px; margin: 0">
+                <span class="glyphicon glyphicon-cog" style="padding-right: 10px;"></span>
+                <span style="font-size: small; color: #0084bf;">Module Resources</span>
+            </div>
+        </div><!-- group27 begins-->
         <div class="null"
              data-angular-treeview="true"
              data-tree-id="resources"
