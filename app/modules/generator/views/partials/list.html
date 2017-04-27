@@ -1,0 +1,26 @@
+<div class="section">
+  <h4>Design</h4>
+  <div ng-include="'_generic.html'"></div>
+</div>
+
+<div class="section">
+  <h4>View</h4>
+  <div ng-include="'_genericView.html'"></div>
+  <div class="form-group ">
+    <label  for="root">parent</label>
+    <div class="input-group">
+      <input id="root" class="form-control"  type="text" placeholder="name" name="root" ng-model="currentComponent.root"/>
+    </div>
+  </div>
+</div>
+
+
+<div class="section">
+  <h6>Controller</h6>
+  <div ng-include="'_genericCtrl.html'"></div>
+  <div class="checkbox-inline" >
+    <label><div><input name="resolve" type="checkbox" value="resolve"  ng-model="currentComponent.resolve"/></div>resolve</label>
+  </div>
+</div>
+
+

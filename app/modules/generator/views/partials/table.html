@@ -1,0 +1,43 @@
+<div class="section">
+  <h6>Design</h6>
+    <div ng-include="'_generic.html'"></div>
+</div>
+
+<div class="section">
+  <h6>View</h6>
+    <div ng-include="'_genericView.html'"></div>
+</div>
+
+<div class="section">
+    <h6>Controller</h6>
+    <div class="checkbox-inline">
+        <label>
+            <input type="checkbox" ng-model="currentComponent.htype">dynamic header
+        </label>
+    </div>
+    <!-- static header-->
+    <div>
+        <div class="form-group">
+            <label >column</label>
+            <div class="input-group" >
+                <input class="form-control"  type="text" ng-keyup="$event.keyCode == 13 && addcol()" ng-model="currentComponent.c" placeholder="component column" />
+            </div>
+        </div>
+        <div style="height: 100px; border: 1px solid lightgray;">
+           <ul>
+               <li ng-repeat="item  in currentComponent.columns">
+                   {{item}}
+                   <span data-ng-click="deleteCol(item)" class="glyphicon glyphicon-trash"></span>
+               </li>
+           </ul>
+        </div>
+    </div>    
+  <div class="form-group">
+    <label><div><input name="resolve" type="checkbox" value="resolve"  ng-model="currentComponent.resolve"/></div>resolve</label>
+    <div style="padding-top:10px" class="form-group  input-group">
+      <label  for="collection" title="">collection</label>
+      <input id="collection" class="form-control" placeholder="table collection" name="method" type="text"  ng-model="currentComponent.collection">
+    </div>
+  </div>
+</div>
+
