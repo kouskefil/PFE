@@ -2,11 +2,9 @@
 <div id="content"  style="padding: 0; "  class="row content-inner col-md-10 col-md-offset-1 "> <!-- content begins-->
     <div id=""  style="padding:0; "  class=" col-md-7 "> <!-- path begins-->
         <div class="floatingPanel col-md-12" style="margin-bottom: 15px; padding: 0">
-            <div style="height: 35px; border-bottom: 1px solid lightgray; margin-bottom: 5px">
-                <div class="header" style="padding: 10px 15px; margin: 0">
-                    <span class="glyphicon glyphicon-cog" style="padding-right: 10px;"></span>
-                    <span style="font-size: small; color: #0084bf;">Resource Definition</span>
-                </div>
+            <div class="g_header" style="padding: 10px 15px; margin: 0">
+                <span class="glyphicon glyphicon-link" style="padding-right: 10px;"></span>
+                <span style="font-size: small; color: #0084bf;">Resource Definition</span>
             </div>
             <div style="padding: 15px 15px">
                 <div  class="form-group">
@@ -22,29 +20,62 @@
             </div>
         </div>
         <div class="col-md-12 floatingPanel " style="padding: 0; min-height:302px">
-            <div style="height: 35px; border-bottom: 1px solid lightgray; margin-bottom: 5px">
-                <div class="header" style="padding: 10px 15px; margin: 0">
-                    <span class="glyphicon glyphicon-cog" style="padding-right: 10px;"></span>
-                    <span style="font-size: small; color: #0084bf;">Resource Methods</span>
-                    <ul style="list-style: none; float: right; font-size: xx-small; display: flex;    margin-bottom: 0px; width: 60px;height: 20px;padding-left: 50px;">
-                        <li style="margin: 0" class="dropdown nav-options" uib-dropdown auto-close="disabled" on-toggle="toggled(open) ">
-                            <span style="z-index: 1005" id="simple-dropdownr" uib-dropdown-toggle class="glyphicon glyphicon-plus "></span>
-                            <ul class="dropdown-menu " template-url="methods.html" uib-dropdown-menu aria-labelledby="dropdownMenu3"></ul>
-                        </li>
-                    </ul>
-                </div>
-
+            <div class="g_header" style="padding: 10px 15px; margin: 0">
+                <span class="glyphicon glyphicon-cog" style="padding-right: 10px;"></span>
+                <span style="font-size: small; color: #0084bf;">Resource Methods</span>
+                <ul style="list-style: none; float: right; font-size: xx-small; display: flex;    margin-bottom: 0px; width: 60px;height: 20px;padding-left: 50px;">
+                    <li style="margin: 0" class="dropdown nav-options" uib-dropdown auto-close="disabled" on-toggle="toggled(open) ">
+                        <span  id="simple-dropdownr" uib-dropdown-toggle class="glyphicon glyphicon-plus g-action" data-ng-click="setmethoddropdownstyle()"></span>
+                        <ul class="dropdown-menu " template-url="methods.html" uib-dropdown-menu aria-labelledby="dropdownMenu3"></ul>
+                    </li>
+                </ul>
             </div>
             <div class="col-md-12 row" style="padding: 0">
-                <div class="col-md-4" style=" padding: 15px">
-                    <ul style="padding: 0 15px; list-style: none;">
+                <div class="col-md-4" style=" padding: 0">
+                    <ul class="items">
                         <li ng-repeat="item in methods" >
-                            <span data-ng-click="getMethod(item)">{{item.id}}</span>
-                            <div class="actions" style="float: right;" class="dropdown nav-options" uib-dropdown auto-close="disabled" on-toggle="toggled(open) ">
-                                <span class="glyphicon glyphicon-plus" id="simple-dropdownr" uib-dropdown-toggle data-ng-click="getMethod(item)"></span>
-                                <ul class="dropdown-menu " template-url="response.html" uib-dropdown-menu aria-labelledby="dropdownMenu3"></ul>
-                                <span class="glyphicon glyphicon-edit" style="padding: 0 10px;"></span>
-                                <span class="glyphicon glyphicon-trash"></span>
+                            <div class="col-md-12" style="padding: 0 0 0 15px">
+                                <div class="col-md-7 item-label-g" >
+                                    <a href class="item-label" data-ng-click="getMethod(item)">{{item.id}}</a>
+                                </div>
+                                <div class="action col-md-5  " style="/*float: right;*/ padding-top: 4px;">
+                                    <ul style="list-style: none; display: flex; padding: 0 20px">
+                                        <li>
+                                            <div class="dropdown"  uib-dropdown auto-close="disabled">
+                                                <span class="glyphicon glyphicon-plus" uib-dropdown-toggle data-ng-click="getMethod(item)"></span>
+                                                <ul class="dropdown-menu "  uib-dropdown-menu role="menu" aria-labelledby="dropdownMenu3">
+                                                    <div class=" dropdown-menu responsedropdown floatingPanel">
+                                                        <div  class="form-group ">
+                                                            <label for="select21">mediatype</label>
+                                                            <select name="select21" id="select21" ng-model="currentRsc.response.mediatype" class="form-control" >
+                                                                <option ng-repeat='item in mediatype' value="{{item.rvalue}}"> {{item.dvalue}} </option>
+                                                            </select>
+                                                        </div>
+                                                        <div  class="form-group">
+                                                            <label for="select25">param name</label>
+                                                            <select name="select25" id="select25" ng-model="currentRsc.response.name" class="form-control" >
+                                                                <option ng-repeat='item in responses' value="{{item.rvalue}}"> {{item.dvalue}}     </option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="input22">param value</label>
+                                                            <input class=" form-control"  placeholder="paramValue" name="input22" id="input22" type="text" ng-model="currentRsc.response.value"/>
+                                                        </div> <!-- div id:input22 -->
+                                                        <button  class="floatingPanel" data-ng-click="addResponse(item)">save</button>
+                                                        <a  href style="float: right" data-ng-click="dropdowncancel()" uib-dropdown-toggle>cancel</a>
+                                                    </div>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown"  uib-dropdown auto-close="disabled" on-toggle="toggled(open) ">
+                                            <span data-ng-click="getMethod(item)" id="simple-dropdown" uib-dropdown-toggle class="glyphicon glyphicon-edit action-edit" style="padding: 0 10px;" ></span>
+                                            <ul class="dropdown-menu " template-url="methods.html" uib-dropdown-menu aria-labelledby="dropdownMenu3"></ul>
+                                        </li>
+                                        <li>
+                                            <span class="glyphicon glyphicon-trash action-delete"></span>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -53,20 +84,34 @@
                 <div class="col-md-8" style=" padding: 0 0px 6px 15px;border-left: 1px solid lightgray;">
                     <uib-tabset id="methodParam">
                         <uib-tab index="14"  heading="request"> <!--begins-->
-                            <table class="table table-bordered">
+                            <!---->
+                            <table class="table table-condensed">
+                                <thead>
                                 <tr>
-                                    <th ng-repeat='header in null'>{{header}}</th>
+                                    <th>name</th>
+                                    <th>type</th>
+                                    <th>style</th>
+                                    <th>default value</th>
                                 </tr>
-                                <tr ng-repeat='data in null'>
-                                    <td ng-repeat='(key, value) in data'>{{value}}</td>
+                                </thead>
+                                <tbody>
+                                <tr ng-repeat="item in requests">
+                                    <td>{{item.name}}</td>
+                                    <td>{{item.type}}</td>
+                                    <td>{{item.style}}</td>
+                                    <td>{{item.defaultValue}}</td>
                                 </tr>
+                                </tbody>
                             </table>
+
+                            <!---->
+
                         </uib-tab> <!--end-->
                         <uib-tab index="15"  heading="response"> <!--begins-->
                             <div class="response-view">
                                 <ul>
-                                    <li ng-repeat="item in currentMtd.responses">
-                                        {{item.mediatype}}
+                                    <li ng-repeat="item in responses">
+                                        {{item}}
                                     </li>
                                 </ul>
                             </div>
@@ -78,9 +123,9 @@
         </div>
     </div>
     <div id="group27" class="floatingPanel col-md-3 " style="padding:0; min-height:465px;max-height:465px;margin-left:15px"  >
-        <div style="height: 35px; border-bottom: 1px solid lightgray; margin-bottom: 5px">
+        <div class="g_header">
             <div class="header" style="padding: 10px 15px; margin: 0">
-                <span class="glyphicon glyphicon-cog" style="padding-right: 10px;"></span>
+                <span class="fa fa-gears" style="padding-right: 10px;"></span>
                 <span style="font-size: small; color: #0084bf;">Module Resources</span>
             </div>
         </div><!-- group27 begins-->
@@ -99,26 +144,25 @@
 
 <!--script for adding methods-->
 <script type="text/ng-template" id="methods.html">
-    <div  class="methoddropdownform floatingPanel dropdown-menu methoddropdownform-position" uib-dropdown-menu role="menu" aria-labelledby="button-template-url">
-            <div role="menuitem" ng-repeat="item in modules" class="group-content" >
-                <div  class="form-group">
-                    <label for="select24">method name</label>
-                    <select name="select24" id="select24" ng-model="currentRsc.method.name" class="form-control" ><option ng-repeat='item in resourceMethod' value="{{item.rvalue}}"> {{item.dvalue}}
-                    </option>
-                    </select>
-                </div>
-                <div  class="form-group">
-                    <label for="select17">method id</label>
-                    <select name="select17" id="select17" ng-model="currentRsc.method.id" class="form-control" >
-                        <option ng-repeat='item in ids' value="{{item.name}}"> {{item.name}} </option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="input18">role</label>
-                    <input class=" form-control"  placeholder="role" name="input18" id="input18" type="text" ng-model="currentRsc.method.role"/>
-                </div> <!-- div id:input18 -->
-                <button  class="floatingPanel" ng-click="addMethod()">add method</button>
-            </div >
+    <div  class=" floatingPanel dropdown-menu "  ng-class="editMethod" uib-dropdown-menu role="menu" aria-labelledby="button-template-url">
+            <div  class="form-group">
+                <label for="select24">method name</label>
+                <select name="select24" id="select24" ng-model="currentRsc.method.name" class="form-control" ><option ng-repeat='item in resourceMethod' value="{{item.rvalue}}"> {{item.dvalue}}
+                </option>
+                </select>
+            </div>
+            <div  class="form-group">
+                <label for="select17">method id</label>
+                <select name="select17" id="select17" ng-model="currentRsc.method.id" class="form-control" >
+                    <option ng-repeat='item in ids' value="{{item.name}}"> {{item.name}} </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="input18">role</label>
+                <input class=" form-control"  placeholder="role" name="input18" id="input18" type="text" ng-model="currentRsc.method.role"/>
+            </div> <!-- div id:input18 -->
+            <button  class="floatingPanel" ng-click="addMethod()">add method</button>
+            <a  href style="float: right" uib-dropdown-toggle>cancel</a>
     </div>
 </script>
 <!--script for adding response-->

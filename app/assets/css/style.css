@@ -105,39 +105,31 @@ label {
     padding: 0;
     min-height: 70%;
 }
-.racine-body{
-    padding-left: 0;
-    height:100%;
-    width:100%;
+
+#racine .tab-content{
+    padding-top: 0;
+    min-height: 400px;
+    max-height: 400px;
 }
 /**/
-.tree-body{
-    height: 97%;
-    overflow-y: scroll;
-}
+
 /*composant*/
 .composants{
     max-height: 465px;
 }
+#composant .tab-content{
+    min-height: 420px;
+    max-height: 420px;
+}
 
-.composant-body .tab-pane{
+.composant .tab-pane{
     min-height: 401px;
     max-height: 409px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 /*component*/
-.simple-body{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-}
-.container-body{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-}
-.widget-body{
+.component-group{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -186,7 +178,7 @@ label {
     float: left;
     margin: 2px;
 }
-.composant-body h4{
+.composant h4{
     margin: 15px 0 10px 0;
     text-align: center;
     background-color: #ECEFF1 !important ;
@@ -289,7 +281,6 @@ label {
 
 #sidebar-wrapper {
  position: fixed;
-    background-color: aliceblue;
   top: 51px;
   width: 216px;
   height: 100%;
@@ -307,10 +298,10 @@ label {
     margin-left: 10px;
     transition: all 0.3s;
 }
-/*.sidebar-wrapper li:hover{
-     background-color: #cdc8ce;
-     border-left: 5px solid #eee;
-}*/
+.sidebar-wrapper li:hover{
+     background-color: lightgrey;
+     /*border-left: 5px solid #eee;*/
+}
 #sidebar-wrapper h3{
      /*text-align: center;*/
      margin: 0;
@@ -318,10 +309,11 @@ label {
      /*background-color: #2a2a2a;*/
 }
 #sidebar-wrapper a{
+    color: lightslategray;
      display: block;
      padding: 0 ;
-     color: #444;
      text-decoration: none;
+    font-weight: 600;
 }
 #sidebar-wrapper i{
      font-size: 18px
@@ -375,17 +367,9 @@ label {
   line-height: 18px;
 }
 
-.sidebar-nav li a:hover,
-.sidebar-nav li.active {
-  color: #fff;
-  background: rgba(255,255,255,0.2);
-  text-decoration: none;
-}
 
-.sidebar-nav li a:active,
-.sidebar-nav li a:focus {
-  text-decoration: none;
-}
+
+
 
 .sidebar-nav > .sidebar-brand {
   height: 65px;
@@ -806,9 +790,17 @@ label {
 .modules{
     background-color: #fff;
     margin-bottom:5px;
+    width: 296px;
+    height: 204px;
+    margin: 10px;
 }
 .modules img{
     height: 30px;
+}
+.modules:hover{
+    background-color: lightgray;
+    color: #fff;
+    transition: 5ms;
 }
 
 /******************** dashboard styling****/
@@ -873,56 +865,66 @@ label {
 }
 
  /*block action*/
-.b-a{
-   height: 25px;
+.block-title{
+    height: 35px;
+    padding: 6px;
+    border-bottom: 1px solid lightgray;
 }
 
-.b-a ul{
+.block-title ul{
     display: inline-flex;
     float: right;
     list-style: none;
-    font-size: 18px;
+    font-size: inherit;
 }
 
-.b-a  li{
+.block-title  li{
     text-decoration: none;
     color: lightgrey;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
+    text-align: -webkit-center;
+    padding-top: 2px;
     text-align: center;
     border-radius: 50px;
 }
-.b-a  li span{
-    padding: 5px;
+.block-title  li span{
+    /*padding: 5px;*/
 }
-.b-a  li:hover {
-    color: black !important;
-    background-color: lightgrey;
+.block-title  li:hover {
+    color: #fff !important;
+    background-color: #999;
     transition: .5s;
 }
 
-.b-a .d-d{
+.block-title .d-d{
     top: 306px !important;
     display: block !important;
     left: 1032px !important;
     right: auto;
 
 }
-.b-t-body{
-    background-color: #fff; padding: 10px; margin: 15px 0  15px 0 ;
+
+.block {
+    list-style: none;
+    padding-left: 0 ;
+}
+
+.block hr{
+    margin: 6px 0  6px 0 ;
+}
+.block-body.title{
+    height: 35px;
+}
+.block-body{
+    /*background-color: #fff; padding: 10px; margin: 15px 0  15px 0 ;*/
     /*max-height: 50px;*/
     color: dimgrey;
     font-family: "Open Sans";
     font-size: 16px;
 }
-
-.d-c ul{
-    list-style: none;
-    padding-left: 0 ;
-}
-
-.d-c hr{
-    margin: 6px 0  6px 0 ;
+.data-content{
+    padding: 20px;
 }
 
 .f-i{
@@ -933,7 +935,7 @@ label {
 /******OPERATION BAR ******/
 .operation-bar{
     font-family: 'Open Sans', sans-serif;
-    color: darkcyan;
+    color: #999;
     font-size: 20px;
     height: 35px;
     padding-left: 0 ;
@@ -955,6 +957,7 @@ label {
     margin: 0  15px;
 }
 .operation-bar li:hover{
+    color: black;
    background-color: lightgrey;
     transition: 0.5s;
 }
@@ -977,15 +980,12 @@ label {
     width: 250px;
     left: -150px;
     border-radius:0 ;
-    padding: 15px 0 0 0
+    text-align: right;
 }
 .m-dd li{
     padding: 0  15px 0  15px;
-    border-bottom: 1px solid lightgrey;
 }
-.mdd{
-    text-align: right;
-}
+
 .m-dd li:hover{
     /*background-color: #cdc8ce;*/
 }
@@ -1040,23 +1040,28 @@ label {
 .partial-view {
     padding: 0;
 }
-.partial-view li{
-    list-style: none;
-    margin: 10px 0 10px;
+
+.partial-view {
+    padding:0;
 }
-.partial-view #p-a{
+.partial-view span{
    float: right;
-    color: darkcyan;
-    cursor: pointer;
-    padding-right: 10px;
+    color:  #F76506;
+}
+#composant{
+    padding: 0;
+}
+
+#composant .tab-content{
+    padding: 0;
 }
 .partial-view a{
    text-decoration: none;
 }
-.partial-view #p-i{
-    margin-right: 5px;
-    font-size: large;
-}
+/*.partial-view #p-i{*/
+    /*margin-right: 5px;*/
+    /*font-size: large;*/
+/*}*/
 /*tabs heading custum*/
 .tab-content{
     padding: 10px 10px 0 15px;
@@ -1105,19 +1110,24 @@ ul.nav.nav-tabs {
 }
 .responsedropdown{
     width: 250px;
-    /*left: -224px;*/
+    left: 24px;
     border-radius: initial;
-    padding: 15px 10px 15px 15px;
+    padding: 15px 10px 15px 15px !important;
+    top: -27px;
 }
-.methoddropdownform{
-    width: 250px;
-    left: -224px;
-    border-radius: initial;
-    padding: 15px 10px 15px 15px;
+.editMethod{
+    padding: 16px !important ;
+    width: 250px !important;
+    top: -26px !important;
+    left: 56px !important;
+    border-radius: 0 !important;
 }
-.methoddropdownform-position {
+.addmethod{
+    padding: 16px !important;
+    width: 250px !important;
     top: -13px !important;
-    right: -9px !important;
+    left: -224px !important;
+    border-radius: 0 !important;
 }
 .content{
     padding: 0;
@@ -1137,13 +1147,29 @@ ul.nav.nav-tabs {
 .modal-dialog {
     width: 400px !important;
 }
+.modal-content{
+    border-radius: 0 !important;
+}
 
 /*tabs custumization*/
 .nav-tabs { border-bottom: 2px solid #DDD; }
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover { border-width: 0; }
 .nav-tabs > li > a { border: none; color: #666; }
-.nav-tabs > li.active > a, .nav-tabs > li > a:hover { border: none; color: #4285F4 !important; background: transparent; }
-.nav-tabs > li > a::after { content: ""; background: #4285F4; height: 2px; position: absolute; width: 100%; left: 0 ; bottom: -1px; transition: all 250ms ease 0s; transform: scale(0); }
+.nav-tabs > li.active > a, .nav-tabs > li > a:hover {
+    border: none;
+    color: #0084bf !important;
+    background: transparent;
+}
+.nav-tabs > li > a::after {
+    content: "";
+    background: #0084bf;
+    height: 2px;
+    position: absolute;
+    width: 100%;
+    left: 0 ;
+    bottom: -1px;
+    transition: all 250ms ease 0s;
+    transform: scale(0); }
 .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after { transform: scale(1); }
 .tab-nav > li > a::after { background: #21527d none repeat scroll 0% 0%; color: #fff; }
 .tab-pane { padding: 15px 0; }
@@ -1163,7 +1189,7 @@ ul.nav.nav-tabs {
     white-space: nowrap;
 }
 .item-label{
-    line-height: 30px;
+    /*line-height: 30px;*/
     color: rgba(0,0,0,.7);
     font-size: 13px;
 }
@@ -1181,7 +1207,29 @@ ul.nav.nav-tabs {
 }
 .action span{
     cursor: pointer;
+    float: right;
 }
 .input-item-label{
     font-size: 13px !important;
+}
+/*generic actions*/
+.g-action{
+    color: lightgray;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    top: -2px;
+    /* text-align: center; */
+    padding: 5px 3px 1px 6px;
+}
+.g-action:hover{
+    background-color: #999;
+    color: #fff;
+    transition: 0.9ms;
+}
+.g_header{
+    background-color:#F5F5F5;
+    height: 35px;
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 5px
 }

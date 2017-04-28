@@ -10,6 +10,8 @@ define(['configs/app',
     '../controllers/operations',
     '../controllers/menus',
     '../controllers/resources',
+    '../controllers/database',
+    '../controllers/workflow',
     '../controllers/dashboard',
     'app/js/directives/angular.treeview.js',
     'app/js/directives/angular-file-model.js',
@@ -42,35 +44,30 @@ define(['configs/app',
                         {
                             name:'Views',
                             state:'root.generator.views'   ,
-                            icon:'glyphicon glyphicon-file'
+                            icon:'glyphicon glyphicon-modal-window'
                         },
                         {
                             name:'Operations',
                             state:'root.generator.operations'   ,
-                            icon:'glyphicon glyphicon-upload'
+                            icon:'glyphicon glyphicon-cog'
                         },
                         {
                             name:'Resources',
                             state:'root.generator.resources'   ,
-                            icon:'glyphicon glyphicon-upload'
-                        },
-                        {
-                            name:'Menus',
-                            state:'root.generator.menus'   ,
-                            icon:'glyphicon glyphicon-upload'
+                            icon:'glyphicon glyphicon-link'
                         },
                         {
                             name:'Workflow',
-                            state:'f'   ,
-                            icon:'glyphicon glyphicon-upload'
+                            state:'root.generator.workflow'   ,
+                            icon:'glyphicon glyphicon-retweet'
                         },
                         {
                             name:'Database',
-                            state:'f'   ,
-                            icon:'glyphicon glyphicon-upload'
+                            state:'root.generator.database'   ,
+                            icon:'glyphicon glyphicon-tasks'
                         }
                     ]);
-                    layoutFactory.setLocation('Operations definition');
+                    layoutFactory.setLocation('Creating Modules');
                     layoutFactory.setOperations( [
                         {
                             name:"new",
@@ -174,7 +171,7 @@ define(['configs/app',
             {
                 url: '^/:label/:type/:num/',
                 templateUrl: function ($stateParams){
-                    return 'app/modules/generator/views/components_partials/' + $stateParams.type +'.html';
+                    return 'app/modules/generator/views/partials/' + $stateParams.type +'.html';
                 },
 
                 controller: ['$scope','$state', '$stateParams', 'componentSet', function($scope,$state, $stateParams, componentSet){
@@ -223,7 +220,6 @@ define(['configs/app',
                             icon:"glyphicon glyphicon-edit",
                             action:function () {
                                 globalVarFactory.AddResource();
-                                console.log(globalVarFactory.getResources());
                             }
                         },
                         {
@@ -238,6 +234,44 @@ define(['configs/app',
                     ]);
             },
             controller:'resources'
+        })
+        .state('root.generator.workflow',{
+            url:'/generator/workflow',
+            templateUrl:'app/modules/generator/views/workflow.html',
+            onEnter:function (globalVarFactory,layoutFactory, fileFactory,operationsFactory) {
+
+                layoutFactory.setLocation('Workflow');
+                // layoutFactory.setOperations(
+                //     [
+                //         {
+                //             name:"upload",
+                //             icon:"glyphicon glyphicon-upload",
+                //             action:function () {
+                //                 globalVarFactory.AddResource();
+                //             }
+                //         }
+                //     ]);
+            },
+            controller:'workflow'
+        })
+        .state('root.generator.database',{
+            url:'/generator/database',
+            templateUrl:'app/modules/generator/views/database.html',
+            onEnter:function (globalVarFactory,layoutFactory, fileFactory,operationsFactory) {
+
+                layoutFactory.setLocation('Database');
+                // layoutFactory.setOperations(
+                //     [
+                //         {
+                //             name:"upload",
+                //             icon:"glyphicon glyphicon-upload",
+                //             action:function () {
+                //                 globalVarFactory.AddResource();
+                //             }
+                //         }
+                //     ]);
+            },
+            controller:'database'
         })
         .state('root.generator.menus',{
             url:'/generator/menus',

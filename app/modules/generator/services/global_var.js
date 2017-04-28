@@ -4,7 +4,7 @@
     define(['configs/app'], function (app){
         app.register.factory('globalVarFactory',['componentSet','$q', function (componentSet, $q) {
 
-        var module = {name:'', models:[], resources:[], operations:[], menus:[] };
+        var module = {name:'', models:[], resources:[], operations:[] };
         var defer = null;
         var upload = false;
         var treeActions =  [
@@ -41,6 +41,8 @@
         ];
         /**operations vars**/
         var skel;
+        var currentOp;
+
         var lookup = function (name) {
             var obj = null ;
             for(i = 0; i < module.operations.length; i++){
@@ -96,7 +98,8 @@
         var getParents = function (resources) {
                 var i, j = resources.length ;
                 for(i = 0; i < resources.length; i++){
-                    RscParent.push(resources[i].parent);
+                     if(resources[i].parent !== '')
+                        RscParent.push(resources[i].parent);
                     if(resources[i].resources.length === 0) {
                         RscParent.push(resources[i].path);
                     }
@@ -109,13 +112,13 @@
         /** resources vars end*/
         var global = {
             /*operations methods*/
-            skeleton : function () {
+            skeleton : function (obj) {
                 skel =  {
-                    name:'',
-                    command:'',
-                    out:'',
-                    sql:'',
-                    inputs:[]
+                    name:obj.name,
+                    command:obj.command,
+                    out:obj.out,
+                    sql:obj.sql,
+                    inputs:obj.inputs
                 };
                 return skel;
             },
@@ -123,70 +126,82 @@
               * @returns { Number }
               */
             AddOperation : function () {
-                if( module.operations.length > 0 && lookup(angular.copy(skel.name)) !== null) {
-                    return 1;
-                }else {
-                    module.operations.push(angular.copy(skel));
-                    skel.name = '';
-                    skel.command = '';
-                    skel.out = '';
-                    skel.sql = '';
-                    skel.inputs = [];
-
-                    return 0;
-                }
+                    if( module.operations.length > 0 && lookup(angular.copy(skel.name))!== null) {
+                        skel.name = '';
+                        skel.command = '';
+                        skel.out = '';
+                        skel.sql = '';
+                        skel.inputs = [];
+                        return -1;
+                    }
+                    else {
+                        module.operations.push(angular.copy(skel));
+                        skel.name = '';
+                        skel.command = '';
+                        skel.out = '';
+                        skel.sql = '';
+                        skel.inputs = [];
+                         return 0;
+                    }
             },
             getOperations: function () {
                  return module.operations;
             },
             /*resource methods*/
-            addMethod : function (rsc) {
-                currentRsc.methods.push(rsc);
-                console.log(currentRsc);
+            addMethod : function (mtd) {
+                currentRsc.methods.push(mtd);
             },
-            rscSkeleton : function () {
+            rscSkeleton : function (obj) {
                 currentRsc =  {
-                path : '',
-                parent : '',
-               resources : [],
-               methods : [],
-               responses : []
+                path : obj.path,
+                parent : obj.parent,
+               resources : obj.resources,
+               methods : obj.methods,
+               responses : obj.responses
             };
                 return currentRsc;
             },
             setCurrentRsc : function (rsc) {
                currentRsc =  rsc;
-                console.log(currentRsc);
             },
-             getResources : function () {
+            getResources : function () {
                return module.resources;
              },
-             getCurrentRsc : function () {
+            getCurrentRsc : function () {
                 return currentRsc;
              },
             getParent : function () {
+                RscParent = [];
                 return  getParents(module.resources);
             },
             AddResource : function(){
                 var rsc = angular.copy(currentRsc);
                 var newpath;
+                if(rscLookup(rsc.path, module.resources) !== null){
+                    currentRsc.path = '';
+                    currentRsc.parent = '';
+                    currentRsc.resources = [];
+                    currentRsc.methods = [];
+                    currentRsc.responses = [];
+                }else {
+                    if(rsc.parent) {
+                        parentLookup().resources.push(rsc);
+                    }else
+                        module.resources.push(rsc);
+                    currentRsc.path = '';
+                    currentRsc.parent = '';
+                    currentRsc.resources = [];
+                    currentRsc.methods = [];
+                    currentRsc.responses = [];
 
-                if(rsc.parent) {
-                    parentLookup().resources.push(rsc);
-                }else
-                    module.resources.push(rsc);
-                currentRsc.path = '';
-                currentRsc.parent = '';
-                currentRsc.resources = [];
-                currentRsc.methods = [];
-                currentRsc.responses = [];
+                    /*currentRsc subResource = {};*/
+                    if(rsc.parent)
+                        newpath = rsc.parent + "/" + rsc.path;
+                    else
+                        newpath = rsc.path;
+                    RscParent.push(newpath);
+                }
 
-                /*currentRsc subResource = {};*/
-                if(rsc.parent)
-                    newpath = rsc.parent + "/" + rsc.path;
-                else
-                    newpath = rsc.path;
-                RscParent.push(newpath);
             },
             /*resource methods end*/
             /*module methods*/
@@ -203,7 +218,7 @@
             getcurrentComponent : function () {
                 return componentSet.currentComponent;
             },
-             getTreeAction : function () {
+            getTreeAction : function () {
                  return treeActions;
              },
             getDefaultComponent : function () {
@@ -228,9 +243,27 @@
             gDelete : function (collection, obj) {
                 var pos = collection.indexOf(obj);
                 collection.splice(pos, 1);
+            },
+            gLookup : function (collection, obj) {
+               var i, find;
+               for(i = 0; i < collection.length; i++){
+                   if(collection[i] === obj){
+                       find = true;
+                   }
+               }
+               return find;
+            }   ,
+            gLookupByAttribute : function (collection, attribute, value) {
+                var i, find = null;
+                for(i = 0; i < collection.length; i++){
+                    if(collection[i][attribute] === value){
+                        find = collection[i];
+                        break;
+                    }
+                }
+                return find;
             }
         };
-
         return global;
     }])
 

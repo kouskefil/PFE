@@ -105,18 +105,26 @@ define(['configs/app'], function (app) {
                     "rvalue":"module"
                 }
             ];
+            $scope.operations = [];
 
             //end
             /*********functions to be added to the model **/
             $scope.operations = globalVarFactory.getOperations();
-            $scope.currentOp = globalVarFactory.skeleton();
+            $scope.currentOp = globalVarFactory.skeleton({});
+            $scope.edition = false;
            
          
             $scope.AddInput = function () {
-                $scope.currentOp.inputs.push($scope.input);
-                $scope.input = {};
+                if(globalVarFactory.gLookup($scope.currentOp.inputs,$scope.input) === true){
+                    $scope.input = {};
+                }
+                else{
+                    $scope.currentOp.inputs.push($scope.input);
+                    $scope.input = {};
+                }
             };
             $scope.editInput = function(input){
+                $scope.edition = true;
                 $scope.input = input;
             };
             $scope.delInput = function (input) {
@@ -125,8 +133,9 @@ define(['configs/app'], function (app) {
             };
             /**********************************************/
             $scope.cclick = function(selectedNode){
-                $scope.currentOp = selectedNode;
+                 $scope.currentOp = globalVarFactory.skeleton(selectedNode);
                 $scope.inputs = $scope.currentOp.inputs;
+                globalVarFactory.setEdition();
             };
             $scope.delOperation = function ( op) {
                 globalVarFactory.gDelete($scope.operations,op) ;

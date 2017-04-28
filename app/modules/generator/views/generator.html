@@ -1,17 +1,21 @@
 <!--new module popup-->
 <script type="text/ng-template" id="new.html" >
-    <div class="modal-module-editing" style="top: 200px !important; ">
-        <div class="modal-header">
-            <h5 class="modal-title" id="modal-title">
-                <i class="glyphicon glyphicon-th"></i>
-                new module
-            </h5>
-        </div>
-        <div class="modal-body" id="modal-body">
-            <input type="text" class="form-control" placeholder="Type a module name" ng-model="moduleName">
-        </div>
-        <div class="modal-footer">
-            <button class="floatingPanel" type="button" ng-click="editModule('create')">Create</button>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -36,27 +40,31 @@
 </script>
 
 <div class="row" style=" z-index: 0 !important;">
-    <div  class="col-md-8 col-md-offset-2">
+    <div  class="col-md-10 col-md-offset-1">
         <div id="header" style=" display: block; margin: 15px 15px 7px 15px">
-            <span>Modules</span>
+            <span>Recents Projects</span>
         </div>
-        <div ng-repeat="item in usermodules" class="floatingPanel modules" >
-            <a ui-sref="root.generator.dashboard({name:item.name})" style="text-decoration: none; color: #808080 !important;">
-                <div class="moduleInfo" style="padding: 15px 15px 7px 15px;  ">
-                    <img src="app/assets/images/m.jpg" alt="">
-                    <span><b>{{item.name}}</b> <small>{{item.date}}</small></span>
+        <div class="col-md-12">
+            <div class="row" style="display: flex;">
+                <div ng-repeat="item in usermodules" class="floatingPanel modules" >
+                    <a ui-sref="root.generator.dashboard({name:item.name})" style="text-decoration: none; color: #808080 !important;">
+                        <div class="moduleInfo" style="padding: 15px 15px 7px 15px;  ">
+                            <span class="glyphicon glyphicon-th-large"></span>
+                            <b>{{item.name}} </b>
+                        </div>
+                        <div class="group_content" style="padding: 15px 15px 7px 15px; margin-top: 115px;">
+                            <!--<span>Create on </span>-->
+                            <div class="moduledesc" style="/* margin-top: 35px;*/">
+                                <!--<small>Description </small>-->
+                                <!--<p style="text-align: justify; ">-->
+                                    <!--{{item.desc}}-->
+                                <!--</p>-->
+                                <small>{{item.date}}</small>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <div class="moduledesc" style="padding: 0px 15px 7px 50px">
-                    <p style="text-align: justify; ">
-                        <small>Description: </small>
-                        {{item.desc}}
-                    </p>
-                </div>
-            </a>
-
+            </div>
         </div>
-
     </div>
-
-
 </div>

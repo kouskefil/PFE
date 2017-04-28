@@ -45,7 +45,7 @@
             <span style="font-size: small; color: #0084bf;">Operation Input Params</span>
             <ul style="list-style: none; float: right; font-size: xx-small; display: flex;    margin-bottom: 0px; width: 60px;height: 20px;padding-left: 50px;">
                 <li style="margin: 0" >
-                 <span style="z-index: 1005"  class="glyphicon glyphicon-plus "></span>
+                 <span  class="glyphicon glyphicon-plus g-action"></span>
                 </li>
             </ul>
     </div>
@@ -86,14 +86,15 @@
        </select>
       </div>
       <div  class="form-group">
-       <label for="select15">input location</label>
-       <select name="select15" id="select15" ng-model="input.location" class="form-control" ><option ng-repeat='item in inputLocation' value="{{item.rvalue}}"> {{item.dvalue}}
+       <label for="select15">default value</label>
+       <select name="select15" id="select15" ng-model="input.dv" class="form-control" ><option ng-repeat='item in inputLocation' value="{{item.rvalue}}"> {{item.dvalue}}
        </option>
        </select>
       </div>
-      <div class="form-group">
-       <input class=" form-control"  placeholder="input module" name="input16" id="input16" type="text" ng-model="input.module"/>
-      </div> <!-- div id:input16 -->
+      <div >
+       <label for="input0">optional</label>
+       <input name="input30" id="input0" type="checkbox" ng-model="currentComponent.optional"/>
+      </div> <!-- div id:input30 -->
       <button  class="floatingPanel" ng-click="AddInput()">add input</button>
       <button  class="floatingPanel" ng-click="clear()">clear input</button>
      </div> <!-- group141 ends-->
@@ -117,8 +118,8 @@
       <span class="item-label">{{item.name}}</span>
      </div>
      <div class="col-md-3 action" >
-      <span class="glyphicon glyphicon-edit action-item action-edit" data-ng-click="cclick(item)" ></span>
       <span class="glyphicon glyphicon-trash action-item action-delete" data-ng-click="delOperation(item)"></span>
+      <span class="glyphicon glyphicon-edit action-item action-edit" data-ng-click="cclick(item)" ></span>
      </div>
     </div>
    </li>

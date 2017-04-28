@@ -128,7 +128,66 @@ function input {
 
     echo "</div> <!-- div id:$id -->"  >> $2
 }
+function dropdown {
+   local    label=`echo $1 | jq -r '.label'`
+   local    id=`echo $1 | jq -r '.id'`
+   local    class=`echo $1 | jq -r '.class'`
 
+    echo -n "<script type=\"text/ng-template\" id=\"$id.html\">" >> $2
+    echo -n "<div class=\"dropdown-menu $class\" >" >> $2
+     foreach "$1" $2 $3
+    echo -n "<div>" >>$2
+    echo -n "</script>" >>$2
+}
+function modal {
+    local    label=`echo $1 | jq -r '.label'`
+    local    id=`echo $1 | jq -r '.id'`
+    local    class=`echo $1 | jq -r '.class'`
+    local    icon=`echo $1 | jq -r '.icon'`
+    local    style=`echo $1 | jq -r '.style'`
+
+   echo "<script type=\"text/ng-template\" id=\"$id.html\">" >> $2
+   echo "<div class=\"$class\" style=\"$style\">" >> $2
+   echo "<div class=\"modal-header\">" >> $2
+   echo "<h5 class=\"modal-title\" id=\"modal-title1\">" >> $2
+   echo "<i class=\"$icon\"></i>" >> $2
+   echo $label >> $2
+   echo "</h5>" >> $2
+   echo "</div>" >> $2
+   echo "<div class=\"modal-body\" id=\"modal-body1\">" >> $2
+         foreach "$1" $2 $3
+   echo "</div>" >> $2
+   echo "</div>" >> $2
+   echo "</script>" >> $2
+
+}
+
+function _ul {
+  local    label=`echo $1 | jq -r '.class'`
+  local    attrs=`echo $1 | jq -r '.otherAttr'`
+
+  echo "<ul " >> $2
+  classmaker "$1" $2 $3
+  if [ "$attrs" != "null" ]; then
+    echo $attrs >> $2
+  fi
+    echo ">" >> $2
+      foreach "$1" $2 $3
+  echo "</ul>"
+}
+function _li {
+  local    label=`echo $1 | jq -r '.class'`
+  local    attrs=`echo $1 | jq -r '.otherAttr'`
+
+    echo "<li " >> $2
+    classmaker "$1" $2 $3
+    if [ "$attrs" != "null" ]; then
+        echo $attrs >> $2
+    fi
+    echo ">" >> $2
+      foreach "$1" $2 $3
+  echo "</li>"
+}
 function button {
     local    label=`echo $1 | jq -r '.label'`
     local    div=`echo $1 | jq -r '.div'`
@@ -698,13 +757,17 @@ function view_generator {
 	    ;;
 	"list")  list "$1" $2 $3
 	    ;;
+    "ul")  _ul "$1" $2 $3
+	    ;;
+    "li")  _li "$1" $2 $3
+	    ;;
 	"table")  table "$1" $2 $3
 	    ;;
 	"tab")  tab "$1" $2 $3
 	    ;;
-	"wizard")  form_wizard "$1" $2 $3
+	"modal")  modal "$1" $2 $3
             ;;
-	"wizard_level")  wizardlvl "$1" $2 $3
+	"dropdown")  dropdown "$1" $2 $3
             ;;
 	*)  echo "type: $type not expected"
 	    ;;

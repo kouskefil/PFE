@@ -1,7 +1,34 @@
 <!-- Generated html file -->
-<div id="content"  class=" row content-inner col-md-10 "> <!-- content begins-->
-<div class="form-group">
-<label for="input2">upload workflowfile</label>
-<input class=" form-control"  placeholder="upload workflowfile" name="input2" id="input2" type="file" ng-model="fileModel"/>
-</div> <!-- div id:input2 -->
-</div> <!-- content ends-->
+
+<!--upload modal-->
+<script type="text/ng-template" id="upload.html" >
+    <div class="modal-module-editing" style="top: 200px !important; ">
+        <div class="modal-header">
+            <h5 class="modal-title" id="modal-title1">
+                <i class="glyphicon glyphicon-retweet"></i>
+                Workflow script
+            </h5>
+        </div>
+        <div class="modal-body" id="modal-body1">
+            <input type="file" class="form-control" value="Browse"  file-model="fileModel">
+        </div>
+        <div class="modal-footer">
+            <button class="floatingPanel" type="button" ng-click="editModule('upload')">UPLOAD</button>
+        </div>
+    </div>
+
+</script>
+
+<div id="content"  style="padding: 0; "  class="row content-inner col-md-10 col-md-offset-1 "> <!-- content begins-->
+    <div id=""  style="padding:0; "  class=" col-md-10 "> <!-- path begins-->
+        <div class="floatingPanel col-md-12 " style="height: 422px;margin-bottom: 15px; padding: 0">
+                <div class="g_header" style="padding: 10px 15px; margin: 0">
+                    <span class="glyphicon glyphicon-retweet" style="padding-right: 10px;"></span>
+                    <span style="font-size: small; color: #0084bf;">Workflow</span>
+                </div>
+            <div style="padding: 15px 15px">
+
+            </div>
+        </div>
+    </div>
+</div>

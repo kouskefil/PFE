@@ -1,593 +1,173 @@
-{
-	"simple": [
-		{
-			"type": "input",
-			"categorie": "simple",
-			"container": false,
-			"img": "fa fa-edit"
-		},
-		{
-			"type": "hx",
-			"categorie": "simple",
-			"container": false,
-			"img": "fa fa-header"
-		},
-		{
-			"type": "i",
-			"categorie": "simple",
-			"container": false,
-			"img": "fa fa-italic"
-		},
-		{
-			"type": "radio",
-			"categorie": "simple",
-			"container": true,
-			"img": "fa fa-dot-circle-o",
-			"designs": [
-				{
-					"type": "text",
-					"name": "Style",
-					"placeholder": "component style ",
-					"class": "form-control",
-					"model": "currentComponent.style"
-				},
-				{
-					"type": "text",
-					"name": "class",
-					"placeholder": "component css class ",
-					"class": "form-control",
-					"model": "currentComponent.class"
-				},
-				{
-					"type": "checkbox",
-					"name": "dynamic class",
-					"class": "checkbox-inline",
-					"model": "currentComponent.model"
-				}
-			],
-			"views": [
-				{
-					"type": "text",
-					"name": "id",
-					"placeholder": "component id ",
-					"class": "form-control",
-					"model": "currentComponent.id"
-				},
-				{
-					"type": "text",
-					"name": "label",
-					"placeholder": "component label ",
-					"class": "form-control",
-					"model": "currentComponent.label"
-				},
-				{
-					"type": "select",
-					"name": "separator",
-					"class": "form-control",
-					"model": "currentComponent.separator"
-				},
-				{
-					"type": "textarea",
-					"name": "options",
-					"placeholder": "radio group option ",
-					"class": "form-control",
-					"model": "currentComponent.options"
-				}
-			],
-			"controllers": [
-				{
-					"type": "text",
-					"name": "model",
-					"placeholder": "component model ",
-					"class": "form-control",
-					"model": "currentComponent.model"
-				}
-			]
+  {
+      "simple": [
+          {
+              "type": "input",
+              "categorie": "simple",
+              "container": false,
+              "img": "fa fa-edit"
+          },
+          {
+              "type": "hx",
+              "categorie": "simple",
+              "container": false,
+              "img": "fa fa-header"
+          },
+          {
+              "type": "i",
+              "categorie": "simple",
+              "container": false,
+              "img": "fa fa-italic"
+          },
+          {
+              "type": "radio",
+              "categorie": "simple",
+              "container": true,
+              "img": "fa fa-dot-circle-o"
+          },
+          {
+              "type": "textarea",
+              "categorie": "simple",
+              "container": false,
+              "img": "fa fa-text-height"
+          },
+          {
+              "type": "button",
+              "categorie": "simple",
+              "container": false,
+              "img": "fa fa-square"
+          },
+          {
+              "type": "select",
+              "categorie": "simple",
+              "container": false,
+              "img": "fa fa-chevron-down"
+          },
+          {
+              "type": "label",
+              "categorie": "simple",
+              "container": false,
+              "img": "fa  fa-font"
+          },
+          {
+              "type": "hr",
+              "categorie": "simple",
+              "container": false,
+              "img": "fa fa-minus"
+          },
+          {
+              "type": "<p>",
+              "categorie": "simple",
+              "container": false,
+              "img": "fa  fa-paragraph"
+          },
+          {
+              "type": "span",
+              "categorie": "simple",
+              "container": false,
+              "img": "fa  fa-arrows-h"
+          },
+          {
+              "type": "img",
+              "categorie": "simple",
+              "container": false,
+              "img": "fa fa-picture-o"
+          }
 
-		},
-		{
-			"type": "textarea",
-			"categorie": "simple",
-			"container": false,
-			"img": "fa fa-text-height",
-			"designs": [
-				{
-					"type": "text",
-					"name": "Style",
-					"placeholder": "component style ",
-					"class": "form-control",
-					"model": "currentComponent.style"
-				},
-				{
-					"type": "text",
-					"name": "class",
-					"placeholder": "component css class ",
-					"class": "form-control",
-					"model": "currentComponent.class"
-				},
-				{
-					"type": "checkbox",
-					"name": "dynamic class",
-					"class": "checkbox-inline",
-					"model": "currentComponent.model"
-				}
-			],
-			"views": [
-				{
-					"type": "text",
-					"name": "id",
-					"placeholder": "component id ",
-					"class": "form-control",
-					"model": "currentComponent.id"
-				},
-				{
-					"type": "text",
-					"name": "label",
-					"placeholder": "component label ",
-					"class": "form-control",
-					"model": "currentComponent.label"
-				},
-				{
-					"type": "number",
-					"name": "rows",
-					"placeholder": "textarea rows ",
-					"class": "form-control",
-					"model": "currentComponent.rows"
-				},
-				{
-					"type": "number",
-					"name": "cols",
-					"placeholder": "textarea cols ",
-					"class": "form-control",
-					"model": "currentComponent.cols"
-				},
-				{
-					"type": "checkbox",
-					"name": "code mirror",
-					"class": "checkbox-inline",
-					"model": "currentComponent.codesource"
-				},
-				{
-					"type": "checkbox",
-					"name": "read only",
-					"class": "checkbox-inline",
-					"model": "currentComponent.ronly"
-				},
-				{
-					"type": "checkbox",
-					"name": "required",
-					"class": "checkbox-inline",
-					"model": "currentComponent.required"
-				}
+      ],
+      "widget": [
+          {
+              "type": "search",
+              "categorie": "composite",
+              "container": false,
+              "img": "fa fa-search"
+          },
+          {
+              "type": "treeview",
+              "categorie": "composite",
+              "container": false,
+              "img": "fa fa-tree"
+          },
+          {
+          "type": "view",
+          "categorie": "group",
+          "container": false,
+          "img": "fa  fa-eye"
+        },
+          {
+            "type": "modal",
+            "categorie": "composite",
+            "container": true,
+            "img": "glyphicon glyphicon-modal-window"
+          },
+         {
+          "type": "ul",
+          "categorie": "composite",
+          "container": true,
+          "img": "fa fa-list-alt "
+        },
+        {
+          "type": "li",
+          "categorie": "composite",
+          "container": true,
+          "img": "fa fa-list "
+        }
 
+      ],
+      "container": [
+          {
+              "type": "tab",
+              "categorie": "composite",
+              "container": true,
+              "img": "fa  fa-navicon"
+          },
+          {
+              "type": "dropdown",
+              "categorie": "composite",
+              "container": true,
+              "img": "fa  fa-toggle-down"
+          },
+          {
+              "type": "wizard",
+              "categorie": "composite",
+              "container": true,
+              "img": "fa  fa-navicon"
+          },
+          {
+              "type": "wizard_level",
+              "categorie": "composite",
+              "container": true,
+              "img": "fa fa-step-forward"
+          },
+          {
+              "type": "form",
+              "categorie": "group",
+              "container": true,
+              "img": "fa  fa-file-text-o"
+          },
+          {
+              "type": "group",
+              "categorie": "group",
+              "container": true,
+              "img": "fa  fa-folder"
+          },
+          {
+              "type": "table",
+              "categorie": "group",
+              "container": false,
+              "img": "fa fa-table"
+          },
+          {
+              "type": "link",
+              "categorie": "simple",
+              "container": true,
+              "img": "fa  fa-link"
+          },
+          {
+              "type": "list",
+              "categorie": "composite",
+              "container": true,
+              "img": "fa  fa-list"
+          }
+      ]
 
-			],
-			"controllers": [
-				{
-					"type": "text",
-					"name": "model",
-					"placeholder": "component.model",
-					"class": "form-control",
-					"model": "currentComponent.model"
-				}
-			]
-		},
-		{
-			"type": "button",
-			"categorie": "simple",
-			"container": false,
-			"img": "fa fa-square",
-			"designs": [
-				{
-					"type": "text",
-					"name": "Style",
-					"placeholder": "component style ",
-					"class": "form-control",
-					"model": "currentComponent.style"
-				},
-				{
-					"type": "text",
-					"name": "class",
-					"placeholder": "component css class ",
-					"class": "form-control",
-					"model": "currentComponent.class"
-				},
-				{
-					"type": "checkbox",
-					"name": "dynamic class",
-					"class": "checkbox-inline",
-					"model": "currentComponent.model"
-				}
-			],
-			"views": [
-				{
-					"type": "text",
-					"name": "id",
-					"placeholder": "component id ",
-					"class": "form-control",
-					"model": "currentComponent.id"
-				},
-				{
-					"type": "text",
-					"name": "label",
-					"placeholder": "component label ",
-					"class": "form-control",
-					"model": "currentComponent.label"
-				},
-				{
-					"type": "checkbox",
-					"name": "div",
-					"class": "checkbox-inline",
-					"model": "currentComponent.div"
-				},
-				{
-					"type": "radio",
-					"name": "static icon",
-					"class": "radio-inline",
-					"model": "currentComponent.static_icon"
-				},
-				{
-					"type": "radio",
-					"name": "dynamic icon",
-					"class": "radio-inline",
-					"model": "currentComponent.static_icon"
-				},
-				{
-					"type": "text",
-					"name": "icon",
-					"placeholder": "component icon ",
-					"class": "form-control",
-					"model": "currentComponent.icon"
-				}
-			],
-			"controllers": [
-				{
-					"type": "text",
-					"name": "model",
-					"placeholder": "component model ",
-					"class": "form-control",
-					"model": "currentComponent.model"
-				},
-				{
-					"type": "text",
-					"name": "method",
-					"placeholder": "component method ",
-					"class": "form-control",
-					"model": "currentComponent.method"
-				},
-				{
-					"type": "text",
-					"name": "success",
-					"placeholder": "component success function ",
-					"class": "form-control",
-					"model": "currentComponent.success"
-				},
-				{
-					"type": "text",
-					"name": "fail",
-					"placeholder": "component fail function ",
-					"class": "form-control",
-					"model": "currentComponent.fail"
-				}
-			]
-		},
-		{
-			"type": "select",
-			"categorie": "simple",
-			"container": false,
-			"img": "fa fa-chevron-down"
-		},
-		{
-			"type": "label",
-			"categorie": "simple",
-			"container": false,
-			"img": "fa  fa-font"
-		},
-		{
-			"type": "hr",
-			"categorie": "simple",
-			"container": false,
-			"img": "fa fa-minus"
-		},
-		{
-			"type": "<p>",
-			"categorie": "simple",
-			"container": false,
-			"img": "fa  fa-paragraph"
-		},
-		{
-			"type": "span",
-			"categorie": "simple",
-			"container": false,
-			"img": "fa  fa-arrows-h"
-		},
-		{
-			"type": "img",
-			"categorie": "simple",
-			"container": false,
-			"img": "fa fa-picture-o"
-		}
-
-	],
-	"widget": [
-		{
-			"type": "search",
-			"categorie": "composite",
-			"container": false,
-			"img": "fa fa-search"
-		},
-		{
-			"type": "treeview",
-			"categorie": "composite",
-			"container": false,
-			"img": "fa fa-tree"
-		},
-		{
-			"type": "view",
-			"categorie": "group",
-			"container": false,
-			"img": "fa  fa-eye",
-			"class": [
-				"class_view 1",
-				"class_view 2",
-				"class_view 3"
-			]
-		}
-	],
-	"container": [
-		{
-			"type": "tab",
-			"categorie": "composite",
-			"container": true,
-			"img": "fa  fa-navicon"
-		},{
-			"type": "wizard",
-			"categorie": "composite",
-			"container": true,
-			"img": "fa  fa-navicon"
-		},
-		{
-			"type": "wizard_level",
-			"categorie": "composite",
-			"container": true,
-			"img": "fa fa-step-forward"
-		},
-		{
-			"type": "form",
-			"categorie": "group",
-			"container": true,
-			"img": "fa  fa-file-text-o"
-		},
-		{
-			"type": "group",
-			"categorie": "group",
-			"container": true,
-			"img": "fa  fa-folder"
-		},
-		{
-			"type": "table",
-			"categorie": "group",
-			"container": false,
-			"img": "fa fa-table",
-			"designs": [
-				{
-					"type": "text",
-					"name": "Style",
-					"placeholder": "component style ",
-					"class": "form-control",
-					"model": "currentComponent.style"
-				},
-				{
-					"type": "text",
-					"name": "class",
-					"placeholder": "component css class ",
-					"class": "form-control",
-					"model": "currentComponent.class"
-				},
-				{
-					"type": "checkbox",
-					"name": "dynamic class",
-					"class": "checkbox-inline",
-					"model": "currentComponent.model"
-				}
-			],
-			"views": [
-				{
-					"type": "text",
-					"name": "id",
-					"placeholder": "component id ",
-					"class": "form-control",
-					"model": "currentComponent.id"
-				},
-				{
-					"type": "text",
-					"name": "label",
-					"placeholder": "component label ",
-					"class": "form-control",
-					"model": "currentComponent.label"
-				},
-				{
-					"type": "text",
-					"name": "name",
-					"placeholder": "component name ",
-					"class": "form-control",
-					"model": "currentComponent.name"
-				},
-				{
-					"type": "checkbox",
-					"name": "read only",
-					"class": "checkbox-inline",
-					"model": "currentComponent.ronly"
-				},
-				{
-					"type": "checkbox",
-					"name": "required",
-					"class": "checkbox-inline",
-					"model": "currentComponent.required"
-				},
-				{
-					"type": "select",
-					"name": "type",
-					"data": [
-						"text",
-						"password",
-						"number",
-						"email",
-						"checkbox"
-					],
-					"class": "form-control",
-					"model": "currentComponent.type"
-				}
-			],
-			"controllers": [
-				{
-					"type": "text",
-					"name": "model",
-					"placeholder": "component model ",
-					"class": "form-control",
-					"model": "currentComponent.model"
-				},
-				{
-					"type": "text",
-					"name": "headers collection",
-					"placeholder": "component headers collection ",
-					"class": "form-control",
-					"model": "currentComponent.collection"
-				},
-				{
-					"type": "checkbox",
-					"name": "resolve",
-					"class": "checkbox-inline",
-					"model": "currentComponent.resolve"
-				}
-			]
-		},
-		{
-			"type": "link",
-			"categorie": "simple",
-			"container": true,
-			"img": "fa  fa-link",
-			"designs": [
-				{
-					"type": "text",
-					"name": "Style",
-					"placeholder": "component style ",
-					"class": "form-control",
-					"model": "currentComponent.style"
-				},
-				{
-					"type": "text",
-					"name": "class",
-					"placeholder": "component css class ",
-					"class": "form-control",
-					"model": "currentComponent.class"
-				},
-				{
-					"type": "checkbox",
-					"name": "dynamic class",
-					"class": "checkbox-inline",
-					"model": "currentComponent.model"
-				}
-			],
-			"views": [
-				{
-					"type": "text",
-					"name": "id",
-					"placeholder": "component id",
-					"class": "form-control",
-					"model": "currentComponent.id"
-				},
-				{
-					"type": "text",
-					"name": "label",
-					"placeholder": "component label",
-					"class": "form-control",
-					"model": "currentComponent.label"
-				},
-				{
-					"type": "text",
-					"name": "click",
-					"placeholder": "fonction to be call on click ",
-					"class": "form-control",
-					"model": "currentComponent.click"
-				}
-			],
-			"controllers": [
-				{
-					"type": "text",
-					"name": "model",
-					"placeholder": "component model ",
-					"class": "form-control",
-					"model": "currentComponent.model"
-				}
-			]
-		},
-		{
-			"type": "list",
-			"categorie": "composite",
-			"container": true,
-			"img": "fa  fa-list",
-			"designs": [
-				{
-					"type": "text",
-					"name": "Style",
-					"placeholder": "component style ",
-					"class": "form-control",
-					"model": "currentComponent.style"
-				},
-				{
-					"type": "text",
-					"name": "class",
-					"placeholder": "component css class ",
-					"class": "form-control",
-					"model": "currentComponent.class"
-				},
-				{
-					"type": "checkbox",
-					"name": "dynamic class",
-					"class": "checkbox-inline",
-					"model": "currentComponent.model"
-				}
-			],
-			"views": [
-				{
-					"type": "text",
-					"name": "id",
-					"placeholder": "component id",
-					"class": "form-control",
-					"model": "currentComponent.id"
-				},
-				{
-					"type": "text",
-					"name": "label",
-					"placeholder": "component label ",
-					"class": "form-control",
-					"model": "currentComponent.label"
-				},
-				{
-					"type": "text",
-					"name": "parent",
-					"placeholder": "component parent ",
-					"class": "form-control",
-					"model": "currentComponent.parent"
-				}
-			],
-			"controllers": [
-				{
-					"type": "text",
-					"name": "model",
-					"placeholder": "component model ",
-					"class": "form-control",
-					"model": "currentComponent.model"
-				},
-				{
-					"type": "checkbox",
-					"name": "resolve",
-					"class": "checkbox-inline",
-					"model": "currentComponent.resolve"
-				}
-			]
-		}
-	]
-
-}
+  }

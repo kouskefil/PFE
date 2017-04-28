@@ -46,70 +46,60 @@
                     }
                 ];
                 $scope.resources = globalVarFactory.getResources();
+                $scope.RscParent = [];
                 $scope.RscParent = globalVarFactory.getParent();
-                $scope.currentRsc = globalVarFactory.rscSkeleton();
-                $scope.ids = globalVarFactory.getOperations();
 
+                $scope.currentRsc = globalVarFactory.rscSkeleton({responses:[]});
+
+                $scope.ids = globalVarFactory.getOperations();
                 $scope.setCurrentRsc = function (rsc) {
                    globalVarFactory.setCurrentRsc(rsc);
                 };
                 $scope.cclick = function (selectedNode) {
                     // $scope.setCurrentRsc(selectedNode);
                     globalVarFactory.setCurrentRsc(selectedNode);
-                    $scope.currentRsc = globalVarFactory.getCurrentRsc();
+                    $scope.currentRsc = globalVarFactory.rscSkeleton(selectedNode);
                     $scope.methods = $scope.currentRsc.methods;
+                    $scope.requests = $scope.currentRsc.requests;
                     // console.log($scope.methods);
                 };
               
                 $scope.addMethod = function () {
                     globalVarFactory.addMethod($scope.currentRsc.method);
-                    console.log(globalVarFactory.getModule());
+                    $scope.currentRsc.method = {};
                 };
                 $scope.getMethod = function (method) {
-                    $scope.currentMtd = method;
-                    console.log('method');
-                    console.log($scope.currentMtd );
+                    $scope.currentRsc.method = method;
+                    $scope.requests = globalVarFactory.gLookupByAttribute(globalVarFactory.getOperations(),'name', method.id).inputs;
+                    $scope.responses = method.responses;
+                    $scope.editMethod = 'editMethod';
+                    // $scope.method =  method ;
                 };
-               
-                $scope.addResponse = function () {
-                    if($scope.currentMtd.responses){
-                        $scope.currentMtd.responses.push($scope.currentRsc.response);
-                    }
-                    else{
-                        $scope.currentMtd.responses = [];
-                        $scope.currentMtd.responses.push($scope.currentRsc.response);
-                    }
-                    $scope.currentRsc.response = {};
-                };
-                // $scope.toggled = function(open) {
-                //     $log.log('Dropdown is now: ', open);
-                // };
 
+                $scope.addResponse = function(method){
 
-
-                $scope.respAdd = function(){
                     var i, found = -1;
                     var resp;
-
+                    if(!method.responses)
+                        method.responses = [];
                     if($scope.currentRsc.response.name){
-                        for(i=0; i < $scope.currentRsc.method.responses.length; i++){
-                            if($scope.currentRsc.method.responses[i].representations[0].param.name == $scope.currentRsc.response.name){
+                        for(i=0; i < method.responses.length; i++){
+                            if(method.responses[i].representations[0].param.name === $scope.currentRsc.response.name){
                                 found = i;
                                 break;
                             }
                         }
-                        if(found == -1){
+                        if(found === -1){
                             resp = {
                                 representations: [{"param": {
                                     name: $scope.currentRsc.response.name,
                                     options : []
                                 }}]
                             };
-                            $scope.currentRsc.methods.responses.push(resp);
-
+                            method.responses.push(resp);
                         }
                         else
-                            resp = $scope.currentRsc.methods.responses[found];
+                            resp = method.responses[found];
                         if($scope.currentRsc.response.mediatype)
                             resp.representations[0].param.options.push({value: $scope.currentRsc.response.value,
                                 mediatype : $scope.currentRsc.response.mediatype});
@@ -118,12 +108,16 @@
                                 mediatype : "application/json"});
                     }
                     else{
-                        $scope.currentRsc.methods.responses.push({
+                        method.responses.push({
                             representations: [{"mediaType": "text/html"}]
                         });
                     }
-
+                    $scope.responses = method.responses;
+                    console.log(method);
                     $scope.currentRsc.response = {};
+                };
+                $scope.setmethoddropdownstyle = function(){
+                    $scope.editMethod= 'addmethod';
                 }
             }])
         });
