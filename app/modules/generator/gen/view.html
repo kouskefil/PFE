@@ -106,8 +106,7 @@ data-tree-actions="treeActions"
 </ul>
 </uib-tab> <!--end-->
 <uib-tab index="77"  heading="configs"> <!--begins-->
-<span  style="margin-bottom:10px; font-size:25px; color:#1A7CB9"  class="">state configurations
-</span>
+<span  style="margin-bottom:10px; font-size:25px; color:#1A7CB9"  class="" id="span84" >state configurations</span>
 <div id="group82"  class=" col-md-12 "> <!-- group82 begins-->
 <div id="group93"  style="border-right: 1px solid #aaa"  class=" col-md-6"> <!-- group93 begins-->
 <div class="form-group">
@@ -162,8 +161,8 @@ data-tree-actions="treeActions"
 <div  class="components" ng-repeat='item in HTMLcomponents.simple'>
 <a ui-sref="root.views.properties({label:item.label, type:item.type, num:currentComponent.num})" ng-click='add(item)'>
 <div id="group39"  class="sizer col-md-6 "> <!-- group39 begins-->
-<span >{{item.type}}</span>
-<span  class="{{item.img}}"></span>
+<span  id="span40" >{{item.type}}</span>
+<span  class="{{item.img}}" id="span41" ></span>
 </div> <!-- group39 ends-->
 </a>
 </div>
@@ -174,8 +173,8 @@ data-tree-actions="treeActions"
 <div  class="components" ng-repeat='item in HTMLcomponents.container'>
 <a ui-sref="root.views.properties({label:item.label, type:item.type, num:currentComponent.num})" ng-click='add(item)'>
 <div id="group50"  class="sizer col-md-6 "> <!-- group50 begins-->
-<span >{{item.type}}</span>
-<span  class="{{item.img}}"></span>
+<span  id="span51" >{{item.type}}</span>
+<span  class="{{item.img}}" id="span52" ></span>
 </div> <!-- group50 ends-->
 </a>
 </div>
@@ -186,8 +185,8 @@ data-tree-actions="treeActions"
 <div  class="components" ng-repeat='item in HTMLcomponents.widget'>
 <a ui-sref="root.views.properties({label:item.label, type:item.type, num:currentComponent.num})" ng-click='add(item)'>
 <div id="group55"  class="sizer col-md-6 "> <!-- group55 begins-->
-<span >{{item.type}}</span>
-<span  class="{{item.img}}">{{item.views}}</span>
+<span  id="span56" >{{item.type}}</span>
+<span  class="{{item.img}}" id="span57" >{{item.views}}</span>
 </div> <!-- group55 ends-->
 </a>
 </div>

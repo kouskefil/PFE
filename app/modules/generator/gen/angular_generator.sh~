@@ -8,7 +8,7 @@ function classmaker {
     local nclass
     #echo "classmaker: $1 class: $class"
     if [ "$style" != "null" ]; then
-	echo -n " style=\"$style\" " >> $2
+	echo -n " style=\"$style\"" >> $2
     fi
 
     if [ "$class" != "null" ]; then
@@ -22,7 +22,7 @@ function classmaker {
 	    nclass=$class
 	fi
 
-	echo -n " class=\"$nclass\"" >> $2
+	echo -n "class=\"$nclass\"" >> $2
     fi
 
 }
@@ -128,77 +128,7 @@ function input {
 
     echo "</div> <!-- div id:$id -->"  >> $2
 }
-function dropdown {
-   local    id=`echo $1 | jq -r '.id'`
-  local    attrs=`echo $1 | jq -r '.otherAttr'`
 
-    echo  "<script type=\"text/ng-template\" id=\"$id.html\">" >> $2
-    echo -n "<div class=\"dropdown-menu " >> $2
-    classmaker2 "$1" $2 $3
-    echo -n "\"" >> $2
-    if [ "$attrs" != "null" ]; then
-        echo " $attrs>" >> $2
-    fi
-
-     foreach  "$1" $2 $3
-    echo  "</div>" >>$2
-    echo  "</script>" >>$2
-}
-function modal {
-    local    label=`echo $1 | jq -r '.label'`
-    local    id=`echo $1 | jq -r '.id'`
-    local    class=`echo $1 | jq -r '.class'`
-    local    icon=`echo $1 | jq -r '.icon'`
-    local    style=`echo $1 | jq -r '.style'`
-
-   echo "<script type=\"text/ng-template\" id=\"$id.html\">" >> $2
-   echo "<div class=\"$class\" style=\"$style\">" >> $2
-   echo "<div class=\"modal-header\">" >> $2
-   echo "<h5 class=\"modal-title\" id=\"modal-title1\">" >> $2
-   echo "<i class=\"$icon\"></i>" >> $2
-   echo $label >> $2
-   echo "</h5>" >> $2
-   echo "</div>" >> $2
-   echo "<div class=\"modal-body\" id=\"modal-body1\">" >> $2
-         foreach "$1" $2 $3
-   echo "</div>" >> $2
-   echo "</div>" >> $2
-   echo "</script>" >> $2
-
-}
-
-function _ul {
-  local    label=`echo $1 | jq -r '.class'`
-  local    attrs=`echo $1 | jq -r '.otherAttr'`
-  local    style=`echo $1 | jq -r '.style'`
-
-  echo -n "<ul " >> $2
-  classmaker "$1" $2 $3
-  if [ "$attrs" != "null" ]; then
-    echo -n " $attrs " >> $2
-  fi
-    echo  ">" >> $2
-      foreach "$1" $2 $3
-  echo  "</ul>"  >> $2
-}
-function _li {
-  local    label=`echo $1 | jq -r '.class'`
-  local    attrs=`echo $1 | jq -r '.otherAttr'`
-  local    collection=`echo $1 | jq -r '.collection'`
-  local    style=`echo $1 | jq -r '.style'`
-
-    echo -n "<li " >> $2
-    classmaker "$1" $2 $3
-     if [ "$attrs" != "null" ]; then
-        echo -n " $attrs" >> $2
-    fi
-    if [ "$collection" != "null" ]; then
-        echo -n "ng-repeat=\" item in $collection\"" >> $2
-    fi
-    echo  ">" >> $2
-      foreach "$1" $2 $3
-  echo  "</li>"  >> $2
-}
 function button {
     local    label=`echo $1 | jq -r '.label'`
     local    div=`echo $1 | jq -r '.div'`
@@ -209,7 +139,7 @@ function button {
 	classmaker "$1" $2 $3
 	echo "<a href=\"\" ng-click=\"$method\">$label</a></div>" >> $2
     else
-	echo -n "<button " >> $2
+	echo -n "<button" >> $2
 	classmaker "$1" $2 $3
 	echo " ng-click=\"$method()\">$label</button>" >> $2
     fi
@@ -323,19 +253,22 @@ function radio {
 }
 
 function img {
-   
+    local    label=`echo $1 | jq -r '.label'`
     local    alt=`echo $1 | jq -r '.alt'`
-    local    src=`echo $1 | jq -r '.src'`
-    echo -n "<img " >> $2
+
+    echo -n "<div"  >> $2
     classmaker "$1" $2 $3
-    echo " src=\"$src\" alt=\"$alt\"/>" >> $2
+    echo ">"  >> $2
+
+    echo "<img src=\"$label\" alt=\"$alt\"/>" >> $2
+
+    echo "</div>" >> $2
 }
 
 function span {
     local   model=`echo $1 | jq -r '.model'`
     local   label=`echo $1 | jq -r '.label'`
-    local   id=`echo $1 | jq -r '.id'`
-    local    attrs=`echo $1 | jq -r '.otherAttr'`
+
 
     local nmodel
 
@@ -347,17 +280,11 @@ function span {
 
     echo -n "<span "  >> $2
     classmaker "$1" $2  $3
-    if [ "$attrs" != "null" ]; then
-      echo -n " $attrs" >> $2
-    fi
-    if [ "$id" != "null" ]; then
-        echo -n " id=\"$id\" " >> $2
-    fi
     echo -n ">" >> $2
     if [ "$model" != "null" ]; then
         echo -n "{{$nmodel}}" >> $2
     elif [ "$label" != "null" ]; then
-	echo -n "$label" >> $2
+	echo "$label" >> $2
     fi
     echo "</span>" >> $2
 }
@@ -405,95 +332,7 @@ function treeview {
 
 }
 
-#function group {
-#
-#    local    src=`echo $1 | jq -r '.src'`
-#    local    label=`echo $1 | jq -r '.label'`
-#    local    num=`echo $1 | jq -r '.num'`
-#    local    collapsible=`echo $1 | jq -r '.collapsible'`
-#    local    id=`echo $1 | jq -r '.id'`
-#    local    pos=`echo $1 | jq -r '.position'`
-#    local    width=`echo $1 | jq -r '.width'`
-#    local    class=`echo $1 | jq -r '.class'`
-#    local    row=`echo $1 | jq -r '.row'`
-#    local    offset
-#    local    icon=`echo $1 | jq -r '.icon'`
-#    local    gtype=`echo $1 | jq -r '.group_type'`
-#    local    expr=`echo $1 | jq -r '.expression'`
-#    local    typeparent=`echo $1 | jq -r '.typeparent'`
-#    local    uiview=`echo $1 | jq -r '.uiview'`
-#    local    style=`echo $1 | jq -r '.style'`
-#
-#    if [ "$typeparent" == "tab" ]; then
-#	echo "<uib-tab index=\"$num\"  heading=\"$label\">" >> $2
-#	foreach "$1" $2 $3
-#	echo "</uib-tab>" >> $2
-#    else
-#
-#	echo -n "<div id=\"$id\" " >> $2
-#
-#	if [ "$expr" != "null" ]; then
-#	    echo  -n " ng-if=\"$expr\" " >> $2
-#	fi
-#	if [ "$style" != "null" ]; then
-#	    echo -n " style=\"$style\" " >> $2
-#	fi
-#	echo -n " class=\"" >> $2
-#	if [ $collapsible == true ]; then
-#	    echo  -n " collapse " >> $2
-#	fi
-#	if [ "$class" != "null" ] ; then
-#	    echo -n "$class" >> $2
-#	fi
-#
-#	if [  $width != "null" ]; then
-#	    case $pos in
-#		"left") echo  -n " col-md-$width" >> $2
-#                    ;;
-#		"center")
-#                    offset=$(((12-$width)/2))
-#                    echo -n  " col-md-$width col-md-offset-$offset " >> $2
-#                    ;;
-#		"right")
-#                    offset=$((12-$width))
-#                    echo -n " col-md-$width col-md-offset-$offset " >> $2
-#                    ;;
-#		*)   echo -n " col-md-$width " >> $2
-#                    ;;
-#            esac;
-#
-#	fi
-#	echo  "\"> " >> $2
-#
-#	if [ "$label" != "null" ]; then
-#	    echo "<h4> $label </h4>" >> $2
-#	    echo "<hr>" >> $2
-#	fi
-#
-#	#--------------- group body begin---------------
-#	echo  -n "<div id=\"$id-body\" class=\"$id-body " >> $2
-#	if [ $row == true ]; then
-#	    echo -n " row " >> $2
-#	fi
-#	echo -n "\"" >> $2
-#	if [ $uiview == true ]; then
-#	    echo -n " ui-view=\"\"" >> $2
-#	fi
-#	if [ "$src" != "null" ]; then
-#	    echo -n " ng-include=\"$src\"" >> $2
-#	fi
-#	echo "> " >> $2
-#	foreach "$1" $2 $3
-#
-#	echo "</div> " >> $2
-#
-#	#--------------group body end ------------------
-#	echo "</div>" >> $2
-#    fi
-#}
-
-# rewriting group generation
-    function group {
+function group {
 
     local    src=`echo $1 | jq -r '.src'`
     local    label=`echo $1 | jq -r '.label'`
@@ -512,64 +351,74 @@ function treeview {
     local    uiview=`echo $1 | jq -r '.uiview'`
     local    style=`echo $1 | jq -r '.style'`
 
-    if [ "$typeparent" == "tab" ];then
-            echo "<uib-tab index=\"$num\"  heading=\"$label\"> <!--begins-->" >> $2
-            foreach "$1" $2 $3
-            echo "</uib-tab> <!--end-->" >> $2
+    
+    if [ "$typeparent" == "tab" ]; then
+	echo "<uib-tab index=\"$num\"  heading=\"$label\">" >> $2
+	foreach "$1" $2 $3
+	echo "</uib-tab>" >> $2
     else
-        echo -n "<div id=\"$id\" " >> $2
-        if [ "$expr" != "null" ];then
-            echo  -n " ng-if=\"$expr\" " >> $2
-        fi
-        if [ $uiview == true ];then
-	        echo -n " ui-view=\"\"" >> $2
-    	fi
-	    if [ "$src" != "null" ];then
-            echo -n " ng-include=\"$src\"" >> $2
-    	fi
-        if [ "$style" != "null" ];then
-            echo -n " style=\"$style\" " >> $2
-        fi
-            echo -n " class=\"" >> $2
-        if [ $row == true ];then
-            echo -n " row " >> $2
-    	fi
-        if [ $collapsible == true ];then
-            echo  -n " collapse " >> $2
-        fi
-        if [ "$class" != "null" ] ;then
-            echo -n "$class" >> $2
-        fi
-        if [  $width != "null" ];then
-            case $pos in
-            "left")
-            echo  -n " col-md-$width" >> $2
-                        ;;
-            "center")
-                        rest=`expr 12 - $width`
-                        offset=`expr $rest / 2`
-                        echo -n  " col-md-$width col-md-offset-$offset " >> $2  ;;
-            "right")
-                        offset=`expr 12 - $width`
-                        echo -n " col-md-$width col-md-offset-$offset " >> $2
-                        ;;
-            *)
-               echo -n " col-md-$width " >> $2
-                        ;;
+	
+	echo -n "<div id=\"$id\" " >> $2
+	
+	if [ "$expr" != "null" ]; then
+	    echo  -n " ng-if=\"$expr\" " >> $2
+	fi
+	if [ "$style" != "null" ]; then
+	    echo -n " style=\"$style\" " >> $2
+	fi
+	echo -n " class=\"" >> $2
+	if [ $collapsible == true ]; then
+	    echo  -n " collapse " >> $2
+	fi
+	if [ "$class" != "null" ] ; then
+	    echo -n "$class" >> $2
+	fi
+	
+	if [  $width != "null" ]; then
+	    case $pos in
+		"left") echo  -n " col-md-$width" >> $2
+                    ;;
+		"center")
+                    offset=$(((12-$width)/2))
+                    echo -n  " col-md-$width col-md-offset-$offset " >> $2
+                    ;;
+		"right")
+                    offset=$((12-$width))
+                    echo -n " col-md-$width col-md-offset-$offset " >> $2
+                    ;;
+		*)   echo -n " col-md-$width " >> $2
+                    ;;
             esac;
-        fi
-            echo  "\"> <!-- $id begins-->" >> $2
-        if [ "$label" != "null" ];then
-            echo "<h4> $label </h4>" >> $2
-            echo "<hr>" >> $2
-	    fi
-		foreach "$1" $2 $3
-
-	echo "</div> <!-- $id ends-->" >> $2
+	    
+	fi
+	echo  "\"> " >> $2
+	
+	if [ "$label" != "null" ]; then
+	    echo "<h4> $label </h4>" >> $2
+	    echo "<hr>" >> $2
+	fi
+	
+	#--------------- group body begin---------------
+	echo  -n "<div id=\"$id-body\" class=\"$id-body " >> $2
+	if [ $row == true ]; then
+	    echo -n " row " >> $2
+	fi
+	echo -n "\"" >> $2
+	if [ $uiview == true ]; then
+	    echo -n " ui-view=\"\"" >> $2
+	fi
+	if [ "$src" != "null" ]; then
+	    echo -n " ng-include=\"$src\"" >> $2
+	fi
+	echo "> " >> $2
+	foreach "$1" $2 $3
+	
+	echo "</div> " >> $2
+	
+	#--------------group body end ------------------
+	echo "</div>" >> $2
     fi
-
 }
-# group end
 
 function link {
     local label=`echo $1 | jq -r '.label'`
@@ -716,44 +565,21 @@ function tab {
 
 function table {
     local    headers=`echo $1 | jq -r '.headers'`
-    local    cols=`echo $1 | jq -r '.columns'`
-    local    collection=`echo $1 | jq -r '.collection'`
+    local    data_collection=`echo $1 | jq -r '.collection'`
     local    res=`echo $1 | jq -r '.resolve'`
-    local    class=`echo $1 | jq -r '.class'`
 
-#    echo -n "<table " >> $2
-#    classmaker "$1" $2 $3
-#    if [ "$class" == "null" ]; then
-#	echo -n "class=\"table table-bordered\"" >> $2
-#    fi
-#    echo ">"  >> $2
-#    echo "<tr>" >> $2
-#    echo "<th ng-repeat='header in $cols'>{{header}}</th>" >> $2
-#    echo "</tr>" >> $2
-#    echo "<tr ng-repeat='data in $collection'>" >> $2
-#    echo "<td ng-repeat='(key, value) in data'>{{value}}</td>" >> $2
-#    echo "</tr>" >> $2
-#    echo "</table>" >> $2
-#
-
-    echo "<table  " >> $2
-    if [ "$class" != "null" ]; then
-        classmaker "$1" $2 $3
-    else
-        echo "class=\"table table-condensed\">" >> $2
+    echo -n "<table " >> $2
+    classmaker "$1" $2 $3
+    if [ "$class" == "null" ]; then
+	echo -n "class=\"table table-bordered\"" >> $2
     fi
-    echo " <thead> " >> $2
+    echo ">"  >> $2
     echo "<tr>" >> $2
-    echo "<th ng-repeat='header in $cols'>{{header}}</th>" >> $2
-    echo "</thead>" >> $2
-    echo "<tbody>" >> $2
-    echo "<tr ng-repeat=\"item in requests\">" >> $2
-    echo "<td>{{item.name}}</td>" >> $2
-    echo "<td>{{item.type}}</td>" >> $2
-    echo "<td>{{item.style}}</td>" >> $2
-    echo "<td>{{item.defaultValue}}</td>" >> $2
+    echo "<th ng-repeat='header in $headers'>{{header}}</th>" >> $2
     echo "</tr>" >> $2
-    echo "</tbody>" >> $2
+    echo "<tr ng-repeat='data in $data_collection'>" >> $2
+    echo "<td ng-repeat='(key, value) in data'>{{value}}</td>" >> $2
+    echo "</tr>" >> $2
     echo "</table>" >> $2
 }
 
@@ -798,17 +624,13 @@ function view_generator {
 	    ;;
 	"list")  list "$1" $2 $3
 	    ;;
-    "ul")  _ul "$1" $2 $3
-	    ;;
-    "li")  _li "$1" $2 $3
-	    ;;
 	"table")  table "$1" $2 $3
 	    ;;
 	"tab")  tab "$1" $2 $3
 	    ;;
-	"modal")  modal "$1" $2 $3
+	"wizard")  form_wizard "$1" $2 $3
             ;;
-	"dropdown")  dropdown "$1" $2 $3
+	"wizard_level")  wizardlvl "$1" $2 $3
             ;;
 	*)  echo "type: $type not expected"
 	    ;;

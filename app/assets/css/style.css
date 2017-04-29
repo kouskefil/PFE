@@ -1192,6 +1192,7 @@ ul.nav.nav-tabs {
     /*line-height: 30px;*/
     color: rgba(0,0,0,.7);
     font-size: 13px;
+    cursor: pointer;
 }
 .action-item{
     padding: 4px 4px;
@@ -1232,4 +1233,13 @@ ul.nav.nav-tabs {
     height: 35px;
     border-bottom: 1px solid lightgray;
     margin-bottom: 5px
+}
+.actions span{
+    float: right;
+    margin-right: 10px;
+    font-size: smaller;
+    cursor: pointer;
+}
+#params ul.nav.nav-tabs{
+    background-color: transparent;
 }

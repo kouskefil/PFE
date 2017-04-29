@@ -1,96 +1,119 @@
 <!-- Generated html file -->
-<div id="group1"  style=""  class="content"> <!-- group1 begins-->
-<div id="content"  style="padding: 0; min-height: 465px; max-height: 465px;"  class="content-inner col-md-10 col-md-offset-1 "> <!-- content begins-->
-<div id="path"  style="padding:0; min-height:465px;max-height:465px;"  class="floatingPanel col-md-7 "> <!-- path begins-->
-<uib-tabset >
-<uib-tab index="29"  heading="path"> <!--begins-->
+<div id="resources"  style="padding:0"  class=" row content-inner col-md-10 col-md-offset-1 "> <!-- resources begins-->
+<div id="resources_params"  style="padding:0;"  class=" col-md-7 "> <!-- resources_params begins-->
+<div id="rsc_definition"  style="margin-bottom: 15px; padding: 0"  class="floatingPanel col-md-12 "> <!-- rsc_definition begins-->
+<div id="rsc_def_header"  style="padding: 10px 15px; margin: 0"  class="g_header"> <!-- rsc_def_header begins-->
+<span  style="padding-right: 10px;"  class="glyphicon glyphicon-link" id="span152" ></span>
+<span  style="font-size: small; color: #0084bf;"  id="span153" >Resources definition</span>
+</div> <!-- rsc_def_header ends-->
+<div id="rsc_def_content"  style="padding: 15px 15px"  class=""> <!-- rsc_def_content begins-->
 <div  class="form-group">
-<label for="select9">parent</label>
-<select name="select9" id="select9" ng-model="currentRsc.parent" class="form-control" ><option ng-repeat='item in RscParent' value="{{item}}"> {{item}} 
+<select name="select155" id="select155" ng-model="currentRsc.parent" class="form-control" ><option ng-repeat='item in RscParent' value="{{item}}"> {{item}} 
  </option>
  </select>
 </div>
 <div class="form-group">
-<label for="input10">path</label>
-<input class=" form-control"  placeholder="path" name="input10" id="input10" type="text" ng-model="currentRsc.path"/>
-</div> <!-- div id:input10 -->
-<div  >
-<label for="radio11">type</label>
-<div >
-<label class=" radio-inline">
-<input id="radio11" type="radio" value="all" ng-model="currentRsc.type"> all
-</label>
-<label class=" radio-inline">
-<input id="radio11" type="radio" value="one" ng-model="currentRsc.type"> one
-</label>
-</div>
-</div> <!-- div id:radio11 -->
-</uib-tab> <!--end-->
-<uib-tab index="13"  heading="method"> <!--begins-->
-<div  class="form-group">
-<label for="select24">method name</label>
-<select name="select24" id="select24" ng-model="currentRsc.method.name" class="form-control" ><option ng-repeat='item in resourceMethod' value="{{item.rvalue}}"> {{item.dvalue}} 
- </option>
- </select>
-</div>
-<div  class="form-group">
-<label for="select17">method id</label>
-<select name="select17" id="select17" ng-model="currentRsc.method.id" class="form-control" ><option ng-repeat='item in ids' value="{{item.rvalue}}"> {{item.dvalue}} 
- </option>
- </select>
-</div>
-<div class="form-group">
-<label for="input18">role</label>
-<input class=" form-control"  placeholder="role" name="input18" id="input18" type="null" ng-model="currentRsc.method.role"/>
-</div> <!-- div id:input18 -->
-<button  class="floatingPanel" ng-click="addmtd()">add method</button>
+<label for="input156">path</label>
+<input class=" form-control"  placeholder="path" name="input156" id="input156" type="text" ng-model="currentRsc.path"/>
+</div> <!-- div id:input156 -->
+</div> <!-- rsc_def_content ends-->
+</div> <!-- rsc_definition ends-->
+<div id="rsc_params"  style="padding: 0; min-height:302px"  class="floatingPanel col-md-12 "> <!-- rsc_params begins-->
+<div id="params_header"  style="padding: 10px 15px; margin: 0"  class="g_header"> <!-- params_header begins-->
+<span  style="padding-right: 10px;"  class="glyphicon glyphicon-cog" id="span158" ></span>
+<span  style="font-size: small; color: #0084bf;"  id="span159" >methods</span>
+<ul  style="list-style: none; float: right; font-size: xx-small; display: flex; margin-bottom: 0px; width: 60px;height: 20px;padding-left: 50px;" >
+<li  style="margin: 0"  class="dropdown nav-options" uib-dropdown auto-close="disabled" on-toggle="toggled(open) ">
+<span  class="glyphicon glyphicon-plus g-action" uib-dropdown-toggle data-ng-click="setmethoddropdownstyle()" id="simple-dropdownr" ></span>
+<ul  class="dropdown-menu" template-url="methods.html" uib-dropdown-menu aria-labelledby="dropdownMenu3" >
+</ul>
+</li>
+</ul>
+</div> <!-- params_header ends-->
+<div id="params_content"  style="padding: 0;"  class=" row  col-md-12 "> <!-- params_content begins-->
+<div id="methods_list"  style=""  class=" col-md-5 "> <!-- methods_list begins-->
+<ul  class="items">
+<li ng-repeat=" item in methods">
+<div id="group169"  class=" col-md-12 "> <!-- group169 begins-->
+<div id="method"  class="item-label-g col-md-7 "> <!-- method begins-->
+<span  class="item-label" data-ng-click="getMethod(item)" id="span179" >{{item.id}}</span>
+</div> <!-- method ends-->
+<div id="actions"  class="actions col-md-5 "> <!-- actions begins-->
+<span  class="glyphicon glyphicon-trash" id="span172" ></span>
+<span  class="glyphicon glyphicon-pencil" id="span173" ></span>
+<span  class="glyphicon glyphicon-plus" id="span174" ></span>
+</div> <!-- actions ends-->
+</div> <!-- group169 ends-->
+</li>
+</ul>
+</div> <!-- methods_list ends-->
+<div id="params"  style="border-left:2px solid lightgray"  class=" col-md-7 "> <!-- params begins-->
 <uib-tabset >
-<uib-tab index="14"  heading="request"> <!--begins-->
-<table class="table table-bordered">
+<uib-tab index="164"  heading="requests"> <!--begins-->
+<table  
+class="table table-condensed">
+ <thead> 
 <tr>
-<th ng-repeat='header in null'>{{header}}</th>
+<th ng-repeat='header in [
+  "name",
+  "type",
+  "style",
+  "default value"
+]'>{{header}}</th>
+</thead>
+<tbody>
+<tr ng-repeat="item in requests">
+<td>{{item.name}}</td>
+<td>{{item.type}}</td>
+<td>{{item.style}}</td>
+<td>{{item.defaultValue}}</td>
 </tr>
-<tr ng-repeat='data in null'>
-<td ng-repeat='(key, value) in data'>{{value}}</td>
-</tr>
+</tbody>
 </table>
 </uib-tab> <!--end-->
-<uib-tab index="15"  heading="response"> <!--begins-->
-<div  class="form-group">
-<label for="select21">mediatype</label>
-<select name="select21" id="select21" ng-model="currentRsc.response.mediatype" class="form-control" ><option ng-repeat='item in mediatype' value="{{item.rvalue}}"> {{item.dvalue}} 
- </option>
- </select>
-</div>
-<div  class="form-group">
-<label for="select25">response name</label>
-<select name="select25" id="select25" ng-model="currentRsc.response.name" class="form-control" ><option ng-repeat='item in null' value="{{item.rvalue}}"> {{item.dvalue}} 
- </option>
- </select>
-</div>
-<div class="form-group">
-<label for="input22">param value</label>
-<input class=" form-control"  placeholder="paramValue" name="input22" id="input22" type="text" ng-model="currentRsc.response.value"/>
-</div> <!-- div id:input22 -->
-<button  class="floatingPanel" ng-click="addrsps()">add response</button>
+<uib-tab index="165"  heading="responses"> <!--begins-->
 </uib-tab> <!--end-->
 </uib-tabset>
-</uib-tab> <!--end-->
-</uib-tabset>
-</div> <!-- path ends-->
-<div id="group27"  style="padding:0; min-height:465px;max-height:465px;margin-left:15px"  class="floatingPanel col-md-3 "> <!-- group27 begins-->
-<div id="group144"  style="padding:0px;height: 46px; border-top-color: transparent; background-color: #F5F5F5; border-left-color: transparent;"  class=""> <!-- group144 begins-->
-</div> <!-- group144 ends-->
+</div> <!-- params ends-->
+</div> <!-- params_content ends-->
+</div> <!-- rsc_params ends-->
+</div> <!-- resources_params ends-->
+<div id="resources_tree"  style="padding:0; min-height:465px;max-height:465px;margin-left:15px"  class="floatingPanel col-md-3 "> <!-- resources_tree begins-->
+<div id="tree_header"  style="padding: 10px 15px; margin: 0"  class="g_header"> <!-- tree_header begins-->
+<span  style="padding-right: 10px;"  class="fa fa-cogs" id="span177" ></span>
+<span  style="font-size: small; color: #0084bf;"  id="span178" >Resources</span>
+</div> <!-- tree_header ends-->
 <div class="null"
 data-angular-treeview="true"
-data-tree-id="resources"
+data-tree-id="rsc_tree"
 data-tree-model="resources"
 data-node-id="path"
 data-node-click="cclick"
 data-node-children="resources"
-data-tree-actions="rscTreeAction"
+data-tree-actions="null"
 >
 </div>
-</div> <!-- group27 ends-->
-</div> <!-- content ends-->
-</div> <!-- group1 ends-->
+</div> <!-- resources_tree ends-->
+</div> <!-- resources ends-->
+<script type="text/ng-template" id="methods.html">
+<div class="dropdown-menu floatingPanel" ng-class="editMethod" uib-dropdown-menu role="menu" aria-labelledby="button-template-url">
+<div  class="form-group">
+<label for="select188">method name</label>
+<select name="select188" id="select188" ng-model="currentRsc.method.name" class="form-control" ><option ng-repeat='item in resourceMethod' value="{{item.rvalue}}"> {{item.rvalue}} 
+ </option>
+ </select>
+</div>
+<div  class="form-group">
+<label for="select189">method id</label>
+<select name="select189" id="select189" ng-model="currentRsc.method.id" class="form-control" ><option ng-repeat='item in ids' value="{{item.name}}"> {{item.name}} 
+ </option>
+ </select>
+</div>
+<div class="form-group">
+<label for="input190">role</label>
+<input class=" form-control"  placeholder="role" name="input190" id="input190" type="text" ng-model="currentRsc.method.role"/>
+</div> <!-- div id:input190 -->
+<button  class="floatingPanel" ng-click="addMethod()">Add method</button>
+<span  style="float: right;"  uib-dropdown-toggle id="span192" >Cancel</span>
+</div>
+</script>
