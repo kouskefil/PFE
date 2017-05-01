@@ -137,8 +137,9 @@ function dropdown {
     classmaker2 "$1" $2 $3
     echo -n "\"" >> $2
     if [ "$attrs" != "null" ]; then
-        echo " $attrs>" >> $2
+        echo " $attrs" >> $2
     fi
+    echo  ">"  >> $2
 
      foreach  "$1" $2 $3
     echo  "</div>" >>$2
@@ -211,7 +212,7 @@ function button {
     else
 	echo -n "<button " >> $2
 	classmaker "$1" $2 $3
-	echo " ng-click=\"$method()\">$label</button>" >> $2
+	echo " ng-click=\"$method\">$label</button>" >> $2
     fi
 }
 
@@ -238,7 +239,7 @@ function _select {
     echo -n "<select name=\"$id\" id=\"$id\" ng-model=\"$mode\" class=\"form-control\" >" >> $2
     
     if [ "$rvalue" != "null" ] && [ "$dvalue" != "null" ]; then
-	echo "<option ng-repeat='item in $collection' value=\"{{$rvalue}}\"> {{$dvalue}} ">> $2
+	echo "<option ng-repeat='item in $collection' value=\"{{item.$rvalue}}\"> {{item.$dvalue}} ">> $2
     else
 	echo "<option ng-repeat='item in $collection' value=\"{{item.rvalue}}\"> {{item.dvalue}} ">> $2
     fi
@@ -253,7 +254,9 @@ function paragraph {
 
     echo -n "<p"  >> $2
     classmaker "$1" $2 $3
-    echo ">{{$model}}</p>" >> $2
+    echo ">" >> $2
+    foreach "$1" $2 $3
+    echo "</p>" >> $2
 }
 
 function textarea {
@@ -404,94 +407,6 @@ function treeview {
     echo "</div>" >> $2
 
 }
-
-#function group {
-#
-#    local    src=`echo $1 | jq -r '.src'`
-#    local    label=`echo $1 | jq -r '.label'`
-#    local    num=`echo $1 | jq -r '.num'`
-#    local    collapsible=`echo $1 | jq -r '.collapsible'`
-#    local    id=`echo $1 | jq -r '.id'`
-#    local    pos=`echo $1 | jq -r '.position'`
-#    local    width=`echo $1 | jq -r '.width'`
-#    local    class=`echo $1 | jq -r '.class'`
-#    local    row=`echo $1 | jq -r '.row'`
-#    local    offset
-#    local    icon=`echo $1 | jq -r '.icon'`
-#    local    gtype=`echo $1 | jq -r '.group_type'`
-#    local    expr=`echo $1 | jq -r '.expression'`
-#    local    typeparent=`echo $1 | jq -r '.typeparent'`
-#    local    uiview=`echo $1 | jq -r '.uiview'`
-#    local    style=`echo $1 | jq -r '.style'`
-#
-#    if [ "$typeparent" == "tab" ]; then
-#	echo "<uib-tab index=\"$num\"  heading=\"$label\">" >> $2
-#	foreach "$1" $2 $3
-#	echo "</uib-tab>" >> $2
-#    else
-#
-#	echo -n "<div id=\"$id\" " >> $2
-#
-#	if [ "$expr" != "null" ]; then
-#	    echo  -n " ng-if=\"$expr\" " >> $2
-#	fi
-#	if [ "$style" != "null" ]; then
-#	    echo -n " style=\"$style\" " >> $2
-#	fi
-#	echo -n " class=\"" >> $2
-#	if [ $collapsible == true ]; then
-#	    echo  -n " collapse " >> $2
-#	fi
-#	if [ "$class" != "null" ] ; then
-#	    echo -n "$class" >> $2
-#	fi
-#
-#	if [  $width != "null" ]; then
-#	    case $pos in
-#		"left") echo  -n " col-md-$width" >> $2
-#                    ;;
-#		"center")
-#                    offset=$(((12-$width)/2))
-#                    echo -n  " col-md-$width col-md-offset-$offset " >> $2
-#                    ;;
-#		"right")
-#                    offset=$((12-$width))
-#                    echo -n " col-md-$width col-md-offset-$offset " >> $2
-#                    ;;
-#		*)   echo -n " col-md-$width " >> $2
-#                    ;;
-#            esac;
-#
-#	fi
-#	echo  "\"> " >> $2
-#
-#	if [ "$label" != "null" ]; then
-#	    echo "<h4> $label </h4>" >> $2
-#	    echo "<hr>" >> $2
-#	fi
-#
-#	#--------------- group body begin---------------
-#	echo  -n "<div id=\"$id-body\" class=\"$id-body " >> $2
-#	if [ $row == true ]; then
-#	    echo -n " row " >> $2
-#	fi
-#	echo -n "\"" >> $2
-#	if [ $uiview == true ]; then
-#	    echo -n " ui-view=\"\"" >> $2
-#	fi
-#	if [ "$src" != "null" ]; then
-#	    echo -n " ng-include=\"$src\"" >> $2
-#	fi
-#	echo "> " >> $2
-#	foreach "$1" $2 $3
-#
-#	echo "</div> " >> $2
-#
-#	#--------------group body end ------------------
-#	echo "</div>" >> $2
-#    fi
-#}
-
 # rewriting group generation
     function group {
 
@@ -511,6 +426,7 @@ function treeview {
     local    typeparent=`echo $1 | jq -r '.typeparent'`
     local    uiview=`echo $1 | jq -r '.uiview'`
     local    style=`echo $1 | jq -r '.style'`
+    local    attrs=`echo $1 | jq -r '.otherAttr'`
 
     if [ "$typeparent" == "tab" ];then
             echo "<uib-tab index=\"$num\"  heading=\"$label\"> <!--begins-->" >> $2
@@ -558,7 +474,11 @@ function treeview {
                         ;;
             esac;
         fi
-            echo  "\"> <!-- $id begins-->" >> $2
+        echo -n "\"" >> $2
+        if [ "$attrs" != "null" ]; then
+           echo -n " $attrs" >> $2
+        fi
+        echo   "> <!-- $id begins-->" >> $2
         if [ "$label" != "null" ];then
             echo "<h4> $label </h4>" >> $2
             echo "<hr>" >> $2
@@ -721,21 +641,6 @@ function table {
     local    res=`echo $1 | jq -r '.resolve'`
     local    class=`echo $1 | jq -r '.class'`
 
-#    echo -n "<table " >> $2
-#    classmaker "$1" $2 $3
-#    if [ "$class" == "null" ]; then
-#	echo -n "class=\"table table-bordered\"" >> $2
-#    fi
-#    echo ">"  >> $2
-#    echo "<tr>" >> $2
-#    echo "<th ng-repeat='header in $cols'>{{header}}</th>" >> $2
-#    echo "</tr>" >> $2
-#    echo "<tr ng-repeat='data in $collection'>" >> $2
-#    echo "<td ng-repeat='(key, value) in data'>{{value}}</td>" >> $2
-#    echo "</tr>" >> $2
-#    echo "</table>" >> $2
-#
-
     echo "<table  " >> $2
     if [ "$class" != "null" ]; then
         classmaker "$1" $2 $3
@@ -775,7 +680,7 @@ function view_generator {
 	    ;;
 	"select") _select "$1" $2 $3
 	    ;;
-	"paragraph")  paragraph "$1" $2
+	"<p>")  paragraph "$1" $2
 	    ;;
 	"textarea")  textarea "$1" $2
 	    ;;
@@ -787,7 +692,6 @@ function view_generator {
 	    ;;
 	"treeview") treeview "$1" $2 $3
 	    ;;
-
 	"span")  span "$1" $2 $3
 	    ;;
 	"form")  form "$1" $2 $3

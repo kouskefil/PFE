@@ -135,7 +135,7 @@ define(['configs/app'], function (app) {
             $scope.cclick = function(selectedNode){
                  $scope.currentOp = globalVarFactory.skeleton(selectedNode);
                 $scope.inputs = $scope.currentOp.inputs;
-                globalVarFactory.setEdition();
+                // globalVarFactory.setEdition();
             };
             $scope.delOperation = function ( op) {
                 globalVarFactory.gDelete($scope.operations,op) ;

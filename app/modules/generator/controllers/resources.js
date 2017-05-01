@@ -8,7 +8,8 @@
                 /**methodAdd dropdown control*/
                 $scope.status = {
                     isopen: false
-                };                    
+                };
+                $scope.responses = [];
                 $scope.resourceMethod = [
                     {
                         "dvalue":"get",
@@ -48,9 +49,12 @@
                 $scope.resources = globalVarFactory.getResources();
                 $scope.RscParent = [];
                 $scope.RscParent = globalVarFactory.getParent();
-
                 $scope.currentRsc = globalVarFactory.rscSkeleton({responses:[]});
-
+                $scope.rsptmp = {
+                    mediatype:'',
+                    name:'',
+                    value:''
+                };
                 $scope.ids = globalVarFactory.getOperations();
                 $scope.setCurrentRsc = function (rsc) {
                    globalVarFactory.setCurrentRsc(rsc);
@@ -69,9 +73,34 @@
                     $scope.currentRsc.method = {};
                 };
                 $scope.getMethod = function (method) {
-                    $scope.currentRsc.method = method;
+                    var i;
                     $scope.requests = globalVarFactory.gLookupByAttribute(globalVarFactory.getOperations(),'name', method.id).inputs;
-                    $scope.responses = method.responses;
+                    console.log('requests');
+                    console.log($scope.requests);
+                    console.log('method');
+                    console.log(method);
+                    $scope.responses.length = 0;
+                    if(method.responses)
+                        for(i=0; i < method.responses.length; i++){
+                        if(method.responses[i].representations[0].param){
+                            angular.forEach(method.responses[i].representations[0].param.options, function(opt){
+                                console.log('opt');
+                                console.log(opt);
+                                $scope.responses.push({
+                                    name : method.responses[i].representations[0].param.name,
+                                    mediatype : opt.mediatype,
+                                    value :  opt.value
+                                });
+                            } );
+                        }
+                        else
+                            console.log('dans le else  '+method.responses[i].representations[0].mediatype);
+                            $scope.responses.push({
+                                name : '',
+                                mediatype : method.responses[i].representations[0].mediatype,
+                                value :  ''
+                            });
+                    }
                     $scope.editMethod = 'editMethod';
                     // $scope.method =  method ;
                 };
@@ -82,9 +111,11 @@
                     var resp;
                     if(!method.responses)
                         method.responses = [];
-                    if($scope.currentRsc.response.name){
+                    if($scope.rsptmp.mediatype == '')
+                        $scope.rsptmp.mediatype = 'application/json';
+                    if($scope.rsptmp.name){
                         for(i=0; i < method.responses.length; i++){
-                            if(method.responses[i].representations[0].param.name === $scope.currentRsc.response.name){
+                            if(method.responses[i].representations[0].param.name === $scope.rsptmp.name){
                                 found = i;
                                 break;
                             }
@@ -92,29 +123,43 @@
                         if(found === -1){
                             resp = {
                                 representations: [{"param": {
-                                    name: $scope.currentRsc.response.name,
-                                    options : []
+                                    name: $scope.rsptmp.name,
+                                    options : [
+                                        {
+                                            mediatype: $scope.rsptmp.mediatype,
+                                            value : $scope.rsptmp.value
+                                        }
+                                    ]
                                 }}]
                             };
                             method.responses.push(resp);
                         }
-                        else
-                            resp = method.responses[found];
-                        if($scope.currentRsc.response.mediatype)
-                            resp.representations[0].param.options.push({value: $scope.currentRsc.response.value,
-                                mediatype : $scope.currentRsc.response.mediatype});
-                        else
-                            resp.representations[0].param.options.push({value: $scope.currentRsc.response.value,
-                                mediatype : "application/json"});
+                        else{
+                            resp = {
+                                mediatype: $scope.rsptmp.mediatype,
+                                value : $scope.rsptmp.value
+                            };
+                            method.responses[found].representations[0].param.options.push(resp);
+                        }
+
                     }
                     else{
                         method.responses.push({
                             representations: [{"mediaType": "text/html"}]
                         });
                     }
-                    $scope.responses = method.responses;
+                    $scope.responses.push($scope.rsptmp);
+                    $scope.rsptmp = {
+                        mediatype:'',
+                        name:'',
+                        value:''
+                    };
+
+                    // $scope.responses = method.responses;
                     console.log(method);
-                    $scope.currentRsc.response = {};
+                    console.log('responses');
+                    console.log($scope.responses);
+
                 };
                 $scope.setmethoddropdownstyle = function(){
                     $scope.editMethod= 'addmethod';

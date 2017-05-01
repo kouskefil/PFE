@@ -30,8 +30,8 @@ data-tree-actions="treeActions"
 </div>
 </div>
 <div id="action"  class=""> <!-- action begins-->
-<button  class="floatingPanel" ng-click="clear()">Clear</button>
-<button  class="floatingPanel" ng-click="add()">Add</button>
+<button  class="floatingPanel" ng-click="clear">Clear</button>
+<button  class="floatingPanel" ng-click="add">Add</button>
 </div> <!-- action ends-->
 <ul >
 <li  ng-repeat='item in currentComponent.functions'>
@@ -59,9 +59,9 @@ data-tree-actions="treeActions"
 </div>
 </div> <!-- data ends-->
 <div id="actions"  class=""> <!-- actions begins-->
-<button  class="floatingPanel" ng-click="clear()">clear</button>
-<button  class="floatingPanel" ng-click="addoperation()">add operation</button>
-<button  class="floatingPanel" ng-click="delOperation()">delete</button>
+<button  class="floatingPanel" ng-click="clear">clear</button>
+<button  class="floatingPanel" ng-click="addoperation">add operation</button>
+<button  class="floatingPanel" ng-click="delOperation">delete</button>
 </div> <!-- actions ends-->
 <ul >
 <li  ng-repeat='item in currentComponent.operations'>
@@ -75,7 +75,7 @@ data-tree-actions="treeActions"
 <label for="input119">dependence</label>
 <input class=" form-control"  placeholder="dependence" name="input119" id="input119" type="text" ng-model="dependence"/>
 </div> <!-- div id:input119 -->
-<button  ng-click="null()">add depeendence</button>
+<button  ng-click="null">add depeendence</button>
 </div> <!-- group118 ends-->
 </uib-tab> <!--end-->
 <uib-tab index="16"  heading="variables"> <!--begins-->
@@ -94,9 +94,9 @@ data-tree-actions="treeActions"
 </div>
 </div>
 <div id="action"  class=""> <!-- action begins-->
-<button  ng-click="addv()">Add</button>
-<button  class="floatingPanel" ng-click="delv()">delete</button>
-<button  class="floatingPanel" ng-click="clear()">Clear</button>
+<button  ng-click="addv">Add</button>
+<button  class="floatingPanel" ng-click="delv">delete</button>
+<button  class="floatingPanel" ng-click="clear">Clear</button>
 </div> <!-- action ends-->
 <ul >
 <li  ng-repeat='item in components.variables'>
@@ -146,7 +146,7 @@ data-tree-actions="treeActions"
 <label for="input113">dependence</label>
 <input class=" form-control"  placeholder="dependence" name="input113" id="input113" type="text" ng-model="dependence"/>
 </div> <!-- div id:input113 -->
-<button  class="floatingPanel" ng-click="addDpdence()">add dependence</button>
+<button  class="floatingPanel" ng-click="addDpdence">add dependence</button>
 </div> <!-- group112 ends-->
 </div> <!-- group82 ends-->
 </uib-tab> <!--end-->

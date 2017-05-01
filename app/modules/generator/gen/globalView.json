@@ -4406,7 +4406,7 @@
                                   "typeparent": "li",
                                   "children": [],
                                   "class": "dropdown-menu",
-                                  "otherAttr": "template-url=\"methods.html\" uib-dropdown-menu aria-labelledby=\"dropdownMenu3\""
+                                  "otherAttr": "template-url=\"methods_dropd.html\" uib-dropdown-menu aria-labelledby=\"dropdownMenu3\""
                                 }
                               ],
                               "style": "margin: 0",
@@ -4415,10 +4415,11 @@
                               "collapsed": false
                             }
                           ],
-                          "style": "list-style: none; float: right; font-size: xx-small; display: flex;    margin-bottom: 0px; width: 60px;height: 20px;padding-left: 50px;"
+                          "style": "list-style: none; float: right; font-size: xx-small; display: flex;    margin-bottom: 0px; width: 60px;height: 20px;padding-left: 50px;",
+                          "collapsed": true
                         }
                       ],
-                      "collapsed": false,
+                      "collapsed": true,
                       "class": "g_header",
                       "style": "padding: 10px 15px; margin: 0"
                     },
@@ -4503,26 +4504,75 @@
                                               "class": "glyphicon glyphicon-trash"
                                             },
                                             {
-                                              "num": 173,
-                                              "id": "span173",
-                                              "img": "fa  fa-arrows-h",
-                                              "type": "span",
+                                              "num": 216,
+                                              "id": "group216",
+                                              "img": "fa  fa-folder",
+                                              "type": "group",
                                               "parent": 171,
                                               "typeparent": "group",
-                                              "class": "glyphicon glyphicon-pencil"
+                                              "children": [
+                                                {
+                                                  "num": 173,
+                                                  "id": "span173",
+                                                  "img": "fa  fa-arrows-h",
+                                                  "type": "span",
+                                                  "parent": 216,
+                                                  "typeparent": "group",
+                                                  "class": "glyphicon glyphicon-pencil",
+                                                  "otherAttr": "uib-dropdown-toggle getMethod(item)"
+                                                },
+                                                {
+                                                  "num": 218,
+                                                  "id": "ul218",
+                                                  "img": "fa fa-list-alt ",
+                                                  "type": "ul",
+                                                  "parent": 216,
+                                                  "typeparent": "group",
+                                                  "children": [],
+                                                  "otherAttr": "template-url=\"methods_dropd.html\" uib-dropdown-menu aria-labelledby=\"dropdownMenu3\""
+                                                }
+                                              ],
+                                              "class": "dropdown",
+                                              "otherAttr": "uib-dropdown auto-close=\"disabled\" on-toggle=\"toggled(open) \"",
+                                              "collapsed": false
                                             },
                                             {
-                                              "num": 174,
-                                              "id": "span174",
-                                              "img": "fa  fa-arrows-h",
-                                              "type": "span",
+                                              "num": 217,
+                                              "id": "group217",
+                                              "img": "fa  fa-folder",
+                                              "type": "group",
                                               "parent": 171,
                                               "typeparent": "group",
-                                              "class": "glyphicon glyphicon-plus"
+                                              "children": [
+                                                {
+                                                  "num": 174,
+                                                  "id": "span",
+                                                  "img": "fa  fa-arrows-h",
+                                                  "type": "span",
+                                                  "parent": 217,
+                                                  "typeparent": "group",
+                                                  "class": "glyphicon glyphicon-plus",
+                                                  "otherAttr": "uib-dropdown-toggle data-ng-click=\"getMethod(item)\""
+                                                },
+                                                {
+                                                  "num": 214,
+                                                  "id": "ul214",
+                                                  "img": "fa fa-list-alt ",
+                                                  "type": "ul",
+                                                  "parent": 217,
+                                                  "typeparent": "group",
+                                                  "children": [],
+                                                  "otherAttr": "template-url=\"response_dropd.html\" uib-dropdown-menu aria-labelledby=\"dropdownMenu3\"",
+                                                  "class": "dropdown-menu"
+                                                }
+                                              ],
+                                              "class": "dropdown",
+                                              "otherAttr": "uib-dropdown auto-close=\"disabled\" on-toggle=\"toggled(open) \"",
+                                              "collapsed": true
                                             }
                                           ],
                                           "width": "5",
-                                          "collapsed": true,
+                                          "collapsed": false,
                                           "class": "actions"
                                         }
                                       ],
@@ -4534,7 +4584,7 @@
                                 }
                               ],
                               "class": "items",
-                              "collapsed": true
+                              "collapsed": false
                             }
                           ],
                           "width": "5",
@@ -4566,24 +4616,111 @@
                                   "typeparent": "tab",
                                   "children": [
                                     {
-                                      "num": 166,
-                                      "id": "table166",
-                                      "img": "fa fa-table",
-                                      "type": "table",
+                                      "num": 193,
+                                      "id": "request",
+                                      "img": "fa  fa-folder",
+                                      "type": "group",
                                       "parent": 164,
                                       "typeparent": "group",
-                                      "selected": "selected",
-                                      "c": "",
-                                      "columns": [
-                                        "name",
-                                        "type",
-                                        "style",
-                                        "default value"
+                                      "children": [
+                                        {
+                                          "num": 200,
+                                          "id": "<p>200",
+                                          "img": "fa  fa-paragraph",
+                                          "type": "<p>",
+                                          "parent": 193,
+                                          "typeparent": "group",
+                                          "children": [
+                                            {
+                                              "num": 203,
+                                              "id": "span203",
+                                              "img": "fa  fa-arrows-h",
+                                              "type": "span",
+                                              "parent": 200,
+                                              "typeparent": "<p>",
+                                              "class": "param",
+                                              "label": "name"
+                                            },
+                                            {
+                                              "num": 204,
+                                              "id": "span204",
+                                              "img": "fa  fa-arrows-h",
+                                              "type": "span",
+                                              "parent": 200,
+                                              "typeparent": "<p>",
+                                              "class": "value",
+                                              "label": "{{item.name}}"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "num": 201,
+                                          "id": "<p>201",
+                                          "img": "fa  fa-paragraph",
+                                          "type": "<p>",
+                                          "parent": 193,
+                                          "typeparent": "group",
+                                          "children": [
+                                            {
+                                              "num": 205,
+                                              "id": "span205",
+                                              "img": "fa  fa-arrows-h",
+                                              "type": "span",
+                                              "parent": 201,
+                                              "typeparent": "<p>",
+                                              "class": "param",
+                                              "label": "Type"
+                                            },
+                                            {
+                                              "num": 206,
+                                              "id": "span206",
+                                              "img": "fa  fa-arrows-h",
+                                              "type": "span",
+                                              "parent": 201,
+                                              "typeparent": "<p>",
+                                              "class": "value",
+                                              "label": "{{item.type}}, {{item.style}}"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "num": 202,
+                                          "id": "<p>202",
+                                          "img": "fa  fa-paragraph",
+                                          "type": "<p>",
+                                          "parent": 193,
+                                          "typeparent": "group",
+                                          "children": [
+                                            {
+                                              "num": 207,
+                                              "id": "span207",
+                                              "img": "fa  fa-arrows-h",
+                                              "type": "span",
+                                              "parent": 202,
+                                              "typeparent": "<p>",
+                                              "class": "param",
+                                              "label": "Default",
+                                              "otherAttr": ""
+                                            },
+                                            {
+                                              "num": 208,
+                                              "id": "span208",
+                                              "img": "fa  fa-arrows-h",
+                                              "type": "span",
+                                              "parent": 202,
+                                              "typeparent": "<p>",
+                                              "class": "value",
+                                              "label": "{{item.defaultValue}}"
+                                            }
+                                          ]
+                                        }
                                       ],
-                                      "collection": "requests"
+                                      "class": "floatingPanel request",
+                                      "otherAttr": "ng-repeat=\"item in requests\"",
+                                      "collapsed": true
                                     }
                                   ],
-                                  "collapsed": true,
+                                  "collapsed": false,
                                   "label": "requests"
                                 },
                                 {
@@ -4593,21 +4730,130 @@
                                   "type": "group",
                                   "parent": 163,
                                   "typeparent": "tab",
-                                  "children": [],
+                                  "children": [
+                                    {
+                                      "num": 219,
+                                      "id": "response",
+                                      "img": "fa  fa-folder",
+                                      "type": "group",
+                                      "parent": 165,
+                                      "typeparent": "group",
+                                      "children": [
+                                        {
+                                          "num": 200,
+                                          "id": "<p>200_copy1",
+                                          "img": "fa  fa-paragraph",
+                                          "type": "<p>",
+                                          "parent": 193,
+                                          "typeparent": "group",
+                                          "children": [
+                                            {
+                                              "num": 203,
+                                              "id": "span203_copy1",
+                                              "img": "fa  fa-arrows-h",
+                                              "type": "span",
+                                              "parent": 200,
+                                              "typeparent": "<p>",
+                                              "class": "param",
+                                              "label": "name"
+                                            },
+                                            {
+                                              "num": 204,
+                                              "id": "span204_copy1",
+                                              "img": "fa  fa-arrows-h",
+                                              "type": "span",
+                                              "parent": 200,
+                                              "typeparent": "<p>",
+                                              "class": "value",
+                                              "label": "",
+                                              "model": "item.name"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "num": 201,
+                                          "id": "<p>201_copy1",
+                                          "img": "fa  fa-paragraph",
+                                          "type": "<p>",
+                                          "parent": 193,
+                                          "typeparent": "group",
+                                          "children": [
+                                            {
+                                              "num": 205,
+                                              "id": "span205_copy1",
+                                              "img": "fa  fa-arrows-h",
+                                              "type": "span",
+                                              "parent": 201,
+                                              "typeparent": "<p>",
+                                              "class": "param",
+                                              "label": "Value"
+                                            },
+                                            {
+                                              "num": 206,
+                                              "id": "span206_copy1",
+                                              "img": "fa  fa-arrows-h",
+                                              "type": "span",
+                                              "parent": 201,
+                                              "typeparent": "<p>",
+                                              "class": "value",
+                                              "label": "",
+                                              "selected": "selected",
+                                              "model": "item.value"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "num": 202,
+                                          "id": "<p>202_copy1",
+                                          "img": "fa  fa-paragraph",
+                                          "type": "<p>",
+                                          "parent": 193,
+                                          "typeparent": "group",
+                                          "children": [
+                                            {
+                                              "num": 207,
+                                              "id": "span207_copy1",
+                                              "img": "fa  fa-arrows-h",
+                                              "type": "span",
+                                              "parent": 202,
+                                              "typeparent": "<p>",
+                                              "class": "param",
+                                              "label": "Media Type",
+                                              "otherAttr": ""
+                                            },
+                                            {
+                                              "num": 208,
+                                              "id": "span208_copy1",
+                                              "img": "fa  fa-arrows-h",
+                                              "type": "span",
+                                              "parent": 202,
+                                              "typeparent": "<p>",
+                                              "class": "value",
+                                              "label": "",
+                                              "model": "item.mediatype"
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "class": "floatingPanel request",
+                                      "otherAttr": "ng-repeat=\"item in responses\"",
+                                      "collapsed": false
+                                    }
+                                  ],
                                   "label": "responses"
                                 }
                               ],
-                              "collapsed": true
+                              "collapsed": false
                             }
                           ],
                           "width": "7",
-                          "collapsed": true,
+                          "collapsed": false,
                           "style": "border-left:2px solid lightgray"
                         }
                       ],
                       "width": "12",
                       "row": true,
-                      "collapsed": true,
+                      "collapsed": false,
                       "style": "padding: 0;"
                     }
                   ],
@@ -4618,7 +4864,8 @@
                 }
               ],
               "width": "7",
-              "style": "padding:0;"
+              "style": "padding:0;",
+              "collapsed": false
             },
             {
               "num": 148,
@@ -4677,7 +4924,8 @@
               ],
               "width": "3",
               "class": "floatingPanel",
-              "style": "padding:0; min-height:465px;max-height:465px;margin-left:15px"
+              "style": "padding:0; min-height:465px;max-height:465px;margin-left:15px",
+              "collapsed": true
             }
           ],
           "class": "content-inner",
@@ -4688,7 +4936,7 @@
         },
         {
           "num": 187,
-          "id": "methods",
+          "id": "methods_dropd",
           "img": "fa  fa-toggle-down",
           "type": "dropdown",
           "parent": 0,
@@ -4714,7 +4962,6 @@
               "type": "select",
               "parent": 187,
               "typeparent": "dropdown",
-              "selected": "selected",
               "model": "currentRsc.method.id",
               "collection": "ids",
               "rvalue": "item.name",
@@ -4757,8 +5004,66 @@
             }
           ],
           "class": "floatingPanel",
-          "collapsed": false,
+          "collapsed": true,
           "otherAttr": "ng-class=\"editMethod\" uib-dropdown-menu role=\"menu\" aria-labelledby=\"button-template-url\""
+        },
+        {
+          "num": 209,
+          "id": "response_dropd",
+          "img": "fa  fa-toggle-down",
+          "type": "dropdown",
+          "parent": 0,
+          "typeparent": "partial",
+          "children": [
+            {
+              "num": 210,
+              "id": "select210",
+              "img": "fa fa-chevron-down",
+              "type": "select",
+              "parent": 209,
+              "typeparent": "dropdown",
+              "model": "rsptmp.mediatype",
+              "label": "Media Type",
+              "collection": "mediatype"
+            },
+            {
+              "num": 211,
+              "id": "select211",
+              "img": "fa fa-chevron-down",
+              "type": "select",
+              "parent": 209,
+              "typeparent": "dropdown",
+              "model": "rsptmp.name",
+              "label": "Param name",
+              "collection": "requests",
+              "rvalue": "name",
+              "dvalue": "name"
+            },
+            {
+              "num": 212,
+              "id": "input212",
+              "img": "fa fa-edit",
+              "type": "input",
+              "parent": 209,
+              "typeparent": "dropdown",
+              "model": "rsptmp.value",
+              "label": "Param value",
+              "name": "paramValue",
+              "selectedtype": "text"
+            },
+            {
+              "num": 213,
+              "id": "button213",
+              "img": "fa fa-square",
+              "type": "button",
+              "parent": 209,
+              "typeparent": "dropdown",
+              "method": "addResponse(item)",
+              "label": "Add Response"
+            }
+          ],
+          "class": "responsedropdown floatingPanel",
+          "collapsed": true
         }
       ],
       "functions": [],
@@ -5803,7 +6108,7 @@
       "class": ""
     }
   ],
- "resources": [
+  "resources": [
     {
       "path": "a",
       "parent": "",
@@ -5833,11 +6138,40 @@
       "methods": [
         {
           "name": "get",
-          "id": "premiere_operation"
+          "id": "premiere_operation",
+          "responses": [
+            {
+              "representations": [
+                {
+                  "param": {
+                    "name": "input_param1",
+                    "options": [
+                      {
+                        "mediatype": "appjson",
+                        "value": "ferfef"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "representations": [
+                {
+                  "mediatype": "text/html"
+                }
+              ]
+            },
+            {
+              "representations": [
+                {
+                  "mediatype": "text/html"
+                }
+              ]
+            }
+          ]
         }
-      ],
-      "responses": [],
-      "selected": "selected"
+      ]
     }
   ],
   "operations": [

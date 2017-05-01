@@ -55,12 +55,6 @@
               "img": "fa fa-minus"
           },
           {
-              "type": "<p>",
-              "categorie": "simple",
-              "container": false,
-              "img": "fa  fa-paragraph"
-          },
-          {
               "type": "span",
               "categorie": "simple",
               "container": false,
@@ -114,6 +108,13 @@
 
       ],
       "container": [
+
+          {
+              "type": "<p>",
+              "categorie": "composite",
+              "container": true,
+              "img": "fa  fa-paragraph"
+          },
           {
               "type": "tab",
               "categorie": "composite",

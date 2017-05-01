@@ -50,7 +50,8 @@ textarea{
 /****** tree-view action ******/
 .an{
     color: lightgray;
-    margin: 5px;
+    margin: 2px;
+    font-size: 10px;
 }
 
 /*.form-control.focus {*/
@@ -1242,4 +1243,16 @@ ul.nav.nav-tabs {
 }
 #params ul.nav.nav-tabs{
     background-color: transparent;
+}
+#params .tab-content{
+    padding: 0;
+}
+.request {
+    padding: 5px 5px;
+    font-family: Cantarell, Arial, sans-serif;
+}
+.request .param{
+    margin-right: 10px;
+    color: rgb(17, 85, 204);
+    font-size: small;
 }
