@@ -115,10 +115,15 @@ define(['configs/app'], function (app) {
            
          
             $scope.AddInput = function () {
-                if(globalVarFactory.gLookup($scope.currentOp.inputs,$scope.input) === true){
+                if($scope.currentOp.inputs === null){
+                    $scope.currentOp.inputs = [];
+                    $scope.currentOp.inputs.push($scope.input);
                     $scope.input = {};
                 }
-                else{
+                else if(globalVarFactory.gLookup($scope.currentOp.inputs,$scope.input) === true){
+                    $scope.input = {};
+                }
+                 else{
                     $scope.currentOp.inputs.push($scope.input);
                     $scope.input = {};
                 }
@@ -132,10 +137,12 @@ define(['configs/app'], function (app) {
                 $scope.currentInput = {};
             };
             /**********************************************/
-            $scope.cclick = function(selectedNode){
-                 $scope.currentOp = globalVarFactory.skeleton(selectedNode);
+            $scope.cclick = function(operation){
+                if(!operation.inputs)
+                    operation.inputs = [];
+                $scope.currentOp = globalVarFactory.skeleton(operation);
                 $scope.inputs = $scope.currentOp.inputs;
-                // globalVarFactory.setEdition();
+                console.log($scope.currentOp )   ;
             };
             $scope.delOperation = function ( op) {
                 globalVarFactory.gDelete($scope.operations,op) ;

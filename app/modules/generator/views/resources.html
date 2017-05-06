@@ -18,7 +18,7 @@
                 </div> <!-- div id:input156 -->
             </div> <!-- rsc_def_content ends-->
         </div> <!-- rsc_definition ends-->
-        <div id="rsc_params"  style="padding: 0; min-height:302px"  class="floatingPanel col-md-12 "> <!-- rsc_params begins-->
+        <div id="rsc_params"  style="padding: 0; min-height:400px"  class="floatingPanel col-md-12 "> <!-- rsc_params begins-->
             <div id="params_header"  style="padding: 10px 15px; margin: 0"  class="g_header"> <!-- params_header begins-->
                 <span  style="padding-right: 10px;"  class="glyphicon glyphicon-cog" id="span158" ></span>
                 <span  style="font-size: small; color: #0084bf;"  id="span159" >methods</span>
@@ -39,9 +39,9 @@
                                     <span  class="item-label" data-ng-click="getMethod(item)" id="span179" >{{item.id}}</span>
                                 </div> <!-- method ends-->
                                 <div id="actions"  class="actions col-md-5 "> <!-- actions begins-->
-                                    <span  class="glyphicon glyphicon-trash" id="span172" ></span>
+                                    <span  class="glyphicon glyphicon-trash" id="span172" ng-click="delete(methods, item)"></span>
                                     <div id="group216"  class="dropdown" uib-dropdown auto-close="disabled" on-toggle="toggled(open) "> <!-- group216 begins-->
-                                        <span  class="glyphicon glyphicon-pencil" uib-dropdown-toggle getMethod(item) id="span173" ></span>
+                                        <span  class="glyphicon glyphicon-pencil" uib-dropdown-toggle  id="span173" ng-click="getMethod(item)"></span>
                                         <ul  template-url="methods_dropd.html" uib-dropdown-menu aria-labelledby="dropdownMenu3" >
                                         </ul>
                                     </div> <!-- group216 ends-->
@@ -74,20 +74,22 @@
                             </div> <!-- request ends-->
                         </uib-tab> <!--end-->
                         <uib-tab index="165"  heading="responses"> <!--begins-->
-                            <div id="response"  class="floatingPanel request" ng-repeat="item in responses"> <!-- response begins-->
-                                <p>
-                                    <span  class="param" id="span203_copy1" >name</span>
-                                    <span  class="value" id="span204_copy1" >{{item.name}}</span>
-                                </p>
-                                <p>
-                                    <span  class="param" id="span205_copy1" >Value</span>
-                                    <span  class="value" id="span206_copy1" >{{item.value}}</span>
-                                </p>
-                                <p>
-                                    <span  class="param"  id="span207_copy1" >Media Type</span>
-                                    <span  class="value" id="span208_copy1" >{{item.mediatype}}</span>
-                                </p>
-                            </div> <!-- response ends-->
+                            <div style="height: 300px;overflow-y: scroll;">
+                                <div id="response"  class="floatingPanel request" ng-repeat="item in responses"> <!-- response begins-->
+                                    <p>
+                                        <span  class="param" id="span203_copy1" >name</span>
+                                        <span  class="value" id="span204_copy1" >{{item.name}}</span>
+                                    </p>
+                                    <p>
+                                        <span  class="param" id="span205_copy1" >Value</span>
+                                        <span  class="value" id="span206_copy1" >{{item.value}}</span>
+                                    </p>
+                                    <p>
+                                        <span  class="param"  id="span207_copy1" >Media Type</span>
+                                        <span  class="value" id="span208_copy1" >{{item.mediatype}}</span>
+                                    </p>
+                                </div> <!-- response ends-->
+                            </div>
                         </uib-tab> <!--end-->
                     </uib-tabset>
                 </div> <!-- params ends-->
@@ -116,13 +118,15 @@
     >
         <div  class="form-group">
             <label for="select188">method name</label>
-            <select name="select188" id="select188" ng-model="currentRsc.method.name" class="form-control" ><option ng-repeat='item in resourceMethod' value="{{item.item.rvalue}}"> {{item.item.rvalue}}
+            <select name="select188" id="select188" ng-model="currentRsc.method.name" class="form-control" >
+                <option ng-repeat='item in resourceMethod' value="{{item.rvalue}}"> {{item.rvalue}}
             </option>
             </select>
         </div>
         <div  class="form-group">
             <label for="select189">method id</label>
-            <select name="select189" id="select189" ng-model="currentRsc.method.id" class="form-control" ><option ng-repeat='item in ids' value="{{item.item.name}}"> {{item.item.name}}
+            <select name="select189" id="select189" ng-model="currentRsc.method.id" class="form-control" >
+                <option ng-repeat='item in ids' value="{{item.name}}"> {{item.name}}
             </option>
             </select>
         </div>
@@ -130,7 +134,7 @@
             <label for="input190">role</label>
             <input class=" form-control"  placeholder="role" name="input190" id="input190" type="text" ng-model="currentRsc.method.role"/>
         </div> <!-- div id:input190 -->
-        <button  class="floatingPanel" ng-click="addMethod">Add method</button>
+        <button  class="floatingPanel" ng-click="addMethod()">Add method</button>
         <span  style="float: right;"  uib-dropdown-toggle id="span192" >Cancel</span>
     </div>
 </script>

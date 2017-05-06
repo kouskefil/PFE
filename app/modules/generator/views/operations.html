@@ -112,7 +112,7 @@
      </div>
      
      <ul class="items">
-   <li ng-repeat="item in operations" >
+   <li ng-repeat="item in operations" ng-click="cclick(item)">
     <div class="col-md-12">
      <div class="col-md-9 item-label-g" >
       <span class="item-label">{{item.name}}</span>
@@ -126,28 +126,3 @@
   </ul>
  </div>
 </div> <!-- group27 ends-->
-
-<!--script for adding methods-->
-<script type="text/ng-template" id="inputs.html">
- <div  class="methoddropdownform floatingPanel dropdown-menu methoddropdownform-position" uib-dropdown-menu role="menu" aria-labelledby="button-template-url">
-  <div role="menuitem" ng-repeat="item in modules" class="group-content" >
-   <div  class="form-group">
-    <label for="select24">method name</label>
-    <select name="select24" id="select24" ng-model="currentRsc.method.name" class="form-control" ><option ng-repeat='item in resourceMethod' value="{{item.rvalue}}"> {{item.dvalue}}
-    </option>
-    </select>
-   </div>
-   <div  class="form-group">
-    <label for="select17">method id</label>
-    <select name="select17" id="select17" ng-model="currentRsc.method.id" class="form-control" >
-     <option ng-repeat='item in ids' value="{{item.name}}"> {{item.name}} </option>
-    </select>
-   </div>
-   <div class="form-group">
-    <label for="input18">role</label>
-    <input class=" form-control"  placeholder="role" name="input18" id="input18" type="text" ng-model="currentRsc.method.role"/>
-   </div> <!-- div id:input18 -->
-   <button  class="floatingPanel" ng-click="addMethod()">add method</button>
-  </div >
- </div>
-</script>

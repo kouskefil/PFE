@@ -1216,7 +1216,8 @@ ul.nav.nav-tabs {
 }
 /*generic actions*/
 .g-action{
-    color: lightgray;
+    background-color: lightgrey;
+    color: lightslategray;
     width: 20px;
     height: 20px;
     border-radius: 50px;

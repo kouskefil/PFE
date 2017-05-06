@@ -100,7 +100,7 @@
                 for(i = 0; i < resources.length; i++){
                      if(resources[i].parent !== '')
                         RscParent.push(resources[i].parent);
-                    if(resources[i].resources.length === 0) {
+                    if(resources[i].resources) {
                         RscParent.push(resources[i].path);
                     }
                     if(resources[i].resources) {
@@ -149,7 +149,10 @@
             },
             /*resource methods*/
             addMethod : function (mtd) {
+                if(!currentRsc.methods)
+                    currentRsc.methods = [];
                 currentRsc.methods.push(mtd);
+                console.log(currentRsc);
             },
             rscSkeleton : function (obj) {
                 currentRsc =  {

@@ -153,7 +153,9 @@ function modal {
     local    style=`echo $1 | jq -r '.style'`
 
    echo "<script type=\"text/ng-template\" id=\"$id.html\">" >> $2
-   echo "<div class=\"$class\" style=\"$style\">" >> $2
+   echo -n "<div " >> $2
+    classmaker "$1" $2 $3
+   echo "> " >> $2
    echo "<div class=\"modal-header\">" >> $2
    echo "<h5 class=\"modal-title\" id=\"modal-title1\">" >> $2
    echo "<i class=\"$icon\"></i>" >> $2

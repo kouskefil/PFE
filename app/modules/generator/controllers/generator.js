@@ -36,8 +36,8 @@ define(['configs/app', '../services/generatorFactory'], function (app) {
             var modalInstance = $uibModal.open(
                 {
                 // animation: $scope.animationsEnabled,
-                ariaLabelledBy: 'modal-title',
-                ariaDescribedBy: 'modal-body',
+                // ariaLabelledBy: 'modal-title',
+                // ariaDescribedBy: 'modal-body',
                 templateUrl: template,
                 controller: ['$uibModalInstance','$scope','$state',function ($uibModalInstance, $scope, $state) {
                     $scope.editModule = function (action) {
