@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0ce9437-dc48-408e-85d8-8bdb3a4bcc24" name="Default" comment="initial version">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/admin/controllers/group.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/admin/controllers/user.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/admin/controllers/userDetails.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/admin/services/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/admin/services/groupFactory.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/admin/services/pagerService.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/admin/services/underscore-min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/admin/services/userFactory.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/admin/views/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/admin/views/userdetails.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/modules/admin/group.html" afterPath="$PROJECT_DIR$/app/modules/admin/views/group.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/modules/admin/pw.html" afterPath="$PROJECT_DIR$/app/modules/admin/views/pw.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/modules/admin/useredit.html" afterPath="$PROJECT_DIR$/app/modules/admin/views/newUser.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/modules/admin/userlist.html" afterPath="$PROJECT_DIR$/app/modules/admin/views/userlist.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/css/style.css" afterPath="$PROJECT_DIR$/app/assets/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/configs/route.js" afterPath="$PROJECT_DIR$/app/configs/route.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers/layoutCtrl.js" afterPath="$PROJECT_DIR$/app/js/controllers/layoutCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/login.html" afterPath="$PROJECT_DIR$/app/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/generator/controllers/generator.js" afterPath="$PROJECT_DIR$/app/modules/generator/controllers/generator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/generator/controllers/operations.js" afterPath="$PROJECT_DIR$/app/modules/generator/controllers/operations.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/generator/controllers/view.js" afterPath="$PROJECT_DIR$/app/modules/generator/controllers/view.js" />
     </list>
     <ignored path="PFE.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,7 +31,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="32">
@@ -137,12 +115,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layoutCtrl.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="layoutCtrl.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/controllers/layoutCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="24" column="36" lean-forward="false" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-              <folding />
+            <state relative-caret-position="430">
+              <caret line="25" column="39" lean-forward="true" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+              <folding>
+                <element signature="e#833#952#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -305,8 +285,8 @@
         <option value="$PROJECT_DIR$/app/modules/admin/services/userFactory.js" />
         <option value="$PROJECT_DIR$/app/modules/admin/services/config.js" />
         <option value="$PROJECT_DIR$/app/modules/admin/views/userdetails.html" />
-        <option value="$PROJECT_DIR$/app/js/controllers/layoutCtrl.js" />
         <option value="$PROJECT_DIR$/app/configs/route.js" />
+        <option value="$PROJECT_DIR$/app/js/controllers/layoutCtrl.js" />
       </list>
     </option>
   </component>
@@ -726,7 +706,7 @@
       <workItem from="1494354687334" duration="28986000" />
       <workItem from="1494498814424" duration="20483000" />
       <workItem from="1494578409947" duration="23208000" />
-      <workItem from="1494686076112" duration="128000" />
+      <workItem from="1494686076112" duration="464000" />
     </task>
     <task id="LOCAL-00001" summary="initial version">
       <created>1491005149686</created>
@@ -746,7 +726,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1042009000" />
+    <option name="totallyTimeSpent" value="1042345000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1194,14 +1174,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/controllers/layoutCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="24" column="36" lean-forward="false" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/configs/route.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="362">
@@ -1225,6 +1197,16 @@
           <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
           <folding>
             <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/layoutCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="25" column="39" lean-forward="true" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+          <folding>
+            <element signature="e#833#952#0" expanded="true" />
           </folding>
         </state>
       </provider>
