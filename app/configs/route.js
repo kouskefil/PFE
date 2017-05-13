@@ -27,7 +27,7 @@ define(['./app'
                      controller: 'layoutCtrl'
                 })
                 .state('root', {
-                    url: '/app',
+                    url: '/',
                     templateUrl: 'app/index.html',
                     onEnter:function (layoutFactory) {
                         layoutFactory.setmName("Home");
@@ -36,7 +36,6 @@ define(['./app'
                             'Comptabilite',
                             'Cours'
                         ]);
-
                         var modules = [
                             {
                                 name: 'generator',
@@ -50,9 +49,17 @@ define(['./app'
                             'inscriptions'
                         ]);
                     },
-                     controller: 'layoutCtrl'
+                     controller: 'layoutCtrl',
+                    abstract : true
+                })
+                 .state('root.app', {
+                    url: '/app'
                 })
 
+                .state('admin',{
+                    url: '/admin',
+                    templateUrl : 'app/admin/views/index.html'
+                })
                 .state('root.install',{
                     url: '/:module',
                     controller:function ($state,$stateParams) {

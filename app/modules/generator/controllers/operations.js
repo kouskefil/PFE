@@ -111,8 +111,7 @@ define(['configs/app'], function (app) {
             /*********functions to be added to the model **/
             $scope.operations = globalVarFactory.getOperations();
             $scope.currentOp = globalVarFactory.skeleton({});
-            $scope.edition = false;
-           
+            $scope.edition = false;         
          
             $scope.AddInput = function () {
                 if($scope.currentOp.inputs === null){

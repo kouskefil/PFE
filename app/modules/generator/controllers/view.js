@@ -3,7 +3,6 @@ define(['configs/app'], function (app){
     app.register.controller('view',['$scope','$state','globalVarFactory', 'HTMLcomponents','componentSet', function($scope,$state,globalVarFactory, HTMLcomponents, componentSet){
             $scope.HTMLcomponents = HTMLcomponents;
             $scope.components = null;
-
             //variables to add in the model
 
             $scope.currentComponent = globalVarFactory.getModelHead().then(function (data) {

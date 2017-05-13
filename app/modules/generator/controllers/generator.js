@@ -35,11 +35,8 @@ define(['configs/app', '../services/generatorFactory'], function (app) {
         $scope.openModal = function (size, template) {
             var modalInstance = $uibModal.open(
                 {
-                // animation: $scope.animationsEnabled,
-                // ariaLabelledBy: 'modal-title',
-                // ariaDescribedBy: 'modal-body',
-                templateUrl: template,
-                controller: ['$uibModalInstance','$scope','$state',function ($uibModalInstance, $scope, $state) {
+                     templateUrl: template,
+                    controller: ['$uibModalInstance','$scope','$state',function ($uibModalInstance, $scope, $state) {
                     $scope.editModule = function (action) {
                         if(action === 'create'){
                             globalVarFactory.setName($scope.moduleName);
@@ -65,11 +62,11 @@ define(['configs/app', '../services/generatorFactory'], function (app) {
                 }] ,
                 size: size
             });
-            modalInstance.result.then(function (selectedItem){
-                $scope.selected = selectedItem;
-            }, function () {
-                $log.info('Modal dismissed at: ' + new Date());
-            });
+            // modalInstance.result.then(function (selectedItem){
+            //     $scope.selected = selectedItem;
+            // }, function () {
+            //     $log.info('Modal dismissed at: ' + new Date());
+            // });
         };
 
         $scope.isCollapsed = false;

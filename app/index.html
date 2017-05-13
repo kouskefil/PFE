@@ -55,7 +55,7 @@
 <div id="wrapper" >
     <!--Sidebar -->
     <div id="sidebar-wrapper" ng-class="sidebar_layout"   >
-        <ul class="item">
+        <ul class="item" ng-hide="location !='Admin'">
             <li>
                 <a ui-sref="root.generator.dashboard" >
                     <i class="glyphicon glyphicon-dashboard" style="padding-right: 15px ">
@@ -97,7 +97,7 @@
 
 <!--modules dropdown template script-->
 <script type="text/ng-template" id="modules.html">
-    <ul  class="m-dd floatingPanel dropdown-menu position2" uib-dropdown-menu role="menu" aria-labelledby="button-template-url">
+    <ul ng-show="'modules && modules.lenght > 0'"  class="m-dd floatingPanel dropdown-menu position2" uib-dropdown-menu role="menu" aria-labelledby="button-template-url">
         <li role="menuitem" ng-repeat="item in modules">
             <a ui-sref="{{item.link}}">
                 <div class="Gl" >

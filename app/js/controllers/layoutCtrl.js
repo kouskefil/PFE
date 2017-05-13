@@ -16,10 +16,13 @@ define(['angular'], function (angular) {
 
             //    to perform operation's action
             $scope.doAction = function (item) {
+                $log.debug('doaction');
+                $log.debug(item);
                 item.action();
             };
              $scope.go = function () {
-                $state.go('root');
+                $state.go('root.install',{});
+                //  $state.go('root.app');
              };
             /*Layout vars config functions*/
             $scope.navbarCollapsed = true;
