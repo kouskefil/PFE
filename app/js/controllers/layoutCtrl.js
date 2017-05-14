@@ -21,8 +21,8 @@ define(['angular'], function (angular) {
                 item.action();
             };
              $scope.go = function () {
-                // $state.go('root.install',{module:'admin'});
-                 $state.go('root.app');
+                $state.go('root.install',{module:'admin'});
+                 // $state.go('root.app');
              };
             /*Layout vars config functions*/
             $scope.navbarCollapsed = true;
