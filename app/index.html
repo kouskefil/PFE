@@ -22,23 +22,10 @@
                     </a>
                     <ul class="dropdown-menu1" template-url="modules.html" uib-dropdown-menu aria-labelledby="dropdownMenu3"></ul>
                 </li>
-                <li class="dropdown nav-options">
-                    <a href id="simple-dropdownr"   uib-dropdown-toggle>
-                        <span class="glyphicon glyphicon-envelope"> </span>
-                        <span class="option-label-message option-label" >14</span>
-                    </a>
-                </li>
                 <li class="dropdown nav-options  " uib-dropdown on-toggle="toggled(open)">
                     <a href id="simple-dropdownr" uib-dropdown-toggle>
                         <span class=" glyphicon glyphicon-bell"></span>
                         <span class="option-label-notif option-label" >13</span>
-                    </a>
-                    <ul class="dropdown-menu" template-url="notifications.html" uib-dropdown-menu aria-labelledby="dropdownMenu3"></ul>
-                </li>
-                <li class="dropdown nav-options  " uib-dropdown on-toggle="toggled(open)">
-                    <a href id="simple-dropdownr" uib-dropdown-toggle>
-                        <span class=" glyphicon glyphicon-tasks"></span>
-                        <span class="option-label-task option-label" >9</span>
                     </a>
                     <ul class="dropdown-menu" template-url="notifications.html" uib-dropdown-menu aria-labelledby="dropdownMenu3"></ul>
                 </li>
@@ -55,7 +42,7 @@
 <div id="wrapper" >
     <!--Sidebar -->
     <div id="sidebar-wrapper" ng-class="sidebar_layout"   >
-        <ul class="item" ng-hide="location !='Admin'">
+        <ul class="item" ng-hide="location =='Admin'">
             <li>
                 <a ui-sref="root.generator.dashboard" >
                     <i class="glyphicon glyphicon-dashboard" style="padding-right: 15px ">

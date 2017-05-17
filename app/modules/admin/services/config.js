@@ -11,24 +11,23 @@ define(['configs/app',
     '../services/pagerService',
     '../services/userFactory',
     '../services/groupFactory',
-    '../../../js/services/layoutFactory'
+    '../../../js/services/layoutFactory',
+    '../directive/edituser'
 
 ], function(app){
     app.register.stateProvider
-
-        .state('root.admin',
-            {
+        .state('root.admin',{
                 url:'/admin',
                 template:'<div ui-view=""></div>',
                 onEnter:function (layoutFactory) {
                     layoutFactory.setmName("Admin");
                 }
             })
-        .state('root.admin.init',
-            {
+        .state('root.admin.init', {
                 url:'/admin',
                 templateUrl:'app/modules/admin/views/userlist.html',
-                onEnter: function (layoutFactory) {
+                onEnter: function (layoutFactory,userFactory) {
+                    layoutFactory.setLocation('Users ');
                     layoutFactory.setItems([
                         {
                             name:'Users',
@@ -46,31 +45,25 @@ define(['configs/app',
                             name:"new",
                             icon:"glyphicon glyphicon-edit",
                             action:function () {
-                            }
-                        },
-                        {
-                            name: "save",
-                            icon: "glyphicon glyphicon-floppy-save",
-                            action:function () {
-
+                                userFactory.editUser('app/modules/admin/views/newUser.html');
                             }
                         }
                     ]);
                 },
                 controller:'users'
-            }
-        )
+            })
         .state('root.admin.user',{
             url:'/user-admin',
             templateUrl:'app/modules/admin/views/userdetails.html',
             onEnter : function (layoutFactory, userFactory) {
+                layoutFactory.setLocation('User settings');
                 layoutFactory.setOperations(
                     [
                         {
                             name:"new",
                             icon:"glyphicon glyphicon-edit",
                             action:function () {
-                                userFactory.newUser('app/modules/admin/views/newUser.html');
+                                userFactory.editUser('app/modules/admin/views/newUser.html');
                             }
                         },
                         {
@@ -83,6 +76,7 @@ define(['configs/app',
                             name:"disable",
                             icon:"fa fa-user",
                             action:function () {
+                                userFactory.editUser('app/modules/admin/views/disable_user.html');
                             }
                         }
                     ]
@@ -102,15 +96,7 @@ define(['configs/app',
                         name:"new",
                         icon:"glyphicon glyphicon-edit",
                         action:function () {
-                            groupFactory.newGrp();
-                        }
-                    },
-                    {
-                        name: "save",
-                        icon: "glyphicon glyphicon-floppy-save",
-                        action:function () {
-                            $log.debug('setOperation');
-
+                            groupFactory.newGrp('app/modules/admin/views/newGrp.html');
                         }
                     }
                 ]);

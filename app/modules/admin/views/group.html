@@ -1,62 +1,17 @@
-<!-- Generated html file -->
-<style>
-    .g-action2{
-        font-size: 11px;
-        float: right;
-        background-color: lightgrey;
-        color: lightslategray;
-        width: 18px;
-        height: 18px;
-        border-radius: 50px;
-        padding: 4px 4px 4px 4px;
-    }
-    .g-action2:hover{
-        color: #FFF;
-        background-color: dimgray;
-    }
-    .role{
-        padding: 10px !important;
-    }
-    .role .action{
-        color: lightgray;
-    }
-    /*.modal {*/
-    /*text-align: center;*/
-    /*padding: 0!important;*/
-    /*}*/
 
-    /*.modal:before {*/
-    /*content: '';*/
-    /*display: inline-block;*/
-    /*height: 100%;*/
-    /*vertical-align: middle;*/
-    /*margin-right: -4px;*/
-    /*}*/
-
-    /*.modal-dialog {*/
-    /*display: inline-block;*/
-    /*text-align: left;*/
-    /*vertical-align: middle;*/
-    /*}*/
-</style>
 <div id="resources"  style="padding:0"  class=" row content-inner col-md-10 col-md-offset-1 "> <!-- resources begins-->
+    <div id="resources_tree"  style="padding:0; min-height:465px;max-height:465px;margin-right:15px"  class="floatingPanel col-md-3 "> <!-- resources_tree begins-->
+        <div id="tree_header"  style="padding: 10px 15px; margin: 0"  class="g_header"> <!-- tree_header begins-->
+            <span  style="padding-right: 10px;"  class="fa fa-cogs" id="span177" ></span>
+            <span  style="font-size: small; color: #0084bf;"  id="span178" >Groups</span>
+        </div> <!-- tree_header ends-->
+        <ul  class="items ">
+            <li ng-repeat=" item in groups" ng-class="{selectedItem:item.name==selected}">
+                <span  class="item-label" data-ng-click="setCurrentGroup(item)" id="span179" >{{item.name}}</span>
+            </li>
+        </ul>
+    </div> <!-- resources_tree ends-->
     <div id="resources_params"  style="padding:0;"  class=" col-md-7 "> <!-- resources_params begins-->
-        <div id="grp_definition"  style="margin-bottom: 15px; padding: 0"  class="floatingPanel col-md-12 "> <!-- grp_definition begins-->
-            <div id="grp_def_header"  style="padding: 10px 15px; margin: 0"  class="g_header"> <!-- grp_def_header begins-->
-                <span  style="padding-right: 10px;"  class="fa fa-group" id="span152" ></span>
-                <span  style="font-size: small; color: #0084bf;"  id="span153" >New Group</span>
-            </div> <!-- grp_def_header ends-->
-            <div id="grp_def_content"  style="padding: 15px 15px"  class=""> <!-- grp_def_content begins-->
-                <div  class="form-group">
-                    <label for="select155">Group name</label>
-                    <input name="select155" id="select155" ng-model="currentGroup.name" disabled class="form-control" />
-                </div>
-                <div class="form-group">
-                    <label for="input156">Group description</label>
-                    <textarea style="min-height: 130px; text-align: justify; padding: 10px !important" class=" form-control"  placeholder="group description" name="input156" id="input156" ng-model="currentGroup.desc"></textarea>
-                </div> <!-- div id:input156 -->
-            </div> <!-- grp_def_content ends-->
-        </div> <!-- grp_definition ends-->
         <div id="grp_params"  style="padding: 0; min-height:400px"  class="floatingPanel col-md-12 "> <!-- grp_params begins-->
             <div id="params_header"  style="padding: 10px 15px; margin: 0"  class="g_header"> <!-- params_header begins-->
                 <span  style="padding-right: 10px;"  class="glyphicon glyphicon-cog" id="span158" ></span>
@@ -70,39 +25,21 @@
             </div> <!-- params_header ends-->
             <div id="params_content" > <!-- params_content begins-->
                 <table class="col-md-10 table">
-               
                 <tbody>
                 <tr ng-repeat="role in currentGroup.roles">
                     <td>{{role.name}}</td>
                     <td>{{role.desc}}</td>
-                    <td><span class="glyphicon glyphicon-trash"></span></td>
+                    <td><span class="glyphicon glyphicon-trash" data-ng-click="deleteRole(role)"></span></td>
                 </tr>
                 </tbody>
                 </table>
             </div> <!-- params_content ends-->
         </div> <!-- grp_params ends-->
     </div> <!-- resources_params ends-->
-    <div id="resources_tree"  style="padding:0; min-height:465px;max-height:465px;margin-left:15px"  class="floatingPanel col-md-3 "> <!-- resources_tree begins-->
-        <div id="tree_header"  style="padding: 10px 15px; margin: 0"  class="g_header"> <!-- tree_header begins-->
-            <span  style="padding-right: 10px;"  class="fa fa-cogs" id="span177" ></span>
-            <span  style="font-size: small; color: #0084bf;"  id="span178" >Groups</span>
-        </div> <!-- tree_header ends-->
-        <ul  class="items">
-            <li ng-repeat=" item in groups">
-                <div id="dgroup169"  class=" col-md-12 "> <!-- group169 begins-->
-                    <div id="smethod"  class="item-label-g col-md-7 "> <!-- method begins-->
-                        <span  class="item-label" data-ng-click="setCurrentGroup(item)" id="span179" >{{item.name}}</span>
-                    </div> <!-- method ends-->
 
-                </div> <!-- group169 ends-->
-            </li>
-        </ul>
-    </div> <!-- resources_tree ends-->
 </div> <!-- resources ends-->
 <script type="text/ng-template" id="moduleRoles.html" >
-
     <div class="modal-module-editing" style="top: 200px !important; ">
-
         <div class="modal-header">
             <h5 class="modal-title" id="modal-title">
                 <i class="glyphicon glyphicon-th"></i>
@@ -111,20 +48,19 @@
         </div>
         <div class="modal-body clo-md-12 " id="modal-body" style=" max-height:300px;overflow-y:scroll ">
             <div class="row">
-                <div class="col-md-5">
+                <div class="col-md-3" style="border-right: 1px solid lightgrey; height: 400px">
                     Modules
                     <ul class="items">
                         <li ng-repeat="module in modules" data-ng-click="setCurrentModule(module)">{{module.name}}</li>
                     </ul>
                 </div>
-                <div class="col-md-7">
+                <div class="col-md-9">
                     Roles
                     <ul class="items" >
                         <div  id="response"  class="floatingPanel request role" ng-repeat="item in currentModule.roles"> <!-- response begins-->
                             <p>
-                                <!--<span  class="param" id="span203_copy1" >name</span>-->
                                 <span  class="value" id="span204_copy1" >{{item.name}}</span>
-                                <span class="fa fa-arrow-right g-action2" data-ng-click="addRole(item)"></span>
+                                <button style="float: right" class="floatingPanel" data-ng-click="addRole(item)">add role</button>
                             </p>
                             <p  class="desc">
                                 <span  class="param" id="span205_copy1" >description</span><br>
@@ -170,6 +106,9 @@
     </div>
 
 </script>
+
+
+
 
 
 

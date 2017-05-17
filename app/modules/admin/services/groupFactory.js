@@ -80,49 +80,35 @@ define(['configs/app'], function (app){
          * creating new group with popup
          *
          */
-        service.newGrp = function(){
+        service.newGrp = function(template){
             $log.debug('service.newgrp');
             var inst = $uibModal.open({
-                template:'  <div>' +
-                '        <div class="modal-header">' +
-                '         <h5 class="modal-title" id="modal-title1">' +
-                '          <i class="fa fa-groups"></i>' +
-                '          New group <span class="glyphicon glyphicon-remove" style="float: right" data-ng-click="cancel()"></span>' +
-                '         </h5>' +
-                '        </div>' +
-                '        <div class="modal-body" id="modal-body1">' +
-                '         <div class="form-group">' +
-                '          <label for="input2">Group name</label>' +
-                '          <input class=" form-control"  placeholder="password" name="input2" id="input2" type="text" ng-model="name"/>' +
-                '         </div> <!-- div id:input2 -->' +
-                '         <div class="form-group">' +
-                '          <label for="input3">Description</label>' +
-                '          <textarea class=" form-control"  placeholder="password" name="input3" id="input3"  ng-model="desc"></textarea>' +
-                '         </div> <!-- div id:input3 -->' +
-                '         <div class="modal-footer">' +
-                '           <button  style="width:100%"  class="floatingPanel" ng-click="addGroup(group)">Add group</button>' +
-                '           </div>'+                          
-                '        </div>' +
-                '       </div>',
+                templateUrl:template,
                 controller: ['$scope', '$uibModalInstance', '$log', function($scope, $uibModalInstance, $log) {
                     $scope.cancel = function () {
                         $uibModalInstance.dismiss('cancel');
                     };
+                    $scope.grpTmp = [];
                     $scope.addGroup = function(){
-                        groups.push({name:$scope.name, desc:$scope.desc}) ;
-
+                        var i;
+                        for(i = 0; i < $scope.grpTmp.length; i++){
+                            groups.push($scope.grpTmp[i]);
+                        }
+                        $scope.cancel();
                     };
+                    $scope.tmpAdd = function () {
+                        $scope.grpTmp.push({name:$scope.name, desc:$scope.desc}) ;
+                        $scope.name = "";
+                        $scope.desc = "";
+                    };
+
 
                 }]
             });
-
-            // /* `modal.result` is a promise that gets resolved when
-            //  * $modalInstance.close() is called */
         };
         /*
         end
          */
-
         service.grpSkeleton = function (obj) {
             skel =  {
                 name:obj.name,

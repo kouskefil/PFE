@@ -1,831 +1,285 @@
-<style>
-    /*
-	/*Name	: Marinka Theme;*/
-	/*Version	: 1.0;*/
-	/*Created : 16 Juni 2014;*/
-/**!*/
 
-    /*!*	IMPORT*/
-    /*===========================*!*/
-
-    /*@import url('bootstrap.min.css');*/
-    /*@import url('font-awesome.min.css');*/
-    /*@import url('portfolio.jquery.css');*/
-    /*@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);*/
-
-    /*!* GENERAL*/
-    /*===========================*!*/
-
-    /*html, body{*/
-        /*margin: 0;*/
-        /*padding: 0;*/
-    /*}*/
-
-    /*body{*/
-        /*font-family: "Open Sans", sans-serif;*/
-        /*font-weight: 400;*/
-        /*background-color: #ecf0f1;*/
-        /*scrollbar-face-color: #121212;*/
-    /*}*/
-
-    /*::-webkit-scrollbar {*/
-        /*width: 8px;*/
-    /*}*/
-
-    /*::-webkit-scrollbar-track {*/
-        /*background-color: #121212;*/
-    /*}*/
-
-    /*::-webkit-scrollbar-thumb {*/
-        /*background-color: #1ccdab;*/
-        /*-webkit-border-radius: 2px;*/
-        /*-moz-border-radius: 2px;*/
-        /*-ms-border-radius: 2px;*/
-        /*-o-border-radius: 2px;*/
-        /*border-radius: 2px;*/
-    /*}*/
-
-    /*::-webkit-scrollbar-button {*/
-        /*display: none;*/
-    /*}*/
-
-    /*::-webkit-scrollbar-corner {*/
-        /*background-color: #000000;*/
-    /*}*/
-
-    /*#scrollUp {*/
-        /*bottom: 20px;*/
-        /*right: 20px;*/
-        /*height: 38px;  !* Height of image *!*/
-        /*width: 38px; !* Width of image *!*/
-        /*background: url(../img/top.png) no-repeat;*/
-    /*}*/
-
-    /*.btn.btn-default{*/
-        /*background-color: #ecf0f1;*/
-        /*color: #34495e;*/
-        /*border: 1px solid #ecf0f1;*/
-    /*}*/
-
-    /*.btn.btn-default:hover{*/
-        /*background-color: #bdc3c7;*/
-        /*color: #34495e;*/
-        /*border: 1px solid #bdc3c7;*/
-        /*transition: all 1s ease;*/
-        /*-webkit-transition: all 1s ease;*/
-        /*-moz-transition: all 1s ease;*/
-        /*-ms-transition: all 1s ease;*/
-        /*-o-transition: all 1s ease;*/
-    /*}*/
-
-    /*.btn.btn-primary{*/
-        /*background-color: #1abc9c;*/
-        /*color: #fff;*/
-        /*border: 1px solid #1abc9c;*/
-    /*}*/
-
-    /*.btn.btn-primary:hover{*/
-        /*background-color: #16a085;*/
-        /*color: #fff;*/
-        /*border: 1px solid #16a085;*/
-        /*transition: all 1s ease;*/
-        /*-webkit-transition: all 1s ease;*/
-        /*-moz-transition: all 1s ease;*/
-        /*-ms-transition: all 1s ease;*/
-        /*-o-transition: all 1s ease;*/
-    /*}*/
-
-    /*.btn.btn-success{*/
-        /*background-color: #2ecc71;*/
-        /*color: #fff;*/
-        /*border: 1px solid #2ecc71;*/
-    /*}*/
-
-    /*.btn.btn-success:hover{*/
-        /*background-color: #27ae60;*/
-        /*color: #fff;*/
-        /*border: 1px solid #27ae60;*/
-        /*transition: all 1s ease;*/
-        /*-webkit-transition: all 1s ease;*/
-        /*-moz-transition: all 1s ease;*/
-        /*-ms-transition: all 1s ease;*/
-        /*-o-transition: all 1s ease;*/
-    /*}*/
-
-    /*.btn.btn-info{*/
-        /*background-color: #3498db;*/
-        /*color: #fff;*/
-        /*border: 1px solid #3498db;*/
-    /*}*/
-
-    /*.btn.btn-info:hover{*/
-        /*background-color: #2980b9;*/
-        /*color: #fff;*/
-        /*border: 1px solid #2980b9;*/
-        /*transition: all 1s ease;*/
-        /*-webkit-transition: all 1s ease;*/
-        /*-moz-transition: all 1s ease;*/
-        /*-ms-transition: all 1s ease;*/
-        /*-o-transition: all 1s ease;*/
-    /*}*/
-
-    /*.btn.btn-warning{*/
-        /*background-color: #f1c40f;*/
-        /*color: #fff;*/
-        /*border: 1px solid #f1c40f;*/
-    /*}*/
-
-    /*.btn.btn-warning:hover{*/
-        /*background-color: #f39c12;*/
-        /*color: #fff;*/
-        /*border: 1px solid #f39c12;*/
-        /*transition: all 1s ease;*/
-        /*-webkit-transition: all 1s ease;*/
-        /*-moz-transition: all 1s ease;*/
-        /*-ms-transition: all 1s ease;*/
-        /*-o-transition: all 1s ease;*/
-    /*}*/
-
-    /*.btn.btn-danger{*/
-        /*background-color: #e74c3c;*/
-        /*color: #fff;*/
-        /*border: 1px solid #e74c3c;*/
-    /*}*/
-
-    /*.btn.btn-danger{*/
-        /*background-color: #c0392b;*/
-        /*color: #fff;*/
-        /*border: 1px solid #c0392b;*/
-        /*transition: all 1s ease;*/
-        /*-webkit-transition: all 1s ease;*/
-        /*-moz-transition: all 1s ease;*/
-        /*-ms-transition: all 1s ease;*/
-        /*-o-transition: all 1s ease;*/
-    /*}*/
-
-    /*.btn-group{*/
-        /*margin-right: 20px;*/
-        /*margin-bottom: 10px;*/
-    /*}*/
-
-    /*.input-lg{*/
-        /*margin-bottom: 22px;*/
-    /*}*/
-
-    /*.form-control{*/
-        /*border: 1px solid #1abc9c;*/
-    /*}*/
-
-    /*.form-control:focus{*/
-        /*border: 1px solid #ecf0f1;*/
-        /*box-shadow: none;*/
-        /*-webkit-box-shadow: none;*/
-        /*-moz-box-shadow: none;*/
-        /*-ms-box-shadow: none;*/
-        /*-o-box-shadow: none;*/
-        /*background-color: #ecf0f1;*/
-        /*transition: all 1s ease;*/
-        /*-webkit-transition: all 1s ease;*/
-        /*-moz-transition: all 1s ease;*/
-        /*-ms-transition: all 1s ease;*/
-        /*-o-transition: all 1s ease;*/
-    /*}*/
-
-    /*!* SIDEBAR*/
-    /*===========================*!*/
-
-    /*#sidebar{*/
-        /*border-top: 10px solid #1abc9c;*/
-        /*margin-bottom: 30px;*/
-    /*}*/
-
-    /*#sidebar .sosmed{*/
-        /*background-color: #16a085;*/
-        /*margin-bottom: 35px;*/
-        /*padding: 20px;*/
-        /*color: #ecf0f1;*/
-        /*border-bottom-right-radius: 10px;*/
-        /*-webkit-border-bottom-right-radius: 10px;*/
-        /*-moz-border-bottom-right-radius: 10px;*/
-        /*-ms-border-bottom-right-radius: 10px;*/
-        /*-o-border-bottom-right-radius: 10px;*/
-        /*border-bottom-left-radius: 10px;*/
-        /*-webkit-border-bottom-left-radius: 10px;*/
-        /*-moz-border-bottom-left-radius: 10px;*/
-        /*-ms-border-bottom-left-radius: 10px;*/
-        /*-o-border-bottom-left-radius: 10px;*/
-    /*}*/
-
-    /*#sidebar .sosmed a{*/
-        /*color: #ecf0f1;*/
-        /*margin-right: 5px;*/
-        /*margin-left: 5px;*/
-    /*}*/
-
-    /*#sidebar .sosmed a i.fa{*/
-        /*background-color: #ecf0f1;*/
-        /*color: #16a085;*/
-        /*width: 60px;*/
-        /*height: 60px;*/
-        /*border-radius: 100%;*/
-        /*-webkit-border-radius: 100%;*/
-        /*-moz-border-radius: 100%;*/
-        /*-ms-border-radius: 100%;*/
-        /*-o-border-radius: 100%;*/
-        /*padding-top: 18px;*/
-    /*}*/
-
-    /*#sidebar .sosmed a i.fa:hover{*/
-        /*background-color: #bdc3c7;*/
-        /*transition: all 1s ease;*/
-        /*-webkit-transition: all 1s ease;*/
-        /*-moz-transition: all 1s ease;*/
-        /*-ms-transition: all 1s ease;*/
-        /*-o-transition: all 1s ease;*/
-    /*}*/
-
-    /*#sidebar .user{*/
-        /*margin-bottom: 30px;*/
-    /*}*/
-
-    /*#sidebar .user img{*/
-        /*border: 10px solid #bdc3c7;*/
-    /*}*/
-
-    /*#sidebar .user .user-head{*/
-        /*text-align: center;*/
-    /*}*/
-
-    /*#sidebar .user .user-head h1{*/
-        /*color: #34495e;*/
-        /*font-weight: 600;*/
-    /*}*/
-
-    /*#sidebar .user .user-head h5{*/
-        /*font-weight: 600;*/
-        /*color: #7f8c8d;*/
-        /*font-size: 18pt;*/
-    /*}*/
-
-    /*#sidebar .user .user-head .hr-center{*/
-        /*height: 3px;*/
-        /*background-color: #1abc9c;*/
-        /*width: 40%;*/
-        /*display: block;*/
-        /*margin: 0 auto;*/
-    /*}*/
-
-    /*#sidebar .link-me{*/
-        /*margin-top: 30px;*/
-    /*}*/
-
-    /*#sidebar .link-me i.fa{*/
-        /*background-color: #1abc9c;*/
-        /*color: #ecf0f1;*/
-        /*width: 45px;*/
-        /*height: 45px;*/
-        /*padding-top: 13px;*/
-        /*border-radius: 10px;*/
-        /*font-size: 14pt;*/
-        /*-webkit-border-radius: 10px;*/
-        /*-moz-border-radius: 10px;*/
-        /*-ms-border-radius: 10px;*/
-        /*-o-border-radius: 10px;*/
-    /*}*/
-
-    /*#sidebar .link-me i.fa:hover{*/
-        /*background-color: #bdc3c7;*/
-        /*transition: all 1s ease;*/
-        /*-webkit-transition: all 1s ease;*/
-        /*-moz-transition: all 1s ease;*/
-        /*-ms-transition: all 1s ease;*/
-        /*-o-transition: all 1s ease;*/
-    /*}*/
-
-    /*#sidebar .link-me .hr-center{*/
-        /*height: 3px;*/
-        /*background-color: #34495e;*/
-        /*margin: 0 auto;*/
-        /*width: 100px;*/
-        /*margin-top: 15px;*/
-    /*}*/
-
-    /*!* CONTENT*/
-    /*===========================*!*/
-
-    /*#content{*/
-        /*background-color: #fff;*/
-        /*border-top: 10px solid #16a085;*/
-        /*border-bottom-right-radius: 10px;*/
-        /*-webkit-border-bottom-right-radius: 10px;*/
-        /*-moz-border-bottom-right-radius: 10px;*/
-        /*-ms-border-bottom-right-radius: 10px;*/
-        /*-o-border-bottom-right-radius: 10px;*/
-        /*border-bottom-left-radius: 10px;*/
-        /*-webkit-border-bottom-left-radius: 10px;*/
-        /*-moz-border-bottom-left-radius: 10px;*/
-        /*-ms-border-bottom-left-radius: 10px;*/
-        /*-o-border-bottom-left-radius: 10px;*/
-    /*}*/
-
-    /*#content .navbar{*/
-        /*margin-bottom: 0;*/
-        /*background-color: #ecf0f1;*/
-    /*}*/
-
-    /*#content .navbar-default .navbar-nav > .active > a,*/
-    /*#content .navbar-default .navbar-nav > .active > a:hover,*/
-    /*#content .navbar-default .navbar-nav > .active > a:focus{*/
-        /*border-radius: 6px;*/
-        /*-webkit-border-radius: 6px;*/
-        /*-moz-border-radius: 6px;*/
-        /*-ms-border-radius: 6px;*/
-        /*-o-border-radius: 6px;*/
-    /*}*/
-
-    /*#content .navbar-default .navbar-collapse,*/
-    /*#content .navbar-default .navbar-form{*/
-        /*margin-top: 10px;*/
-    /*}*/
-
-    /*#content .navbar-default ul.nav li a{*/
-        /*color: #34495e;*/
-    /*}*/
-
-    /*#content .navbar-default ul.nav li a:hover{*/
-        /*color: #1abc9c;*/
-        /*transition: all 1s ease;*/
-        /*-webkit-transition: all 1s ease;*/
-        /*-moz-transition: all 1s ease;*/
-        /*-ms-transition: all 1s ease;*/
-        /*-o-transition: all 1s ease;*/
-    /*}*/
-
-    /*#content .navbar ul.nav.navbar-right{*/
-        /*margin-right: 17px !important;*/
-    /*}*/
-
-    /*#content .navbar ul.nav.navbar-right i.fa{*/
-        /*background-color: #34495e;*/
-        /*color: #fff;*/
-        /*width: 30px;*/
-        /*padding-top: 8px;*/
-        /*padding-left: 10px;*/
-        /*border-radius: 100%;*/
-        /*-webkit-border-radius: 100%;*/
-        /*-moz-border-radius: 100%;*/
-        /*-ms-border-radius: 100%;*/
-        /*-o-border-radius: 100%;*/
-        /*height: 30px;*/
-    /*}*/
-
-    /*#content .main-content{*/
-        /*padding: 0 20px;*/
-    /*}*/
-
-    .timeline {
-        list-style: none;
-        padding: 20px 0 20px;
-        position: relative;
-    }
-
-
-    .timeline > li {
-        margin-bottom: 20px;
-        position: relative;
-    }
-
-
-    {
-        clear: both;
-    }
-
-    .timeline > li > .timeline-panel {
-        width: calc( 100% - 75px );
-        float: left;
-        background-color: #FFF;
-        color: #34495e;
-        border: 1px solid #d4d4d4;
-        border-radius: 2px;
-        margin-bottom: 30px;
-        padding: 20px;
-        position: relative;
-        -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
-        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
-    }
-
-
-    .timeline > li > .timeline-panel .hr-left{
-        height: 1px;
-        width: 100px;
-        margin-bottom: 20px;
-        background-color: #ddd;
-    }
-
-    .timeline .timeline-head{
-        text-align: right;
-        margin-right: 80px;
-        margin-top: 20px;
-    }
-
-
-    .timeline > li.timeline-inverted > .timeline-panel {
-        float: right;
-    }
-
-
-
-    .timeline-title {
-        margin-top: 0;
-        color: inherit;
-    }
-
-    .timeline-body > p,
-    .timeline-body > ul {
-        margin-bottom: 0;
-    }
-
-    .timeline-body > p + p {
-        margin-top: 5px;
-    }
-
-    /*	WORK
-    ==========================*/
-
-    .thumbnail{
-        padding: 0;
-        border: none;
-    }
-
-    .thumbnail:hover{
-        border: none;
-    }
-
-    /*	RESUME
-    ==========================*/
-
-    #resume i.fa{
-        margin-right: 10px;
-    }
-
-    /*	WORK EXPERIENCE
-    ==========================*/
-
-    .work-experience h3{
-        margin-bottom: 5px;
-    }
-
-    .work-experience small{
-        color: #7f8c8d;
-    }
-
-    .work-experience p{
-        margin-top: 15px;
-    }
-
-    /*	Skills
-    ===========================*/
-
-    .skillbar {
-        position:relative;
-        display:block;
-        margin-bottom:15px;
-        width:100%;
-        background:#eee;
-        height:25px;
-        border-radius:3px;
-        -moz-border-radius:3px;
-        -webkit-border-radius:3px;
-        -webkit-transition:0.4s linear;
-        -moz-transition:0.4s linear;
-        -ms-transition:0.4s linear;
-        -o-transition:0.4s linear;
-        transition:0.4s linear;
-        -webkit-transition-property:width, background-color;
-        -moz-transition-property:width, background-color;
-        -ms-transition-property:width, background-color;
-        -o-transition-property:width, background-color;
-        transition-property:width, background-color;
-    }
-
-    .skillbar-title {
-        position:absolute;
-        top:0;
-        left:0;
-        width:110px;
-        font-weight:bold;
-        font-size:13px;
-        color:#ffffff;
-        background:#6adcfa;
-        -webkit-border-top-left-radius:3px;
-        -webkit-border-bottom-left-radius:4px;
-        -moz-border-radius-topleft:3px;
-        -moz-border-radius-bottomleft:3px;
-        border-top-left-radius:3px;
-        border-bottom-left-radius:3px;
-    }
-
-    .skillbar-title span {
-        display:block;
-        background:rgba(0, 0, 0, 0.1);
-        padding:0 20px;
-        height:25px;
-        line-height:25px;
-        -webkit-border-top-left-radius:3px;
-        -webkit-border-bottom-left-radius:3px;
-        -moz-border-radius-topleft:3px;
-        -moz-border-radius-bottomleft:3px;
-        border-top-left-radius:3px;
-        border-bottom-left-radius:3px;
-    }
-
-    .skillbar-bar {
-        height:25px;
-        width:0px;
-        background:#6adcfa;
-        border-radius:3px;
-        -moz-border-radius:3px;
-        -webkit-border-radius:3px;
-    }
-
-    .skill-bar-percent {
-        position:absolute;
-        right:10px;
-        top:0;
-        font-size:11px;
-        height:25px;
-        line-height:25px;
-        color:#ffffff;
-        color:rgba(0, 0, 0, 0.4);
-    }
-
-    /*	BLOG
-    ==============================*/
-
-    #blog .blog-content h3{
-        margin-top: 0;
-        margin-bottom: 5px;
-    }
-
-    #blog .blog-content h3 a{
-        text-decoration: none;
-        color: #34495e;
-    }
-
-    #blog .blog-content h3 a:hover{
-        color: #1abc9c;
-        transition: all 1s ease;
-        -webkit-transition: all 1s ease;
-        -moz-transition: all 1s ease;
-        -ms-transition: all 1s ease;
-        -o-transition: all 1s ease;
-    }
-
-    #blog .blog-content small i.fa{
-        margin-right: 8px;
-        color: #bdc3c7;
-    }
-
-    #blog .blog-content small a{
-        margin-right: 20px;
-        color: #7f8c8d;
-        text-decoration: none;
-    }
-
-    #blog .blog-content small a:hover{
-        color: #1abc9c;
-        transition: all 1s ease;
-        -webkit-transition: all 1s ease;
-        -moz-transition: all 1s ease;
-        -ms-transition: all 1s ease;
-        -o-transition: all 1s ease;
-    }
-
-    #blog .blog-content p{
-        margin-top: 15px;
-    }
-
-    #blog img{
-        height: 180px;
-        width: 100%;
-    }
-
-    /*	CONTACT
-    ===========================*/
-
-    #contact a{
-        color: #34495e;
-        text-decoration: none;
-    }
-
-    #contact a:hover{
-        color: #1abc9c;
-        transition: all 1s ease;
-        -webkit-transition: all 1s ease;
-        -moz-transition: all 1s ease;
-        -ms-transition: all 1s ease;
-        -o-transition: all 1s ease;
-    }
-
-    /*	FOOTER
-    =============================*/
-
-    footer{
-        background-color: #34495e;
-        padding: 30px 20px 20px 20px;
-        margin-top: 30px;
-    }
-
-    footer p{
-        color: #fff;
-    }
-
-    .top-nav-collapse {
-        /* Customize the look and feel of the collapsed top nav here */
-        padding: 0;
-        background-color: #08c;
-        border-bottom: 1px scroller #ccc;
-        z-index: 1030 !important;
-        position: fixed !important;
-    }
-
-    /*	RESPONSIVE
-    =============================*/
-
-    /* Smartphones (portrait) ----------- */
-    @media only screen and (max-width : 320px) {
-        /* Styles */
-
-    }
-
-    @media only screen and (max-width : 480px) {
-        /* Styles */
-
-        .timeline-panel h1{
-            font-size: 20pt;
-        }
-
-        .timeline-panel p{
-            font-size: 10pt;
-        }
-
-        .timeline-panel address{
-            font-size: 10pt;
-        }
-
-        .timeline-panel .skillbar-title{
-            width: 55px;
-        }
-
-        .timeline-panel .skillbar-title span{
-            padding: 0 5px;
-            font-size: 6pt;
-        }
-
-        .timeline-panel .skill-bar-percent{
-            font-size: 6pt;
-        }
-
-        #personal-info .btn-group button{
-            font-size: 8pt;
-        }
-
-    }
-
-</style>
 <!-- Generated html file -->
-<div id=""  style="padding: 0;"  class=" row content-inner col-md-10 col-md-offset-1 "> <!-- content begins-->
-    <div id="group5"  style="padding: 0;"  class=" col-md-10 "> <!-- group5 begins-->
-        <div id="group6"  style="height: 422px;margin-bottom: 15px; padding: 0"  class=" col-md-12 "> <!-- group6 begins-->
-            <div id="gcontent"  class=""> <!-- gcontent begins-->
-                <ul class="timeline">
-                    <li>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <div class="col-md-12" style="padding: 0">
-                                    <div class="col-md-8" style="padding: 0">
-                                        <h1 class="timeline-title">{{user.name}}</h1>
-                                        <h4>{{user.title}}</h4>
+<div id="content"  style="padding: 0; "  class="content-inner col-md-10 col-md-offset-1 "> <!-- content begins-->
+    <div id=""  style="padding:0; margin-bottom: 50px"  class=" col-md-10 "> <!-- path begins-->
+        <ul class="timeline">
+            <li>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <div class="col-md-12" style="padding: 0">
+                            <div class="col-md-8" style="padding: 0">
+                                <h1 class="timeline-title">{{user.name}}</h1>
+                                <h4>{{user.title}}</h4>
+                            </div>
+                            <div class="col-md-4" style="padding: 0">
+                                <div class="user" style="float:right" >
+                                    <div class="text-center">
+                                        <img style="width: 50px;height: 50px;" src="app/assets/images/avatar_2x.png" class="img-circle">
                                     </div>
-                                    <div class="col-md-4" style="padding: 0">
-                                        <div class="user" style="float:right" >
-                                            <div class="text-center">
-                                                <img style="width: 50px;height: 50px;" src="app/assets/images/avatar_2x.png" class="img-circle">
-                                            </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Created at {{ user.registered}}</small></p>
+                    </div>
+                    <div class="hr-left"></div>
+                    <div class="timeline-body">
+                        <form class="form-horizontal">
+                            <div class="col md 12 row" >
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-2" for="gender">Gender:</label>
+                                        <div class="col-sm-10">
+                                            <p id="gender" class="form-control-static">
+                                                {{user.gender}}
+                                                <span class="glyphicon glyphicon-pencil user-edit" data-ng-click="editUser('Gender', 'gender')"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-2" for="birthday">Birthday:</label>
+                                        <div class="col-sm-10">
+                                            <p id="birthday" class="form-control-static">
+                                                {{user.birthday}}
+                                                <span class="glyphicon glyphicon-pencil user-edit" data-ng-click="editUser('Birthday', 'birthday')"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-2" for="birthp">Place:</label>
+                                        <div class="col-sm-10">
+                                            <p id="birthp" class="form-control-static" >
+                                                {{user.birthp}}
+                                                <span class="glyphicon glyphicon-pencil user-edit" data-ng-click="editUser('Place of Birth', 'birthp')()"></span>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
-
-                                <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Created at {{ user.registered}}</small></p>
-                            </div>
-                            <div class="hr-left"></div>
-                            <div class="timeline-body">
-                                <form class="form-horizontal">
-                                    <div class="col md 12 row" >
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label class="control-label col-sm-2" for="gender">Gender:</label>
-                                                <div class="col-sm-10">
-                                                    <p id="gender" class="form-control-static">{{user.gender}}</p>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-sm-2" for="tel">Phone:</label>
-                                                <div class="col-sm-10">
-                                                    <p id="tel" class="form-control-static">{{user.phone}}</p>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-sm-2" for="email">Email:</label>
-                                                <div class="col-sm-10">
-                                                    <p id="email" class="form-control-static">someone@example.com</p>
-                                                </div>
-                                            </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-2" for="userType">Type:</label>
+                                        <div class="col-sm-10">
+                                            <p id="userType" class="form-control-static">
+                                                {{user.type}}
+                                                <span class="glyphicon glyphicon-pencil user-edit" data-ng-click="editUser('Type', 'type')"></span>
+                                            </p>
                                         </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label class="control-label col-sm-2" for="gender">Gender:</label>
-                                                <div class="col-sm-10">
-                                                    <p id="gender" class="form-control-static">{{user.gender}}</p>
+                                    </div>                                      
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-panel">
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="timeline-title">User configurations</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <form class="form-horizontal">
+                            <div class="col md 12 row" >
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-2" for="gender">Login:</label>
+                                        <div class="col-sm-10">
+                                            <p id="login" class="form-control-static">
+                                                {{user.login}}
+                                                <span class="glyphicon glyphicon-pencil user-edit" data-ng-click="editUser('Login', 'login')"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="expiration">Expire on:</label>
+                                        <div class="col-sm-9">
+                                            <p id="expiration" class="form-control-static">
+                                                {{user.accountExp}}
+                                                <span class="glyphicon glyphicon-pencil user-edit" data-ng-click="editUser('Account expiriration', 'accountExp')"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="passExpire">Password expires on</label>
+                                        <div class="col-sm-9">
+                                            <p id="passExpire" class="form-control-static">
+                                                {{user.passExp}}
+                                                <span class="glyphicon glyphicon-pencil user-edit" data-ng-click="editUser('password expiriration', 'passExp')"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                <div class="form-group">
+                                        <label class="control-label col-sm-2" for="accountstate">State:</label>
+                                        <div class="col-sm-10">
+                                            <p id="accountstate" class="form-control-static">
+                                            <h2>{{user.status}}</h2>
+                                            <span class="glyphicon glyphicon-pencil user-edit" data-ng-click="editUser('Status', 'status')"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-panel">
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="timeline-title">Contact</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <form class="form-horizontal">
+                            <div class="col md 12 row" >
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-2" for="telephone">Phone:</label>
+                                        <div class="col-sm-10" style="display: inline-flex">
+                                            <p id="telephone" class="form-control-static " >
+                                                {{user.phone}}
+                                                <span class="glyphicon glyphicon-pencil user-edit" data-ng-click="editUser('Phone', 'phone')"></span>
+                                                <div class="dropdown" uib-dropdown auto-close="disabled" on-toggle="toggled(open) ">
+                                                    <span style="margin-top: 8px" class="glyphicon glyphicon-chevron-down user-edit" data-ng-click="setStatus()" uib-dropdown-toggle id="simple-dropdownr"></span>
+                                                    <ul class="dropdown-menu" template-url="dropdown.html" uib-dropdown-menu aria-labelledby="dropdownMenu3" > </ul>
                                                 </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-sm-2" for="tel">Phone:</label>
-                                                <div class="col-sm-10">
-                                                    <p id="tel" class="form-control-static">{{user.phone}}</p>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-2" for="email">Email:</label>
+                                        <div class="col-sm-10">
+                                            <p id="email" class="form-control-static">
+                                                {{user.email}}
+                                                <span class="glyphicon glyphicon-pencil user-edit" data-ng-click="editUser('Email', 'email')"></span>
+                                                <div class="dropdown" uib-dropdown auto-close="disabled" on-toggle="toggled(open) ">
+                                                    <span style="margin-top: 8px" class="glyphicon glyphicon-chevron-down user-edit" data-ng-click="setStatus()" uib-dropdown-toggle id="simple-dropdownr"></span>
+                                                     <ul class="dropdown-menu" template-url="dropdown.html" uib-dropdown-menu aria-labelledby="dropdownMenu3" > </ul>
                                                 </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-sm-2" for="email">Email:</label>
-                                                <div class="col-sm-10">
-                                                    <p id="email" class="form-control-static">someone@example.com</p>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-2" for="poBox">Po Box:</label>
+                                        <div class="col-sm-10" >
+                                            <p id="poBox" class="form-control-static">
+                                                {{user.pbox}}
+                                                <span class="glyphicon glyphicon-pencil user-edit" data-ng-click="editUser('Po Box', 'pbox')"></span>
+                                                <div class="dropdown" uib-dropdown auto-close="disabled" on-toggle="toggled(open) ">
+                                                    <span style="margin-top: 8px" class="glyphicon glyphicon-chevron-down user-edit" data-ng-click="setStatus()" uib-dropdown-toggle id="simple-dropdownr"></span>
+                                                    <ul class="dropdown-menu" template-url="dropdown.html" uib-dropdown-menu aria-labelledby="dropdownMenu3" > </ul>
                                                 </div>
-                                            </div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-2" for="country">Country:</label>
+                                        <div class="col-sm-10">
+                                            <p id="country" class="form-control-static">
+                                                {{user.country}}
+                                                <span class="glyphicon glyphicon-pencil user-edit" data-ng-click="editUser('Country', 'country')"></span>
+                                                <div class="dropdown" uib-dropdown auto-close="disabled" on-toggle="toggled(open) ">
+                                                    <span style="margin-top: 8px" class="glyphicon glyphicon-chevron-down user-edit" data-ng-click="setStatus()" uib-dropdown-toggle id="simple-dropdownr"></span>
+                                                    <ul class="dropdown-menu" template-url="dropdown.html" uib-dropdown-menu aria-labelledby="dropdownMenu3" > </ul>
+                                                </div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-2" for="city">City:</label>
+                                        <div class="col-sm-10">
+                                            <p id="city" class="form-control-static">
+                                                {{user.city}}
+                                                <span class="glyphicon glyphicon-pencil user-edit" data-ng-click="editUser('City', 'city')"></span>
+                                                <div class="dropdown" uib-dropdown auto-close="disabled" on-toggle="toggled(open) ">
+                                                    <span style="margin-top: 8px" class="glyphicon glyphicon-chevron-down user-edit" data-ng-click="setStatus()" uib-dropdown-toggle id="simple-dropdownr"></span>
+                                                    <ul class="dropdown-menu" template-url="dropdown.html" uib-dropdown-menu aria-labelledby="dropdownMenu3" > </ul>
+                                                </div>
+                                            </p>
                                         </div>
                                     </div>
 
-                                </form>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="timeline-panel">
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4 class="timeline-title">User configurations</h4>
-                            </div>
-                            <div class="timeline-body">
-                                <form class="form-horizontal">
-                                    <div class="col md 12 row" >
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label class="control-label col-sm-2" for="gender">Login:</label>
-                                                <div class="col-sm-10">
-                                                    <p id="login" class="form-control-static">{{user.login}}</p>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-sm-3" for="expiration">Expire on:</label>
-                                                <div class="col-sm-9">
-                                                    <p id="expiration" class="form-control-static">{{user.expire}}</p>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-sm-3" for="passExpire">Password expires on</label>
-                                                <div class="col-sm-9">
-                                                    <p id="passExpire" class="form-control-static">{{user.passexpires}}</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label class="control-label col-sm-2" for="accountstate">State:</label>
-                                                <div class="col-sm-10">
-                                                    <p id="accountstate" class="form-control-static">
-                                                         <h2>{{user.state}}</h2>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                           
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-1" for="other">Others:</label>
+                                        <div class="col-sm-11">
+                                            <p id="other" class="form-control-static">
+                                                {{user.others}}
+                                                <span class="glyphicon glyphicon-pencil user-edit" data-ng-click="editUser('Other informations', 'others')"></span>
+                                                <span class="glyphicon glyphicon-chevron-down user-edit" data-ng-click="setStatus()"></span>
+                                            </p>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
 
-                                </form>
-                            </div>
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="timeline-title">Groups setting</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <div class="col-md-6">
+                            <h5> group</h5>
+                            <ul ng-init="user.groups=['toto','tata','lorem']">
+                            <li ng-repeat="grp in user.groups">
+                                <div  class="badge" style="border-radius:2px">
+                                    {{grp}}
+                                    <span style="font-size: xx-small" class="glyphicon glyphicon-remove"></span>
+                                </div>
+                            </li>
+                            </ul>
                         </div>
-                    </li>
-                    <li>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-                            </div>
-                            <div class="timeline-body">
-                                <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-                            </div>
+                        <div class="col-md-6">
+                            <h5>User groups</h5>
+                            <ul ng-init="user.groups=['toto','tata','lorem']">
+                                <li ng-repeat="grp in user.groups">
+                                    <div  class="badge" style="border-radius:2px">
+                                        {{grp}}
+                                        <span style="font-size: xx-small" class="glyphicon glyphicon-remove"></span>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                    </li>
-                  
-                </ul>
-            </div> <!-- gcontent ends-->
-        </div> <!-- group6 ends-->
-    </div> <!-- group5 ends-->
-</div> <!-- content ends-->
+
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div> <!-- group27 ends-->
+
+<script type="text/ng-template" id="updateUser.html" >
+    <div class="modal-module-editing" style="top: 200px !important; ">
+        <div class="modal-header">
+            <h5 class="modal-title" id="modal-title1">
+                <i class="glyphicon glyphicon-user"></i>
+                User : {{title}}
+            </h5>
+        </div>
+        <div class="modal-body" id="modal-body1">
+            <input type="text" class="form-control" ng-model="updatedValue" focus-me="true">
+        </div>
+        <div class="modal-footer">
+            <button class="floatingPanel" type="button" ng-click="setUserAttr(attr)">Update</button>
+        </div>
+    </div>
+
+</script>
+<script type="text/ng-template" id="dropdown.html">
+    <div class="dropdown-menu floatingPanel"  uib-dropdown-menu role="menu" aria-labelledby="button-template-url">
+     <ul>
+         <li ng-repeat="item in multiple">{{item}}</li>
+     </ul>
+
+    </div>
+</script>

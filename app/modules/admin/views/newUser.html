@@ -8,6 +8,16 @@
     </div>
     <div class="modal-body" id="modal-body">
         <form>
+            <div ng-show="step==0">
+                <div class=" row">
+                    <div class="form-group col-md-9">
+                        <label for="name">Name</label>
+                        <input class=" form-control"  placeholder="Title" name="input_title" id="name" type="text" ng-model="user.name"/>
+                    </div> <!-- div id:input_title -->
+                    <button data-ng-click="createUser()" style="margin-top: 15px;margin-left: 15px;" class="floatingPanel btn-primary col-md-2"> Create</button>
+                </div>
+
+            </div>
             <div class="" ng-show="step==1">
                 <div class="form-group">
                     <label class="control-label" for="radio6">Type</label>
@@ -75,17 +85,12 @@
                         <input class=" form-control"  placeholder="ctry" name="input_country" id="input_country" type="text" ng-model="user.contact.ctry"/>
                     </div> <!-- div id:input_country -->
                 </div> <!-- group_contact ends-->
-            </div>
-            <div class="" ng-show="step==3">
-                <h3>step 3</h3>
-                <h3>resume</h3>
-            </div>
-            <!--</div>-->
+            </div>  <!--</div>-->
         </form>
     </div>
     <div class="modal-footer">
         <button ng-show="step > 1" type="button" class="btn btn-default" data-ng-click="previous()">Previous</button>
-        <button ng-hide="step==3" type="button" class="btn btn-default" data-ng-click="next()">Next</button>
-        <button ng-show="step==3" type="button" class="btn btn-default" data-ng-click="addUser()">Submit</button>
+        <button ng-show="step > 0" type="button" class="btn btn-default" data-ng-click="next()">Next</button>
+        <button ng-show="step==2" type="button" class="btn btn-default" data-ng-click="addUser()">Submit</button>
     </div>
 </div> <!-- group22 ends-->

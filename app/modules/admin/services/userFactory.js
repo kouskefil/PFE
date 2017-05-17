@@ -1213,15 +1213,15 @@ define(['configs/app'], function (app){
             }
         ];
 
-        service.newUser = function(template){
+        service.editUser = function(template){
             var inst = $uibModal.open({
                 templateUrl:template,
-                controller: ['$scope', '$uibModalInstance', '$log', function($scope, $uibModalInstance, $log) {
+                controller: ['$scope', '$uibModalInstance', '$log','$state', function($scope, $uibModalInstance, $log, $state) {
                     $scope.cancel = function () {
                         $uibModalInstance.dismiss('cancel');
                     };
                     /* wizard control*/
-                    $scope.step = 1;
+                    $scope.step = 0;
                     $scope.next = function () {
                         $scope.step  = $scope.step + 1;
                     };
@@ -1229,11 +1229,14 @@ define(['configs/app'], function (app){
                         $scope.step  = $scope.step - 1 ;
                     };
                     $scope.addUser = function(){
-                        console.log($scope.user);
+                        users.push($scope.user);
+                        $uibModalInstance.close();
                     };
+                    $scope.createUser = function () {
+                        $scope.step = $scope.step + 1;
+                    }
 
                     /*wizard ends*/
-                   console.log($scope.type);
                 }]
             });
 

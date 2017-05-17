@@ -7,14 +7,21 @@ define(['configs/app'], function (app) {
         $scope.modules = groupFactory.getModules();
         $scope.groups = groupFactory.getGroups();
         $scope.currentGroup = groupFactory.grpSkeleton({});
+        $scope.deleteRole = function (role) {
+            $scope.currentGroup.roles.splice($scope.currentGroup.roles.indexOf(role),1);
+        };
+        $scope.selected ='';
+        $scope.step = 1;
+        $scope.next = function () {
+            $scope.step = $scope.step + 1;
+        };
 
         $scope.setCurrentGroup = function (group) {
+            $scope.selected = group.name;
             groupFactory.setCurrentGroup(group);
             $scope.currentGroup = groupFactory.getCurrentGroup()
         };
         $scope.openModal = function ( template) {
-        // groupFactory.setCurrentModule(module) ;
-
             var modalInstance = $uibModal.open(
                 {
                     templateUrl: template,
@@ -36,10 +43,10 @@ define(['configs/app'], function (app) {
                             $scope.currentGroup.roles.push(role);
                             console.log($scope.currentGroup.roles);
                         };
-
-                    }]
+                    }],
+                    size : 'lg'
                 });
-            modalInstance.result.then(function (selectedItem){
+                modalInstance.result.then(function (selectedItem){
                 $scope.selected = selectedItem;
             });
         };
