@@ -1,6 +1,6 @@
 
 <!-- Generated html file -->
-<div id="content"  style="padding: 0; "  class="content-inner col-md-10 col-md-offset-1 "> <!-- content begins-->
+<div id="content"  style="padding: 0; width: 80%"  class="content-inner col-md-8 col-md-offset-2 "> <!-- content begins-->
     <div id=""  style="padding:0; margin-bottom: 50px"  class=" col-md-10 "> <!-- path begins-->
         <ul class="timeline">
             <li>
@@ -28,20 +28,31 @@
                             <div class="col md 12 row" >
                                 <div class="col-md-6">
                                     <div class="form-group">
+                                        <label class="control-label col-sm-2" for="userType">Type:</label>
+                                        <div class="col-sm-10">
+                                            <p id="userType" class="form-control-static">
+                                                {{user.type}}
+                                                <span class="glyphicon glyphicon-edit user-edit" data-ng-click="editUser('Type', 'type')"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
                                         <label class="control-label col-sm-2" for="gender">Gender:</label>
                                         <div class="col-sm-10">
                                             <p id="gender" class="form-control-static">
                                                 {{user.gender}}
-                                                <span class="glyphicon glyphicon-pencil user-edit" data-ng-click="editUser('Gender', 'gender')"></span>
+                                                <span class="glyphicon glyphicon-edit user-edit" data-ng-click="editUser('Gender', 'gender')"></span>
                                             </p>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="control-label col-sm-2" for="birthday">Birthday:</label>
                                         <div class="col-sm-10">
                                             <p id="birthday" class="form-control-static">
                                                 {{user.birthday}}
-                                                <span class="glyphicon glyphicon-pencil user-edit" data-ng-click="editUser('Birthday', 'birthday')"></span>
+                                                <span class="glyphicon glyphicon-edit user-edit" data-ng-click="editUser('Birthday', 'birthday')"></span>
                                             </p>
                                         </div>
                                     </div>
@@ -50,21 +61,11 @@
                                         <div class="col-sm-10">
                                             <p id="birthp" class="form-control-static" >
                                                 {{user.birthp}}
-                                                <span class="glyphicon glyphicon-pencil user-edit" data-ng-click="editUser('Place of Birth', 'birthp')()"></span>
+                                                <span class="glyphicon glyphicon-edit user-edit" data-ng-click="editUser('Place of Birth', 'birthp')()"></span>
                                             </p>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="control-label col-sm-2" for="userType">Type:</label>
-                                        <div class="col-sm-10">
-                                            <p id="userType" class="form-control-static">
-                                                {{user.type}}
-                                                <span class="glyphicon glyphicon-pencil user-edit" data-ng-click="editUser('Type', 'type')"></span>
-                                            </p>
-                                        </div>
-                                    </div>                                      
+
                                 </div>
                             </div>
 
@@ -75,8 +76,9 @@
             <li class="timeline-panel">
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4 class="timeline-title">User configurations</h4>
+                        <h4 class="timeline-title"><span class="fa fa-cogs" style=" margin-right: 5px;"></span>User configurations</h4>
                     </div>
+                    <div class="hr-left"></div>
                     <div class="timeline-body">
                         <form class="form-horizontal">
                             <div class="col md 12 row" >
@@ -85,63 +87,76 @@
                                         <label class="control-label col-sm-2" for="gender">Login:</label>
                                         <div class="col-sm-10">
                                             <p id="login" class="form-control-static">
-                                                {{user.login}}
-                                                <span class="glyphicon glyphicon-pencil user-edit" data-ng-click="editUser('Login', 'login')"></span>
+                                                {{user.user.login}}
+                                                <span class="glyphicon glyphicon-edit user-edit" data-ng-click="editUser('Login', 'login')"></span>
                                             </p>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label col-sm-3" for="expiration">Expire on:</label>
-                                        <div class="col-sm-9">
-                                            <p id="expiration" class="form-control-static">
-                                                {{user.accountExp}}
-                                                <span class="glyphicon glyphicon-pencil user-edit" data-ng-click="editUser('Account expiriration', 'accountExp')"></span>
+                                        <label class="control-label col-sm-2" for="accountstate">State:</label>
+                                        <div class="col-sm-10">
+                                            <p id="accountstate" class="form-control-static">
+                                                {{user.user.status}}
+                                                <span class="glyphicon glyphicon-edit user-edit" data-ng-click="editUser('Status', 'status')"></span>
                                             </p>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label col-sm-3" for="passExpire">Password expires on</label>
-                                        <div class="col-sm-9">
-                                            <p id="passExpire" class="form-control-static">
-                                                {{user.passExp}}
-                                                <span class="glyphicon glyphicon-pencil user-edit" data-ng-click="editUser('password expiriration', 'passExp')"></span>
+                                        <label class="control-label col-sm-5" for="lastc" style="text-align: left">Last connexion:</label>
+                                        <div class="col-sm-5">
+                                            <p id="lastc" class="form-control-static">
+                                                {{user.user.last_connexion}}
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                <div class="form-group">
-                                        <label class="control-label col-sm-2" for="accountstate">State:</label>
-                                        <div class="col-sm-10">
-                                            <p id="accountstate" class="form-control-static">
-                                            <h2>{{user.status}}</h2>
-                                            <span class="glyphicon glyphicon-pencil user-edit" data-ng-click="editUser('Status', 'status')"></span>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="expiration">Expire on:</label>
+                                        <div class="col-sm-9">
+                                            <p id="expiration" class="form-control-static">
+                                                {{user.user.accountExp}}
+                                                <span class="glyphicon glyphicon-edit user-edit" data-ng-click="editUser('Account expiriration', 'accountExp')"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-5" for="passExpire">Password expires on</label>
+                                        <div class="col-sm-5">
+                                            <p id="passExpire" class="form-control-static">
+                                                {{user.user.passExp}}
+                                                <span class="glyphicon glyphicon-edit user-edit" data-ng-click="editUser('password expiriration', 'passExp')"></span>
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
                         </form>
                     </div>
                 </div>
             </li>
             <li class="timeline-panel">
                 <div class="timeline-panel">
-                    <div class="timeline-heading">
-                        <h4 class="timeline-title">Contact</h4>
+                    <div class="timeline-heading">                          
+                        <h4 class="timeline-title">
+                            <span class="fa fa-address-card" style=" margin-right: 5px;"></span>
+                            Contact
+                        </h4>
                     </div>
+                    <div class="hr-left"></div>
                     <div class="timeline-body">
                         <form class="form-horizontal">
                             <div class="col md 12 row" >
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="control-label col-sm-2" for="telephone">Phone:</label>
-                                        <div class="col-sm-10" style="display: inline-flex">
+                                        <div class="col-sm-10 attr"  >
                                             <p id="telephone" class="form-control-static " >
-                                                {{user.phone}}
-                                                <span class="glyphicon glyphicon-pencil user-edit" data-ng-click="editUser('Phone', 'phone')"></span>
-                                                <div class="dropdown" uib-dropdown auto-close="disabled" on-toggle="toggled(open) ">
-                                                    <span style="margin-top: 8px" class="glyphicon glyphicon-chevron-down user-edit" data-ng-click="setStatus()" uib-dropdown-toggle id="simple-dropdownr"></span>
+                                                {{user.defaultPhone}}
+                                                <span class="glyphicon glyphicon-edit user-edit" data-ng-click="editUser('Phone', 'defaultPhone')"></span>
+                                                <div class="dropdown user-edit" uib-dropdown auto-close="disabled" on-toggle="toggled(open) ">
+                                                    <span ng-show="user.phones.length > 0" style="margin-top: 8px" class="glyphicon glyphicon-chevron-down " data-ng-click="getOtherPhones()" uib-dropdown-toggle id="simple-dropdownr"></span>
                                                     <ul class="dropdown-menu" template-url="dropdown.html" uib-dropdown-menu aria-labelledby="dropdownMenu3" > </ul>
                                                 </div>
                                             </p>
@@ -149,12 +164,12 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label col-sm-2" for="email">Email:</label>
-                                        <div class="col-sm-10">
+                                        <div class="col-sm-10 attr">
                                             <p id="email" class="form-control-static">
-                                                {{user.email}}
-                                                <span class="glyphicon glyphicon-pencil user-edit" data-ng-click="editUser('Email', 'email')"></span>
-                                                <div class="dropdown" uib-dropdown auto-close="disabled" on-toggle="toggled(open) ">
-                                                    <span style="margin-top: 8px" class="glyphicon glyphicon-chevron-down user-edit" data-ng-click="setStatus()" uib-dropdown-toggle id="simple-dropdownr"></span>
+                                                {{user.defaultEmail}}
+                                                <span class="glyphicon glyphicon-edit user-edit" data-ng-click="editUser('Email', 'defaultEmail')"></span>
+                                                <div class="dropdown user-edit" uib-dropdown auto-close="disabled" on-toggle="toggled(open) ">
+                                                    <span style="margin-top: 8px" class="glyphicon glyphicon-chevron-down " data-ng-click="getOtherEmails()" uib-dropdown-toggle id="simple-dropdownr"></span>
                                                      <ul class="dropdown-menu" template-url="dropdown.html" uib-dropdown-menu aria-labelledby="dropdownMenu3" > </ul>
                                                 </div>
                                             </p>
@@ -162,12 +177,12 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label col-sm-2" for="poBox">Po Box:</label>
-                                        <div class="col-sm-10" >
+                                        <div class="col-sm-10 attr" >
                                             <p id="poBox" class="form-control-static">
-                                                {{user.pbox}}
-                                                <span class="glyphicon glyphicon-pencil user-edit" data-ng-click="editUser('Po Box', 'pbox')"></span>
+                                                {{user.defaultPobox}}
+                                                <span class="glyphicon glyphicon-edit user-edit" data-ng-click="editUser('Po Box', 'defaultPobox')"></span>
                                                 <div class="dropdown" uib-dropdown auto-close="disabled" on-toggle="toggled(open) ">
-                                                    <span style="margin-top: 8px" class="glyphicon glyphicon-chevron-down user-edit" data-ng-click="setStatus()" uib-dropdown-toggle id="simple-dropdownr"></span>
+                                                    <span style="margin-top: 8px" class="glyphicon glyphicon-chevron-down user-edit" data-ng-click="getOtherPobox()" uib-dropdown-toggle id="simple-dropdownr"></span>
                                                     <ul class="dropdown-menu" template-url="dropdown.html" uib-dropdown-menu aria-labelledby="dropdownMenu3" > </ul>
                                                 </div>
                                             </p>
@@ -177,12 +192,12 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="control-label col-sm-2" for="country">Country:</label>
-                                        <div class="col-sm-10">
+                                        <div class="col-sm-10 attr">
                                             <p id="country" class="form-control-static">
-                                                {{user.country}}
-                                                <span class="glyphicon glyphicon-pencil user-edit" data-ng-click="editUser('Country', 'country')"></span>
+                                                {{user.defaultCountry}}
+                                                <span class="glyphicon glyphicon-edit user-edit" data-ng-click="editUser('Country', 'defaultCountry')"></span>
                                                 <div class="dropdown" uib-dropdown auto-close="disabled" on-toggle="toggled(open) ">
-                                                    <span style="margin-top: 8px" class="glyphicon glyphicon-chevron-down user-edit" data-ng-click="setStatus()" uib-dropdown-toggle id="simple-dropdownr"></span>
+                                                    <span style="margin-top: 8px" class="glyphicon glyphicon-chevron-down user-edit" data-ng-click="getOtherCountries()" uib-dropdown-toggle id="simple-dropdownr"></span>
                                                     <ul class="dropdown-menu" template-url="dropdown.html" uib-dropdown-menu aria-labelledby="dropdownMenu3" > </ul>
                                                 </div>
                                             </p>
@@ -190,27 +205,25 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label col-sm-2" for="city">City:</label>
-                                        <div class="col-sm-10">
+                                        <div class="col-sm-10 attr">
                                             <p id="city" class="form-control-static">
-                                                {{user.city}}
-                                                <span class="glyphicon glyphicon-pencil user-edit" data-ng-click="editUser('City', 'city')"></span>
+                                                {{user.defaultCity}}
+                                                <span class="glyphicon glyphicon-edit user-edit" data-ng-click="editUser('City', 'defaultCity')"></span>
                                                 <div class="dropdown" uib-dropdown auto-close="disabled" on-toggle="toggled(open) ">
-                                                    <span style="margin-top: 8px" class="glyphicon glyphicon-chevron-down user-edit" data-ng-click="setStatus()" uib-dropdown-toggle id="simple-dropdownr"></span>
+                                                    <span style="margin-top: 8px" class="glyphicon glyphicon-chevron-down user-edit" data-ng-click="getOtherCities()" uib-dropdown-toggle id="simple-dropdownr"></span>
                                                     <ul class="dropdown-menu" template-url="dropdown.html" uib-dropdown-menu aria-labelledby="dropdownMenu3" > </ul>
                                                 </div>
                                             </p>
                                         </div>
                                     </div>
-
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label class="control-label col-sm-1" for="other">Others:</label>
                                         <div class="col-sm-11">
-                                            <p id="other" class="form-control-static">
+                                            <!--<span class="glyphicon glyphicon-edit user-edit" data-ng-click="editUser('Other informations', 'others')"></span>-->
+                                            <p id="other" class="form-control-static" style="border: 1px solid lightgrey; height: auto">
                                                 {{user.others}}
-                                                <span class="glyphicon glyphicon-pencil user-edit" data-ng-click="editUser('Other informations', 'others')"></span>
-                                                <span class="glyphicon glyphicon-chevron-down user-edit" data-ng-click="setStatus()"></span>
                                             </p>
                                         </div>
                                     </div>
@@ -224,8 +237,9 @@
             <li>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4 class="timeline-title">Groups setting</h4>
+                        <h4 class="timeline-title"><span class="fa fa-group" style=" margin-right: 5px;"></span>Groups setting</h4>
                     </div>
+                    <div class="hr-left"></div>
                     <div class="timeline-body">
                         <div class="col-md-6">
                             <h5> group</h5>
@@ -240,14 +254,15 @@
                         </div>
                         <div class="col-md-6">
                             <h5>User groups</h5>
-                            <ul ng-init="user.groups=['toto','tata','lorem']">
-                                <li ng-repeat="grp in user.groups">
-                                    <div  class="badge" style="border-radius:2px">
-                                        {{grp}}
+                            <div class="user-groups">
+                                <div ng-repeat="grp in user.user.groups" class="">
+                                    <div  class="label label-success grp" style="border-radius:2px">
+                                        {{grp.name}}
                                         <span style="font-size: xx-small" class="glyphicon glyphicon-remove"></span>
                                     </div>
-                                </li>
-                            </ul>
+                                </div>
+                            </div>
+
                         </div>
 
 
@@ -276,9 +291,13 @@
 
 </script>
 <script type="text/ng-template" id="dropdown.html">
-    <div class="dropdown-menu floatingPanel"  uib-dropdown-menu role="menu" aria-labelledby="button-template-url">
-     <ul>
-         <li ng-repeat="item in multiple">{{item}}</li>
+    <div class="dropdown-menu floatingPanel" style="color: cornflowerblue; padding: 15px" uib-dropdown-menu role="menu" aria-labelledby="button-template-url">
+     <ul ng-switch="attr" style="list-style-type: none; padding: 0">
+         <li ng-switch-when="emails" ng-repeat="item in otherEmails">{{item.email}}</li>
+         <li ng-switch-when="phones" ng-repeat="item in otherPhones">{{item.number}}</li>
+         <li ng-switch-when="countries" ng-repeat="item in otherCountries">{{item.country}}</li>
+         <li ng-switch-when="cities" ng-repeat="item in otherCities">{{item.city}}</li>
+         <li ng-switch-when="pobox" ng-repeat="item in otherPobox">{{item.number}}</li>
      </ul>
 
     </div>

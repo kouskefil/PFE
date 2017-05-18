@@ -5,6 +5,27 @@ define(['configs/app'], function (app) {
     'use strict';
     app.register.controller('userdetails', ['$scope','userFactory','$uibModal', function ($scope,userFactory,$uibModal) {
         $scope.user = userFactory.getCurrentUser();
+        $scope.attr = null;
+        $scope.getOtherEmails = function () {
+            $scope.attr = 'emails';
+            $scope.otherEmails = userFactory.getOthers('emails');
+        };
+        $scope.getOtherPhones = function () {
+            $scope.attr = 'phones';
+            $scope.otherPhones = userFactory.getOthers('phones');
+        };
+        $scope.getOtherCountries = function () {
+            $scope.attr = 'countries';
+            $scope.otherCountries = userFactory.getOthers('countries');
+        };
+        $scope.getOtherCities = function () {
+            $scope.attr = 'cities';
+            $scope.otherCities = userFactory.getOthers('cities');
+        };
+        $scope.getOtherPobox = function () {
+            $scope.attr = 'pobox';
+            $scope.otherPobox = userFactory.getOthers('Pobox');
+        };
 
         $scope.editUser  = function (title, attr) {
             var modalInstance = $uibModal.open(
@@ -85,7 +106,6 @@ define(['configs/app'], function (app) {
                 $scope.selected = selectedItem;
             });
         };
-        console.log( $scope.user);
     }])
 });
 

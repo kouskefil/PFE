@@ -27,8 +27,8 @@
                    <tbody>
                    <tr ng-repeat="user in items" data-ng-click="setSelectedUser(user)">
                        <td>{{user.name}}</td>
-                       <td>{{user.email}}</td>
-                       <td>{{user.phone}}</td>
+                       <td>{{user.user.last_connexion}}</td>
+                       <td>{{user.user.accountExp}}</td>
                        <td>{{user._id}}</td>
                    </tr>
                    </tbody>

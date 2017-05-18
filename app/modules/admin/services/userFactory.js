@@ -15,13 +15,105 @@ define(['configs/app'], function (app){
                 "_id": "591236bec087efa4465d0bb9",
                 "name": "Head Sharp",
                 "title": "KNEEDLES",
+                type : "Person",
+                birthday : "1992-03-22",
+                birthp : "New-York USA",
                 "gender": "male",
+                "defaultEmail":"headsharp@combogene.org",
+                "defaultPhone":"+229 97 41 70 71",
+                "defaultCountry":"Benin",
+                "defaultCity":"Cotonou",
+                "defaultPobox":"01 BP 75000",
                 "company": "COMBOGENE",
-                "email": "headsharp@combogene.com",
-                "phone": "+1 (812) 545-2276",
-                "address": "761 Ryder Street, Gloucester, Maine, 7211",
+                "emails": [
+                    {
+                        email:"moto@combogene.org"
+                    },
+                    {
+                        email:"doe@evrestene.net"
+                    }
+                ],
+                "phones": [
+                    {
+                        default:true,
+                        number:"+1 (812) 545-2276"
+                    },
+                    {
+                        default:false,
+                        number:"+234 00 545-22701"
+                    },
+                    {
+                        default:false,
+                        number:"+229 22 545-2202"
+                    }
+                ],
+                "addresses":[
+                    {
+                        address: "761 Ryder Street, Gloucester, Maine, 7211",
+                        default: true
+                    },
+                    {
+                        address: "75001 louivier Street, Nantes, France",
+                        default: false
+                    }
+                ],
+                "cities":[
+                    {
+                        city: "Cotonou",
+                        default: true
+                    },
+                    {
+                        city: "Lagos",
+                        default: false
+                    },
+                    {
+                        city: "Bruxelle",
+                        default: false
+                    }
+                ],
+                "countries":[
+                    {
+                        country: "Benin",
+                        default: true
+                    },
+                    {
+                        country: "South Africa",
+                        default: false
+                    },
+                    {
+                        country: "Madina",
+                        default: false
+                    }
+                ],
                 "about": "Culpa cillum irure est duis adipisicing est mollit dolor excepteur. Et exercitation amet nisi excepteur nulla sit. Deserunt eu tempor occaecat non aliqua Lorem. Ut voluptate magna in sunt ad est id nostrud irure elit velit consequat. Laboris duis proident qui exercitation occaecat fugiat et duis nulla mollit in et qui. Consequat tempor qui ea incididunt occaecat adipisicing occaecat reprehenderit eu ex sunt.\r\n",
-                "registered": "2017-03-26T08:50:47 -01:00"
+                "registered": "2017-03-26",
+                "user":{
+                    groups : [
+                        {
+                            name: "I.T managers"
+                        },
+                        {
+                            name: "Store keeper"
+                        },
+                        {
+                            name: "Professors"
+                        },
+                        {
+                            name: "Administration"
+                        },
+                        {
+                            name: "Accountants"
+                        },
+                        {
+                            name: "Secretaries"
+                        }
+                    ],
+                    login : "Shar_Head",
+                    accountExp : "2018-05-02",
+                    passExp : "2017-11-05",
+                    status : "Active",
+                    last_connexion : "2017-02-02"
+                }
             },
             {
                 "_id": "591236be8b5de0df14809109",
@@ -1243,7 +1335,10 @@ define(['configs/app'], function (app){
             // /* `modal.result` is a promise that gets resolved when
             //  * $modalInstance.close() is called */
         };
-
+        service.getOthers = function (attr) {
+            console.log(currentUser[attr])
+              return currentUser[attr];
+        };
         service.setCurrentUser = function (user) {
           currentUser = user;
         };

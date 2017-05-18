@@ -1469,3 +1469,23 @@ th{
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+.attr{
+    display: inline-flex;
+}
+.user-edit{
+    margin: 3px;
+    color: lightgrey;
+}
+.form-control-static {
+    padding-top: 3px;
+
+}
+.user-groups{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+}
+.grp{
+    margin: 5px;
+}
