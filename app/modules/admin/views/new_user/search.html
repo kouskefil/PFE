@@ -1,0 +1,23 @@
+
+
+    <div class="row">
+        <div class="col-md-10" style="border-right: 1px solid lightgrey;">
+            <input  ng-model="username" type="text" class="form-control"/>
+        </div>
+        <div class="col-md-2">
+            <button class="button default" data-ng-click="goToStep(currentStep + 1)">create</button>
+        </div>
+    </div>
+<div style=" max-height:258px; overflow-y: scroll">
+    <div class="" style="margin-top: 30px">
+        <div id="response"  class="floatingPanel request role" ng-repeat="x in users | filter : username"  > <!-- response begins-->
+            <p>
+                <span  class="value" id="span204_copy1" data-ng-click="setCurrentUser(x)">{{x.name}}</span>
+            </p>
+            <p  class="desc">
+                <span  class="param" id="span205_copy1" >description</span><br>
+                <span  class="desc" id="span206_copy1" >{{x.birthday}}, {{x.birthp}} </span>
+            </p>
+        </div> <!-- response ends-->
+    </div>
+</div>

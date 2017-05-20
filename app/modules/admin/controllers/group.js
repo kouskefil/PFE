@@ -26,10 +26,13 @@ define(['configs/app'], function (app) {
                 {
                     templateUrl: template,
                     controller: ['$uibModalInstance','$scope','$state','groupFactory',function ($uibModalInstance, $scope, $state,groupFactory) {
+                        $scope.selected ='';
                         $scope.currentModule = groupFactory.getCurrentModule();
                         $scope.currentGroup = groupFactory.getCurrentGroup();
+                        $scope.roleTmp = [];
                         $scope.modules = groupFactory.getModules();
                         $scope.setCurrentModule = function (module) {
+                            $scope.selected = module.name;
                             $scope.currentModule = module;
                         };
                         // $scope.roles = groupFactory.fillRoles(groupFactory.getCurrentModule(), $scope.currentGroup);
@@ -39,9 +42,19 @@ define(['configs/app'], function (app) {
                         $scope.getCurrentGroup = function () {
                             $scope.currentGroup = groupFactory.getCurrentGroup;
                         };
+                        $scope.submitRole = function () {
+                            var i;
+                            for(i = 0; i < $scope.roleTmp.length; i++)
+                                $scope.currentGroup.roles.push($scope.roleTmp[i]);
+                            $scope.cancel();
+
+                        };
+                        $scope.removeRole = function (role) {
+                            var pos = $scope.roleTmp.indexOf(role);
+                            $scope.roleTmp.splice(pos,1);
+                        };
                         $scope.addRole = function (role) {
-                            $scope.currentGroup.roles.push(role);
-                            console.log($scope.currentGroup.roles);
+                            $scope.roleTmp.push(role);
                         };
                     }],
                     size : 'lg'

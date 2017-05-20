@@ -86,6 +86,7 @@ define(['configs/app',
             controller:'userdetails'
 
         })
+
         .state('root.admin.groups',{
             url:'/user-groups',
             templateUrl:'app/modules/admin/views/group.html',

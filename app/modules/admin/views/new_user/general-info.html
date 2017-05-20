@@ -1,0 +1,45 @@
+>
+<div style=" max-height:300px; overflow-y: scroll">
+    <div class="form-group">
+        <label class="control-label" for="radio6">Type</label>
+        <div class="">
+            <label class=" radio-inline">
+                <input id="radio6" type="radio" value="enterprise" ng-model="user.type"/> Enterprise
+            </label>
+            <label class=" radio-inline">
+                <input id="radio7" type="radio" checked="checked" value="person" ng-model="user.type"/> person
+            </label>
+        </div>
+    </div> <!-- div id:radio6 -->
+    <div class="form-group">
+        <label for="input_name">name</label>
+        <input class=" form-control"  placeholder="name" name="input_name" id="input_name" type="text" ng-model="user.name"/>
+    </div> <!-- div id:input_nom -->
+    <div class="form-group">
+        <label for="input_title">Title</label>
+        <input class=" form-control"  placeholder="Title" name="input_title" id="input_title" type="text" ng-model="user.title"/>
+    </div> <!-- div id:input_title -->
+    <div ng-show="type=='person'" id="person"  class=""> <!-- person begins-->
+        <div class="form-group" >
+            <label for="sex">Gender</label>
+            <div >
+                <label class=" radio-inline">
+                    <input id="sex" type="radio" value="F" ng-model="user.gender"> F
+                </label>
+                <label class=" radio-inline">
+                    <input id="sex1" type="radio" value="M" checked ng-model="user.gender"> M
+                </label>
+            </div>
+        </div> <!-- div id:sexe -->
+        <div class="form-group">
+            <label for="input_date">Date of birth</label>
+            <input class=" form-control"  placeholder="Date of birth" name="input_date" id="input_date" type="text" ng-model="user.birthday"/>
+        </div> <!-- div id:input_date -->
+        <div class="form-group">
+            <label for="input_bp">Place of birth</label>
+            <input class=" form-control"  placeholder="Place of birth" name="input_bp" id="input_pb" type="text" ng-model="user.birthp"/>
+        </div> <!-- div id:input_bp -->
+    </div> <!-- person ends-->
+    <div ng-show="type=='enterprise'" id="enterprise"  class=""> <!-- enterprise begins-->
+    </div> <!-- enterprise ends--
+</div>

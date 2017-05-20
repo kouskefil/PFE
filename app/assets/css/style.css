@@ -14,12 +14,12 @@ body{
     /*box-shadow: none;*/
 }
 
-button{
-    color: #fff;
-    background-color: #518FF5 !important;
-    border: 0 !important;
-    height: 34px !important;
-}
+/*button{*/
+    /*color: #fff;*/
+    /*background-color: #518FF5 !important;*/
+    /*border: 0 !important;*/
+    /*height: 34px !important;*/
+/*}*/
 /*generator.html buttons*/
 .btn-outline {
     background-color: transparent;
@@ -1488,4 +1488,11 @@ th{
 }
 .grp{
     margin: 5px;
+    background-color: lightsteelblue;
+}
+.grp:hover{
+    cursor: default;
+}
+.grp-granted{
+    background-color: #5CB85C;
 }

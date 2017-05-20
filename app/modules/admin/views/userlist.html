@@ -18,38 +18,32 @@
                <table class="col-md-10 table">
                    <thead>
                    <tr>
-                       <th>User Name</th>
-                       <th>Last connexion</th>
-                       <th>exipry date</th>
                        <th>User Id</th>
+                       <th>User login</th>
+                       <th>Last connexion</th>
+                       <th>Expires</th>
                    </tr>
                    </thead>
                    <tbody>
                    <tr ng-repeat="user in items" data-ng-click="setSelectedUser(user)">
-                       <td>{{user.name}}</td>
+                       <td>{{user._id}}</td>
+                       <td>{{user.login}}</td>
                        <td>{{user.user.last_connexion}}</td>
                        <td>{{user.user.accountExp}}</td>
-                       <td>{{user._id}}</td>
                    </tr>
                    </tbody>
                </table>
            </div>
-            <div style="; bottom: 0" class=" col-md-12 footer" >
+            <div style="bottom: 0; padding: 10px" class=" col-md-12 footer" >
             <!--Pager-->
-            <div class="col-md-10" >
-                <div style="float: right; height: 100%; padding: 20px;">
-                    {{pager.currentPage}} of {{pager.pages.length}}
-                </div>
-            </div>
                 <div class="">
-                    <ul style="float: right" ng-if="pager.pages.length" class=" pager">
-                        <li ng-class="{disabled:pager.currentPage === 1}">
-                            <span ng-click="setPage(pager.currentPage - 1)" class="glyphicon glyphicon-chevron-left"></span>
-                        </li>
-                        <li ng-class="{disabled:pager.currentPage === pager.totalPages}">
-                            <a ng-click="setPage(pager.currentPage + 1)" class="glyphicon glyphicon-chevron-right"></a>
-                        </li>
-                    </ul>
+                    <!--<span ng-click="setPage(pager.currentPage - 1)" class="glyphicon glyphicon-chevron-left"></span>-->
+                        <div style="float: right" class="btn-group" role="group" aria-label="...">
+                            <button type="button" class="btn btn-default">AA-AC</button>
+                            <button type="button" class="btn btn-default">AC-BD</button>
+                            <button type="button" class="btn btn-default">BD-CZ</button>
+                        </div>
+                    <!--<span ng-click="setPage(pager.currentPage + 1)" class="glyphicon glyphicon-chevron-right"></span>-->
                 </div>
             </div>
         </div>

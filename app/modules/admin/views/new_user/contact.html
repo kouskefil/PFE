@@ -1,0 +1,34 @@
+<div id="group_contact"  class="" style=" max-height:300px; overflow-y: scroll"> <!-- group_contact begins-->
+
+    <div class="form-group">
+        <label for="input_mail">Email</label>
+        <input class=" form-control"  placeholder="email" name="input_mail" id="input_mail" type="email" ng-model="user.default.Email"/>
+    </div> <!-- div id:input_mail -->
+    <div class="form-group">
+        <label for="input_country">Country</label>
+        <input class="form-control" ng-model="user.defaultCountry" list="browsers" placeholder="user country" name="input_country" id="input_country">
+        <datalist id="browsers">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+        <!--<input class=" form-control" ng-change="ddd(user.defaultCountry)" placeholder="user country" name="input_country" id="input_country" type="text" ng-model="user.defaultCountry"/>-->
+    </div> <!-- div id:input_country -->
+    <div ng-show="user.defaultCountry !=='' && user.defaultCountry !== undefined ">
+        <div class="form-group">
+            <label for="input_tel">Telephone</label>
+            <input class=" form-control"  placeholder="Phone" name="input_tel" id="input_tel" type="text" ng-model="user.defaultPhone"/>
+        </div> <!-- div id:input_tel -->
+        <div class="form-group">
+            <label for="input_bp">Boîte postal</label>
+            <input class=" form-control"  placeholder="bp" name="input_bp" id="input_bp" type="text" ng-model="user.user.default.pobox"/>
+        </div> <!-- div id:input_bp -->
+        <div class="form-group">
+            <label for="input_city">city</label>
+            <input class=" form-control"  placeholder="city" name="input_city" id="input_city" type="text" ng-model="user.contact.city"/>
+        </div> <!-- div id:input_city -->
+    </div>
+
+</div> <!-- group_contact ends-->

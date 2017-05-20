@@ -41,39 +41,46 @@
 <script type="text/ng-template" id="moduleRoles.html" >
     <div class="modal-module-editing" style="top: 200px !important; ">
         <div class="modal-header">
-            <h5 class="modal-title" id="modal-title">
+            <h5 class="modal-title" id="">
                 <i class="glyphicon glyphicon-th"></i>
-                Module roles <span data-ng-click="cancel()" style="float: right" class="glyphicon glyphicon-remove"> </span>
+                Module roles 
             </h5>
         </div>
-        <div class="modal-body clo-md-12 " id="modal-body" style=" max-height:300px;overflow-y:scroll ">
+        <div class="modal-body clo-md-12 "  style=" max-height:300px;overflow-y:scroll ">
             <div class="row">
-                <div class="col-md-3" style="border-right: 1px solid lightgrey; height: 400px">
+                <div class="col-md-3" style="border-right: 1px solid lightgrey; height: 100%">
                     Modules
                     <ul class="items">
-                        <li ng-repeat="module in modules" data-ng-click="setCurrentModule(module)">{{module.name}}</li>
+                        <li ng-repeat="module in modules" data-ng-click="setCurrentModule(module)" style="text-transform: uppercase" ng-class="{selectedItem:module.name==selected}">{{module.name}}</li>
                     </ul>
                 </div>
-                <div class="col-md-9">
+                <div class="col-md-6">
                     Roles
-                    <ul class="items" >
+                    <div class="" >
                         <div  id="response"  class="floatingPanel request role" ng-repeat="item in currentModule.roles"> <!-- response begins-->
                             <p>
                                 <span  class="value" id="span204_copy1" >{{item.name}}</span>
-                                <button style="float: right" class="floatingPanel" data-ng-click="addRole(item)">add role</button>
+                                <button style="float: right;text-transform: uppercase" class="button default" data-ng-click="addRole(item)">add role</button>
                             </p>
                             <p  class="desc">
                                 <span  class="param" id="span205_copy1" >description</span><br>
                                 <span  class="desc" id="span206_copy1" >{{item.desc}}</span>
                             </p>
-
                         </div> <!-- response ends-->
+                    </div>
+                </div>
+                <div class="col-md-3" style="border-left: 1px solid lightgrey; height: 100%;">
+                    <ul class="items">
+                        <li ng-repeat="r in roleTmp">
+                            {{r.name}}
+                            <span style="color: #d43f3a; float: right" class="glyphicon glyphicon-remove" data-ng-click="removeRole(r)"></span>
+                        </li>
                     </ul>
                 </div>
             </div>
-
-
-
+        </div>
+        <div class="modal-footer">
+            <button class="button green" style="text-transform: uppercase" data-ng-click="submitRole()"> save</button>
         </div>
 
     </div>

@@ -1,96 +1,149 @@
-<!-- Generated html file -->
-<div id="group22"  class=""> <!-- group22 begins-->
+<!--&lt;!&ndash; Generated html file &ndash;&gt;-->
+<!--<div id="group22"  class=""> &lt;!&ndash; group22 begins&ndash;&gt;-->
+<!--<div class="modal-header">-->
+<!--<h5 class="modal-title" id="modal-title">-->
+<!--<i class="glyphicon glyphicon-user"></i>-->
+<!--New user -->
+<!--</h5>-->
+<!--</div>-->
+<!--<div class="modal-body row" id="modal-body">-->
+<!--<ng-include src="getStepTemplate()"></ng-include>-->
+<!--</div>-->
+<!--<div class="modal-footer">-->
+<!--</div>-->
+
+<!--</div> &lt;!&ndash; group22 ends&ndash;&gt;-->
+
+
+
+<div class="modal-module-editing" style="top: 200px !important; ">
     <div class="modal-header">
-        <h5 class="modal-title" id="modal-title">
+        <h5 class="modal-title" id="">
             <i class="glyphicon glyphicon-user"></i>
-            New user <span style="float: right;">{{step}}/3</span>
+            New user
         </h5>
     </div>
-    <div class="modal-body" id="modal-body">
-        <form>
-            <div ng-show="step==0">
-                <div class=" row">
-                    <div class="form-group col-md-9">
-                        <label for="name">Name</label>
-                        <input class=" form-control"  placeholder="Title" name="input_title" id="name" type="text" ng-model="user.name"/>
-                    </div> <!-- div id:input_title -->
-                    <button data-ng-click="createUser()" style="margin-top: 15px;margin-left: 15px;" class="floatingPanel btn-primary col-md-2"> Create</button>
-                </div>
-
-            </div>
-            <div class="" ng-show="step==1">
-                <div class="form-group">
-                    <label class="control-label" for="radio6">Type</label>
-                    <div class="">
-                        <label class=" radio-inline">
-                            <input id="radio6" type="radio" value="enterprise" ng-model="type"/> Enterprise
-                        </label>
-                        <label class=" radio-inline">
-                            <input id="radio7" type="radio" checked="checked" value="person" ng-model="type"/> person
-                        </label>
-                    </div>
-                </div> <!-- div id:radio6 -->
-                <div class="form-group">
-                    <label for="input_name">name</label>
-                    <input class=" form-control"  placeholder="name" name="input_name" id="input_name" type="text" ng-model="user.name"/>
-                </div> <!-- div id:input_nom -->
-                <div class="form-group">
-                    <label for="input_title">Title</label>
-                    <input class=" form-control"  placeholder="Title" name="input_title" id="input_title" type="text" ng-model="user.title"/>
-                </div> <!-- div id:input_title -->
-                <div ng-show="type=='person'" id="person"  class=""> <!-- person begins-->
-                    <div class="form-group" >
-                        <label for="sex">sex</label>
-                        <div >
-                            <label class=" radio-inline">
-                                <input id="sex" type="radio" value="F" ng-model="user.sex"> F
-                            </label>
-                            <label class=" radio-inline">
-                                <input id="sex1" type="radio" value="M" checked ng-model="user.sex"> M
-                            </label>
-                        </div>
-                    </div> <!-- div id:sexe -->
-                    <div class="form-group">
-                        <label for="input_date">Date of birth</label>
-                        <input class=" form-control"  placeholder="Date of birth" name="input_date" id="input_date" type="text" ng-model="birthday"/>
-                    </div> <!-- div id:input_date -->
-                    <div class="form-group">
-                        <label for="input_bp">Place of birth</label>
-                        <input class=" form-control"  placeholder="Place of birth" name="input_bp" id="input_pb" type="text" ng-model="birthplace"/>
-                    </div> <!-- div id:input_bp -->
-                </div> <!-- person ends-->
-                <div ng-show="type=='enterprise'" id="enterprise"  class=""> <!-- enterprise begins-->
-                </div> <!-- enterprise ends-->
-            </div>
-            <div class="" ng-show="step==2">
-                <div id="group_contact"  class=""> <!-- group_contact begins-->
-                    <div class="form-group">
-                        <label for="input_tel">Telephone</label>
-                        <input class=" form-control"  placeholder="tel" name="input_tel" id="input_tel" type="text" ng-model="user.contact.telephone"/>
-                    </div> <!-- div id:input_tel -->
-                    <div class="form-group">
-                        <label for="input_mail">Email</label>
-                        <input class=" form-control"  placeholder="email" name="input_mail" id="input_mail" type="email" ng-model="user.contact.email"/>
-                    </div> <!-- div id:input_mail -->
-                    <div class="form-group">
-                        <label for="input_bp">Boîte postal</label>
-                        <input class=" form-control"  placeholder="bp" name="input_bp" id="input_bp" type="text" ng-model="user.contact.bp"/>
-                    </div> <!-- div id:input_bp -->
-                    <div class="form-group">
-                        <label for="input_city">city</label>
-                        <input class=" form-control"  placeholder="city" name="input_city" id="input_city" type="text" ng-model="user.contact.city"/>
-                    </div> <!-- div id:input_city -->
-                    <div class="form-group">
-                        <label for="input_country">Country</label>
-                        <input class=" form-control"  placeholder="ctry" name="input_country" id="input_country" type="text" ng-model="user.contact.ctry"/>
-                    </div> <!-- div id:input_country -->
-                </div> <!-- group_contact ends-->
-            </div>  <!--</div>-->
-        </form>
+    <div style=" padding: 15px 15px 0 15px;">
+        <ul class="nav nav-pills nav-justified" >
+            <li ng-repeat="step in wizardSteps" ng-class="{'active':step.step == currentStep}"><a ng-click="vm.gotoStep(step.step)" href="">{{step.step}}. {{step.name}}</a></li>
+        </ul>
+    </div>
+    <div class="modal-body clo-md-12 "  style=" max-height:300px ">
+        <ng-include src="getStepTemplate()"></ng-include>
     </div>
     <div class="modal-footer">
-        <button ng-show="step > 1" type="button" class="btn btn-default" data-ng-click="previous()">Previous</button>
-        <button ng-show="step > 0" type="button" class="btn btn-default" data-ng-click="next()">Next</button>
-        <button ng-show="step==2" type="button" class="btn btn-default" data-ng-click="addUser()">Submit</button>
+        <span class="btn-group" ng-show="currentStep > 1  ">
+          <button ng-disabled="currentStep <= 1" class="button default" name="previous" type="button" ng-click="goToStep(currentStep - 1)"><i class="fa fa-arrow-left"></i> Previous step</button>
+          <button ng-disabled="currentStep >= wizardSteps.length" class="button blue" name="next" type="button" ng-click="goToStep(currentStep + 1)">Next step <i class="fa fa-arrow-right"></i></button>
+        </span>
+        <button ng-show="currentStep==wizardSteps.length" class="button green" style="text-transform: uppercase" data-ng-click="submitRole()"> save</button>
     </div>
-</div> <!-- group22 ends-->
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<form>-->
+    <!--<div ng-show="step==0">-->
+        <!--<div class=" row">-->
+            <!--<div class="form-group col-md-9">-->
+                <!--<label for="name">Name</label>-->
+                <!--<input class=" form-control"  placeholder="Title" name="input_title" id="name" type="text" ng-model="user.name"/>-->
+            <!--</div> &lt;!&ndash; div id:input_title &ndash;&gt;-->
+            <!--<button data-ng-click="createUser()" style="margin-top: 15px;margin-left: 15px;" class="floatingPanel btn-primary col-md-2"> Create</button>-->
+        <!--</div>-->
+
+    <!--</div>-->
+    <!--<div class="" ng-show="step==1">-->
+        <!--<div class="form-group">-->
+            <!--<label class="control-label" for="radio6">Type</label>-->
+            <!--<div class="">-->
+                <!--<label class=" radio-inline">-->
+                    <!--<input id="radio6" type="radio" value="enterprise" ng-model="type"/> Enterprise-->
+                <!--</label>-->
+                <!--<label class=" radio-inline">-->
+                    <!--<input id="radio7" type="radio" checked="checked" value="person" ng-model="type"/> person-->
+                <!--</label>-->
+            <!--</div>-->
+        <!--</div> &lt;!&ndash; div id:radio6 &ndash;&gt;-->
+        <!--<div class="form-group">-->
+            <!--<label for="input_name">name</label>-->
+            <!--<input class=" form-control"  placeholder="name" name="input_name" id="input_name" type="text" ng-model="user.name"/>-->
+        <!--</div> &lt;!&ndash; div id:input_nom &ndash;&gt;-->
+        <!--<div class="form-group">-->
+            <!--<label for="input_title">Title</label>-->
+            <!--<input class=" form-control"  placeholder="Title" name="input_title" id="input_title" type="text" ng-model="user.title"/>-->
+        <!--</div> &lt;!&ndash; div id:input_title &ndash;&gt;-->
+        <!--<div ng-show="type=='person'" id="person"  class=""> &lt;!&ndash; person begins&ndash;&gt;-->
+            <!--<div class="form-group" >-->
+                <!--<label for="sex">sex</label>-->
+                <!--<div >-->
+                    <!--<label class=" radio-inline">-->
+                        <!--<input id="sex" type="radio" value="F" ng-model="user.sex"> F-->
+                    <!--</label>-->
+                    <!--<label class=" radio-inline">-->
+                        <!--<input id="sex1" type="radio" value="M" checked ng-model="user.sex"> M-->
+                    <!--</label>-->
+                <!--</div>-->
+            <!--</div> &lt;!&ndash; div id:sexe &ndash;&gt;-->
+            <!--<div class="form-group">-->
+                <!--<label for="input_date">Date of birth</label>-->
+                <!--<input class=" form-control"  placeholder="Date of birth" name="input_date" id="input_date" type="text" ng-model="birthday"/>-->
+            <!--</div> &lt;!&ndash; div id:input_date &ndash;&gt;-->
+            <!--<div class="form-group">-->
+                <!--<label for="input_bp">Place of birth</label>-->
+                <!--<input class=" form-control"  placeholder="Place of birth" name="input_bp" id="input_pb" type="text" ng-model="birthplace"/>-->
+            <!--</div> &lt;!&ndash; div id:input_bp &ndash;&gt;-->
+        <!--</div> &lt;!&ndash; person ends&ndash;&gt;-->
+        <!--<div ng-show="type=='enterprise'" id="enterprise"  class=""> &lt;!&ndash; enterprise begins&ndash;&gt;-->
+        <!--</div> &lt;!&ndash; enterprise ends&ndash;&gt;-->
+    <!--</div>-->
+    <!--<div class="" ng-show="step==2">-->
+        <!--<div id="group_contact"  class=""> &lt;!&ndash; group_contact begins&ndash;&gt;-->
+            <!--<div class="form-group">-->
+                <!--<label for="input_tel">Telephone</label>-->
+                <!--<input class=" form-control"  placeholder="tel" name="input_tel" id="input_tel" type="text" ng-model="user.contact.telephone"/>-->
+            <!--</div> &lt;!&ndash; div id:input_tel &ndash;&gt;-->
+            <!--<div class="form-group">-->
+                <!--<label for="input_mail">Email</label>-->
+                <!--<input class=" form-control"  placeholder="email" name="input_mail" id="input_mail" type="email" ng-model="user.contact.email"/>-->
+            <!--</div> &lt;!&ndash; div id:input_mail &ndash;&gt;-->
+            <!--<div class="form-group">-->
+                <!--<label for="input_bp">Boîte postal</label>-->
+                <!--<input class=" form-control"  placeholder="bp" name="input_bp" id="input_bp" type="text" ng-model="user.contact.bp"/>-->
+            <!--</div> &lt;!&ndash; div id:input_bp &ndash;&gt;-->
+            <!--<div class="form-group">-->
+                <!--<label for="input_city">city</label>-->
+                <!--<input class=" form-control"  placeholder="city" name="input_city" id="input_city" type="text" ng-model="user.contact.city"/>-->
+            <!--</div> &lt;!&ndash; div id:input_city &ndash;&gt;-->
+            <!--<div class="form-group">-->
+                <!--<label for="input_country">Country</label>-->
+                <!--<input class=" form-control"  placeholder="ctry" name="input_country" id="input_country" type="text" ng-model="user.contact.ctry"/>-->
+            <!--</div> &lt;!&ndash; div id:input_country &ndash;&gt;-->
+        <!--</div> &lt;!&ndash; group_contact ends&ndash;&gt;-->
+    <!--</div>  &lt;!&ndash;</div>&ndash;&gt;-->
+<!--</form>-->
