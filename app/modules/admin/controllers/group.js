@@ -44,8 +44,11 @@ define(['configs/app'], function (app) {
                         };
                         $scope.submitRole = function () {
                             var i;
-                            for(i = 0; i < $scope.roleTmp.length; i++)
+                            for(i = 0; i < $scope.roleTmp.length; i++) {
+                                if (!$scope.currentGroup.roles)
+                                    $scope.currentGroup.roles = [];
                                 $scope.currentGroup.roles.push($scope.roleTmp[i]);
+                            }
                             $scope.cancel();
 
                         };

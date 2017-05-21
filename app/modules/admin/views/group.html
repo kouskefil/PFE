@@ -1,18 +1,21 @@
 
-<div id="resources"  style="padding:0"  class=" row content-inner col-md-10 col-md-offset-1 "> <!-- resources begins-->
+<div id="groups"  style="padding:0"  class=" row content-inner col-md-10 col-md-offset-1 "> <!-- resources begins-->
     <div id="resources_tree"  style="padding:0; min-height:465px;max-height:465px;margin-right:15px"  class="floatingPanel col-md-3 "> <!-- resources_tree begins-->
         <div id="tree_header"  style="padding: 10px 15px; margin: 0"  class="g_header"> <!-- tree_header begins-->
             <span  style="padding-right: 10px;"  class="fa fa-cogs" id="span177" ></span>
             <span  style="font-size: small; color: #0084bf;"  id="span178" >Groups</span>
         </div> <!-- tree_header ends-->
-        <ul  class="items ">
-            <li ng-repeat=" item in groups" ng-class="{selectedItem:item.name==selected}">
-                <span  class="item-label" data-ng-click="setCurrentGroup(item)" id="span179" >{{item.name}}</span>
-            </li>
-        </ul>
+        <div class="group-body" style="overflow-y: scroll; height: 430px">
+            <ul  class="items ">
+                <li ng-repeat=" item in groups" ng-class="{selectedItem:item.name==selected}">
+                    <span  class="item-label" data-ng-click="setCurrentGroup(item)" id="span179" >{{item.name}}</span>
+                </li>
+            </ul>
+        </div>
+
     </div> <!-- resources_tree ends-->
     <div id="resources_params"  style="padding:0;"  class=" col-md-7 "> <!-- resources_params begins-->
-        <div id="grp_params"  style="padding: 0; min-height:400px"  class="floatingPanel col-md-12 "> <!-- grp_params begins-->
+        <div id="grp_params"  style="padding: 0; min-height:465px"  class="floatingPanel col-md-12 "> <!-- grp_params begins-->
             <div id="params_header"  style="padding: 10px 15px; margin: 0"  class="g_header"> <!-- params_header begins-->
                 <span  style="padding-right: 10px;"  class="glyphicon glyphicon-cog" id="span158" ></span>
                 <span  style="font-size: small; color: #0084bf;"  id="span159" >Roles</span>
@@ -79,10 +82,10 @@
                 </div>
             </div>
         </div>
-        <div class="modal-footer">
-            <button class="button green" style="text-transform: uppercase" data-ng-click="submitRole()"> save</button>
+        <div class="modal-footer ">
+            <div class="loader _loader" > </div>
+            <button style="margin-bottom: 13px;" class="button green" style="text-transform: uppercase" data-ng-click="submitRole()"> save</button>
         </div>
-
     </div>
 
 </script>

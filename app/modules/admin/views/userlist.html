@@ -15,7 +15,7 @@
                 </div>
             </div>
            <div >
-               <table class="col-md-10 table">
+               <table class="col-md-10 table table-striped">
                    <thead>
                    <tr>
                        <th>User Id</th>
@@ -25,7 +25,7 @@
                    </tr>
                    </thead>
                    <tbody>
-                   <tr ng-repeat="user in items" data-ng-click="setSelectedUser(user)">
+                   <tr ng-repeat="user in users" data-ng-click="setSelectedUser(user)">
                        <td>{{user._id}}</td>
                        <td>{{user.login}}</td>
                        <td>{{user.user.last_connexion}}</td>

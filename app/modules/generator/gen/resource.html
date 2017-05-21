@@ -41,7 +41,7 @@
 <div id="actions"  class="actions col-md-5 "> <!-- actions begins-->
 <span  class="glyphicon glyphicon-trash" id="span172" ></span>
 <div id="group216"  class="dropdown" uib-dropdown auto-close="disabled" on-toggle="toggled(open) "> <!-- group216 begins-->
-<span  class="glyphicon glyphicon-pencil" uib-dropdown-toggle getMethod(item) id="span173" ></span>
+<span  class="glyphicon glyphicon-pencil" uib-dropdown-toggle ng-click="getMethod(item)" id="span173" ></span>
 <ul  template-url="methods_dropd.html" uib-dropdown-menu aria-labelledby="dropdownMenu3" >
 </ul>
 </div> <!-- group216 ends-->
@@ -116,13 +116,13 @@ data-tree-actions="null"
 >
 <div  class="form-group">
 <label for="select188">method name</label>
-<select name="select188" id="select188" ng-model="currentRsc.method.name" class="form-control" ><option ng-repeat='item in resourceMethod' value="{{item.item.rvalue}}"> {{item.item.rvalue}} 
+<select name="select188" id="select188" ng-model="currentRsc.method.name" class="form-control" ><option ng-repeat='item in resourceMethod' value="{{item.rvalue}}"> {{item.rvalue}} 
  </option>
  </select>
 </div>
 <div  class="form-group">
 <label for="select189">method id</label>
-<select name="select189" id="select189" ng-model="currentRsc.method.id" class="form-control" ><option ng-repeat='item in ids' value="{{item.item.name}}"> {{item.item.name}} 
+<select name="select189" id="select189" ng-model="currentRsc.method.id" class="form-control" ><option ng-repeat='item in ids' value="{{item.name}}"> {{item.name}} 
  </option>
  </select>
 </div>

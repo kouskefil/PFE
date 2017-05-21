@@ -1,0 +1,176 @@
+ <!-- contact-->
+<ul class="timeline">
+    <li>
+        <div class="timeline-panel">
+            <div class="timeline-heading">
+                <div class="col-md-12" style="padding: 0">
+                    <div class="col-md-8" style="padding: 0">
+                        <h1 ng-show="edit=='' || edit !='name'" class="timeline-title">
+                            {{user.name}}
+                            <span style="font-size: large" class="glyphicon glyphicon-edit user-edit" data-ng-click="editUser('name')"></span>
+                        </h1>
+                        <input ng-show="edit=='name'" ng-model="user.name" focus-me="true"  ng-keyup="$event.keyCode == 13 && editDone()" type="text" class="form-control"/>
+                        <h4>{{user.title}}</h4>
+                    </div>
+                    <div class="col-md-4" style="padding: 0">
+                        <div class="user" style="float:right" >
+                            <div class="text-center">
+                                <img style="width: 50px;height: 50px;" src="app/assets/images/avatar_2x.png" class="img-circle">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Created at {{ user.registered}}</small></p>
+            </div>
+            <div class="hr-left"></div>
+            <div class="timeline-body">
+                <form class="form-horizontal">
+                    <div class="col md 12 row" >
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="userType">Type:</label>
+                                <div class="col-sm-10">
+                                    <p id="userType" class="form-control-static">
+                                        {{user.type}}
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="gender">Gender:</label>
+                                <div class="col-sm-10">
+                                    <p id="gender" class="form-control-static">
+                                        {{user.gender}}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="birthday">Birthday:</label>
+                                <div class="col-sm-10">
+                                    <p ng-show="edit=='' || edit !='birthday'" id="birthday" class="form-control-static">
+                                        {{user.birthday}}
+                                        <span class="glyphicon glyphicon-edit user-edit" data-ng-click="editUser('birthday')"></span>
+                                    </p>
+                                    <input ng-show="edit=='birthday'" ng-blur="editDone()" ng-model="user.birthday" ng-keyup="$event.keyCode == 13 && editDone()" type="text" class="form-control"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="birthp">Place:</label>
+                                <div class="col-sm-10">
+                                    <p ng-show="edit=='' || edit !='birthp'"  class="form-control-static" >
+                                        {{user.birthp}}
+                                        <span class="glyphicon glyphicon-edit user-edit" data-ng-click="editUser('birthp','Place of Birth', 'birthp')()"></span>
+                                    </p>
+                                    <input ng-show="edit == 'birthp'" id="birthp" ng-blur="editDone()" ng-model="user.birthp" ng-keyup="$event.keyCode == 13 && editDone()" type="text" class="form-control"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </li>
+    <li class="timeline-panel">
+        <div class="timeline-panel">
+            <div class="timeline-heading">
+                <h4 class="timeline-title">
+                    <span class="fa fa-address-card" style=" margin-right: 5px;"></span>
+                    Contact
+                </h4>
+            </div>
+            <div class="hr-left"></div>
+            <div class="timeline-body">
+                <form class="form-horizontal">
+                    <div class="col md 12 row" >
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="country">Country:</label>
+                                <div class="col-sm-10 attr">
+                                    <p ng-show="edit=='' || edit!='defaultCountry'" id="country" class="form-control-static">
+                                        {{user.defaultCountry}}
+                                        <span class="glyphicon glyphicon-edit user-edit" data-ng-click="editUser('defaultCountry')"></span>
+                                    <div class="dropdown" uib-dropdown auto-close="disabled" on-toggle="toggled(open) ">
+                                        <span style="margin-top: 8px" class="glyphicon glyphicon-chevron-down user-edit" data-ng-click="getOtherCountries()" uib-dropdown-toggle id="simple-dropdownr"></span>
+                                        <ul class="dropdown-menu" template-url="dropdown.html" uib-dropdown-menu aria-labelledby="dropdownMenu3" > </ul>
+                                    </div>
+                                    </p>
+                                    <input ng-show="edit=='defaultCountry'" ng-blur="editDone()" ng-model="user.defaultCountry" ng-keyup="$event.keyCode == 13 && editDone()" type="text" class="form-control"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="telephone">Phone:</label>
+                                <div class="col-sm-10 attr"  >
+                                    <p ng-show="edit=='' || edit !='defaultPhone'" id="telephone" class="form-control-static " >
+                                        {{user.defaultPhone}}
+                                        <span class="glyphicon glyphicon-edit user-edit" data-ng-click="editUser('defaultPhone')"></span>
+                                    <div class="dropdown user-edit" uib-dropdown auto-close="disabled" on-toggle="toggled(open) ">
+                                        <span ng-show="user.phones.length > 0" style="margin-top: 8px" class="glyphicon glyphicon-chevron-down " data-ng-click="getOtherPhones()" uib-dropdown-toggle id="simple-dropdownr"></span>
+                                        <ul class="dropdown-menu" template-url="dropdown.html" uib-dropdown-menu aria-labelledby="dropdownMenu3" > </ul>
+                                    </div>
+                                    </p>
+                                    <input ng-show="edit=='defaultPhone'" ng-blur="editDone()" ng-model="user.defaultPhone" ng-keyup="$event.keyCode == 13 && editDone()" type="text" class="form-control"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="poBox">Po Box:</label>
+                                <div class="col-sm-10 attr" >
+                                    <p ng-show="edit=='' || edit !='defaultPobox'" id="poBox" class="form-control-static">
+                                        {{user.defaultPobox}}
+                                        <span class="glyphicon glyphicon-edit user-edit" data-ng-click="editUser('defaultPobox')"></span>
+                                    <div class="dropdown" uib-dropdown auto-close="disabled" on-toggle="toggled(open) ">
+                                        <span style="margin-top: 8px" class="glyphicon glyphicon-chevron-down user-edit" data-ng-click="getOtherPobox()" uib-dropdown-toggle id="simple-dropdownr"></span>
+                                        <ul class="dropdown-menu" template-url="dropdown.html" uib-dropdown-menu aria-labelledby="dropdownMenu3" > </ul>
+                                    </div>
+                                    </p>
+                                    <input ng-show="edit=='defaultPobox'" ng-blur="editDone()" ng-model="user.defaultPobox" ng-keyup="$event.keyCode == 13 && editDone()" type="text" class="form-control"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="city">City:</label>
+                                <div class="col-sm-10 attr">
+                                    <p ng-show="edit=='' || edit!='defaultCity'" id="city" class="form-control-static">
+                                        {{user.defaultCity}}
+                                        <span class="glyphicon glyphicon-edit user-edit" data-ng-click="editUser('defaultCity')"></span>
+                                    <div class="dropdown" uib-dropdown auto-close="disabled" on-toggle="toggled(open) ">
+                                        <span style="margin-top: 8px" class="glyphicon glyphicon-chevron-down user-edit" data-ng-click="getOtherCities()" uib-dropdown-toggle id="simple-dropdownr"></span>
+                                        <ul class="dropdown-menu" template-url="dropdown.html" uib-dropdown-menu aria-labelledby="dropdownMenu3" > </ul>
+                                    </div>
+                                    </p>
+                                    <input ng-show="edit=='defaultCity'" ng-blur="editDone()" ng-model="user.defaultCity" ng-keyup="$event.keyCode == 13 && editDone()" type="text" class="form-control"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="email">Email:</label>
+                                <div class="col-sm-10 attr">
+                                    <p ng-show="edit=='' || edit !='defaultEmail'" id="email" class="form-control-static">
+                                        {{user.defaultEmail}}
+                                        <span class="glyphicon glyphicon-edit user-edit" data-ng-click="editUser('defaultEmail')"></span>
+                                    <div class="dropdown user-edit" uib-dropdown auto-close="disabled" on-toggle="toggled(open) ">
+                                        <span style="margin-top: 8px" class="glyphicon glyphicon-chevron-down " data-ng-click="getOtherEmails()" uib-dropdown-toggle id="simple-dropdownr"></span>
+                                        <ul class="dropdown-menu" template-url="dropdown.html" uib-dropdown-menu aria-labelledby="dropdownMenu3" > </ul>
+                                    </div>
+                                    </p>
+                                    <input ng-show="edit=='defaultEmail'" ng-blur="editDone()" ng-model="user.defaultEmail" ng-keyup="$event.keyCode == 13 && editDone()" type="text" class="form-control"/>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-12">
+
+                            <label class="" for="other">Others</label>
+                            <span class="glyphicon glyphicon-edit user-edit" data-ng-click="editUser('others')"></span>
+                            <p ng-show="edit=='' || edit !='others'" id="other" class="" style="border: 1px solid lightgrey; height: auto">
+                                {{user.others}}
+                                lorem
+                            </p>
+                            <textarea ng-show="edit=='others'" ng-blur="editDone()" ng-model="user.others" ng-keyup="$event.keyCode == 13 && editDone()"  class="form-control"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </li>
+</ul>

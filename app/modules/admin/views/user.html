@@ -1,0 +1,85 @@
+<ul class="timeline">
+    <li class="timeline-panel">
+        <div class="timeline-panel">
+            <div class="timeline-heading">
+                <h4 class="timeline-title"><span class="fa fa-cogs" style=" margin-right: 5px;"></span>User configurations</h4>
+            </div>
+            <div class="hr-left"></div>
+            <div class="timeline-body">
+                <form class="form-horizontal">
+                    <div class="col md 12 row" >
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="gender">Login:</label>
+                                <div class="col-sm-10">
+                                    <p ng-show="edit=='' || edit !='login'" id="login" class="form-control-static">
+                                        {{user.user.login}}
+                                        <span class="glyphicon glyphicon-edit user-edit" data-ng-click="editUser('login','Login', 'login')"></span>
+                                    </p>
+                                    <input ng-show="edit=='login'" ng-model="user.user.login" ng-keyup="$event.keyCode == 13 && editDone()" type="text" class="form-control"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="accountstate">State:</label>
+                                <div class="col-sm-10">
+                                    <p  id="accountstate" class="form-control-static">
+                                        {{user.user.status}}
+                                        <span class="glyphicon glyphicon-edit user-edit" data-ng-click="editUser('status', 'Status', 'status')"></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-5" for="lastc" style="text-align: left">Last connexion:</label>
+                                <div class="col-sm-5">
+                                    <p ng-show="edit==''" id="lastc" class="form-control-static">
+                                        {{user.user.last_connexion}}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" for="expiration">Expires on:</label>
+                                <div class="col-sm-6">
+                                    <p ng-show="edit=='' || edit !='accountExp'" id="expiration" class="form-control-static">
+                                        {{user.user.accountExp}}
+                                        <span class="glyphicon glyphicon-edit user-edit" data-ng-click="editUser('accountExp')"></span>
+                                    </p>
+                                    <input ng-show="edit=='accountExp'" ng-model="user.user.accountExp" ng-keyup="$event.keyCode == 13 && editDone()" type="text" class="form-control"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" for="passExpire">Password expires on</label>
+                                <div class="col-sm-8">
+                                    <p  ng-show="edit=='' || edit !='passExp'" id="passExpire" class="form-control-static">
+                                        {{user.user.passExp}}
+                                        <span class="glyphicon glyphicon-edit user-edit" data-ng-click="editUser('passExp','password expiriration', 'passExp')"></span>
+                                    </p>
+                                    <input ng-show="edit=='passExp'" ng-model="user.user.passExp" ng-keyup="$event.keyCode == 13 && editDone()" type="text" class="form-control"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="timeline-panel">
+            <div class="timeline-heading">
+                <h4 class="timeline-title"><span class="fa fa-group" style=" margin-right: 5px;"></span>Groups setting</h4>
+            </div>
+            <div class="hr-left"></div>
+            <div class="timeline-body">
+                <div class="col-md-12">
+                    <div ng-repeat="grp in user.user.groups" data-ng-click="grantGrp(grp)" class="badge grp" ng-class="{'grp-granted':grp.granted==true}"  style="border-radius:2px">
+                        {{grp.name}}
+                        <span ng-show="grp.granted==false || grp.granted==undefined" class="glyphicon glyphicon-ok " style=" margin-left: 10px;"></span>
+                        <span ng-show="grp.granted==true" class="glyphicon glyphicon-remove "  style=" margin-left: 10px;"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>

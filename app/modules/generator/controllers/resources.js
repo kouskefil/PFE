@@ -47,7 +47,6 @@ define(['configs/app'], function (app) {
             }
         ];
         $scope.resources = globalVarFactory.getResources();
-        $scope.RscParent = [];
         $scope.RscParent = globalVarFactory.getParent();
         $scope.currentRsc = globalVarFactory.rscSkeleton({responses:[]});
         $scope.rsptmp = {
@@ -68,9 +67,6 @@ define(['configs/app'], function (app) {
             $scope.currentRsc = globalVarFactory.rscSkeleton(selectedNode);
             $scope.methods = $scope.currentRsc.methods;
             $scope.requests = $scope.currentRsc.requests;
-            console.log($scope.methods);
-
-            console.log($scope.requests);
         };
 
         $scope.addMethod = function () {

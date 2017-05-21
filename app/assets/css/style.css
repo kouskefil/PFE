@@ -7,20 +7,6 @@ body{
 .form-control{
     border-radius: 0 !important;
 }
-.form-control:focus {
-    /*border: 3px solid darkgrey !important;*/
-    /*outline: 0;*/
-    /*-webkit-box-shadow: none;*/
-    /*box-shadow: none;*/
-}
-
-/*button{*/
-    /*color: #fff;*/
-    /*background-color: #518FF5 !important;*/
-    /*border: 0 !important;*/
-    /*height: 34px !important;*/
-/*}*/
-/*generator.html buttons*/
 .btn-outline {
     background-color: transparent;
     color: inherit;
@@ -83,6 +69,9 @@ input[type="password"]{
 }
 input[type="email"]{
     font-size: 14px !important;
+    height: 25px !important;
+}
+select{
     height: 25px !important;
 }
 
@@ -583,7 +572,7 @@ label {
 .button {
     /*float: left;*/
     min-width: 150px;
-    max-width: 250px;
+    /*max-width: 250px;*/
     /*display: block;*/
     /*margin: 1em;*/
     padding: 1em 2em;
@@ -921,6 +910,7 @@ label {
     list-style: none;
     padding-left: 0 ;
 }
+
 
 .block hr{
     margin: 6px 0  6px 0 ;
@@ -1290,7 +1280,10 @@ ul.nav.nav-tabs {
     margin-bottom: 20px;
     position: relative;
 }
-
+.timeline p{
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
 
 {
     clear: both;
@@ -1450,10 +1443,13 @@ th{
 }
 
 .selectedItem{
-    color: #FFF;
+    color: #FFF !important;
     font-weight: 600;
     background-color: lightgrey;
     border-radius: 2px;
+}
+.selectedItem span{
+    color: #FFF !important;
 }
 
 .loader {
@@ -1495,4 +1491,10 @@ th{
 }
 .grp-granted{
     background-color: #5CB85C;
+}
+._loader{
+    display: -webkit-inline-box;
+}
+._li{
+    margin-bottom: 20px;
 }

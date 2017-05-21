@@ -2,7 +2,7 @@
  * Created by kefil on 05/11/16.
  */
     define(['configs/app'], function (app){
-        app.register.factory('globalVarFactory',['componentSet','$q', function (componentSet, $q) {
+        app.register.factory('globalVarFactory',['componentSet','$q','$log' ,function (componentSet, $q,$log) {
 
         var module = {name:'', models:[], resources:[], operations:[] };
         var defer = null;
@@ -70,45 +70,45 @@
             return RscParent;
         };
         var rscLookup = function(path, rsc){
+            $log.debug('rscLookup ')  ;
             var v, i, j, tp = "";
 
             v = path.split('/');
             for(i = 0; i < rsc.length; i++){
                 if(v[0] === rsc[i].path){
+                    $log.debug(v[0])  ;
                     if(v.length === 1)
                         return rsc[i];
-
                     for(j = 1; j < v.length; j++){
                         if(j === v.length - 1)
                             tp += v[j];
                         else
                             tp += v[j] + "/";
                     }
-
+                    $log.debug('rscLookup ')  ;
+                    $log.debug(rscLookup(tp,rsc[i].resources))  ;
                     return rscLookup(tp,rsc[i].resources);
                 }
-
             }
-
             return null;
         };
         var parentLookup = function(){
+            $log.debug('parentLookup parent = '+ currentRsc.parent)  ;
             return rscLookup(currentRsc.parent, module.resources);
         };
         var getParents = function (resources) {
-                var i, j = resources.length ;
-                for(i = 0; i < resources.length; i++){
-                     if(resources[i].parent !== '')
-                        RscParent.push(resources[i].parent);
-                    if(resources[i].resources) {
-                        RscParent.push(resources[i].path);
-                    }
-                    if(resources[i].resources) {
-                        getParents(resources[i].resources);
-                    }
+            var i, j = resources.length ;
+            for(i = 0; i < resources.length; i++){
+                RscParent.push(resources[i].parent);
+                if(resources.length === 0) {
+                    RscParent.push(resources[i].path);
                 }
-                return RscParent;
-            };
+                if(resources[i].resources) {
+                    getParents(resources[i].resources);
+                }
+            }
+            return RscParent;
+        };
         /** resources vars end*/
         var global = {
             /*operations methods*/
@@ -174,11 +174,12 @@
                 return currentRsc;
              },
             getParent : function () {
-                RscParent = [];
                 return  getParents(module.resources);
             },
             AddResource : function(){
                 var rsc = angular.copy(currentRsc);
+                console.log(rsc);
+
                 var newpath;
                 if(rscLookup(rsc.path, module.resources) !== null){
                     currentRsc.path = '';

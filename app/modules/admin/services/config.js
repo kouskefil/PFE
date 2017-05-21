@@ -4,11 +4,11 @@
 'use strict';
 
 define(['configs/app',
-    '../controllers/user',
+    '../controllers/users',
     '../controllers/userDetails',
     '../controllers/group',
-    '../services/underscore-min',
-    '../services/pagerService',
+    '../controllers/partner',
+    '../controllers/user' ,
     '../services/userFactory',
     '../services/groupFactory',
     '../../../js/services/layoutFactory',
