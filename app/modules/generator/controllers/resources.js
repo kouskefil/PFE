@@ -48,6 +48,7 @@ define(['configs/app'], function (app) {
         ];
         $scope.resources = globalVarFactory.getResources();
         $scope.RscParent = globalVarFactory.getParent();
+        console.log($scope.RscParent);
         $scope.currentRsc = globalVarFactory.rscSkeleton({responses:[]});
         $scope.rsptmp = {
             mediatype:'',

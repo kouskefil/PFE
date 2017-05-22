@@ -9,20 +9,15 @@ define(['angular'], function (angular) {
 
             //    to get location operations to display on operations bar
             $scope.actions = layoutFactory.getOperations();
-
             //     to get current location
             $scope.location = layoutFactory.getCurrentLocation();
-            $log.info('location'+ $scope.location);
-
             //    to perform operation's action
             $scope.doAction = function (item) {
-                $log.debug('doaction');
-                $log.debug(item);
                 item.action();
             };
              $scope.go = function () {
-                // $state.go('root.install',{module:'admin'});
-                 $state.go('root.app');
+                $state.go('root.install',{module:'generator'});
+                //  $state.go('root.generator');
              };
             /*Layout vars config functions*/
             $scope.navbarCollapsed = true;

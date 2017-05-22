@@ -70,7 +70,6 @@
             return RscParent;
         };
         var rscLookup = function(path, rsc){
-            $log.debug('rscLookup ')  ;
             var v, i, j, tp = "";
 
             v = path.split('/');
@@ -85,8 +84,6 @@
                         else
                             tp += v[j] + "/";
                     }
-                    $log.debug('rscLookup ')  ;
-                    $log.debug(rscLookup(tp,rsc[i].resources))  ;
                     return rscLookup(tp,rsc[i].resources);
                 }
             }
@@ -99,7 +96,7 @@
         var getParents = function (resources) {
             var i, j = resources.length ;
             for(i = 0; i < resources.length; i++){
-                RscParent.push(resources[i].parent);
+                // RscParent.push(resources[i].parent);
                 if(resources.length === 0) {
                     RscParent.push(resources[i].path);
                 }
@@ -189,7 +186,10 @@
                     currentRsc.responses = [];
                 }else {
                     if(rsc.parent) {
-                        parentLookup().resources.push(rsc);
+                        var parent = parentLookup();
+                        if(!parent.resources)
+                            parent.resources = [];
+                        parent.resources.push(rsc);
                     }else
                         module.resources.push(rsc);
                     currentRsc.path = '';
