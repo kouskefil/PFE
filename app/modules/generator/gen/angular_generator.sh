@@ -434,6 +434,10 @@ function treeview {
             echo "<uib-tab index=\"$num\"  heading=\"$label\"> <!--begins-->" >> $2
             foreach "$1" $2 $3
             echo "</uib-tab> <!--end-->" >> $2
+    elif [ "$typeparent" == "accordion" ];then
+            echo    "<div uib-accordion-group class=\"panel-default\" heading=\"$label\">" >> $2
+                foreach "$1" $2 $3
+            echo    "</div>" >> $2
     else
         echo -n "<div id=\"$id\" " >> $2
         if [ "$expr" != "null" ];then
@@ -493,6 +497,16 @@ function treeview {
 }
 # group end
 
+function accordion {
+    local    class=`echo $1 | jq -r '.class'`
+    local    id=`echo $1 | jq -r '.id'`
+    local    style=`echo $1 | jq -r '.style'`
+
+    echo    "<uib-accordion close-others=\"true\">" >> $2
+              foreach "$1" $2 $3
+    echo    "</uib-accordion>" >> $2
+
+}
 function link {
     local label=`echo $1 | jq -r '.label'`
     local click=`echo $1 | jq -r '.click'`
@@ -681,6 +695,8 @@ function view_generator {
 	"button") button "$1" $2 $3
 	    ;;
 	"select") _select "$1" $2 $3
+	    ;;
+    "accordion") accordion "$1" $2 $3
 	    ;;
 	"<p>")  paragraph "$1" $2
 	    ;;

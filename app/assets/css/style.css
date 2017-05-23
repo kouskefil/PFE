@@ -248,7 +248,7 @@ label {
     -webkit-box-sizing: border-box;
     background-color: white;
     box-sizing: border-box;
-    border-right: 1px solid #aaa;
+    /*border-right: 1px solid #aaa;*/
     box-shadow: 0 0 0 1px rgba(0,0,0,.1),0 2px 3px rgba(0,0,0,.2);
 }
 
@@ -1497,4 +1497,7 @@ th{
 }
 ._li{
     margin-bottom: 20px;
+}
+.selected-node{
+    background-color: green;
 }

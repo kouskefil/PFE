@@ -219,16 +219,21 @@ define(['configs/app',
                             name:"new",
                             icon:"glyphicon glyphicon-edit",
                             action:function () {
-                                globalVarFactory.AddResource();
+                                globalVarFactory.newresource();
+                            }
+                        },
+                        {
+                            name: "add resources",
+                            icon: "glyphicon glyphicon-plus",
+                            action:function () {
+                                globalVarFactory.addResource();
                             }
                         },
                         {
                             name: "save",
                             icon: "glyphicon glyphicon-floppy-disk",
                             action:function () {
-                                //console.log(containerFactory.module);
                                 fileFactory.saveAsJson(angular.toJson(globalVarFactory.getModule()),'models');
-                                // $state.go('root');
                             }
                         }
                     ]);

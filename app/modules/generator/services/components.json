@@ -2,173 +2,175 @@
       "simple": [
           {
               "type": "input",
-              "categorie": "simple",
+              "category": "simple",
               "container": false,
               "img": "fa fa-edit"
           },
           {
               "type": "hx",
-              "categorie": "simple",
+              "category": "simple",
               "container": false,
               "img": "fa fa-header"
           },
           {
               "type": "i",
-              "categorie": "simple",
+              "category": "simple",
               "container": false,
               "img": "fa fa-italic"
           },
           {
               "type": "radio",
-              "categorie": "simple",
+              "category": "simple",
               "container": true,
               "img": "fa fa-dot-circle-o"
           },
           {
               "type": "textarea",
-              "categorie": "simple",
+              "category": "simple",
               "container": false,
               "img": "fa fa-text-height"
           },
           {
               "type": "button",
-              "categorie": "simple",
+              "category": "simple",
               "container": false,
               "img": "fa fa-square"
           },
           {
               "type": "select",
-              "categorie": "simple",
+              "category": "simple",
               "container": false,
               "img": "fa fa-chevron-down"
           },
           {
               "type": "label",
-              "categorie": "simple",
+              "category": "simple",
               "container": false,
               "img": "fa  fa-font"
           },
           {
               "type": "hr",
-              "categorie": "simple",
+              "category": "simple",
               "container": false,
               "img": "fa fa-minus"
           },
           {
               "type": "span",
-              "categorie": "simple",
+              "category": "simple",
               "container": false,
               "img": "fa  fa-arrows-h"
           },
           {
               "type": "img",
-              "categorie": "simple",
+              "category": "simple",
               "container": false,
               "img": "fa fa-picture-o"
           }
-
       ],
       "widget": [
           {
               "type": "search",
-              "categorie": "composite",
+              "category": "composite",
               "container": false,
               "img": "fa fa-search"
           },
           {
               "type": "treeview",
-              "categorie": "composite",
+              "category": "composite",
               "container": false,
               "img": "fa fa-tree"
           },
           {
           "type": "view",
-          "categorie": "group",
+          "category": "group",
           "container": false,
           "img": "fa  fa-eye"
         },
           {
             "type": "modal",
-            "categorie": "composite",
+            "category": "composite",
             "container": true,
             "img": "glyphicon glyphicon-modal-window"
           },
-         {
+            {
           "type": "ul",
-          "categorie": "composite",
+          "category": "composite",
           "container": true,
           "img": "fa fa-list-alt "
         },
-        {
+            {
           "type": "li",
-          "categorie": "composite",
+          "category": "composite",
           "container": true,
           "img": "fa fa-list "
         }
-
       ],
       "container": [
-
+          {
+            "type":"accordion",
+            "category":"composite",
+            "container": true,
+            "img":"glyphicon glyphicon-menu-hamburger"
+          },  
           {
               "type": "<p>",
-              "categorie": "composite",
+              "category": "composite",
               "container": true,
               "img": "fa  fa-paragraph"
           },
           {
               "type": "tab",
-              "categorie": "composite",
+              "category": "composite",
               "container": true,
               "img": "fa  fa-navicon"
           },
           {
               "type": "dropdown",
-              "categorie": "composite",
+              "category": "composite",
               "container": true,
               "img": "fa  fa-toggle-down"
           },
           {
               "type": "wizard",
-              "categorie": "composite",
+              "category": "composite",
               "container": true,
               "img": "fa  fa-navicon"
           },
           {
               "type": "wizard_level",
-              "categorie": "composite",
+              "category": "composite",
               "container": true,
               "img": "fa fa-step-forward"
           },
           {
               "type": "form",
-              "categorie": "group",
+              "category": "group",
               "container": true,
               "img": "fa  fa-file-text-o"
           },
           {
               "type": "group",
-              "categorie": "group",
+              "category": "group",
               "container": true,
               "img": "fa  fa-folder"
           },
           {
               "type": "table",
-              "categorie": "group",
+              "category": "group",
               "container": false,
               "img": "fa fa-table"
           },
           {
               "type": "link",
-              "categorie": "simple",
+              "category": "simple",
               "container": true,
               "img": "fa  fa-link"
           },
           {
               "type": "list",
-              "categorie": "composite",
+              "category": "composite",
               "container": true,
               "img": "fa  fa-list"
           }
       ]
-
   }

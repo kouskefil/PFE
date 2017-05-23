@@ -47,7 +47,7 @@ define(['configs/app'], function (app) {
             }
         ];
         $scope.resources = globalVarFactory.getResources();
-        $scope.RscParent = globalVarFactory.getParent();
+        $scope.RscParent = globalVarFactory.generateParent();
         console.log($scope.RscParent);
         $scope.currentRsc = globalVarFactory.rscSkeleton({responses:[]});
         $scope.rsptmp = {
@@ -156,6 +156,11 @@ define(['configs/app'], function (app) {
         };
         $scope.setmethoddropdownstyle = function(){
             $scope.editMethod= 'addmethod';
-        }
+        };
+
+
+
+
+
     }])
 });

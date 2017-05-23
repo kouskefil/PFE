@@ -9,7 +9,7 @@
             <div id="rsc_def_content"  style="padding: 15px 15px"  class=""> <!-- rsc_def_content begins-->
                 <div  class="form-group">
                     <select name="select155" id="select155" ng-model="currentRsc.parent" class="form-control" >
-                        <option ng-repeat='item in RscParent' value="{{item}}"> {{item}}
+                        <option ng-repeat='item in RscParent' value="{{item.realpath}}"> {{item.realpath}}
                     </option>
                     </select>
                 </div>
@@ -17,6 +17,7 @@
                     <label for="input156">path</label>
                     <input class=" form-control"  placeholder="path" name="input156" id="input156" type="text" ng-model="currentRsc.path"/>
                 </div> <!-- div id:input156 -->
+             
             </div> <!-- rsc_def_content ends-->
         </div> <!-- rsc_definition ends-->
         <div id="rsc_params"  style="padding: 0; min-height:400px"  class="floatingPanel col-md-12 "> <!-- rsc_params begins-->

@@ -55,56 +55,51 @@
 
         /**resources vars **/
         var currentRsc , RscParent = [];
-        var fillRscParent = function(path){
-            var i, newpath;
-            for(i = 0; i < module.resources.length; i++){
-                if(path.length === 0)
-                    newpath = module.resources[i].path;
+        var resourcesParents = [];
+        var genParent = function (rsc,root) {
+            var realpath, i ;
+            if(!rsc.methods.length){
+                if(root == '')
+                    realpath = rsc.path;
                 else
-                    newpath = path + "/" + module.resources[i].path;
-                RscParent.push(newpath);
-                if(module.resources[i].resources){
-                    fillRscParent(newpath, module.resources[i].resources)
-                }
+                    realpath = root + '/' +rsc.path;
+                resourcesParents.push({realpath:realpath, resource:rsc}) ;
+                for(i = 0; i < rsc.resources.length; i++)
+                    genParent(rsc.resources[i], realpath);
             }
-            return RscParent;
-        };
-        var rscLookup = function(path, rsc){
-            var v, i, j, tp = "";
 
-            v = path.split('/');
-            for(i = 0; i < rsc.length; i++){
-                if(v[0] === rsc[i].path){
-                    $log.debug(v[0])  ;
-                    if(v.length === 1)
-                        return rsc[i];
-                    for(j = 1; j < v.length; j++){
-                        if(j === v.length - 1)
-                            tp += v[j];
-                        else
-                            tp += v[j] + "/";
-                    }
-                    return rscLookup(tp,rsc[i].resources);
+
+
+        };
+        var addParent = function (rsc) {
+            var realpath;
+            $log.debug('addParent methods.length='+rsc.methods.length);
+            if(rsc.methods.length)
+                 return ;
+            if(rsc.parent == '')
+                realpath = rsc.path;
+            else
+                realpath =  rsc.parent + '/' + rsc.path;
+            resourcesParents.push({realpath:realpath, resource:rsc}) ;
+        };
+
+        var parentLookup = function(rsc){
+            // var realpath, i;
+            // realpath =  rsc.parent + '/' + rsc.path;
+            $log.debug('lookup resourcesParents length '+ resourcesParents.length);
+            for(i = 0 ; i < resourcesParents.length; i ++) {
+                $log.debug(' realpath='  +rsc.parent+ ' resourcesParents[i].realpath=' + resourcesParents[i].realpath);
+                if (resourcesParents[i].realpath == rsc.parent) {
+                    $log.debug('lookup i = +' + i + ' rsc =' + resourcesParents[i].resource);
+                    return resourcesParents[i].resource;
                 }
             }
+
             return null;
         };
-        var parentLookup = function(){
-            $log.debug('parentLookup parent = '+ currentRsc.parent)  ;
-            return rscLookup(currentRsc.parent, module.resources);
-        };
         var getParents = function (resources) {
-            var i, j = resources.length ;
-            for(i = 0; i < resources.length; i++){
-                // RscParent.push(resources[i].parent);
-                if(resources.length === 0) {
-                    RscParent.push(resources[i].path);
-                }
-                if(resources[i].resources) {
-                    getParents(resources[i].resources);
-                }
-            }
-            return RscParent;
+
+            return resourcesParents;
         };
         /** resources vars end*/
         var global = {
@@ -173,39 +168,28 @@
             getParent : function () {
                 return  getParents(module.resources);
             },
-            AddResource : function(){
+            addResource : function(){
                 var rsc = angular.copy(currentRsc);
-                console.log(rsc);
-
-                var newpath;
-                if(rscLookup(rsc.path, module.resources) !== null){
-                    currentRsc.path = '';
-                    currentRsc.parent = '';
-                    currentRsc.resources = [];
-                    currentRsc.methods = [];
-                    currentRsc.responses = [];
-                }else {
-                    if(rsc.parent) {
-                        var parent = parentLookup();
-                        if(!parent.resources)
-                            parent.resources = [];
-                        parent.resources.push(rsc);
-                    }else
-                        module.resources.push(rsc);
-                    currentRsc.path = '';
-                    currentRsc.parent = '';
-                    currentRsc.resources = [];
-                    currentRsc.methods = [];
-                    currentRsc.responses = [];
-
-                    /*currentRsc subResource = {};*/
-                    if(rsc.parent)
-                        newpath = rsc.parent + "/" + rsc.path;
-                    else
-                        newpath = rsc.path;
-                    RscParent.push(newpath);
-                }
-
+                $log.debug('addresouce');
+                $log.debug(rsc);
+               if(rsc.parent == '')
+                   module.resources.push(rsc);
+               else
+                   parentLookup(rsc).resources.push(rsc);
+               addParent(rsc) ;
+            },
+            generateParent: function () {
+                var i;
+                for(i = 0; i < module.resources.length; i++)
+                    genParent(module.resources[i], '');
+                return resourcesParents;
+            },
+            newresource : function () {
+                currentRsc.path = '';
+                currentRsc.parent = '';
+                currentRsc.resources = [] ;
+                currentRsc.methods = [];
+                currentRsc.responses = [];
             },
             /*resource methods end*/
             /*module methods*/

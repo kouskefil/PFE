@@ -4,7 +4,6 @@ define(['configs/app'], function (app){
             $scope.HTMLcomponents = HTMLcomponents;
             $scope.components = null;
             //variables to add in the model
-
             $scope.currentComponent = globalVarFactory.getModelHead().then(function (data) {
                 $scope.currentComponent = data;
                 $scope.components = data;
@@ -21,10 +20,6 @@ define(['configs/app'], function (app){
                     }
                 };
 
-            console.log('cmoption');
-            console.log($scope.cmOption);
-
-
             $scope.setModel = function (model) {
                 globalVarFactory.setModel(model);
                 $scope.components = model;
@@ -32,7 +27,6 @@ define(['configs/app'], function (app){
                 $scope.currentComponent = model;
                 console.log($scope.components);
             } ;
-
             //**************************************** fonctions à ajouter dans le model----------
             $scope.addoperation = function () {
                 $scope.currentModel.operations.push($scope.operation);
@@ -42,17 +36,6 @@ define(['configs/app'], function (app){
                 $scope.operation = operation;
                 $scope.currentoperation = operation;
             };
-            // $scope.delOperation = function () {
-            //  if ($scope.currentoperation !== null) {
-            //   var pos = $scope.currentComponent.operations.indexOf($scope.currentoperation);
-            //   $scope.currentComponent.operations.splice(pos, 1);
-            //   $scope.operation = {};
-            //   $scope.currentoperation = null;
-            //  }
-            // };
-
-            //    Variables  functions
-
             $scope.addv = function () {
                 $scope.currentModel.variables.push($scope.variable);
                 $scope.variable = {};
@@ -89,11 +72,7 @@ define(['configs/app'], function (app){
                 globalVarFactory.gDelete($scope.models, model);
                 $scope.currentModel = {};
             };
-
-            //***************************************************************************************
-
             $scope.treeActions = globalVarFactory.getTreeAction();
-
             $scope.setcurrentContainer = function (component) {
                 globalVarFactory.setcurrentContainer(component);
                 $scope.currentComponent = component;
@@ -207,7 +186,9 @@ define(['configs/app'], function (app){
             };
             $scope.deleteCol = function (col) {
               globalVarFactory.gDelete($scope.currentComponent.columns, col);
-            }
+            };
+
+            $scope.oneAtATime = true;
 
         }]
 

@@ -1,66 +1,11 @@
 <!-- Generated html file -->
-<div id="group1"  style=""  class="content"> <!-- group1 begins-->
-<div id="content"  style=""  class="content-inner col-md-10 col-md-offset-1 "> <!-- content begins-->
-<div id="definition"  style="min-height:465px;max-height:465px;padding:0;"  class="floatingPanel col-md-7 "> <!-- definition begins-->
-<uib-tabset >
-<uib-tab index="139"  heading="definition"> <!--begins-->
-<div class="form-group">
-<label for="input5"></label>
-<input class=" form-control"  placeholder="operation" name="input5" id="input5" type="text" ng-model="currentOp.name"/>
-</div> <!-- div id:input5 -->
-<div  class="form-group">
-<label for="select6">operation cmd</label>
-<select name="select6" id="select6" ng-model="currentOp.command" class="form-control" ><option ng-repeat='item in opCommand' value="{{item.rvalue}}"> {{item.dvalue}} 
- </option>
- </select>
-</div>
-<div class="form-group">
-<label for="input7"></label>
-<input class=" form-control"  placeholder="output" name="input7" id="input7" type="text" ng-model="currentOp.out"/>
-</div> <!-- div id:input7 -->
-</uib-tab> <!--end-->
-<uib-tab index="136"  heading="sql"> <!--begins-->
-<div id="group140"  class=""> <!-- group140 begins-->
-<div class="form-group" >
-<label for="textarea11">sql</label>
-<div>
-<textarea id="textarea11" class="form-control" name="textarea11" ui-codemirror="cmOption" ng-model="currentOp.sql.text"></textarea>
-</div>
-</div>
-</div> <!-- group140 ends-->
-</uib-tab> <!--end-->
-<uib-tab index="137"  heading="inputs"> <!--begins-->
-<div id="group141"  class=""> <!-- group141 begins-->
-<div class="form-group">
-<input class=" form-control"  placeholder="input name" name="input12" id="input12" type="text" ng-model="currentOp.input.name"/>
-</div> <!-- div id:input12 -->
-<div  class="form-group">
-<label for="select13">input type</label>
-<select name="select13" id="select13" ng-model="currentOp.input.type" class="form-control" ><option ng-repeat='item in inputType' value="{{item.rvalue}}"> {{item.dvalue}} 
- </option>
- </select>
-</div>
-<div  class="form-group">
-<label for="select14">input style</label>
-<select name="select14" id="select14" ng-model="currentOp.input.style" class="form-control" ><option ng-repeat='item in inputStyle' value="{{item.rvalue}}"> {{item.dvalue}} 
- </option>
- </select>
-</div>
-<div  class="form-group">
-<label for="select15">input location</label>
-<select name="select15" id="select15" ng-model="currentOp.input.location" class="form-control" ><option ng-repeat='item in inputLocation' value="{{item.rvalue}}"> {{item.dvalue}} 
- </option>
- </select>
-</div>
-<div class="form-group">
-<input class=" form-control"  placeholder="input module" name="input16" id="input16" type="text" ng-model="currentOp.input.module"/>
-</div> <!-- div id:input16 -->
-<button  class="floatingPanel" ng-click="add">add input</button>
-<button  class="floatingPanel" ng-click="clear">clear input</button>
-</div> <!-- group141 ends-->
-</uib-tab> <!--end-->
-</uib-tabset>
+<div id="operations"  style=""  class="content-inner col-md-10 col-md-offset-1 "> <!-- operations begins-->
+<div id="content"  style="padding:0; margin-bottom: 150px"  class=" col-md-7 "> <!-- content begins-->
+<div id="definition-inner"  style="margin-bottom: 15px; padding:0"  class="floatingPanel col-md-12 "> <!-- definition-inner begins-->
+<div id="definition"  class=""> <!-- definition begins-->
 </div> <!-- definition ends-->
+</div> <!-- definition-inner ends-->
+</div> <!-- content ends-->
 <div id="tree"  style="padding:0; min-height:465px;max-height:465px; margin-left:15px"  class="floatingPanel col-md-3 "> <!-- tree begins-->
 <div id="group143"  style="height: 46px; border: 1px solid lightgray; border-top-color: transparent; background-color: #F5F5F5; border-left-color: transparent;"  class=""> <!-- group143 begins-->
 </div> <!-- group143 ends-->
@@ -75,5 +20,4 @@ data-tree-actions="opActions"
 >
 </div>
 </div> <!-- tree ends-->
-</div> <!-- content ends-->
-</div> <!-- group1 ends-->
+</div> <!-- operations ends-->

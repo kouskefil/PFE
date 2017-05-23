@@ -1,24 +1,40 @@
 <!-- Generated html file -->
-<div id="racine"  style="margin-left: 49px;"  class="racine"> <!-- racine begins-->
+<div id="racine"  style=""  class="racine content-inner col-md-10 col-md-offset-1 "> <!-- racine begins-->
 <div id="recepteur"  style=""  class="floatingPanel recepteur col-md-7 "> <!-- recepteur begins-->
 <uib-tabset >
-<uib-tab index="13"  heading="treeview"> <!--begins-->
-<div id="group132"  style="padding-right:0px"  class=" col-md-12 "> <!-- group132 begins-->
-<div class="col-md-7"
+<uib-tab index="13"  heading="Treeview"> <!--begins-->
+<div id="group136"  style="padding-right:0px"  class=" row "> <!-- group136 begins-->
+<div id="group137"  style="overflow-y: auto; max-height: 363px;"  class=" col-md-8 "> <!-- group137 begins-->
+<span  style="margin-bottom:15px"  class="fa fa-window-restore" id="span138" ></span>
+<span  id="span143" >components</span>
+<div id="group132"  style="padding-right:0"  class=" row  col-md-12 "> <!-- group132 begins-->
+<div class=""
 data-angular-treeview="true"
 data-tree-id="tree1"
 data-tree-model="components.children"
-data-node-id="num"
-data-node-click="null"
+data-node-id=""
+data-node-click="cclick"
 data-node-children="children"
 data-tree-actions="treeActions"
 >
 </div>
-<div id="group134"  ui-view="" style="border-left:1px solid gainsboro; max-width:230px; border-right:1px solid gainsboro;"  class=" col-md-5 "> <!-- group134 begins-->
-</div> <!-- group134 ends-->
 </div> <!-- group132 ends-->
+</div> <!-- group137 ends-->
+<div id="group159"  style="border-left:1px solid gainsboro; max-width:230px; border-right:1px solid gainsboro; overflow-y:auto; max-height: 363px;"  class=" col-md-4 "> <!-- group159 begins-->
+<div id="title_copy1"  class=""> <!-- title_copy1 begins-->
+<span  style="margin-bottom:15px"  class="fa fa-cogs" id="span146_copy1" ></span>
+<span  id="span147_copy1" >properties</span>
+</div> <!-- title_copy1 ends-->
+<div id="group161"  ui-view="" class=""> <!-- group161 begins-->
+</div> <!-- group161 ends-->
+</div> <!-- group159 ends-->
+</div> <!-- group136 ends-->
 </uib-tab> <!--end-->
 <uib-tab index="14"  heading="functions"> <!--begins-->
+<div id="title"  class=""> <!-- title begins-->
+<span  style="margin-bottom:15px"  class="fa fa-cogs" id="span146" ></span>
+<span  id="span147" >state functions</span>
+</div> <!-- title ends-->
 <div class="form-group">
 <label for="input17">Name</label>
 <input class=" form-control"  placeholder="name" name="input17" id="input17" type="text" ng-model="function.name"/>
@@ -41,7 +57,11 @@ data-tree-actions="treeActions"
 </ul>
 </uib-tab> <!--end-->
 <uib-tab index="15"  heading="operations"> <!--begins-->
-<div id="group117"  style="border-right: 1px solid #aaa"  class=" col-md-6 "> <!-- group117 begins-->
+<div id="title_copy1"  class=""> <!-- title_copy1 begins-->
+<span  style="margin-bottom:15px"  class="fa fa-cogs" id="span146_copy1" ></span>
+<span  id="span147_copy1" >state operations</span>
+</div> <!-- title_copy1 ends-->
+<div id="group117"  style=""  class=" col-md-12 "> <!-- group117 begins-->
 <div id="data"  class=""> <!-- data begins-->
 <div class="form-group">
 <label for="input23">Name</label>
@@ -51,6 +71,12 @@ data-tree-actions="treeActions"
 <label for="input24">Icon</label>
 <input class=" form-control"  placeholder="icon" name="input24" id="input24" type="text" ng-model="operation.icon"/>
 </div> <!-- div id:input24 -->
+<div class="form-group" >
+<label for="textarea27_copy2">dependances</label>
+<div>
+<textarea id="textarea27_copy2" class="form-control" name="textarea27_copy2" ui-codemirror="cmOption" ng-model="operation.dependances"></textarea>
+</div>
+</div>
 <div class="form-group" >
 <label for="textarea27">Action</label>
 <div>
@@ -70,23 +96,32 @@ data-tree-actions="treeActions"
 </li>
 </ul>
 </div> <!-- group117 ends-->
-<div id="group118"  class=" col-md-6 "> <!-- group118 begins-->
-<div class="form-group">
-<label for="input119">dependence</label>
-<input class=" form-control"  placeholder="dependence" name="input119" id="input119" type="text" ng-model="dependence"/>
-</div> <!-- div id:input119 -->
-<button  ng-click="null">add depeendence</button>
-</div> <!-- group118 ends-->
 </uib-tab> <!--end-->
 <uib-tab index="16"  heading="variables"> <!--begins-->
-<div class="form-group">
-<label for="input29">Name</label>
-<input class=" form-control"  placeholder="name" name="input29" id="input29" type="text" ng-model="variable.name"/>
-</div> <!-- div id:input29 -->
+<div id="title_copy2"  class=""> <!-- title_copy2 begins-->
+<span  style="margin-bottom:15px"  class="fa fa-cogs" id="span146_copy2" ></span>
+<span  id="span147_copy2" >state variables</span>
+</div> <!-- title_copy2 ends-->
+<div >
+<label for="input30_copy2">async</label>
+<input class=" "  placeholder="async" name="input30_copy2" id="input30_copy2" type="checkbox" ng-model="variable.async"/>
+</div> <!-- div id:input30_copy2 -->
 <div >
 <label for="input30">resolve</label>
 <input class=" "  placeholder="resolve" name="input30" id="input30" type="checkbox" ng-model="variable.resolve"/>
 </div> <!-- div id:input30 -->
+<div class="form-group">
+<label for="input29">Name</label>
+<input class=" form-control"  placeholder="name" name="input29" id="input29" type="text" ng-model="variable.name"/>
+</div> <!-- div id:input29 -->
+<div class="form-group">
+<label for="input162">service form</label>
+<input class=" form-control"  placeholder="serviceform" name="input162" id="input162" type="text" ng-model="variable.servform"/>
+</div> <!-- div id:input162 -->
+<div class="form-group">
+<label for="input163">service module</label>
+<input class=" form-control"  placeholder="service module" name="input163" id="input163" type="text" ng-model="variable.servmodule"/>
+</div> <!-- div id:input163 -->
 <div class="form-group" >
 <label for="textarea124">value</label>
 <div>
@@ -106,9 +141,19 @@ data-tree-actions="treeActions"
 </ul>
 </uib-tab> <!--end-->
 <uib-tab index="77"  heading="configs"> <!--begins-->
-<span  style="margin-bottom:10px; font-size:25px; color:#1A7CB9"  class="" id="span84" >state configurations</span>
-<div id="group82"  class=" col-md-12 "> <!-- group82 begins-->
-<div id="group93"  style="border-right: 1px solid #aaa"  class=" col-md-6"> <!-- group93 begins-->
+<div id="title_copy2_copy1"  class=""> <!-- title_copy2_copy1 begins-->
+<span  style="margin-bottom:15px"  class="fa fa-wrench" id="span146_copy2_copy1" ></span>
+<span  id="span147_copy2_copy1" >state configs</span>
+</div> <!-- title_copy2_copy1 ends-->
+<div id="group93"  style=""  class=" col-md-12 "> <!-- group93 begins-->
+<div >
+<label for="input152">view in main menu</label>
+<input class=" "  placeholder="view in main menu" name="input152" id="input152" type="checkbox" ng-model="currentComponent.vimm"/>
+</div> <!-- div id:input152 -->
+<div class="form-group">
+<label for="input153">role</label>
+<input class=" form-control"  placeholder="role" name="input153" id="input153" type="null" ng-model="currentComponent.role"/>
+</div> <!-- div id:input153 -->
 <div class="form-group">
 <label for="input78">state</label>
 <input class=" form-control"  placeholder="state" name="input78" id="input78" type="text" ng-model="currentComponent.state"/>
@@ -134,27 +179,20 @@ data-tree-actions="treeActions"
 <textarea id="textarea110" class="form-control" name="textarea110" ui-codemirror="cmOption" ng-model="currentComponent.templateUrl"></textarea>
 </div>
 </div>
-</div> <!-- group93 ends-->
-<div id="group112"  class=" col-md-6 "> <!-- group112 begins-->
 <div class="form-group" >
-<label for="textarea122">onEnter</label>
+<label for="textarea151">Dependances</label>
 <div>
-<textarea id="textarea122" class="form-control" name="textarea122" ui-codemirror="cmOption" ng-model="currentComponent.onEnter"></textarea>
+<textarea id="textarea151" class="form-control" name="textarea151" ng-model="currentComponent.dependances"></textarea>
 </div>
 </div>
-<div class="form-group">
-<label for="input113">dependence</label>
-<input class=" form-control"  placeholder="dependence" name="input113" id="input113" type="text" ng-model="dependence"/>
-</div> <!-- div id:input113 -->
-<button  class="floatingPanel" ng-click="addDpdence">add dependence</button>
-</div> <!-- group112 ends-->
-</div> <!-- group82 ends-->
+</div> <!-- group93 ends-->
 </uib-tab> <!--end-->
 </uib-tabset>
 </div> <!-- recepteur ends-->
-<div id="composant"  style="position: fixed; left: 947px; top: 120px;"  class=" row floatingPanel composants col-md-2 "> <!-- composant begins-->
+<div id="composant"  style="margin-left:15px"  class=" row floatingPanel composants composant col-md-3 "> <!-- composant begins-->
 <uib-tabset >
 <uib-tab index="5"  heading="components"> <!--begins-->
+<uib-accordion close-others="true">
 <div id="simple"  class=""> <!-- simple begins-->
 <h4> Simple </h4>
 <hr>
@@ -167,6 +205,7 @@ data-tree-actions="treeActions"
 </a>
 </div>
 </div> <!-- simple ends-->
+</uib-accordion>
 <div id="container"  class=""> <!-- container begins-->
 <h4> Containers </h4>
 <hr>
@@ -193,10 +232,11 @@ data-tree-actions="treeActions"
 </div> <!-- widget ends-->
 </uib-tab> <!--end-->
 <uib-tab index="9"  heading="views"> <!--begins-->
-<ul  class="list">
-<li  ng-repeat='item in models'>
+<ul  class="list-group partial-view">
+<li  class="list-group-item"ng-repeat=" item in models">
 <a ui-sref="root.generator.views.properties({label:item.label, type:item.type, num:currentComponent.num})" ng-click='setModel(item)'>
 {{item.label}}</a>
+<span  class="glyphicon glyphicon-trash item-label" data-ng-click="delete-view(item)" id="span158" ></span>
 </li>
 </ul>
 </uib-tab> <!--end-->
