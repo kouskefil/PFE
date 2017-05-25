@@ -41,7 +41,7 @@
 <div id="actions"  class="actions col-md-5 "> <!-- actions begins-->
 <span  class="glyphicon glyphicon-trash" id="span172" ></span>
 <div id="group216"  class="dropdown" uib-dropdown auto-close="disabled" on-toggle="toggled(open) "> <!-- group216 begins-->
-<span  class="glyphicon glyphicon-pencil" uib-dropdown-toggle ng-click="getMethod(item)" id="span173" ></span>
+<span  class="glyphicon glyphicon-edit" uib-dropdown-toggle ng-click="getMethod(item)" id="span173" ></span>
 <ul  template-url="methods_dropd.html" uib-dropdown-menu aria-labelledby="dropdownMenu3" >
 </ul>
 </div> <!-- group216 ends-->
@@ -56,6 +56,41 @@
 </ul>
 </div> <!-- methods_list ends-->
 <div id="params"  style="border-left:2px solid lightgray"  class=" col-md-7 "> <!-- params begins-->
+<div id="method-action"  class=""> <!-- method-action begins-->
+<ul  class="method-action">
+<li >
+<div id="trig"  class="dropdown" uib-dropdown auto-close="disabled"> <!-- trig begins-->
+<span  class="glyphicon glyphicon-share-alt" uib-dropdown-toggle
+
+data-ng-click="getMethod(item)" id="span242" ></span>
+<ul  class="dropdown-menu" template-url="trigger.html" uib-dropdown-menu aria-labelledby="dropdownMenu1" >
+</ul>
+</div> <!-- trig ends-->
+</li>
+<li >
+<div id="resp"  class="dropdown" uib-dropdown auto-close="disabled"> <!-- resp begins-->
+<span  class="glyphicon glyphicon-plus" uib-dropdown-toggle 
+
+data-ng-click="getMethod(item)" id="span243" ></span>
+<ul  class="dropdown-menu" template-url="response_dropd.html" uib-dropdown-menu aria-labelledby="dropdownMenu2" >
+</ul>
+</div> <!-- resp ends-->
+</li>
+<li >
+<div id="edit"  class="dropdown" uib-dropdown auto-close="disabled"> <!-- edit begins-->
+<span  class="glyphicon glyphicon-edit" uib-dropdown-toggle
+ng-click="getMethod(item)" id="span244" ></span>
+<ul  class="dropdown-menu" template-url="methods_dropd.html" uib-dropdown-menu aria-labelledby="dropdownMenu3" >
+</ul>
+</div> <!-- edit ends-->
+</li>
+<li >
+<div id="del"  class="dropdown" uib-dropdown auto-close="disabled"> <!-- del begins-->
+<span  class="glyphicon glyphicon-trash" ng-click="delete(methods, item)" id="span245" ></span>
+</div> <!-- del ends-->
+</li>
+</ul>
+</div> <!-- method-action ends-->
 <uib-tabset >
 <uib-tab index="164"  heading="requests"> <!--begins-->
 <div id="request"  class="floatingPanel request" ng-repeat="item in requests"> <!-- request begins-->
@@ -77,17 +112,32 @@
 <div id="response"  class="floatingPanel request" ng-repeat="item in responses"> <!-- response begins-->
 <p>
 <span  class="param" id="span203_copy1" >name</span>
-<span  class="value" id="span204_copy1" >{{.item.name}}</span>
+<span  class="value" id="span204_copy1" >{{item.name}}</span>
+<p>
+<span  class="param" id="span203_copy1_copy9" >name</span>
+<span  class="value" id="span204_copy1_copy9" >{{item.name}}</span>
+</p>
+<p>
+<span  class="param" id="span203_copy1_copy10" >name</span>
+<span  class="value" id="span204_copy1_copy10" >{{item.name}}</span>
+<p>
+<span  class="param" id="span203_copy1_copy9_copy10" >name</span>
+<span  class="value" id="span204_copy1_copy9_copy10" >{{item.name}}</span>
+</p>
+</p>
 </p>
 <p>
 <span  class="param" id="span205_copy1" >Value</span>
-<span  class="value" id="span206_copy1" >{{.item.value}}</span>
+<span  class="value" id="span206_copy1" >{{item.item.value}}</span>
 </p>
 <p>
 <span  class="param"  id="span207_copy1" >Media Type</span>
-<span  class="value" id="span208_copy1" >{{.item.mediatype}}</span>
+<span  class="value" id="span208_copy1" >{{item.item.mediatype}}</span>
 </p>
 </div> <!-- response ends-->
+</uib-tab> <!--end-->
+<uib-tab index="220"  heading="trigger"> <!--begins-->
+<span  id="span236" >{{item.currentMtd.triger.name}}</span>
 </uib-tab> <!--end-->
 </uib-tabset>
 </div> <!-- params ends-->

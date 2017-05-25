@@ -48,7 +48,6 @@ define(['configs/app'], function (app) {
         ];
         $scope.resources = globalVarFactory.getResources();
         $scope.RscParent = globalVarFactory.generateParent();
-        console.log($scope.RscParent);
         $scope.currentRsc = globalVarFactory.rscSkeleton({responses:[]});
         $scope.rsptmp = {
             mediatype:'',
@@ -76,6 +75,7 @@ define(['configs/app'], function (app) {
         };
         $scope.getMethod = function (method) {
             var i;
+            console.log(method);
             $scope.currentRsc.method = method;
             $scope.requests = globalVarFactory.gLookupByAttribute(globalVarFactory.getOperations(),'name', method.id).inputs;
             $scope.responses.length = 0;

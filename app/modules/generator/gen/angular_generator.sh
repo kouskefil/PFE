@@ -344,11 +344,11 @@ function span {
 
     local nmodel
 
-    if [ "$3" == "null"  ]; then
-	nmodel=$model
-    else
-	nmodel=`echo "$3.$model"`
-    fi
+#    if [ "$3" == "null"  ]; then
+#	nmodel=$model
+#    else
+#	nmodel=`echo "$3.$model"`
+#    fi
 
     echo -n "<span "  >> $2
     classmaker "$1" $2  $3
@@ -360,7 +360,8 @@ function span {
     fi
     echo -n ">" >> $2
     if [ "$model" != "null" ]; then
-        echo -n "{{$nmodel}}" >> $2
+#        echo -n "{{$nmodel}}" >> $2
+         echo -n "{{item.$model}}" >> $2
     elif [ "$label" != "null" ]; then
 	echo -n "$label" >> $2
     fi
@@ -485,10 +486,10 @@ function treeview {
            echo -n " $attrs" >> $2
         fi
         echo   "> <!-- $id begins-->" >> $2
-        if [ "$label" != "null" ];then
-            echo "<h4> $label </h4>" >> $2
-            echo "<hr>" >> $2
-	    fi
+#        if [ "$label" != "null" ];then
+#            echo "<h4> $label </h4>" >> $2
+##            echo "<hr>" >> $2
+#	    fi
 		foreach "$1" $2 $3
 
 	echo "</div> <!-- $id ends-->" >> $2

@@ -113,7 +113,7 @@
             "img":"glyphicon glyphicon-menu-hamburger"
           },  
           {
-              "type": "<p>",
+              "type": "P",
               "category": "composite",
               "container": true,
               "img": "fa  fa-paragraph"

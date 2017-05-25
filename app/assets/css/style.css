@@ -1,6 +1,7 @@
 body{
     background: #ECEFF1;
-    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Open Sans', sans-serif;*/
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     overflow: hidden;
 }
@@ -1184,12 +1185,13 @@ ul.nav.nav-tabs {
 }
 .items li{
     line-height: 22px;
-    text-indent: 8px;
+    /*text-indent: 8px;*/
 }
 .items div{
     padding: 0;
 }
 .item-label-g{
+    padding: 0; 
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -1445,7 +1447,7 @@ th{
 .selectedItem{
     color: #FFF !important;
     font-weight: 600;
-    background-color: lightgrey;
+    background-color: #5CB85C;
     border-radius: 2px;
 }
 .selectedItem span{
@@ -1500,4 +1502,22 @@ th{
 }
 .selected-node{
     background-color: green;
+}
+#method-action{
+    height: auto;
+}
+.method-action {
+    padding: 0;
+    list-style: none;
+    display: inline-flex;
+}
+#method-action ul{
+    padding: 0;
+}
+.method-action li {
+    border: 1px solid lightgray;
+    margin-right: 2px;
+}
+.method-action  span{
+    padding: 5px;
 }

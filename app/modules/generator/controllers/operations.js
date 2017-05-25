@@ -69,16 +69,12 @@ define(['configs/app'], function (app) {
                     "rvalue":"boolean"
                 },
                 {
-                    "dvalue":"json",
-                    "rvalue":"json"
+                    "dvalue":"object",
+                    "rvalue":"object"
                 },
                 {
-                    "dvalue":"json strict",
-                    "rvalue":"jsons"
-                },
-                {
-                    "dvalue":"json array strict",
-                    "rvalue":"jas"
+                    "dvalue":"array",
+                    "rvalue":"array"
                 }
             ];
             $scope.inputStyle = [
@@ -97,16 +93,16 @@ define(['configs/app'], function (app) {
             ];
             $scope.inputLocation = [
                 {
-                    "dvalue":"library",
-                    "rvalue":"library"
+                    "dvalue":"context_userid",
+                    "rvalue":"$context.userid"
                 },
                 {
-                    "dvalue":"module",
-                    "rvalue":"module"
+                    "dvalue":"app",
+                    "rvalue":"$app"
                 }
             ];
             $scope.operations = [];
-
+            $scope.selected = '';
             //end
             /*********functions to be added to the model **/
             $scope.operations = globalVarFactory.getOperations();
@@ -137,11 +133,12 @@ define(['configs/app'], function (app) {
             };
             /**********************************************/
             $scope.cclick = function(operation){
+
                 if(!operation.inputs)
                     operation.inputs = [];
                 $scope.currentOp = globalVarFactory.skeleton(operation);
                 $scope.inputs = $scope.currentOp.inputs;
-                console.log($scope.currentOp )   ;
+                $scope.selected = $scope.currentOp.name;
             };
             $scope.delOperation = function ( op) {
                 globalVarFactory.gDelete($scope.operations,op) ;

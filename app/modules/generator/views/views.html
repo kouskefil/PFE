@@ -4,7 +4,7 @@
         <uib-tabset >
             <uib-tab index="13"  heading="Treeview"> <!--begins-->
                 <div id="group136"  style="padding-right:0px"  class=" row "> <!-- group136 begins-->
-                    <div id="group137"  style="overflow-y: auto; max-height: 363px;"  class=" col-md-8 "> <!-- group137 begins-->
+                    <div id="group137"  style="overflow-y: auto; max-height: 405px;"  class=" col-md-8 "> <!-- group137 begins-->
                         <span  style="margin-bottom:15px"  class="fa fa-window-restore" id="span138" ></span>
                         <span  id="span143" >components</span>
                         <div id="group132"  style="padding-right:0"  class=" row  col-md-12 "> <!-- group132 begins-->
@@ -20,7 +20,7 @@
                             </div>
                         </div> <!-- group132 ends-->
                     </div> <!-- group137 ends-->
-                    <div id="group159"  style="border-left:1px solid gainsboro; max-width:230px; border-right:1px solid gainsboro; overflow-y:auto; max-height: 363px;"  class=" col-md-4 "> <!-- group159 begins-->
+                    <div id="group159"  style="border-left:1px solid gainsboro; max-width:230px; border-right:1px solid gainsboro; overflow-y:auto; max-height: 405px;"  class=" col-md-4 "> <!-- group159 begins-->
                         <div id="title_copy1"  class=""> <!-- title_copy1 begins-->
                             <span  style="margin-bottom:15px"  class="fa fa-cogs" id="span146_copy1" ></span>
                             <span  id="span147_copy1" >properties</span>
@@ -194,10 +194,8 @@
             <uib-tab index="5"  heading="components"> <!--begins-->
                 <uib-accordion close-others="true">
                     <div id="simple"  class=""> <!-- simple begins-->
-                        <h4> Simple </h4>
-                        <hr>
                         <div  class="components" ng-repeat='item in HTMLcomponents.simple'>
-                            <a ui-sref="root.views.properties({label:item.label, type:item.type, num:currentComponent.num})" ng-click='add(item)'>
+                            <a ui-sref="root.generator.views.properties({label:item.label, type:item.type, num:currentComponent.num})" ng-click='add(item)'>
                                 <div id="group39"  class="sizer col-md-6 "> <!-- group39 begins-->
                                     <span  id="span40" >{{item.type}}</span>
                                     <span  class="{{item.img}}" id="span41" ></span>
@@ -207,10 +205,8 @@
                     </div> <!-- simple ends-->
                 </uib-accordion>
                 <div id="container"  class=""> <!-- container begins-->
-                    <h4> Containers </h4>
-                    <hr>
                     <div  class="components" ng-repeat='item in HTMLcomponents.container'>
-                        <a ui-sref="root.views.properties({label:item.label, type:item.type, num:currentComponent.num})" ng-click='add(item)'>
+                        <a ui-sref="root.generator.views.properties({label:item.label, type:item.type, num:currentComponent.num})" ng-click='add(item)'>
                             <div id="group50"  class="sizer col-md-6 "> <!-- group50 begins-->
                                 <span  id="span51" >{{item.type}}</span>
                                 <span  class="{{item.img}}" id="span52" ></span>
@@ -219,10 +215,8 @@
                     </div>
                 </div> <!-- container ends-->
                 <div id="widget"  class=""> <!-- widget begins-->
-                    <h4> Widgets </h4>
-                    <hr>
                     <div  class="components" ng-repeat='item in HTMLcomponents.widget'>
-                        <a ui-sref="root.views.properties({label:item.label, type:item.type, num:currentComponent.num})" ng-click='add(item)'>
+                        <a ui-sref="root.generator.views.properties({label:item.label, type:item.type, num:currentComponent.num})" ng-click='add(item)'>
                             <div id="group55"  class="sizer col-md-6 "> <!-- group55 begins-->
                                 <span  id="span56" >{{item.type}}</span>
                                 <span  class="{{item.img}}" id="span57" >{{item.views}}</span>
