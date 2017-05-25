@@ -8,8 +8,9 @@
             </div> <!-- rsc_def_header ends-->
             <div id="rsc_def_content"  style="padding: 15px 15px"  class=""> <!-- rsc_def_content begins-->
                 <div  class="form-group">
-                    <select name="select155" id="select155" ng-model="currentRsc.parent" class="form-control" ><option ng-repeat='item in RscParent' value="{{item.item}}"> {{item.item}}
-                    </option>
+                    <select name="select155" id="select155" ng-model="currentRsc.parent" class="form-control" >
+                        <option ng-repeat='item in RscParent' value="{{item.realpath}}"> {{item.realpath}}
+                        </option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -31,31 +32,18 @@
                 </ul>
             </div> <!-- params_header ends-->
             <div id="params_content"  style="padding: 0;"  class=" row  col-md-12 "> <!-- params_content begins-->
-                <div id="methods_list"  style=""  class=" col-md-5 "> <!-- methods_list begins-->
+                <div id="methods_list"  style=""  class=" col-md-4 "> <!-- methods_list begins-->
                     <ul  class="items">
                         <li ng-repeat=" item in methods">
                             <div id="group169"  class=" col-md-12 "> <!-- group169 begins-->
                                 <div id="method"  class="item-label-g col-md-7 "> <!-- method begins-->
                                     <span  class="item-label" data-ng-click="getMethod(item)" id="span179" >{{item.id}}</span>
                                 </div> <!-- method ends-->
-                                <div id="actions"  class="actions col-md-5 "> <!-- actions begins-->
-                                    <span  class="glyphicon glyphicon-trash" id="span172" ></span>
-                                    <div id="group216"  class="dropdown" uib-dropdown auto-close="disabled" on-toggle="toggled(open) "> <!-- group216 begins-->
-                                        <span  class="glyphicon glyphicon-edit" uib-dropdown-toggle ng-click="getMethod(item)" id="span173" ></span>
-                                        <ul  template-url="methods_dropd.html" uib-dropdown-menu aria-labelledby="dropdownMenu3" >
-                                        </ul>
-                                    </div> <!-- group216 ends-->
-                                    <div id="group217"  class="dropdown" uib-dropdown auto-close="disabled" on-toggle="toggled(open) "> <!-- group217 begins-->
-                                        <span  class="glyphicon glyphicon-plus" uib-dropdown-toggle data-ng-click="getMethod(item)" id="span" ></span>
-                                        <ul  class="dropdown-menu" template-url="response_dropd.html" uib-dropdown-menu aria-labelledby="dropdownMenu3" >
-                                        </ul>
-                                    </div> <!-- group217 ends-->
-                                </div> <!-- actions ends-->
                             </div> <!-- group169 ends-->
                         </li>
                     </ul>
                 </div> <!-- methods_list ends-->
-                <div id="params"  style="border-left:2px solid lightgray"  class=" col-md-7 "> <!-- params begins-->
+                <div id="params"  style="border-left:2px solid lightgray"  class=" col-md-8 "> <!-- params begins-->
                     <div id="method-action"  class=""> <!-- method-action begins-->
                         <ul  class="method-action">
                             <li >
@@ -203,19 +191,5 @@
             <input class=" form-control"  placeholder="paramValue" name="input212" id="input212" type="text" ng-model="rsptmp.value"/>
         </div> <!-- div id:input212 -->
         <button  ng-click="addResponse(item)">Add Response</button>
-    </div>
-</script>
-
-<script type="text/ng-template" id="trigger.html">
-    <div class="dropdown-menu responsedropdown floatingPanel">
-        <div class="form-group">
-            <label for="input212">name</label>
-            <input class=" form-control"  placeholder="trigger name" name="input212" id="input2212" type="text" ng-model="trigger.name"/>
-        </div> <!-- div id:input212 -->
-        <div class="form-group">
-            <label for="input212">origin</label>
-            <input class=" form-control"  placeholder="module name" name="input212" id="trigger.origin" type="text" ng-model="trigger.name"/>
-        </div> <!-- div id:input212 -->
-        <button  ng-click="setTrigger(item)">save</button>
     </div>
 </script>
