@@ -229,8 +229,13 @@
             },
             /*global methods*/
             gDelete : function (collection, obj) {
-                var pos = collection.indexOf(obj);
-                collection.splice(pos, 1);
+                var i;
+                for(i = 0; i < collection.length; i++){
+                    if(collection[i] === obj) {
+                        var pos = collection.indexOf(obj);
+                        collection.splice(pos, 1);
+                    }
+                }
             },
             gLookup : function (collection, obj) {
                var i, find;

@@ -193,7 +193,7 @@ data-tree-actions="treeActions"
 <uib-tabset >
 <uib-tab index="5"  heading="components"> <!--begins-->
 <uib-accordion close-others="true">
-<div id="simple"  class=""> <!-- simple begins-->
+<div uib-accordion-group class="panel-default" heading="Simple components">
 <div  class="components" ng-repeat='item in HTMLcomponents.simple'>
 <a ui-sref="root.generator.views.properties({label:item.label, type:item.type, num:currentComponent.num})" ng-click='add(item)'>
 <div id="group39"  class="sizer col-md-6 "> <!-- group39 begins-->
@@ -202,9 +202,8 @@ data-tree-actions="treeActions"
 </div> <!-- group39 ends-->
 </a>
 </div>
-</div> <!-- simple ends-->
-</uib-accordion>
-<div id="container"  class=""> <!-- container begins-->
+</div>
+<div uib-accordion-group class="panel-default" heading="Containers components">
 <div  class="components" ng-repeat='item in HTMLcomponents.container'>
 <a ui-sref="root.generator.views.properties({label:item.label, type:item.type, num:currentComponent.num})" ng-click='add(item)'>
 <div id="group50"  class="sizer col-md-6 "> <!-- group50 begins-->
@@ -213,8 +212,8 @@ data-tree-actions="treeActions"
 </div> <!-- group50 ends-->
 </a>
 </div>
-</div> <!-- container ends-->
-<div id="widget"  class=""> <!-- widget begins-->
+</div>
+<div uib-accordion-group class="panel-default" heading="Widgets components">
 <div  class="components" ng-repeat='item in HTMLcomponents.widget'>
 <a ui-sref="root.generator.views.properties({label:item.label, type:item.type, num:currentComponent.num})" ng-click='add(item)'>
 <div id="group55"  class="sizer col-md-6 "> <!-- group55 begins-->
@@ -223,6 +222,13 @@ data-tree-actions="treeActions"
 </div> <!-- group55 ends-->
 </a>
 </div>
+</div>
+</uib-accordion>
+<div id="simple"  class=""> <!-- simple begins-->
+</div> <!-- simple ends-->
+<div id="container"  class=""> <!-- container begins-->
+</div> <!-- container ends-->
+<div id="widget"  class=""> <!-- widget begins-->
 </div> <!-- widget ends-->
 </uib-tab> <!--end-->
 <uib-tab index="9"  heading="views"> <!--begins-->
@@ -230,7 +236,7 @@ data-tree-actions="treeActions"
 <li  class="list-group-item"ng-repeat=" item in models">
 <a ui-sref="root.generator.views.properties({label:item.label, type:item.type, num:currentComponent.num})" ng-click='setModel(item)'>
 {{item.label}}</a>
-<span  class="glyphicon glyphicon-trash item-label" data-ng-click="delete-view(item)" id="span158" ></span>
+<span  class="glyphicon glyphicon-trash item-label" data-ng-click="deleteModel(item)" id="span158" ></span>
 </li>
 </ul>
 </uib-tab> <!--end-->

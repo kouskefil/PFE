@@ -180,10 +180,8 @@ label {
     margin: 2px;
 }
 .composant h4{
-    margin: 15px 0 10px 0;
-    text-align: center;
-    background-color: #ECEFF1 !important ;
-    color: #0084bf;
+    margin: 6px 0 6px 0;
+    font-weight: 200;
 }
 
 
@@ -1113,10 +1111,21 @@ ul.nav.nav-tabs {
 }
 .responsedropdown{
     width: 250px;
-    left: 24px;
+    left: -28px;
+    background-color: #ECEFF1;
     border-radius: initial;
     padding: 15px 10px 15px 15px !important;
-    top: -27px;
+    top: 33px;
+}
+.responsedropdown:before{
+    content: "";
+    border-bottom: 10px solid lightgray;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: -10px;
+    right: 199px;
+    z-index: 10;
 }
 .editMethod{
     padding: 16px !important ;
@@ -1128,8 +1137,8 @@ ul.nav.nav-tabs {
 .addmethod{
     padding: 16px !important;
     width: 250px !important;
-    top: -13px !important;
-    left: -224px !important;
+    /*top: -13px !important;*/
+    /*left: -224px !important;*/
     border-radius: 0 !important;
 }
 .content{
@@ -1447,7 +1456,7 @@ th{
 .selectedItem{
     color: #FFF !important;
     font-weight: 600;
-    background-color: #5CB85C;
+    background-color: lightblue;
     border-radius: 2px;
 }
 .selectedItem span{
@@ -1520,4 +1529,55 @@ th{
 }
 .method-action  span{
     padding: 5px;
+}
+.trigger{
+    background-color: transparent;
+}
+.trigger-param-dropdown{
+    width: 250px;
+    left: -197px;
+    border-radius: initial;
+    padding: 15px 10px 15px 15px !important;
+    top: 15px;
+}
+.method-dropdown{
+    width: 250px;
+    left: -28px;
+    background-color: #ECEFF1;
+    border-radius: initial;
+    padding: 15px 10px 15px 15px !important;
+    top: 33px;
+}
+
+.method-dropdown:before{
+    content: "";
+    border-bottom: 10px solid lightgray;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: -10px;
+    right: 199px;
+    z-index: 10;
+}
+.disable-action{
+    color: lightgray;
+    cursor: no-drop;
+}
+.panel-group .panel {
+    margin-bottom: 5px;
+     border-radius: 0;
+}
+
+.panel-group .panel+.panel {
+     margin-top: 0;
+}
+.panel-heading {
+    padding: 1px 8px;
+}
+.panel-heading a{
+    text-decoration: none;
+}
+#composant .panel-body{
+    display: flex;
+    flex-flow: row wrap;
 }

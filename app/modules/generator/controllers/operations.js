@@ -93,7 +93,7 @@ define(['configs/app'], function (app) {
             ];
             $scope.inputLocation = [
                 {
-                    "dvalue":"context_userid",
+                    "dvalue":"$context.userid",
                     "rvalue":"$context.userid"
                 },
                 {

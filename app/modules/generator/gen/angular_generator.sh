@@ -206,6 +206,7 @@ function button {
     local    label=`echo $1 | jq -r '.label'`
     local    div=`echo $1 | jq -r '.div'`
     local    method=`echo $1 | jq -r '.method'`
+    local    attr=`echo $1 | jq -r '.otherAttr'`
 
     if [ $div == true ]; then
 	echo -n "<div"  >> $2
@@ -214,7 +215,13 @@ function button {
     else
 	echo -n "<button " >> $2
 	classmaker "$1" $2 $3
-	echo " ng-click=\"$method\">$label</button>" >> $2
+	if [ $attr != 'null' ]; then
+	    echo -n " $attr" >> $2
+    fi
+	if [ $method != 'null' ]; then
+	    echo -n " ng-click=\"$method\"" >> $2
+    fi
+	echo  ">$label</button>" >> $2
     fi
 }
 
@@ -344,11 +351,11 @@ function span {
 
     local nmodel
 
-#    if [ "$3" == "null"  ]; then
-#	nmodel=$model
-#    else
-#	nmodel=`echo "$3.$model"`
-#    fi
+    if [ "$3" == "null"  ]; then
+	nmodel=$model
+    else
+	nmodel=`echo "$3.$model"`
+    fi
 
     echo -n "<span "  >> $2
     classmaker "$1" $2  $3
@@ -360,10 +367,10 @@ function span {
     fi
     echo -n ">" >> $2
     if [ "$model" != "null" ]; then
-#        echo -n "{{$nmodel}}" >> $2
-         echo -n "{{item.$model}}" >> $2
+        echo -n "{{$nmodel}}" >> $2
+#         echo -n "{{item.$model}}" >> $2
     elif [ "$label" != "null" ]; then
-	echo -n "$label" >> $2
+    	echo -n "$label" >> $2
     fi
     echo "</span>" >> $2
 }
@@ -678,9 +685,6 @@ function table {
     echo "</tbody>" >> $2
     echo "</table>" >> $2
 }
-
-
-
 
 function view_generator {
     #echo "gen: $1"

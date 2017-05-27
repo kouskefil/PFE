@@ -1,30 +1,27 @@
 <!-- Generated html file -->
-<div id="content"  style="padding: 0;"  class=" row content-inner col-md-10 col-md-offset-1 "> <!-- content begins-->
-    <div id="group5"  style="padding: 0;"  class=" col-md-10 "> <!-- group5 begins-->
-        <div id="group6"  style="height: 422px;margin-bottom: 15px; padding: 0"  class="floatingPanel col-md-12 "> <!-- group6 begins-->
-            <div id="group7"  style="padding: 10px 15px; margin: 0"  class="g_header"> <!-- group7 begins-->
-                <span  style="padding-right: 10px;"  class="glyphicon glyphicon-retweet"></span>
-                <span  style="font-size: small; color: #0084bf;" >Database
-</span>
-            </div> <!-- group7 ends-->
-            <div id="gcontent"  class=""> <!-- gcontent begins-->
-            </div> <!-- gcontent ends-->
-        </div> <!-- group6 ends-->
-    </div> <!-- group5 ends-->
-</div> <!-- content ends-->
+<div id="group1"  style="padding: 0;"  class=" row content-inner col-md-10 col-md-offset-1 "> <!-- group1 begins-->
+    <div id="group2"  style="padding: 0;"  class=" col-md-10 "> <!-- group2 begins-->
+        <div id="group3"  style="height: 422px;margin-bottom: 15px; padding: 0"  class="floatingPanel col-md-12 "> <!-- group3 begins-->
+            <div id="group4"  style="padding: 10px 15px; margin: 0"  class="g_header"> <!-- group4 begins-->
+                <span  class="fa fa-database" id="span6" ></span>
+                <span  id="span5" >Database</span>
+            </div> <!-- group4 ends-->
+            <div id="content"  class=""> <!-- content begins-->
+                <uib-accordion close-others="true">
+                    <div uib-accordion-group class="panel-default" heading="exemple 1">
+                    </div>
+                    <div uib-accordion-group class="panel-default" heading="exemple 2">
+                    </div>
+                </uib-accordion>
+            </div> <!-- content ends-->
+        </div> <!-- group3 ends-->
+    </div> <!-- group2 ends-->
+</div> <!-- group1 ends-->
 <script type="text/ng-template" id="uploaddatabase.html">
-    <div class="modal-module-editing" style="top: 200px !important;">
-        <div class="modal-header">
-            <h5 class="modal-title" id="modal-title1">
-                <i class="glyphicon glyphicon-tasks"></i>
-                Database
-            </h5>
-        </div>
-        <div class="modal-body" id="modal-body1">
-            <div class="form-group">
-                <input class=" form-control"  placeholder="null" name="input12" id="input12" type="file" ng-model="null"/>
-            </div> <!-- div id:input12 -->
-            <button  ng-click="upload()">UPLOAD</button>
-        </div>
+    <div class="dropdown-menu ">
+        <div class="form-group">
+            <input class=" form-control"  placeholder="null" name="input10" id="input10" type="file" ng-model="database"/>
+        </div> <!-- div id:input10 -->
+        <button  class="button blue floatingPanel" ng-click="upload">null</button>
     </div>
 </script>

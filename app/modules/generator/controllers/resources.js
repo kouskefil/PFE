@@ -6,6 +6,9 @@ define(['configs/app'], function (app) {
     app.register.controller('resources', ['$scope','globalVarFactory','$log', function ($scope, globalVarFactory,$log) {
         //variables to be adding in the model
         /**methodAdd dropdown control*/
+        $scope.selected = '';
+        $scope.method =  {} ;
+        $scope.edit = '';
         $scope.status = {
             isopen: false
         };
@@ -69,42 +72,15 @@ define(['configs/app'], function (app) {
             $scope.requests = $scope.currentRsc.requests;
         };
 
-        $scope.addMethod = function () {
-            globalVarFactory.addMethod($scope.currentRsc.method);
-            $scope.currentRsc.method = {};
-        };
-        $scope.getMethod = function (method) {
-            var i;
+        $scope.addMethod = function (method) {
             console.log(method);
-            $scope.currentRsc.method = method;
-            $scope.requests = globalVarFactory.gLookupByAttribute(globalVarFactory.getOperations(),'name', method.id).inputs;
-            $scope.responses.length = 0;
-            if(method.responses)
-                for(i=0; i < method.responses.length; i++){
-                    if(method.responses[i].representations[0].param){
-                        var j;
-                        for(j = 0; j < method.responses[i].representations[0].param.options.length; j++){
-                            $scope.responses.push({
-                                name : method.responses[i].representations[0].param.name,
-                                mediatype : method.responses[i].representations[0].param.options[j].mediatype,
-                                value :  method.responses[i].representations[0].param.options[j].value
-                            });
-                        }
-                    }
-                    else
-                        $scope.responses.push({
-                            name : '',
-                            mediatype : method.responses[i].representations[0].mediatype,
-                            value :  ''
-                        });
-                }
-            $scope.editMethod = 'editMethod';
-            // $scope.method =  method ;
+            globalVarFactory.addMethod(angular.copy(method));
+            $scope.method =  angular.copy(method);
+            method.name = '';
+            method.id = '';
+            method.role = '';
+            // $scope.currentRsc.method = {};
         };
-        $scope.delete = function (collection, obj) {
-             globalVarFactory.gDelete(collection, obj);
-        };
-
         $scope.addResponse = function(method){
             var i, found = -1;
             var resp;
@@ -114,6 +90,7 @@ define(['configs/app'], function (app) {
                 $scope.rsptmp.mediatype = 'application/json';
             if($scope.rsptmp.name){
                 for(i=0; i < method.responses.length; i++){
+                    console.log(method.responses[i].representations[0]);
                     if(method.responses[i].representations[0].param.name === $scope.rsptmp.name){
                         found = i;
                         break;
@@ -144,7 +121,7 @@ define(['configs/app'], function (app) {
             }
             else{
                 method.responses.push({
-                    representations: [{"mediaType": "text/html"}]
+                    representations: [{"mediatype": "text/html"}]
                 });
             }
             $scope.responses.push($scope.rsptmp);
@@ -154,6 +131,59 @@ define(['configs/app'], function (app) {
                 value:''
             };
         };
+        $scope.getMethod = function (method) {
+            var i;
+            console.log('method');
+            console.log(method);
+            $scope.selected = method.id;
+            $scope.method = method;
+            $scope.trigger = $scope.method;
+            $scope.requests = globalVarFactory.gLookupByAttribute(globalVarFactory.getOperations(),'name', method.id).inputs;
+            $scope.responses.length = 0;
+            if(method.responses) {
+                console.log(method.responses);
+                for (i = 0; i < method.responses.length; i++) {
+                    if (method.responses[i].representations[0].param) {
+                        var j;
+                        for (j = 0; j < method.responses[i].representations[0].param.options.length; j++) {
+                            $scope.responses.push({
+                                name: method.responses[i].representations[0].param.name,
+                                mediatype: method.responses[i].representations[0].param.options[j].mediatype,
+                                value: method.responses[i].representations[0].param.options[j].value
+                            });
+                        }
+                    }
+                    else
+                        $scope.responses.push({
+                            name: '',
+                            mediatype: method.responses[i].representations[0].mediatype,
+                            value: ''
+                        });
+                }
+                // $scope.editMethod = 'editMethod';
+            }
+        };
+        $scope.delete = function (collection) {
+            if($scope.method !== {}) {
+                globalVarFactory.gDelete(collection, $scope.method);
+                $scope.method = {};
+            }
+
+        };
+        $scope.addtriggerParam = function (param) {
+            $log.debug('param');
+            $log.debug($scope.method.trigger);
+            if (!$scope.method.trigger.in){
+                $log.debug('creation du tableau');
+                $scope.method.trigger.in = [];
+            }
+            $scope.method.trigger.in.push(angular.copy(param));
+            $log.debug('push complete');
+            $log.debug($scope.method.trigger);
+            param.name = '';
+            param.value = '';
+        };
+
         $scope.setmethoddropdownstyle = function(){
             $scope.editMethod= 'addmethod';
         };
@@ -162,5 +192,93 @@ define(['configs/app'], function (app) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // $scope.addResponse = function(method){
+        //     var i, found = -1;
+        //     var resp;
+        //     if(!method.responses)
+        //         method.responses = [];
+        //     if($scope.rsptmp.mediatype === '')
+        //         $scope.rsptmp.mediatype = 'application/json';
+        //     if($scope.rsptmp.name){
+        //         for(i=0; i < method.responses.length; i++){
+        //             if(method.responses[i].representations[0].param.name === $scope.rsptmp.name){
+        //                 found = i;
+        //                 break;
+        //             }
+        //         }
+        //         if(found === -1){
+        //             resp = {
+        //                 representations: [{"param": {
+        //                     name: $scope.rsptmp.name,
+        //                     options : [
+        //                         {
+        //                             mediatype: $scope.rsptmp.mediatype,
+        //                             value : $scope.rsptmp.value
+        //                         }
+        //                     ]
+        //                 }}]
+        //             };
+        //             method.responses.push(resp);
+        //         }
+        //         else{
+        //             resp = {
+        //                 mediatype: $scope.rsptmp.mediatype,
+        //                 value : $scope.rsptmp.value
+        //             };
+        //             method.responses[found].representations[0].param.options.push(resp);
+        //         }
+        //
+        //     }
+        //     else{
+        //         method.responses.push({
+        //             representations: [{"mediatype": "text/html"}]
+        //         });
+        //     }
+        //     $scope.responses.push($scope.rsptmp);
+        //     $scope.rsptmp = {
+        //         mediatype:'',
+        //         name:'',
+        //         value:''
+        //     };
+        // };
     }])
 });

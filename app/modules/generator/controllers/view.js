@@ -170,6 +170,9 @@ define(['configs/app'], function (app){
             $scope.down = function(component){
                 componentSet.getActions().movedown(component);
             };
+            $scope.deleteModel = function (model) {
+                 globalVarFactory.gDelete(globalVarFactory.getModule().models, model);
+            };
 
             $scope.cclick = function (selectedNode) {
                 console.log(selectedNode);
