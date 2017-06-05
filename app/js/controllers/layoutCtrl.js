@@ -16,7 +16,7 @@ define(['angular'], function (angular) {
                 item.action();
             };
              $scope.go = function () {
-                $state.go('root.install',{module:'generator'});
+                $state.go('root.install',{module:'admin'});
                 //  $state.go('root.generator');
              };
             /*Layout vars config functions*/

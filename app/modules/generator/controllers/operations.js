@@ -5,22 +5,22 @@ define(['configs/app'], function (app) {
     'use strict';
     app.register.controller('operations', ['$scope', '$state', 'globalVarFactory', function ($scope, $state, globalVarFactory) {
             //variables to be adding in the model
-            $scope.opCommand = [
+            $scope.operations_type = [
                 {
-                    "dvalue":"insert",
-                    "rvalue":"insert"
+                    "dvalue":"command",
+                    "rvalue":"command"
                 },
                 {
-                    "dvalue":"update",
-                    "rvalue":"update"
+                    "dvalue":"request",
+                    "rvalue":"request"
                 },
                 {
-                    "dvalue":"delete",
-                    "rvalue":"delete"
+                    "dvalue":"reply",
+                    "rvalue":"reply"
                 },
                 {
-                    "dvalue":"select",
-                    "rvalue":"select"
+                    "dvalue":"empty",
+                    "rvalue":"empty"
                 },
                 {
                     "dvalue":"insert-returning",
@@ -29,14 +29,6 @@ define(['configs/app'], function (app) {
                 {
                     "dvalue":"update-returning",
                     "rvalue":"update-r"
-                },
-                {
-                    "dvalue":"delete-returning",
-                    "rvalue":"delete-r"
-                },
-                {
-                    "dvalue":"select-returning",
-                    "rvalue":"select-r"
                 }
             ];
             $scope.inputType = [

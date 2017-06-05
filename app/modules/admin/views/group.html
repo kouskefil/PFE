@@ -5,7 +5,7 @@
             <span  style="padding-right: 10px;"  class="fa fa-cogs" id="span177" ></span>
             <span  style="font-size: small; color: #0084bf;"  id="span178" >Groups</span>
         </div> <!-- tree_header ends-->
-        <div class="group-body" style="overflow-y: scroll; height: 430px">
+        <div class="group-body" data-slim-scroll style=" height: 430px">
             <ul  class="items ">
                 <li ng-repeat=" item in groups" ng-class="{selectedItem:item.name==selected}">
                     <span  class="item-label" data-ng-click="setCurrentGroup(item)" id="span179" >{{item.name}}</span>

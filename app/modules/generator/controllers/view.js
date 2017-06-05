@@ -40,7 +40,6 @@ define(['configs/app'], function (app){
                 $scope.currentModel.variables.push($scope.variable);
                 $scope.variable = {};
             };
-
             $scope.delv = function () {
                 if($scope.variable !== null){
                     var pos = $scope.currentModel.variables.indexOf($scope.variable);
@@ -49,15 +48,12 @@ define(['configs/app'], function (app){
                     $scope.variable = null;
                 }
             };
-
             $scope.setv = function (variable) {
                 $scope.variable  =  variable;
             };
-
             $scope.clear = function () {
                 $scope.operation = {};
             };
-
             $scope.collection = [];
             $scope.operation = [];
             $scope.select_option = [];

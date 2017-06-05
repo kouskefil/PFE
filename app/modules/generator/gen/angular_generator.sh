@@ -343,19 +343,43 @@ function img {
     echo " src=\"$src\" alt=\"$alt\"/>" >> $2
 }
 
+#function span {
+#    local   model=`echo $1 | jq -r '.model'`
+#    local   label=`echo $1 | jq -r '.label'`
+#    local   id=`echo $1 | jq -r '.id'`
+#    local    attrs=`echo $1 | jq -r '.otherAttr'`
+#
+#    local nmodel
+#
+#    if [ "$3" == "null"  ]; then
+#	nmodel=$model
+#    else
+#	nmodel=`echo "$3.$model"`
+#    fi
+#
+#    echo -n "<span "  >> $2
+#    classmaker "$1" $2  $3
+#    if [ "$attrs" != "null" ]; then
+#      echo -n " $attrs" >> $2
+#    fi
+#    if [ "$id" != "null" ]; then
+#        echo -n " id=\"$id\" " >> $2
+#    fi
+#    echo -n ">" >> $2
+#    if [ "$model" != "null" ]; then
+#        echo -n "{{$nmodel}}" >> $2
+##         echo -n "{{item.$model}}" >> $2
+#    elif [ "$label" != "null" ]; then
+#    	echo -n "$label" >> $2
+#    fi
+#    echo "</span>" >> $2
+#}
+
 function span {
     local   model=`echo $1 | jq -r '.model'`
     local   label=`echo $1 | jq -r '.label'`
     local   id=`echo $1 | jq -r '.id'`
     local    attrs=`echo $1 | jq -r '.otherAttr'`
-
-    local nmodel
-
-    if [ "$3" == "null"  ]; then
-	nmodel=$model
-    else
-	nmodel=`echo "$3.$model"`
-    fi
 
     echo -n "<span "  >> $2
     classmaker "$1" $2  $3
@@ -367,13 +391,13 @@ function span {
     fi
     echo -n ">" >> $2
     if [ "$model" != "null" ]; then
-        echo -n "{{$nmodel}}" >> $2
-#         echo -n "{{item.$model}}" >> $2
+         echo -n "{{item.$model}}" >> $2
     elif [ "$label" != "null" ]; then
     	echo -n "$label" >> $2
     fi
     echo "</span>" >> $2
 }
+
 
 function form {
     local validation=`echo $1 | jq -r '.validation'`

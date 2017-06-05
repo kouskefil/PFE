@@ -3,11 +3,22 @@
     <div id="recepteur"  style=""  class="floatingPanel recepteur col-md-7 "> <!-- recepteur begins-->
         <uib-tabset >
             <uib-tab index="13"  heading="Treeview"> <!--begins-->
-                <div id="group136"  style="padding-right:0px"  class=" row "> <!-- group136 begins-->
-                    <div id="group137"  style="overflow-y: auto; max-height: 405px;"  class=" col-md-8 "> <!-- group137 begins-->
+                <div id="Heading"  class=" row "> <!-- Heading begins-->
+                    <div id="treeHeading"  style="float:left"  class=" col-md-3 "> <!-- treeHeading begins-->
                         <span  style="margin-bottom:15px"  class="fa fa-window-restore" id="span138" ></span>
                         <span  id="span143" >components</span>
-                        <div id="group132"  style="padding-right:0"  class=" row  col-md-12 "> <!-- group132 begins-->
+                    </div> <!-- treeHeading ends-->
+                    <div  class="col-md-5"class="form-group">
+                        <input class=" form-control"  placeholder="search" name="input174" id="input174" type="text" ng-model="wantedcomp"/>
+                    </div> <!-- div id:input174 -->
+                    <div id="propertiesHeading"  style="float:right"  class=" col-md-4 "> <!-- propertiesHeading begins-->
+                        <span  style="margin-bottom:15px"  class="fa fa-cogs" id="span146_copy1" ></span>
+                        <span  id="span147_copy1" >properties</span>
+                    </div> <!-- propertiesHeading ends-->
+                </div> <!-- Heading ends-->
+                <div id="group136"  style="padding:0; margin-left:0;"  class=" row  col-md-12 "> <!-- group136 begins-->
+                    <div id="group137"  style="overflow-y: auto; max-height: 405px;padding:0"  class=" col-md-8 "> <!-- group137 begins-->
+                        <div id="group132"  style="margin-left:0"  class=" row  col-md-12 "> <!-- group132 begins-->
                             <div class=""
                                  data-angular-treeview="true"
                                  data-tree-id="tree1"
@@ -20,11 +31,7 @@
                             </div>
                         </div> <!-- group132 ends-->
                     </div> <!-- group137 ends-->
-                    <div id="group159"  style="border-left:1px solid gainsboro; max-width:230px; border-right:1px solid gainsboro; overflow-y:auto; max-height: 405px;"  class=" col-md-4 "> <!-- group159 begins-->
-                        <div id="title_copy1"  class=""> <!-- title_copy1 begins-->
-                            <span  style="margin-bottom:15px"  class="fa fa-cogs" id="span146_copy1" ></span>
-                            <span  id="span147_copy1" >properties</span>
-                        </div> <!-- title_copy1 ends-->
+                    <div id="group159"  style="border-left:1px solid gainsboro; max-width:230px; border-right:1px solid gainsboro; overflow-y:auto; max-height: 405px;padding:6px;"  class=" col-md-4 "> <!-- group159 begins-->
                         <div id="group161"  ui-view="" class=""> <!-- group161 begins-->
                         </div> <!-- group161 ends-->
                     </div> <!-- group159 ends-->
@@ -32,8 +39,6 @@
             </uib-tab> <!--end-->
             <uib-tab index="14"  heading="functions"> <!--begins-->
                 <div id="title"  class=""> <!-- title begins-->
-                    <span  style="margin-bottom:15px"  class="fa fa-cogs" id="span146" ></span>
-                    <span  id="span147" >state functions</span>
                 </div> <!-- title ends-->
                 <div class="form-group">
                     <label for="input17">Name</label>
@@ -224,12 +229,12 @@
                         </div>
                     </div>
                 </uib-accordion>
-                <!--<div id="simple"  class=""> &lt;!&ndash; simple begins&ndash;&gt;-->
-                <!--</div> &lt;!&ndash; simple ends&ndash;&gt;-->
-                <!--<div id="container"  class=""> &lt;!&ndash; container begins&ndash;&gt;-->
-                <!--</div> &lt;!&ndash; container ends&ndash;&gt;-->
-                <!--<div id="widget"  class=""> &lt;!&ndash; widget begins&ndash;&gt;-->
-                <!--</div> &lt;!&ndash; widget ends&ndash;&gt;-->
+                <div id="simple"  class=""> <!-- simple begins-->
+                </div> <!-- simple ends-->
+                <div id="container"  class=""> <!-- container begins-->
+                </div> <!-- container ends-->
+                <div id="widget"  class=""> <!-- widget begins-->
+                </div> <!-- widget ends-->
             </uib-tab> <!--end-->
             <uib-tab index="9"  heading="views"> <!--begins-->
                 <ul  class="list-group partial-view">

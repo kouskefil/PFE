@@ -74,11 +74,11 @@
 <div id="group254"  class=" row dropdown trigger" > <!-- group254 begins-->
 <div id="group278"  class=" col-md-5 "> <!-- group278 begins-->
 <span  id="name" >name :</span>
-<span  id="span236" >{{.}}</span>
+<span  id="span236" >{{item.}}</span>
 </div> <!-- group278 ends-->
 <div id="group279"  class=" col-md-5 "> <!-- group279 begins-->
 <span  style="margin: 0 0 15px 30px"  id="from" >from :</span>
-<span  id="span255" >{{.}}</span>
+<span  id="span255" >{{item.}}</span>
 </div> <!-- group279 ends-->
 <div id="group280"  class=" col-md-2 " uib-dropdown auto-close="disabled"> <!-- group280 begins-->
 <span  style="float:right"  class="glyphicon glyphicon-plus" uib-dropdown-toggle id="span256" ></span>
@@ -115,15 +115,15 @@
 <div id="response"  class="floatingPanel request" ng-repeat="item in responses"> <!-- response begins-->
 <p>
 <span  class="param" id="span203_copy1" >name</span>
-<span  class="value" id="span204_copy1" >{{.name}}</span>
+<span  class="value" id="span204_copy1" >{{item.name}}</span>
 </p>
 <p>
 <span  class="param" id="span205_copy1" >Value</span>
-<span  class="value" id="span206_copy1" >{{.item.value}}</span>
+<span  class="value" id="span206_copy1" >{{item.item.value}}</span>
 </p>
 <p>
 <span  class="param"  id="span207_copy1" >Media Type</span>
-<span  class="value" id="span208_copy1" >{{.item.mediatype}}</span>
+<span  class="value" id="span208_copy1" >{{item.item.mediatype}}</span>
 </p>
 </div> <!-- response ends-->
 </uib-tab> <!--end-->
@@ -144,7 +144,7 @@ data-tree-model="resources"
 data-node-id="path"
 data-node-click="cclick"
 data-node-children="resources"
-data-tree-actions="null"
+data-tree-actions="treeActions"
 >
 </div>
 </div> <!-- resources_tree ends-->

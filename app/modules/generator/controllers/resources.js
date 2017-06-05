@@ -71,7 +71,20 @@ define(['configs/app'], function (app) {
             $scope.methods = $scope.currentRsc.methods;
             $scope.requests = $scope.currentRsc.requests;
         };
-
+        $scope.treeActions =
+            [
+                {
+                    name:"delete",
+                    icon:"glyphicon glyphicon-trash",
+                    title:'delete resource'
+                }
+            ];
+        $scope.applytreeActions = function(rsc, currentRsc){
+             for(var i = 0; i < $scope.resources.length; i++){
+                 if($scope.resources[i] === currentRsc)
+                     $scope.resources.splice($scope.resources.indexOf(currentRsc), 1);
+             }
+        };
         $scope.addMethod = function (method) {
             console.log(method);
             globalVarFactory.addMethod(angular.copy(method));
@@ -183,7 +196,6 @@ define(['configs/app'], function (app) {
             param.name = '';
             param.value = '';
         };
-
         $scope.setmethoddropdownstyle = function(){
             $scope.editMethod= 'addmethod';
         };

@@ -20,11 +20,11 @@ define(['configs/app'], function (app) {
 					var template =
 						'<ul>' +
 						'<li ng-repeat="node in ' + treeModel + '">' +
-						'<i class="collapsed" data-ng-show="node.' + nodeChildren + '.length && node.collapsed" data-ng-click="' + treeId + '.selectNodeHead(node)"></i>' +
-						'<i class="expanded" data-ng-show="node.' + nodeChildren + '.length && !node.collapsed" data-ng-click="' + treeId + '.selectNodeHead(node)"></i>' +
-						'<i class="normal" data-ng-hide="node.' + nodeChildren + '.length"></i> ' +
+						'<i class="fa fa-folder collapsed " data-ng-show="node.' + nodeChildren + '.length && node.collapsed" data-ng-click="' + treeId + '.selectNodeHead(node)"></i>' +
+						'<i class="fa fa-folder-open-o expanded" data-ng-show="node.' + nodeChildren + '.length && !node.collapsed" data-ng-click="' + treeId + '.selectNodeHead(node)"></i>' +
+						'<i class="fa fa-file-code-o normal" data-ng-hide="node.' + nodeChildren + '.length"></i> ' +
 						'<span data-ng-class="node.selected" data-ng-click="' + treeId + '.selectNodeLabel(node)">{{node.' + nodeLabel + '}} </span>' +
-						'<a ng-repeat="	item in ' + actions +'" class="an" data-ng-click="applytreeActions(item, node)"><i class="{{item.icon}}"> </i> </a>'+
+						'<a ng-repeat="	item in ' + actions +'" data-ng-class="node.actions" class="an" data-ng-click="applytreeActions(item, node)"><i class="{{item.icon}}"> </i> </a>'+
 						'<div data-ng-hide="node.collapsed" data-tree-id="' + treeId + '" data-tree-model="node.' + nodeChildren + '" data-node-id=' + nodeId + ' data-node-label=' + nodeLabel + ' data-node-children=' + nodeChildren + ' data-tree-actions=' + actions + '></div>' +
 						'</li>' +
 						'</ul>';
@@ -45,9 +45,11 @@ define(['configs/app'], function (app) {
 									//remove highlight from previous node
 									if (scope[treeId].currentNode && scope[treeId].currentNode.selected) {
 										scope[treeId].currentNode.selected = undefined;
+										scope[treeId].currentNode.actions = undefined;
 									}
 									//set highlight to selected node
 									selectedNode.selected = 'selected';
+									selectedNode.actions = 'actions';
 									//set currentNode
 									scope[treeId].currentNode = selectedNode;
 									scope[onClick](selectedNode);
