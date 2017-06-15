@@ -79,11 +79,26 @@ define(['configs/app'], function (app) {
                     title:'delete resource'
                 }
             ];
-        $scope.applytreeActions = function(rsc, currentRsc){
-             for(var i = 0; i < $scope.resources.length; i++){
-                 if($scope.resources[i] === currentRsc)
-                     $scope.resources.splice($scope.resources.indexOf(currentRsc), 1);
-             }
+       
+        var gp = function (collection, path, resource) {
+            for(var i = 0; i < collection.length; i++){
+                if (collection[i].path === path) {
+                    collection[i].resources.splice(collection[i].resources.indexOf(resource),1);
+                }else if(collection[i].resources )
+                    gp(collection[i].resources, path);
+            }
+        };
+        $scope.applytreeActions = function(action, rsc){
+            var array, parentPath;
+            if(rsc.parent){
+                array = rsc.parent.split('/');
+                if(array.length > 1)
+                    parentPath = array[array.length-1];
+                else
+                    parentPath = array[0];
+                gp($scope.resources, parentPath, rsc);
+            }
+            else  $scope.resources.splice($scope.resources.indexOf(rsc), 1);
         };
         $scope.addMethod = function (method) {
             console.log(method);

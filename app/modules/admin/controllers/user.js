@@ -7,6 +7,9 @@
 define(['configs/app'], function (app) {
     'use strict';
     app.register.controller('userinfo', ['$scope','userFactory','$uibModal', '$log','groupFactory', function ($scope,userFactory, $uibModal, $log, groupFactory) {
+        $scope.userActive = 'glyphicon glyphicon-check';
+        $scope.userInactive = 'glyphicon glyphicon-remove';
+
         $scope.user = userFactory.getCurrentUser();
         $scope.users = userFactory.getUsers();
         $scope.groups = groupFactory.getGroups();

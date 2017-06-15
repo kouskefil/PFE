@@ -172,7 +172,7 @@ define(['configs/app'], function (app){
                     login : "Shar_Head",
                     accountExp : "2018-05-02",
                     passExp : "2017-11-05",
-                    status : "Active",
+                    status : "active",
                     last_connexion : "2017-02-02"
                 }
             },
