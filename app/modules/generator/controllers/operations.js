@@ -11,24 +11,24 @@ define(['configs/app'], function (app) {
                     "rvalue":"command"
                 },
                 {
+                    "dvalue":"command reply",
+                    "rvalue":"command reply"
+                },
+                {
                     "dvalue":"request",
                     "rvalue":"request"
                 },
                 {
-                    "dvalue":"reply",
-                    "rvalue":"reply"
+                    "dvalue":"request reply",
+                    "rvalue":"request reply"
                 },
                 {
                     "dvalue":"empty",
                     "rvalue":"empty"
                 },
                 {
-                    "dvalue":"insert-returning",
-                    "rvalue":"insert-r"
-                },
-                {
-                    "dvalue":"update-returning",
-                    "rvalue":"update-r"
+                    "dvalue":"empty",
+                    "rvalue":"empty"
                 }
             ];
             $scope.inputType = [
@@ -85,12 +85,16 @@ define(['configs/app'], function (app) {
             ];
             $scope.inputLocation = [
                 {
-                    "dvalue":"$context.userid",
-                    "rvalue":"$context.userid"
+                    "dvalue":"userid",
+                    "rvalue":"$ctx.userid"
                 },
                 {
                     "dvalue":"app",
                     "rvalue":"$app"
+                },
+                {
+                    "dvalue":"login",
+                    "rvalue":"$ctx.login"
                 }
             ];
             $scope.operations = [];
@@ -101,23 +105,29 @@ define(['configs/app'], function (app) {
             $scope.currentOp = globalVarFactory.skeleton({});
             $scope.edition = false;         
          
-            $scope.AddInput = function () {
-                if($scope.currentOp.inputs === null){
+            $scope.addInput = function () {
+                if($scope.currentOp.inputs === undefined){
                     $scope.currentOp.inputs = [];
                     $scope.currentOp.inputs.push($scope.input);
                     $scope.input = {};
+                    console.log('array created');
                 }
-                else if(globalVarFactory.gLookup($scope.currentOp.inputs,$scope.input) === true){
+                else if($scope.edition === true) {
+                    console.log('edition');
+                    $scope.edition = false;
                     $scope.input = {};
                 }
                  else{
                     $scope.currentOp.inputs.push($scope.input);
                     $scope.input = {};
+                    console.log('normal');
                 }
+                console.log($scope.currentOp.inputs);
             };
             $scope.editInput = function(input){
                 $scope.edition = true;
                 $scope.input = input;
+                console.log('edition');
             };
             $scope.delInput = function (input) {
                 globalVarFactory.gDelete($scope.inputs, input);

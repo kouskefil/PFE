@@ -118,21 +118,22 @@
               * @returns { Number }
               */
             AddOperation : function () {
+                console.log(angular.copy(skel));
                     if( module.operations.length > 0 && lookup(angular.copy(skel.name))!== null) {
                         skel.name = '';
-                        skel.command = '';
-                        skel.out = '';
-                        skel.sql = '';
-                        skel.inputs = [];
+                        skel.type = '';
+                        skel.reply = '';
+                        skel.sql = {};
+                        skel.in = [];
                         return -1;
                     }
                     else {
                         module.operations.push(angular.copy(skel));
                         skel.name = '';
-                        skel.command = '';
-                        skel.out = '';
-                        skel.sql = '';
-                        skel.inputs = [];
+                        skel.type = '';
+                        skel.reply = '';
+                        skel.sql = {};
+                        skel.in = [];
                          return 0;
                     }
             },

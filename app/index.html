@@ -23,9 +23,12 @@
                     <ul class="dropdown-menu1" template-url="modules.html" uib-dropdown-menu aria-labelledby="dropdownMenu3"></ul>
                 </li>
                 <li class="dropdown nav-options  " uib-dropdown on-toggle="toggled(open)">
+                    <a href id="simple-dropdownr" uib-dropdown-toggle>
+                        <span class="fa fa-bell"></span>
+                    </a>
                     <ul class="dropdown-menu" template-url="notifications.html" uib-dropdown-menu aria-labelledby="dropdownMenu3"></ul>
                 </li>
-                <li style="background-image: url('app/assets/images/2.jpg')" class="dropdown nav-options" uib-dropdown on-toggle="toggled(open) ">
+                <li style="background-image: url('app/assets/images/avatar_2x.png')" class="dropdown nav-options" uib-dropdown on-toggle="toggled(open) ">
                     <a href="#" id="simple-dropdownr" uib-dropdown-toggle></a>
                     <ul class="dropdown-menu " template-url="profile.html" uib-dropdown-menu aria-labelledby="dropdownMenu3"></ul>
                 </li>
@@ -85,7 +88,9 @@
             <a ui-sref="{{item.link}}">
                 <div class="Gl" >
                     <div class="gc" style="display: flex; margin: 7px; width: 88px; float: left; text-align: center; ">
-                        <div style="margin-right: 25px"><img src="app/assets/images/gears-512.png" alt="" style="width:40px"></div>
+                        <div style="margin-right: 25px">
+                            <img src="app/assets/images/avatar-512.png" alt="" style="width:40px">
+                        </div>
                         <div style="padding: 10px;"><span>{{item.name}}</span></div>
                     </div>
                 </div>

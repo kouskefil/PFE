@@ -17,7 +17,7 @@ require.config({
         "treeview": "js/directives/angular.treeview.js",
         "infinit-scroll": "js/directives/ng-infinite-scroll.min",
         "slim-scroll": "js/directives/ng-slim-scroll",
-        "jquery":"assets/jquery/jquery.min"
+        "jquery":"assets/jquery/jquery.min",
         // "sidebar":"assets/js/sidebar",
         // "bootstrap": "assets/bootstrap/js/bootstrap.min",
     },

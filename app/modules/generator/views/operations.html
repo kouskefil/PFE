@@ -20,13 +20,24 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="input183">output</label>
-                    <input class=" form-control"  placeholder="output" name="input183" id="input183" type="text" ng-model="currentOp.out"/>
+                    <label for="input183">reply</label>
+                    <input class=" form-control"  placeholder="reply" name="input183" id="input183" type="text" ng-model="currentOp.out"/>
                 </div> <!-- div id:input183 -->
+                <div  >
+                    <label for="radio292">static</label>
+                    <div  class="spacer">
+                        <label class=" radio-inline">
+                            <input id="radio292" type="radio" value="true" ng-model="currentOp.sql.static"> true
+                        </label>
+                        <label class=" radio-inline">
+                            <input id="radio292" type="radio" value="false" ng-model="currentOp.sql.static"> false
+                        </label>
+                    </div>
+                </div> <!-- div id:radio292 -->
                 <div class="form-group" >
                     <label for="textarea184">sql</label>
                     <div>
-                        <textarea id="textarea184" class="form-control" name="textarea184" ui-codemirror="cmOption" ng-model="currentOp.sql"></textarea>
+                        <textarea id="textarea184" class="form-control" name="textarea184" ui-codemirror="cmOption" ng-model="currentOp.sql.text"></textarea>
                     </div>
                 </div>
             </div> <!-- group180 ends-->
@@ -41,13 +52,12 @@
             <div id="group186"  style=""  class=" row  col-md-12 "> <!-- group186 begins-->
                 <div id="op-inputs"  style="padding: 0 8px;"  class=" col-md-5 "> <!-- op-inputs begins-->
                     <ul  class="items">
-                        <li ng-repeat=" item in inputs">
+                        <li  data-ng-click="editInput(item)"ng-repeat=" item in currentOp.inputs">
                             <div id="group195"  class=" col-md-12 "> <!-- group195 begins-->
                                 <div id="group196"  class="item-label-g input-item-label col-md-9 "> <!-- group196 begins-->
                                     <span  class="item-label" id="span197" >{{item.name}}</span>
                                 </div> <!-- group196 ends-->
                                 <div id="group198"  class=""> <!-- group198 begins-->
-                                    <span  class="glyphicon glyphicon-edit action-item action-edit" data-ng-click="editInput(item)" id="span199" ></span>
                                     <span  class="glyphicon glyphicon-trash action-item action-delete" data-ng-click="delInput(item)" id="span200" ></span>
                                 </div> <!-- group198 ends-->
                             </div> <!-- group195 ends-->
@@ -72,8 +82,8 @@
                         </select>
                     </div>
                     <div  class="form-group">
-                        <label for="select205">location</label>
-                        <select name="select205" id="select205" ng-model="defaultValue" class="form-control" ><option ng-repeat='item in inputLocation' value="{{item.rvalue}}"> {{item.dvalue}}
+                        <label for="select205">default</label>
+                        <select name="select205" id="select205" ng-model="input.defaultValue" class="form-control" ><option ng-repeat='item in inputLocation' value="{{item.rvalue}}"> {{item.dvalue}}
                         </option>
                         </select>
                     </div>
@@ -81,8 +91,7 @@
                         <label for="input206">optional</label>
                         <input class=" "  placeholder="optional" name="input206" id="input206" type="checkbox" ng-model="input.optional"/>
                     </div> <!-- div id:input206 -->
-                    <button  class="floatingPanel button blue" ng-click="AddInput">add input</button>
-                    <button  class="floatingPanel button blue">null</button>
+                    <button  class="floatingPanel button blue" ng-click="addInput()">add input</button>
                 </div> <!-- group201 ends-->
             </div> <!-- group186 ends-->
         </div> <!-- parameters ends-->
