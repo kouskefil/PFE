@@ -1,131 +1,24 @@
 <!-- Generated html file -->
 
 <div id="content"  style="padding: 0; "  class="content-inner col-md-10 col-md-offset-1 "> <!-- content begins-->
-    <div id=""  style="padding:0; margin-bottom: 150px"  class=" col-md-10 "> <!-- path begins-->
-        <div class="" >
-            <div ng-repeat="user in users"  class="floatingPanel" style="margin-bottom:15px; height: 100px ">
-                <div class="row" style=" margin-left: 0; ">
-                    <div  style="    padding: 15px 9px 13px 6px;border: 1px solid ; background-color: #F5F5F5; height: 100%; color:cadetblue" class="col-md-1">
-                       <!--<span ng-show="user.user.status=='active'" class="glyphicon glyphicon-remove " style="font-size: 60px"></span>-->
-                       <!--<span ng-show="user.user.status=='inactive' || user.user.status=='' || user.user.status==undefined" class="glyphicon glyphicon-check" style="font-size: 60px"></span>-->
-                        <img src="app/assets/images/avatar_2x.png" alt="user photo" style="width: 65px;height: 65px;border-radius: 50%">
-                    </div>
-                    <div class="col-md-11" data-ng-click="setSelectedUser(user)" >
-                        <div class="moduleInfo" style="padding: 15px 15px 7px 15px;  ">
-                            <!--<span class="glyphicon glyphicon-user"></span>-->
-                            <!--<img src="app/assets/images/avatar_2x.png" alt="user photo" style="width: 30px;height: 30px;border-radius: 50%">-->
-                            <b>{{user.partner.nom}} Clarisse DUPONT</b>
-                        </div>
-                        <div class="row"  style="padding: 15px 15px 7px 15px; /*margin-top: 115px;*/">
-                            <div class="col-md-3" >
-                               
-                            </div>
-                            <div class="col-md-3" >
-                                <span class="glyphicon glyphicon-log-in"></span>
-                                <small>{{user.login}}Sloager213</small>
-                            </div>
-                            <div class="col-md-3" >
-                                <span class="fa fa-clock-o"></span>
-                                <small>{{user.uuser.lastlog}}21-mar-2017</small>
-                            </div>
-                            <div class="col-md-3" >
-                                <span class="fa fa-user-circle-o"></span>
-                                <small>{{user.uuser.accountexp}}13-jan-2020</small>
-                            </div>
-                        </div>
-                    </div>
+    <div id=""  style="padding:0; margin-bottom: 150px; "  class=" col-md-10 "> <!-- path begins-->
+        <div class="col-md-12 ">
+            <div class="col-md-5  floatingPanel user" data-ng-click="setSelectedUser(user)" ng-repeat="user in users" >
+                <div class="col-md-2 avatar" style="padding: 0">
+                    <img src="app/assets/images/avatar_2x.png" alt="user photo" style="width: 50px;height: 50px;border-radius: 50%">
                 </div>
-
+                <div class="col-md-10" style="padding: 0">
+                    <p><b>{{user.name}}</b></p>
+                    <p>
+                        <span class="glyphicon glyphicon-time"> </span>
+                        {{user.accountExp}}    20-03-2016
+                        &nbsp;&nbsp;&nbsp;
+                        <span class="glyphicon glyphicon-log-in"></span>
+                        {{user.last_connexion}}    20-03-2016
+                    </p>
+                </div>
             </div>
         </div>
+
     </div>
 </div> <!-- group27 ends-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--<div class="userheader" ng-class="inputSearchedit" style="padding: 10px 10px" >-->
-    <!--<div class="row">-->
-        <!--<div class="col-md-1">-->
-            <!--<span   class=" icon glyphicon glyphicon-search"></span>-->
-        <!--</div>-->
-        <!--<div class="search col-md-4">-->
-            <!--<input ng-blur="searchLostFocus()" ng-focus="searchGainFocus()" type="text" placeholder="Search "/>-->
-        <!--</div>-->
-
-    <!--</div>-->
-<!--</div>-->
-<!--<div >-->
-    <!--<table class="col-md-10 table table-striped">-->
-        <!--<thead>-->
-        <!--<tr>-->
-            <!--<th>User Id</th>-->
-            <!--<th>User login</th>-->
-            <!--<th>Last connexion</th>-->
-            <!--<th>Expires</th>-->
-        <!--</tr>-->
-        <!--</thead>-->
-        <!--<tbody>-->
-        <!--<tr ng-repeat="user in users" data-ng-click="setSelectedUser(user)">-->
-            <!--<td>{{user._id}}</td>-->
-            <!--<td>{{user.login}}</td>-->
-            <!--<td>{{user.user.last_connexion}}</td>-->
-            <!--<td>{{user.user.accountExp}}</td>-->
-        <!--</tr>-->
-        <!--</tbody>-->
-    <!--</table>-->
-<!--</div>-->
-<!--<div style="bottom: 0; padding: 10px" class=" col-md-12 footer" >-->
-    <!--&lt;!&ndash;Pager&ndash;&gt;-->
-    <!--<div class="">-->
-        <!--&lt;!&ndash;<span ng-click="setPage(pager.currentPage - 1)" class="glyphicon glyphicon-chevron-left"></span>&ndash;&gt;-->
-        <!--<div style="float: right" class="btn-group" role="group" aria-label="...">-->
-            <!--<button type="button" class="btn btn-default">AA-AC</button>-->
-            <!--<button type="button" class="btn btn-default">AC-BD</button>-->
-            <!--<button type="button" class="btn btn-default">BD-CZ</button>-->
-        <!--</div>-->
-        <!--&lt;!&ndash;<span ng-click="setPage(pager.currentPage + 1)" class="glyphicon glyphicon-chevron-right"></span>&ndash;&gt;-->
-    <!--</div>-->
-<!--</div>-->

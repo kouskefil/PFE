@@ -44,26 +44,31 @@ define(['configs/app',
                         {
                             name:'Views',
                             state:'root.generator.views'   ,
+                            role : 'admin',
                             icon:'glyphicon glyphicon-modal-window'
                         },
                         {
                             name:'Operations',
                             state:'root.generator.operations'   ,
+                            role : 'user',
                             icon:'glyphicon glyphicon-cog'
                         },
                         {
                             name:'Resources',
                             state:'root.generator.resources'   ,
+                            role : 'admin',
                             icon:'glyphicon glyphicon-link'
                         },
                         {
                             name:'Workflow',
                             state:'root.generator.workflow'   ,
+                            role : 'admin',
                             icon:'glyphicon glyphicon-retweet'
                         },
                         {
                             name:'Database',
                             state:'root.generator.database'   ,
+                            role : 'user',
                             icon:'glyphicon glyphicon-tasks'
                         }
                     ]);

@@ -6,6 +6,25 @@ define(['angular'], function (angular) {
     'use strict';
     angular.module('layoutCtrlModule',["layoutModule"])
         .controller('layoutCtrl', ['$scope','layoutFactory','$log','$state', function ($scope, layoutFactory, $log,$state) {
+            $scope._tasks=[
+                {
+                    "name": "duis aliquip",
+                     "occurrence": 4
+                },
+                {
+                    "name": "veniam qui",
+                    "occurrence": 1
+                },
+                {"name": "pariatur ipsum",
+                    "occurrence": 9
+                },
+                {"name": "dolore eiusmod",
+                    "occurrence": 11
+                },
+                {"name": "aliquip veniam"},
+                {"name": "excepteur excepteur"},
+                {"name": "consectetur deserunt" }
+                ];
 
             //    to get location operations to display on operations bar
             $scope.actions = layoutFactory.getOperations();
@@ -16,8 +35,11 @@ define(['angular'], function (angular) {
                 item.action();
             };
              $scope.go = function () {
-                $state.go('root.install',{module:'generator'});
-                //  $state.go('root.generator');
+                $state.go('root.install',{module:'admin'});
+                  // $state.go('root.app');
+             };
+             $scope.isauthorized = function (menu) {
+                return true; 
              };
             /*Layout vars config functions*/
             $scope.navbarCollapsed = true;

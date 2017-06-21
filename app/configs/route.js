@@ -52,10 +52,12 @@ define(['./app'
                      controller: 'layoutCtrl',
                     abstract : true
                 })
-                 .state('root.app', {
-                    url: '/app'
-                })
+                .state('root.app', {
+                        url: '/app' ,
+                        templateUrl:'app/common-views/dashboard.html',
+                        controller : 'layoutCtrl'
 
+                })
                 .state('admin',{
                     url: '/admin',
                     templateUrl : 'app/admin/views/index.html'

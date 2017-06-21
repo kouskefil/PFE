@@ -1,0 +1,28 @@
+
+<div class="content-inner col-md-10 col-md-offset-1">
+    <div class=" col-md-12 row">
+            <div class=" col-md-4  floatingPanel" style="height: 350px;padding: 0 " >
+                <div id="group4"  style="padding: 10px 15px; margin: 0"  class="g_header"> <!-- group4 begins-->
+                    <span  class="fa fa-tasks" id="span6" ></span>
+                    <span  id="span5" >Tasks</span>
+                </div>
+                <div class="tskcontent" style=" height:315px;overflow-y: scroll">
+                    <ul class="tsk" style="list-style: none; padding: 5px" >
+                        <li role="menuitem" ng-repeat="item in _tasks">
+                            <a ui-sref="{{item.link}}">
+                                <p>
+                                    {{item.name}} <span class="badge" style="float: right">{{item.occurrence}}</span>
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 col-md-offset-1 floatingPanel" style="height: 350px;padding: 0 ">
+                <div id="group5"  style="padding: 10px 15px; margin: 0"  class="g_header"> <!-- group4 begins-->
+                    <!--<span  class="fa fa-tasks" id="span6" ></span>-->
+                    <!--<span  id="span5" >Tasks</span>-->
+                </div>
+            </div>
+    </div>
+</div>

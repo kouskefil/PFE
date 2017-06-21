@@ -52,7 +52,7 @@
         </ul>
         <ul class="item" >
             <!--&lt;!&ndash;ng-show="showSidebarItems==true"&ndash;&gt;            ui-sref="{{item.state}}"-->
-            <li ng-repeat="item in items">
+            <li ng-repeat="item in items" ng-show="isauthorized(item.role)">
                 <a ui-sref="{{item.state}}">
                     <i class="{{item.icon}}" style="padding-right:15px "></i>
                     {{item.name}}
@@ -60,7 +60,7 @@
             </li>
         </ul>
         <ul >
-            <li ng-repeat="lnkm in item.lnkModule">
+            <li ng-repeat="lnkm in item.lnkModule" ng-show="isauthorised(item.role)">
                 <a href="#anch2">
                     <i class="lnkm.icon" style="padding-right:15px "></i>
                     lnkm.name
@@ -73,7 +73,7 @@
         <div class=" operation-bar col-md-10 col-md-offset-1" style=" margin-top: 20px;">
             <span >{{location[0]}}</span>
             <ul >
-                <li style="padding: 3px;" ng-repeat="item in actions"><span class="{{item.icon}}" ng-click="doAction(item)"></span></li>
+                <li style="padding: 3px;" ng-repeat="item in actions"><span class="{{item.icon}}" ng-click="doAction(item)" ng-show="isauthorized(item.role)"></span></li>
             </ul>
         </div>
         <div ui-view></div>
@@ -89,7 +89,7 @@
                 <div class="Gl" >
                     <div class="gc" style="display: flex; margin: 7px; width: 88px; float: left; text-align: center; ">
                         <div style="margin-right: 25px">
-                            <img src="app/assets/images/avatar-512.png" alt="" style="width:40px">
+                            <img src="app/assets/images/gears-512.png" alt="" style="width:40px">
                         </div>
                         <div style="padding: 10px;"><span>{{item.name}}</span></div>
                     </div>
@@ -101,14 +101,11 @@
 <!-- Notifications dropdown script-->
 <script type="text/ng-template" id="notifications.html">
     <ul  class="m-dd floatingPanel dropdown-menu position1" uib-dropdown-menu role="menu" aria-labelledby="button-template-url">
-        <li role="menuitem" ng-repeat="item in modules">
+        <li role="menuitem" ng-repeat="item in _tasks">
             <a ui-sref="{{item.link}}">
-                <div class="Gl" >
-                    <div class="gc" style="display: flex; margin: 7px; width: 88px; float: left; text-align: center; ">
-                        <div style="margin-right: 25px"><img src="app/assets/images/gears-512.png" alt="" style="width:40px"></div>
-                        <div style="padding: 10px;"><span>moi meme</span></div>
-                    </div>
-                </div>
+                <p>
+                    {{item.name}} <span class="badge" style="float: right">{{item.occurrence}}</span>
+                </p>
             </a>
         </li>
     </ul>

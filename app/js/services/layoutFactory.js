@@ -74,6 +74,9 @@ define(['angular'], function (angular) {
         fac.getItems = function(){
             return layout.sidebar.items;
         };
+        fac.isauthorized = function (menu) {
+            return true;
+        };
         fac.getLinks = function(){
             return layout.sidebar.links;
         };
