@@ -169,14 +169,12 @@ define(['configs/app'], function (app){
             $scope.deleteModel = function (model) {
                  globalVarFactory.gDelete(globalVarFactory.getModule().models, model);
             };
-
             $scope.cclick = function (selectedNode) {
                 console.log(selectedNode);
                 $scope.setcurrentContainer(selectedNode);
                 componentSet.currentComponent = selectedNode;
                 $scope.go($scope.currentComponent);
             };
-
             $scope.addcol = function () {
                 if(!$scope.currentComponent.columns)
                     $scope.currentComponent.columns = [];

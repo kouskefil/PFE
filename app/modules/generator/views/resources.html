@@ -56,13 +56,6 @@
                                 </div> <!-- resp ends-->
                             </li>
                             <li >
-                                <div id="edit"  class="dropdown" uib-dropdown auto-close="disabled"> <!-- edit begins-->
-                                    <span  class="glyphicon glyphicon-edit" uib-dropdown-toggle id="span244" ></span>
-                                    <ul  class="dropdown-menu" template-url="methods-edit.html" uib-dropdown-menu aria-labelledby="dropdownMenu3" >
-                                    </ul>
-                                </div> <!-- edit ends-->
-                            </li>
-                            <li >
                                 <div id="del"  class="dropdown" uib-dropdown auto-close="disabled"> <!-- del begins-->
                                     <span  class="glyphicon glyphicon-trash" ng-click="delete(methods, item)" id="span245" ></span>
                                 </div> <!-- del ends-->
@@ -96,7 +89,7 @@
                                 </div> <!-- group278 ends-->
                                 <div id="group279"  class=" col-md-5 "> <!-- group279 begins-->
                                     <span  style="margin: 0 0 15px 30px"  id="from" >from :</span>
-                                    <span  id="span255" >{{item.from}}</span>
+                                    <span  id="span255" >{{item.frame}}</span>
                                 </div> <!-- group279 ends-->
                                 <div id="group280"  class=" col-md-2 " uib-dropdown auto-close="disabled"> <!-- group280 begins-->
                                     <span  style="float:right"  class="glyphicon glyphicon-plus" uib-dropdown-toggle id="span256" ></span>
@@ -137,11 +130,11 @@
                                 </p>
                                 <p>
                                     <span  class="param" id="span205_copy1" >Value</span>
-                                    <span  class="value" id="span206_copy1" >{{item.item.value}}</span>
+                                    <span  class="value" id="span206_copy1" >{{item.value}}</span>
                                 </p>
                                 <p>
                                     <span  class="param"  id="span207_copy1" >Media Type</span>
-                                    <span  class="value" id="span208_copy1" >{{item.item.mediatype}}</span>
+                                    <span  class="value" id="span208_copy1" >{{item.mediatype}}</span>
                                 </p>
                             </div> <!-- response ends-->
                         </uib-tab> <!--end-->

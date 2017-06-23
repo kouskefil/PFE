@@ -67,29 +67,30 @@
                 <div id="group201"  style="padding: 0 0px 6px 15px;border-left: 1px solid lightgray;"  class=" col-md-7 "> <!-- group201 begins-->
                     <div class="form-group">
                         <label for="input202">name</label>
-                        <input class=" form-control"  placeholder="name" name="input202" id="input202" type="text" ng-model="input.name"/>
+                        <input class=" form-control"  placeholder="name" name="input202" id="input202" type="text" ng-model="currentOp.in.name"/>
                     </div> <!-- div id:input202 -->
                     <div  class="form-group">
                         <label for="select203">type</label>
-                        <select name="select203" id="select203" ng-model="input.type" class="form-control" ><option ng-repeat='item in inputType' value="{{item.rvalue}}"> {{item.dvalue}}
+                        <select name="select203" id="select203" ng-model="currentOp.in.type" class="form-control" >
+                            <option ng-repeat='item in inputType' value="{{item.rvalue}}"> {{item.dvalue}}
                         </option>
                         </select>
                     </div>
                     <div  class="form-group">
                         <label for="select204">style</label>
-                        <select name="select204" id="select204" ng-model="input.style" class="form-control" ><option ng-repeat='item in inputStyle' value="{{item.rvalue}}"> {{item.dvalue}}
+                        <select name="select204" id="select204" ng-model="currentOp.in.style" class="form-control" ><option ng-repeat='item in inputStyle' value="{{item.rvalue}}"> {{item.dvalue}}
                         </option>
                         </select>
                     </div>
                     <div  class="form-group">
                         <label for="select205">default</label>
-                        <select name="select205" id="select205" ng-model="input.defaultValue" class="form-control" ><option ng-repeat='item in inputLocation' value="{{item.rvalue}}"> {{item.dvalue}}
+                        <select name="select205" id="select205" ng-model="currentOp.in.defaultValue" class="form-control" ><option ng-repeat='item in inputLocation' value="{{item.rvalue}}"> {{item.dvalue}}
                         </option>
                         </select>
                     </div>
                     <div >
                         <label for="input206">optional</label>
-                        <input class=" "  placeholder="optional" name="input206" id="input206" type="checkbox" ng-model="input.optional"/>
+                        <input class=" "  placeholder="optional" name="input206" id="input206" type="checkbox" ng-model="currentOp.in.optional"/>
                     </div> <!-- div id:input206 -->
                     <button  class="floatingPanel button blue" ng-click="addInput()">add input</button>
                 </div> <!-- group201 ends-->
