@@ -67,7 +67,7 @@ define(['configs/app'], function (app) {
             if(!selectedNode.requests)
                 selectedNode.requests = [];
             globalVarFactory.setCurrentRsc(selectedNode);
-            $scope.currentRsc = globalVarFactory.rscSkeleton(selectedNode);
+            $scope.currentRsc = selectedNode/*globalVarFactory.rscSkeleton(selectedNode)*/;
             $scope.methods = $scope.currentRsc.methods;
             $scope.requests = $scope.currentRsc.requests;
         };

@@ -35,7 +35,7 @@
     <div class="modal-footer">
         <span class="btn-group" ng-show="currentStep > 1  ">
           <button ng-disabled="currentStep <= 1" class="button default" name="previous" type="button" ng-click="goToStep(currentStep - 1)"><i class="fa fa-arrow-left"></i> Previous step</button>
-          <button ng-disabled="currentStep >= wizardSteps.length" class="button blue" name="next" type="button" ng-click="goToStep(currentStep + 1)">Next step <i class="fa fa-arrow-right"></i></button>
+          <button ng-hide="currentStep >= wizardSteps.length" class="button blue" name="next" type="button" ng-click="goToStep(currentStep + 1)">Next step <i class="fa fa-arrow-right"></i></button>
         </span>
         <button ng-show="currentStep==wizardSteps.length" class="button green" style="text-transform: uppercase" data-ng-click="submitRole()"> save</button>
     </div>

@@ -33,8 +33,8 @@
 <div id="params_content"  style="padding: 0;"  class=" row  col-md-12 "> <!-- params_content begins-->
 <div id="methods_list"  style="padding-left: 20px; padding-right: 5px;"  class=" col-md-4 "> <!-- methods_list begins-->
 <ul  class="items">
-<li  style="padding-left: 10px;"  class="" ng-class="{selectedItem:item.id==selected}"ng-repeat=" item in methods">
-<span  class="item-label" data-ng-click="getMethod(item)" id="span179" >{{item.id}}</span>
+<li  style="padding-left: 10px;"  class="" ng-class="{selectedItem:item.id==selected}" data-ng-click="getMethod(item)"ng-repeat=" item in methods">
+<span  class="item-label" id="span179" >{{item.id}}</span>
 </li>
 </ul>
 </div> <!-- methods_list ends-->
@@ -56,13 +56,6 @@
 </div> <!-- resp ends-->
 </li>
 <li >
-<div id="edit"  class="dropdown" uib-dropdown auto-close="disabled"> <!-- edit begins-->
-<span  class="glyphicon glyphicon-edit" uib-dropdown-toggle id="span244" ></span>
-<ul  class="dropdown-menu" template-url="methods-edit.html" uib-dropdown-menu aria-labelledby="dropdownMenu3" >
-</ul>
-</div> <!-- edit ends-->
-</li>
-<li >
 <div id="del"  class="dropdown" uib-dropdown auto-close="disabled"> <!-- del begins-->
 <span  class="glyphicon glyphicon-trash" ng-click="delete(methods, item)" id="span245" ></span>
 </div> <!-- del ends-->
@@ -70,6 +63,24 @@
 </ul>
 </div> <!-- method-action ends-->
 <uib-tabset >
+<uib-tab index="293"  heading="details"> <!--begins-->
+<div  class="form-group">
+<label for="select297">name</label>
+<select name="select297" id="select297" ng-model="method.name" class="form-control" ><option ng-repeat='item in resourceMethod' value="{{item.rvalue}}"> {{item.dvalue}} 
+ </option>
+ </select>
+</div>
+<div  class="form-group">
+<label for="select298">id</label>
+<select name="select298" id="select298" ng-model="method.id" class="form-control" ><option ng-repeat='item in ids' value="{{item.name}}"> {{item.name}} 
+ </option>
+ </select>
+</div>
+<div class="form-group">
+<label for="input299">role</label>
+<input class=" form-control"  placeholder="role" name="input299" id="input299" type="text" ng-model="method.role"/>
+</div> <!-- div id:input299 -->
+</uib-tab> <!--end-->
 <uib-tab index="220"  heading="trigger"> <!--begins-->
 <div id="group254"  class=" row dropdown trigger" > <!-- group254 begins-->
 <div id="group278"  class=" col-md-5 "> <!-- group278 begins-->
@@ -119,11 +130,11 @@
 </p>
 <p>
 <span  class="param" id="span205_copy1" >Value</span>
-<span  class="value" id="span206_copy1" >{{item.item.value}}</span>
+<span  class="value" id="span206_copy1" >{{item.value}}</span>
 </p>
 <p>
 <span  class="param"  id="span207_copy1" >Media Type</span>
-<span  class="value" id="span208_copy1" >{{item.item.mediatype}}</span>
+<span  class="value" id="span208_copy1" >{{item.mediatype}}</span>
 </p>
 </div> <!-- response ends-->
 </uib-tab> <!--end-->
@@ -222,28 +233,5 @@ data-tree-actions="treeActions"
 </div> <!-- div id:input276 -->
 <button  class="floatingPanel button blue" ng-click="addtriggerParam(param)">add</button>
 <span  style="float: right"  uib-dropdown-toggle id="span281" >cancel</span>
-</div>
-</script>
-<script type="text/ng-template" id="methods-edit.html">
-<div class="dropdown-menu floatingPanel method-dropdown" ng-class="editMethod" uib-dropdown-menu role="menu" aria-labelledby="button-template-url"
->
-<div  class="form-group">
-<label for="select188_copy1">method name</label>
-<select name="select188_copy1" id="select188_copy1" ng-model="method.name" class="form-control" ><option ng-repeat='item in resourceMethod' value="{{item.rvalue}}"> {{item.rvalue}} 
- </option>
- </select>
-</div>
-<div  class="form-group">
-<label for="select189_copy2">method id</label>
-<select name="select189_copy2" id="select189_copy2" ng-model="method.id" class="form-control" ><option ng-repeat='item in ids' value="{{item.name}}"> {{item.name}} 
- </option>
- </select>
-</div>
-<div class="form-group">
-<label for="input190_copy3">role</label>
-<input class=" form-control"  placeholder="role" name="input190_copy3" id="input190_copy3" type="text" ng-model="method.role"/>
-</div> <!-- div id:input190_copy3 -->
-<button  class="floatingPanel button blue" ng-click="addMethod">save</button>
-<span  style="float: right;"  uib-dropdown-toggle id="span192_copy5" >Cancel</span>
 </div>
 </script>
