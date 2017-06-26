@@ -33,8 +33,12 @@ define(['configs/app'], function (app){
                 $scope.currentModel.operations.push($scope.operation);
                 $scope.operation = {};
             };
-            $scope.delete = function(){
-                globalVarFactory.gDelete($scope.currentModel.operations, $scope.operation);
+            $scope.deleteoperation = function(){
+               for(var i=0; i<$scope.currentModel.operations.length; i++)
+                   if($scope.operation === $scope.currentModel.operations[i]){
+                       $scope.currentModel.operations.splice($scope.currentModel.operations.indexOf($scope.operation,1));
+                       $scope.operation = {};
+               }
             } ;
             $scope.setoperation = function (operation) {
                 $scope.operation = operation;
@@ -77,8 +81,6 @@ define(['configs/app'], function (app){
                 $scope.currentComponent = component;
             };
             $scope.models = globalVarFactory.getModule().models;
-            console.log('models');
-            console.log($scope.models);
             $scope.receptab =  [
                 {
                     "id":"0" ,

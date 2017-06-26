@@ -106,40 +106,42 @@ define(['configs/app'], function (app) {
             $scope.edition = false;         
          
             $scope.addInput = function () {
-                if($scope.currentOp.inputs === undefined){
-                    $scope.currentOp.inputs = [];
-                    $scope.currentOp.inputs.push($scope.input);
-                    $scope.input = {};
+                console.log('in');
+                console.log($scope.currentOp);
+                console.log($scope.currentOp.in);
+
+                if($scope.currentOp.in == undefined || $scope.currentOp.in == null){
+                    $scope.currentOp.in = [];
+                    $scope.currentOp.in.push($scope.in);
+                    $scope.in = {};
                     console.log('array created');
                 }
                 else if($scope.edition === true) {
                     console.log('edition');
                     $scope.edition = false;
-                    $scope.input = {};
+                    $scope.in = {};
                 }
                  else{
-                    $scope.currentOp.inputs.push($scope.input);
-                    $scope.input = {};
+                    $scope.currentOp.in.push($scope.in);
+                    $scope.in = {};
                     console.log('normal');
                 }
-                console.log($scope.currentOp.inputs);
+                console.log($scope.currentOp.in);
             };
             $scope.editInput = function(input){
                 $scope.edition = true;
-                $scope.input = input;
+                $scope.in = input;
                 console.log('edition');
             };
             $scope.delInput = function (input) {
-                globalVarFactory.gDelete($scope.inputs, input);
+                globalVarFactory.gDelete($scope.in, input);
                 $scope.currentInput = {};
             };
             /**********************************************/
             $scope.cclick = function(operation){
-
-                if(!operation.inputs)
-                    operation.inputs = [];
-                $scope.currentOp = globalVarFactory.skeleton(operation);
-                $scope.inputs = $scope.currentOp.inputs;
+                $scope.currentOp = operation;
+                // $scope.currentOp = globalVarFactory.skeleton(operation);
+                $scope.in = $scope.currentOp.in;
                 $scope.selected = $scope.currentOp.name;
             };
             $scope.delOperation = function ( op) {
