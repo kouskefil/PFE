@@ -51,7 +51,7 @@ define(['configs/app'], function (app) {
         ];
         $scope.resources = globalVarFactory.getResources();
         $scope.RscParent = globalVarFactory.generateParent();
-        $scope.currentRsc = globalVarFactory.rscSkeleton({responses:[]});
+        $scope.currentRsc = globalVarFactory.rscSkeleton({});
         $scope.rsptmp = {
             mediatype:'',
             name:'',
@@ -64,12 +64,12 @@ define(['configs/app'], function (app) {
         $scope.cclick = function (selectedNode) {
             if(!selectedNode.methods)
                 selectedNode.methods = [];
-            if(!selectedNode.requests)
-                selectedNode.requests = [];
+            // if(!selectedNode.requests)
+            //     selectedNode.requests = [];
             globalVarFactory.setCurrentRsc(selectedNode);
             $scope.currentRsc = selectedNode/*globalVarFactory.rscSkeleton(selectedNode)*/;
             $scope.methods = $scope.currentRsc.methods;
-            $scope.requests = $scope.currentRsc.requests;
+            // $scope.requests = $scope.currentRsc.requests;
         };
         $scope.treeActions =
             [

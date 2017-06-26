@@ -5,7 +5,7 @@ define(['configs/app'], function (app){
             $scope.new = function(){
 
                     globalVarFactory.getModule().name = $scope.name;
-                    $state.go('root.generator.dashboard');
+                    $state.go('root.generator.overview');
             };
         }]);
 });

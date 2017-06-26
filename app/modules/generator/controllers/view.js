@@ -3,6 +3,7 @@ define(['configs/app'], function (app){
     app.register.controller('view',['$scope','$state','globalVarFactory', 'HTMLcomponents','componentSet', function($scope,$state,globalVarFactory, HTMLcomponents, componentSet){
             $scope.HTMLcomponents = HTMLcomponents;
             $scope.components = null;
+            $scope.operation = {};
             //variables to add in the model
             $scope.currentComponent = globalVarFactory.getModelHead().then(function (data) {
                 $scope.currentComponent = data;
@@ -32,6 +33,9 @@ define(['configs/app'], function (app){
                 $scope.currentModel.operations.push($scope.operation);
                 $scope.operation = {};
             };
+            $scope.delete = function(){
+                globalVarFactory.gDelete($scope.currentModel.operations, $scope.operation);
+            } ;
             $scope.setoperation = function (operation) {
                 $scope.operation = operation;
                 $scope.currentoperation = operation;
@@ -55,7 +59,6 @@ define(['configs/app'], function (app){
                 $scope.operation = {};
             };
             $scope.collection = [];
-            $scope.operation = [];
             $scope.select_option = [];
 
             $scope.g_Add = function (int, obj) {

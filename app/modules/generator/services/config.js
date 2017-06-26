@@ -12,7 +12,7 @@ define(['configs/app',
     '../controllers/resources',
     '../controllers/database',
     '../controllers/workflow',
-    '../controllers/dashboard',
+    '../controllers/overview',
     'app/js/directives/angular.treeview.js',
     'app/js/directives/angular-file-model.js',
     'modules/generator/services/componentFactory',
@@ -122,14 +122,14 @@ define(['configs/app',
                 templateUrl:'app/partials/moduleLoad.html',
                 controller:'moduleLoadCtrl'
             })
-        .state('root.generator.dashboard',
+        .state('root.generator.overview',
             {
                 url: '/module/:name',
-                templateUrl: 'app/modules/generator/views/dashboard.html',
+                templateUrl: 'app/modules/generator/views/overview.html',
                 onEnter:function (layoutFactory) {
 
                 },
-                controller:'dashboard'
+                controller:'overview'
             })
         .state('root.generator.views',
             {

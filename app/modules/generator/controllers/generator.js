@@ -41,7 +41,7 @@ define(['configs/app', '../services/generatorFactory'], function (app) {
                         if(action === 'create'){
                             globalVarFactory.setName($scope.moduleName);
                             // console.log(globalVarFactory.getModule());
-                            $state.go('root.generator.dashboard');
+                            $state.go('root.generator.overview');
                             $uibModalInstance.close();
                         }
                         else {
@@ -50,7 +50,7 @@ define(['configs/app', '../services/generatorFactory'], function (app) {
                             reader.addEventListener('load', function() {
                                 var m = JSON.parse(reader.result);
                                 globalVarFactory.setModule(m) ;
-                                $state.go('root.generator.dashboard');
+                                $state.go('root.generator.overview');
                                 $uibModalInstance.close();
                             });
                         }

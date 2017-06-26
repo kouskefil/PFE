@@ -283,7 +283,10 @@ label {
 .sidebarCachee{
     margin-left: -216px;
 }
-
+.sideb_v{
+    line-height: 40px;
+    text-indent: 3px;
+}
 .sidebarVisible{
     margin-left: 0 ;
 }
@@ -375,7 +378,7 @@ label {
     color: #41484c;
     text-align: center;
     width: 20px;
-    line-height: 18px;
+    line-height: 40px;
 }
 
 
@@ -836,18 +839,22 @@ label {
     display: inline-block;
     background-color: rgba(143,143,143,0.21);
 }
-
 .modules{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+.module{
     background-color: #fff;
     margin-bottom:5px;
     width: 296px;
     height: 204px;
-    margin: 10px;
+    margin: 5px;
 }
-.modules img{
+.module img{
     height: 30px;
 }
-.modules:hover{
+.module:hover{
     background-color: lightgray;
     color: #fff;
     transition: 5ms;

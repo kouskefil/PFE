@@ -1,0 +1,49 @@
+
+cmake_minimum_required (VERSION 3.0)
+project (generator C)
+
+# The version number.
+set (GENERATOR_VERSION_MAJOR 0)
+set (GENERATOR_VERSION_MINOR 1)
+
+configure_file (
+  "${PROJECT_SOURCE_DIR}/generatorConfig.h.in"
+  "${PROJECT_BINARY_DIR}/generatorConfig.h"
+  )
+
+option(FASTCALL_DISABLE "fast call disable" ON)
+
+include_directories (${INCDIRS}
+  ${PROJECT_SOURCE_DIR} 
+  
+  # add the binary tree to the search path for include files
+  # so that we will find xxxConfig.h
+  ${PROJECT_BINARY_DIR})
+
+add_definitions(-g -O2 -fsigned-char -freg-struct-return -Wshadow -Wstrict-prototypes -Wpointer-arith -Winline -nostdlib)
+
+set (CMAKE_INSTALL_PREFIX "/opt/pehu")
+
+
+add_subdirectory(libsrc)
+add_subdirectory(www)
+add_subdirectory(sql)
+
+
+SET(CPACK_GENERATOR "DEB")
+SET(CPACK_DEBIAN_PACKAGE_MAINTAINER "Toto Tata") #required
+
+set(CPACK_PACKAGE_VERSION "0.1.0")
+set(CPACK_PACKAGE_VERSION_MAJOR "0")
+set(CPACK_PACKAGE_VERSION_MINOR "1")
+set(CPACK_PACKAGE_VERSION_PATCH "0")
+
+set(CPACK_DEBIAN_PACKAGE_CONTROL_EXTRA
+  "${CMAKE_CURRENT_BINARY_DIR}/postinst")
+
+INCLUDE(CPack)
+
+# set(PostgreSQL_ROOT "/usr/include/postgresql/")
+# include_directories (${PostgreSQL_ROOT}
+#   "/opt/pehu/include"
+#   )

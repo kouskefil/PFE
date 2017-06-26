@@ -65,7 +65,7 @@ define(['angular'], function (angular) {
             $scope.changeLayout = function () {
                 if($scope.layout === 'contentPlusSidebar'){
                     $scope.layout = 'contentSeul';
-                    $scope.sidebar_layout = 'sidebarCachee';
+                    $scope.sidebar_layout = 'sidebarCachee sideb_v';
                     $scope.sidebarState  = 'closed';
                 }
                 else if ($scope.layout === 'contentSeul'){

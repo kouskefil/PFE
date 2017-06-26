@@ -152,8 +152,8 @@
                 path : obj.path,
                 parent : obj.parent,
                resources : obj.resources,
-               methods : obj.methods,
-               responses : obj.responses
+               methods : obj.methods
+               // responses : obj.responses
             };
                 return currentRsc;
             },
@@ -189,8 +189,8 @@
                 currentRsc.path = '';
                 currentRsc.parent = '';
                 currentRsc.resources = [] ;
-                currentRsc.methods = [];
-                currentRsc.responses = [];
+                currentRsc.methods = []
+                // currentRsc.responses = [];
             },
             /*resource methods end*/
             /*module methods*/

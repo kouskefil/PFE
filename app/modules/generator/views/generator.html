@@ -37,13 +37,11 @@
 
 <div class="row" style=" z-index: 0 !important;">
     <div  class="col-md-10 col-md-offset-1">
-        <div id="header" style=" display: block; margin: 15px 15px 7px 15px">
-            <span>Recents Projects</span>
-        </div>
+       
         <div class="col-md-12">
-            <div class="row" style="display: flex;">
-                <div ng-repeat="item in usermodules" class="floatingPanel modules" >
-                    <a ui-sref="root.generator.dashboard({name:item.name})" style="text-decoration: none; color: #808080 !important;">
+            <div class="row modules" style="display: flex;">
+                <div ng-repeat="item in usermodules" class="floatingPanel module" >
+                    <a ui-sref="root.generator.overview({name:item.name})" style="text-decoration: none; color: #808080 !important;">
                         <div class="moduleInfo" style="padding: 15px 15px 7px 15px;  ">
                             <span class="glyphicon glyphicon-th-large"></span>
                             <b>{{item.name}} </b>
@@ -51,10 +49,6 @@
                         <div class="group_content" style="padding: 15px 15px 7px 15px; margin-top: 115px;">
                             <!--<span>Create on </span>-->
                             <div class="moduledesc" style="/* margin-top: 35px;*/">
-                                <!--<small>Description </small>-->
-                                <!--<p style="text-align: justify; ">-->
-                                    <!--{{item.desc}}-->
-                                <!--</p>-->
                                 <small>{{item.date}}</small>
                             </div>
                         </div>

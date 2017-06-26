@@ -3,7 +3,7 @@
  */
 define(['configs/app'], function (app) {
     'use strict';
-    app.register.controller('dashboard', ['$scope', 'layoutFactory','globalVarFactory', function ($scope, layoutFactory,globalVarFactory) {
+    app.register.controller('overview', ['$scope', 'layoutFactory','globalVarFactory', function ($scope, layoutFactory,globalVarFactory) {
 
             $scope.treeActions = [
                 {
@@ -103,11 +103,11 @@ define(['configs/app'], function (app) {
                 }
             ];
             //    dashboard layout controller
-            var config = layoutFactory.getDashboardConf();
+            // var config = layoutFactory.getDashboardConf();
             // console.log(config);
             // $scope.contentClass = config[0].contentClass;
             // $scope.moduleBlocClass = config[1].moduleBlocClass;
 
         
     }])
-})
+});
