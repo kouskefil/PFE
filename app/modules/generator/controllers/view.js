@@ -30,15 +30,19 @@ define(['configs/app'], function (app){
             } ;
             //**************************************** fonctions à ajouter dans le model----------
             $scope.addoperation = function () {
+                if( !$scope.currentModel.operations)
+                    $scope.currentModel.operations = [];
                 $scope.currentModel.operations.push($scope.operation);
                 $scope.operation = {};
             };
             $scope.deleteoperation = function(){
                for(var i=0; i<$scope.currentModel.operations.length; i++)
                    if($scope.operation === $scope.currentModel.operations[i]){
-                       $scope.currentModel.operations.splice($scope.currentModel.operations.indexOf($scope.operation,1));
+                       $scope.currentModel.operations.splice($scope.currentModel.operations.indexOf($scope.currentoperation,1));
                        $scope.operation = {};
                }
+               console.log('operations');
+               console.log( $scope.currentModel.operations);
             } ;
             $scope.setoperation = function (operation) {
                 $scope.operation = operation;
