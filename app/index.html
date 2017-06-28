@@ -102,7 +102,7 @@
 <script type="text/ng-template" id="notifications.html">
     <ul  class="m-dd floatingPanel dropdown-menu position1" uib-dropdown-menu role="menu" aria-labelledby="button-template-url">
         <li role="menuitem" ng-repeat="item in _tasks">
-            <a ui-sref="{{item.link}}">
+            <a ui-sref="root.generator.tasks({taskname:item.name})">
                 <p>
                     {{item.name}} <span class="badge" style="float: right">{{item.occurrence}}</span>
                 </p>
@@ -113,15 +113,20 @@
 <!-- profile dropdown script-->
 <script type="text/ng-template" id="profile.html">
     <ul  class="m-dd floatingPanel dropdown-menu position3" uib-dropdown-menu role="menu" aria-labelledby="button-template-url">
-        <li role="menuitem" ng-repeat="item in modules">
-            <a ui-sref="{{item.link}}">
-                <div class="Gl" >
-                    <div class="gc" style="display: flex; margin: 7px; width: 88px; float: left; text-align: center; ">
-                        <div style="margin-right: 25px"><img src="app/assets/images/2.jpg" alt="" style="width:40px"></div>
-                        <div style="padding: 10px;"><span>nav-options</span></div>
-                    </div>
-                </div>
+        <li role="menuitem" >
+            <a data-ng-click="showprofile()">
+                <p>
+                    <span class="glyphicon glyphicon-user" > Profile</span>
+                </p>
             </a>
         </li>
+        <li role="menuitem" >
+            <a data-ng-click="logout()">
+                <p>
+                     <span class="glyphicon glyphicon-log-out" > Logout</span>
+                </p>
+            </a>
+        </li>
+
     </ul>
 </script>

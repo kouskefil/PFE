@@ -62,11 +62,7 @@ define(['configs/app', '../services/generatorFactory'], function (app) {
                 }] ,
                 size: size
             });
-            // modalInstance.result.then(function (selectedItem){
-            //     $scope.selected = selectedItem;
-            // }, function () {
-            //     $log.info('Modal dismissed at: ' + new Date());
-            // });
+
         };
 
         $scope.isCollapsed = false;

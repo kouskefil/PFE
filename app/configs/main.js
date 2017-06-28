@@ -11,6 +11,7 @@ require.config({
     paths : {
 
         "angular" : "assets/angular/angular.min",
+        "toaster" : "assets/angular/toaster",
         "angular-animate" : "assets/angular/angular-animate",
         "ui-router" : "assets/angular/angular-ui-router.min",
         "ui-bootstrap" : "assets/bootstrap/js/ui-bootstrap.min",
@@ -25,8 +26,13 @@ require.config({
         "angular": {
             exports: "angular"
         },
+        "toaster": {
+            deps: ["angular"],
+            exports: "toaster"
+        },
         "angular-animate": {
-            exports: "angular"
+            deps: ["angular"],
+            exports : "angular-animate"
         },
         "ui-router": {
             deps: ["angular"],
@@ -58,7 +64,9 @@ require([
     "ui-bootstrap",
     "jquery",
     "infinit-scroll",
-    "slim-scroll"
+    "slim-scroll",
+    "angular-animate",
+    "toaster"
 ], function(app) {
      app.init();
 

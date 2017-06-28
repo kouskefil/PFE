@@ -11,7 +11,7 @@ define(['configs/app'], function (app){
 			var downloadLink = document.createElement("a");
 			downloadLink.download = fileNameToSaveAs;
 			downloadLink.innerHTML = "Download File";
-			if (window.webkitURL != null)
+			if (window.webkitURL !== null)
 			{
 				// Chrome allows the link to be clicked
 				// without actually adding it to the DOM.

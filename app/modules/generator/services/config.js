@@ -96,9 +96,8 @@ define(['configs/app',
                             name: "save",
                             icon: "glyphicon glyphicon-floppy-save",
                             action:function () {
-                                //console.log(containerFactory.module);
-                                fileFactory.saveAsJson(angular.toJson(globalVarFactory.getModule()),'models');
-                                // $state.go('root');
+                                var module = globalVarFactory.getModule();
+                                fileFactory.saveAsJson(angular.toJson(module),module.name);
                             }
                         }
                     ]);
@@ -163,15 +162,20 @@ define(['configs/app',
                                 name: "save",
                                 icon: "glyphicon glyphicon-floppy-disk",
                                 action:function () {
-                                    //console.log(containerFactory.module);
-                                    fileFactory.saveAsJson(angular.toJson(globalVarFactory.getModule()),'models');
-                                    // $state.go('root');
+                                    var module = globalVarFactory.getModule();
+                                    fileFactory.saveAsJson(angular.toJson(module),module.name);
                                 }
                             }
                         ]);
                 },
                 controller: 'view'
             })
+        .state('root.generator.tasks',
+            {
+                url: '/module/:taskname',
+                templateUrl: 'app/modules/generator/views/tasks.html'
+            })
+
         .state('root.generator.views.properties',
             {
                 url: '^/:label/:type/:num/',
@@ -203,9 +207,8 @@ define(['configs/app',
                             name: "save",
                             icon: "glyphicon glyphicon-floppy-disk",
                             action:function () {
-                                //console.log(containerFactory.module);
-                                fileFactory.saveAsJson(angular.toJson(globalVarFactory.getModule()),'models');
-                                // $state.go('root');
+                                var module = globalVarFactory.getModule();
+                                fileFactory.saveAsJson(angular.toJson(module),module.name);
                             }
                         }
                     ]);
@@ -238,7 +241,8 @@ define(['configs/app',
                             name: "save",
                             icon: "glyphicon glyphicon-floppy-disk",
                             action:function () {
-                                fileFactory.saveAsJson(angular.toJson(globalVarFactory.getModule()),'models');
+                                var module = globalVarFactory.getModule();
+                                fileFactory.saveAsJson(angular.toJson(module),module.name);
                             }
                         }
                     ]);
@@ -302,9 +306,8 @@ define(['configs/app',
                             name: "save",
                             icon: "glyphicon glyphicon-floppy-disk",
                             action:function () {
-                                //console.log(containerFactory.module);
-                                fileFactory.saveAsJson(angular.toJson(globalVarFactory.getModule()),'models');
-                                // $state.go('root');
+                                var module = globalVarFactory.getModule();
+                                fileFactory.saveAsJson(angular.toJson(module),module.name);
                             }
                         }
                     ]);

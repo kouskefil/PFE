@@ -8,7 +8,7 @@ define(["angular",
     // "ui-bootstrap"
     /*******************************/
 ], function(angular){
-    var app = angular.module("myapp", ['ui.router','ngSlimScroll','infinite-scroll', 'ui.bootstrap','layoutModule', 'layoutCtrlModule']);
+    var app = angular.module("myapp", ['ui.router','ngSlimScroll','infinite-scroll', 'ui.bootstrap','layoutModule', 'layoutCtrlModule','toaster']);
     app.init = function() {
         angular.bootstrap(document, ["myapp"]);
     };

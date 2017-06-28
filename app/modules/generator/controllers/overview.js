@@ -3,7 +3,7 @@
  */
 define(['configs/app'], function (app) {
     'use strict';
-    app.register.controller('overview', ['$scope', 'layoutFactory','globalVarFactory', function ($scope, layoutFactory,globalVarFactory) {
+    app.register.controller('overview', ['$scope', 'layoutFactory','globalVarFactory','$sce','toaster','$window', function ($scope, layoutFactory,globalVarFactory, $sce, toaster, $window) {
 
             $scope.treeActions = [
                 {
@@ -102,12 +102,37 @@ define(['configs/app'], function (app) {
                     ]
                 }
             ];
-            //    dashboard layout controller
-            // var config = layoutFactory.getDashboardConf();
-            // console.log(config);
-            // $scope.contentClass = config[0].contentClass;
-            // $scope.moduleBlocClass = config[1].moduleBlocClass;
+            $scope.branches= [
+                {
+                    "name": "sit"
+                },
+                {
+                    "name": "velit"
+                },
+                {
+                    "name": "culpa"
+                },
+                {
+                    "name": "deserunt"
+                },
+                {
+                    "name": "nisi"
+                }
+            ];
+            $scope.dynamicPopover = {
+                content: 'Hello, World!',
+                templateUrl: 'branch.html',
+                title: 'Title'
+            };
 
-        
+
+        $scope.pop = function(){
+            toaster.pop('warning', "title", "myTemplate.html", 100000, 'template');
+        };
+
+        $scope.clear = function(){
+            toaster.clear();
+        };
+                
     }])
 });

@@ -36,17 +36,7 @@ define(['configs/app'], function (app){
                        name:'Student',
                        date:'2017-12-02',
                        desc:'fefnifjlhfiuhiuhfie'
-                   },
-                    {
-                       name:'Student',
-                       date:'2017-12-02',
-                       desc:'fefnifjlhfiuhiuhfie'
-                   },
-                    {
-                       name:'Student',
-                       date:'2017-12-02',
-                       desc:'fefnifjlhfiuhiuhfie'
-                   },
+                   }
                    
                ];
            }
