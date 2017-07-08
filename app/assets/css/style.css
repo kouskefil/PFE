@@ -624,7 +624,7 @@ label {
     margin-bottom: 15px;
 }
 .desc{
-    height: 30px;
+    min-height: 30px;
     margin-top: 8px;
     border-bottom: 1px solid;
 }

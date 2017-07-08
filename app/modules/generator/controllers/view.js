@@ -10,14 +10,17 @@ define(['configs/app'], function (app){
                 $scope.components = data;
 
             });
+            console.log(CodeMirror);
+		    // CodeMirror().setOption('mode', 'javascript');
             // The ui-codemirror option
             $scope.cmOption =
                 {
                     lineNumbers: true,
                     indentWithTabs: true,
                     onLoad : function(_cm){
-                        _cm.setOption("mode", 'javascript');
-
+                        _cm.setOption("mode", 'sql');
+                        console.log('codemirror onload');
+                        console.log(_cm);
                     }
                 };
 

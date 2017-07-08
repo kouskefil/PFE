@@ -100,13 +100,13 @@ define(['configs/app'], function (app) {
             }
             else  $scope.resources.splice($scope.resources.indexOf(rsc), 1);
         };
-        $scope.addMethod = function (method) {
-            console.log(method);
-            globalVarFactory.addMethod(angular.copy(method));
-            $scope.method =  angular.copy(method);
-            method.name = '';
-            method.id = '';
-            method.role = '';
+        $scope.addMethod = function () {
+            console.log($scope.method);
+            globalVarFactory.addMethod($scope.method);
+            // $scope.method =  angular.copy(method);
+            // method.name = '';
+            // method.id = '';
+            // method.role = '';
             // $scope.currentRsc.method = {};
         };
         $scope.addResponse = function(method){

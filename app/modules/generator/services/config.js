@@ -8,7 +8,6 @@ define(['configs/app',
     '../controllers/generator',
     '../controllers/moduleCtrl',
     '../controllers/operations',
-    '../controllers/menus',
     '../controllers/resources',
     '../controllers/database',
     '../controllers/workflow',
@@ -19,14 +18,11 @@ define(['configs/app',
     'modules/generator/services/global_var',
     'modules/generator/services/operationsFactory',
     'modules/generator/services/resourcesFactory' ,
-    'modules/generator/services/menusFactory',
     'modules/generator/services/actionsFactory',
     'modules/generator/services/fileFactory'
 ], function(app){
     app.register.stateProvider
-
-        .state('root.generator',
-            {
+        .state('root.generator',{
                 url:'',
                 template:'<div ui-view></div>',
                 onEnter:function (layoutFactory) {
@@ -35,8 +31,7 @@ define(['configs/app',
                 abstract:true
 
             })
-        .state('root.generator.init',
-            {
+        .state('root.generator.init',{
                 url:'/generator',
                 templateUrl:'app/modules/generator/views/generator.html',
                 onEnter: function (layoutFactory,globalVarFactory,resourcesFactory, fileFactory,operationsFactory) {
@@ -72,57 +67,23 @@ define(['configs/app',
                             icon:'glyphicon glyphicon-tasks'
                         }
                     ]);
-                    layoutFactory.setLocation('Creating Modules');
-                    layoutFactory.setOperations( [
-                        {
-                            name:"new",
-                            icon:"glyphicon glyphicon-edit",
-                            action:function () {
-                            }
-                        },
-                        {
-                            name: "upload",
-                            icon: "glyphicon glyphicon-upload",
-                            action:function () {
-                                var reader = new FileReader();
-                                reader.readAsText($scope.fileModel);
-                                reader.addEventListener('load', function() {
-                                    var m = JSON.parse(reader.result);
-                                    globalVarFactory.setModule(m) ;
-                                });
-                            }
-                        },
-                        {
-                            name: "save",
-                            icon: "glyphicon glyphicon-floppy-save",
-                            action:function () {
-                                var module = globalVarFactory.getModule();
-                                fileFactory.saveAsJson(angular.toJson(module),module.name);
-                            }
-                        }
-                    ]);
+                    layoutFactory.setLocation('Overview');
                 },
-
                 controller:'generatorCtrl'
             })
-        .state('root.generator.new',
-            {
+        .state('root.generator.new',{
                 url: '/generator',
                 templateUrl: 'app/modules/generator/views/module.html',
                 onEnter: function () {
-
                 },
                 controller: 'moduleCtrl'
-
             })
-        .state('root.generator.update',
-            {
+        .state('root.generator.update',{
                 url:'/loadmodule',
                 templateUrl:'app/partials/moduleLoad.html',
                 controller:'moduleLoadCtrl'
             })
-        .state('root.generator.overview',
-            {
+        .state('root.generator.overview',{
                 url: '/module/:name',
                 templateUrl: 'app/modules/generator/views/overview.html',
                 onEnter:function (layoutFactory) {
@@ -130,8 +91,7 @@ define(['configs/app',
                 },
                 controller:'overview'
             })
-        .state('root.generator.views',
-            {
+        .state('root.generator.views',{
                 url: "/generator/views",
                 templateUrl: "app/modules/generator/views/views.html",
                 resolve: {
@@ -170,14 +130,11 @@ define(['configs/app',
                 },
                 controller: 'view'
             })
-        .state('root.generator.tasks',
-            {
+        .state('root.generator.tasks',{
                 url: '/module/:taskname',
                 templateUrl: 'app/modules/generator/views/tasks.html'
             })
-
-        .state('root.generator.views.properties',
-            {
+        .state('root.generator.views.properties', {
                 url: '^/:label/:type/:num/',
                 templateUrl: function ($stateParams){
                     return 'app/modules/generator/views/partials/' + $stateParams.type +'.html';
@@ -287,32 +244,6 @@ define(['configs/app',
             },
             controller:'database'
         })
-        .state('root.generator.menus',{
-            url:'/generator/menus',
-            templateUrl:'app/modules/generator/views/menus.html',
-            onEnter:function (globalVarFactory,layoutFactory,resourcesFactory, fileFactory,operationsFactory,mnsFactory) {
-
-                layoutFactory.setLocation('Menus');
-                layoutFactory.setOperations(
-                    [
-                        {
-                            name:"new",
-                            icon:"glyphicon glyphicon-edit",
-                            action:function () {
-                                mnsFactory.menuAdd();
-                            }
-                        },
-                        {
-                            name: "save",
-                            icon: "glyphicon glyphicon-floppy-disk",
-                            action:function () {
-                                var module = globalVarFactory.getModule();
-                                fileFactory.saveAsJson(angular.toJson(module),module.name);
-                            }
-                        }
-                    ]);
-            },
-            controller:'menus'
-        })
+       
 
 });

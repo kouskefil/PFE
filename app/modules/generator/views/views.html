@@ -9,7 +9,7 @@
                             <span  style="margin-bottom:15px"  class="fa fa-window-restore" id="span138" ></span>
                             <span  id="span143" >components</span>
                         </div> <!-- treeHeading ends-->
-                        <div  class="col-md-5"class="form-group">
+                        <div  class="col-md-5 form-group" >
                             <input class=" form-control"  placeholder="search" name="input174" id="input174" type="text" ng-model="wantedcomp"/>
                         </div> <!-- div id:input174 -->
                         <div id="propertiesHeading"  style="float:right"  class=" col-md-4 "> <!-- propertiesHeading begins-->
@@ -50,7 +50,7 @@
                     <div class="form-group" >
                         <label for="textarea18">content</label>
                         <div>
-                            <textarea id="textarea18" class="form-control" name="textarea18" ui-codemirror="cmOption" ng-model="function.content"></textarea>
+                            <textarea id="textarea18"  name="textarea18" ui-codemirror="cmOption" ng-model="function.content"></textarea>
                         </div>
                     </div>
                     <div id="action"  class=""> <!-- action begins-->
@@ -69,7 +69,7 @@
                 <div id="op_content"  style="padding:20px;"  class=""> <!-- op_content begins-->
                     <div id="title_copy1"  class=""> <!-- title_copy1 begins-->
                         <span  style="margin-bottom:15px"  class="fa fa-cogs" id="span146_copy1" ></span>
-                        <span  id="span147_copy1" >state operations</span>
+                        <span  id="span147_copy" >state operations</span>
                     </div> <!-- title_copy1 ends-->
                     <div id="group117"  style=""  class=" col-md-12 "> <!-- group117 begins-->
                         <div id="data"  class=""> <!-- data begins-->
@@ -83,15 +83,15 @@
                             </div> <!-- div id:input24 -->
                             <div class="form-group" >
                                 <label for="textarea27_copy2">dependances</label>
-                                <div>
-                                    <textarea id="textarea27_copy2" class="form-control" name="textarea27_copy2" ui-codemirror="cmOption" ng-model="operation.dependances"></textarea>
-                                </div>
+                                <!--<div>-->
+                                    <!--<textarea id="textarea27_copy2" class="form-control" name="textarea27_copy2" ui-codemirror="cmOption" ng-model="operation.dependances"></textarea>-->
+                                <!--</div>-->
                             </div>
                             <div class="form-group" >
                                 <label for="textarea27">Action</label>
-                                <div>
-                                    <textarea id="textarea27" class="form-control" name="textarea27" ui-codemirror="cmOption" ng-model="operation.action"></textarea>
-                                </div>
+                                <!--<div>-->
+                                    <!--<textarea id="textarea27" class="form-control" name="textarea27" ui-codemirror="cmOption" ng-model="operation.action"></textarea>-->
+                                <!--</div>-->
                             </div>
                         </div> <!-- data ends-->
                         <div id="actions"  class=""> <!-- actions begins-->
@@ -140,7 +140,7 @@
                             <textarea id="textarea124" class="form-control" name="textarea124" ng-model="variable.value"></textarea>
                         </div>
                     </div>
-                    <div id="action"  class=""> <!-- action begins-->
+                    <div id="_action"  class=""> <!-- action begins-->
                         <button  ng-click="addv">Add</button>
                         <button  class="floatingPanel" ng-click="delv">delete</button>
                         <button  class="floatingPanel" ng-click="clear">Clear</button>
@@ -182,14 +182,14 @@
                                 <input id="radio111" type="radio" value="static" ng-model="currentComponent.templatetype"> static
                             </label>
                             <label class=" radio-inline">
-                                <input id="radio111" type="radio" value="function" ng-model="currentComponent.templatetype"> function
+                                <input id="radio11" type="radio" value="function" ng-model="currentComponent.templatetype"> function
                             </label>
                         </div>
                     </div> <!-- div id:radio111 -->
                     <div class="form-group" >
                         <label for="textarea110">templateUrl</label>
                         <div>
-                            <textarea id="textarea110" class="form-control" name="textarea110" ui-codemirror="cmOption" ng-model="currentComponent.templateUrl"></textarea>
+                            <!--<textarea id="textarea110" class="form-control" name="textarea110" ui-codemirror="cmOption" ng-model="currentComponent.templateUrl"></textarea>-->
                         </div>
                     </div>
                     <div class="form-group" >

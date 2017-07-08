@@ -3,7 +3,7 @@
  */
 define(['configs/app'], function (app) {
     'use strict';
-    app.register.controller('overview', ['$scope', 'layoutFactory','globalVarFactory','$sce','toaster','$window', function ($scope, layoutFactory,globalVarFactory, $sce, toaster, $window) {
+    app.register.controller('overview', ['$scope', 'layoutFactory','globalVarFactory','$sce','toaster','$window','$uibModal', function ($scope, layoutFactory,globalVarFactory, $sce, toaster, $window,$uibModal) {
 
             $scope.treeActions = [
                 {
@@ -119,6 +119,37 @@ define(['configs/app'], function (app) {
                     "name": "nisi"
                 }
             ];
+            $scope.contributors = [
+                {
+                    "_id": "595419a4a094aeb8af91d95b",
+                    "name": "Guadalupe Jensen"
+                },
+                {
+                    "_id": "595419a49cee1777ed2005ca",
+                    "name": "Julia Sexton"
+                },
+                {
+                    "_id": "595419a48c762739d54090bc",
+                    "name": "Whitfield Ward"
+                },
+                {
+                    "_id": "595419a4c289a398b17fb4cc",
+                    "name": "Aurora England"
+                },
+                {
+                    "_id": "595419a4a8083998287470ab",
+                    "name": "Clare Gilmore"
+                },
+                {
+                    "_id": "595419a4b684de6a914a215d",
+                    "name": "Phoebe Cannon"
+                },
+                {
+                    "_id": "595419a48669a185752897dd",
+                    "name": "Mcknight Ellison"
+                }
+            ];
+            $scope.date = new Date();
             $scope.dynamicPopover = {
                 content: 'Hello, World!',
                 templateUrl: 'branch.html',
@@ -127,12 +158,36 @@ define(['configs/app'], function (app) {
 
 
         $scope.pop = function(){
-            toaster.pop('warning', "title", "myTemplate.html", 100000, 'template');
+            // toaster.pop('error', "title", "myTemplate.html", 5000, 'template');
+            toaster.pop('wait', "title", "myTemplate.html");
         };
 
         $scope.clear = function(){
             toaster.clear();
         };
+
+        $scope.openModal = function () {
+            var modalInstance = $uibModal.open(
+                {
+                    templateUrl: 'upload.html',
+                    controller: ['$uibModalInstance','$scope','$state',function ($uibModalInstance, $scope, $state) {
+                        $scope.filetype = [
+                            {type:"service"},
+                            {type:"controller"},
+                            {type:"view"},
+                            {type:"operation"},
+                            {type:"workflow"},
+                            {type:"database"}
+                        ];
+                        $scope.cancel = function () {
+                            $uibModalInstance.dismiss('cancel');
+                        };
+                    }] ,
+                    size: 'md'
+                });
+
+        };
+
                 
     }])
 });

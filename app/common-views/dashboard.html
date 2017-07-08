@@ -6,12 +6,17 @@
         <div class="notificone col-md-1">
             <span class="glyphicon glyphicon-tasks"></span>
         </div>
-        <div class="col-md-4 taskname">
+        <div class="col-md-3 taskname">
             {{item.name}}
+        </div>                      
+        <div class="col-md-2" >
+            {{item.date}}
+            <span style="">20 Jan 2017</  span>
         </div>
-        <div class="col-md-7 taskdesc">
+        <div class="col-md-6 taskdesc">
             {{item.desc}}
         </div>
+        <span class="badge" style="float:right">33</span>
     </div>
     <span ng-show="_tasks.length==0" class="glyphicon glyphicon-tasks notask"> No pending tasks</span>
 </div> <!-- content ends-->

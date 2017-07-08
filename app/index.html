@@ -73,7 +73,7 @@
         <div class=" operation-bar col-md-10 col-md-offset-1" style=" margin-top: 20px;">
             <span >{{location[0]}}</span>
             <ul >
-                <li style="padding: 3px;" ng-repeat="item in actions"><span class="{{item.icon}}" ng-click="doAction(item)" ng-show="isauthorized(item.role)"></span></li>
+                <li style="padding: 3px;" ng-repeat="item in actions" uib-tooltip="{{item.name}}"  tooltip-placement="bottom"><span class="{{item.icon}}" ng-click="doAction(item)" ng-show="isauthorized(item.role)"></span></li>
             </ul>
         </div>
         <div ui-view></div>

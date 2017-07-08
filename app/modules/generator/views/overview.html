@@ -2,27 +2,50 @@
     i{
         margin-right: 10px;
     }
+    .title{
+        color: #000;
+    }
 </style>
 <div  id="content" class="col-md-10 col-md-offset-1" style="margin-bottom: 150px;">  <!--content-->
     <div class="col-md-12 floatingPanel row" style=" padding-right: 0; color: lightslategray;">
         <div class="col-md-8">
             <div class="header-actions" style="height: 50px; margin-top: 5px">
+                <!--<span><h1>{{date | date:'dd-MM-yyyy:hh-mm-ss'}}</h1></span>-->
                <button popover-placement="bottom" uib-popover-template="dynamicPopover.templateUrl" popover-title="Select a branch" class="button default">Branch<i class="glyphicon glyphicon-chevron-down" style="margin-left: 8px"></i> {{branch}}</button>
                <button class="button default" data-ng-click="pop()">New pull request</button>
-               <button class="button default" data-ng-click="upload()" style="float: right">Upload files</button>
+               <button class="button default" data-ng-click="openModal()" style="float: right">Upload files</button>
             </div>
             <div>
                 <toaster-container toaster-options="{'close-button':false, 'time-out':{ 'toast-warning': 2000, 'toast-error': 0 } }"></toaster-container>
             </div>            
             <div class="modfiles">
                 <span class="glyphicon glyphicon-tasks"> Database</span>
+                <ul class="act">
+                    <li>
+                        <span  class="glyphicon glyphicon-plus"></span>
+                    </li>
+                </ul>
+                <div class="">
+                    <span class="database">{{modfile.database}}</span>
+                </div>
             </div>
             <div class="modfiles">
                 <span class="glyphicon glyphicon-retweet"> Workflow</span>
+                <ul class="act">
+                    <li>
+                        <span  class="glyphicon glyphicon-plus"></span>
+                    </li>
+                </ul>
+                <div class="">
+                    <span class="workflow">{{modfile.workflow}}</span>
+                </div>
             </div>
             <div class="modfiles">
                 <span class="glyphicon glyphicon-modal-window"> Views</span>
                 <ul class="act">
+                    <li>
+                        <span  class="glyphicon glyphicon-plus"></span>
+                    </li>
                     <li>
                         <span  class="glyphicon glyphicon-check"></span>
                     </li>
@@ -42,6 +65,18 @@
                         </div>
                     </li>
                 </ul>
+                <div class="">
+                    <div class="null"
+                         data-angular-treeview="true"
+                         data-tree-id="views"
+                         data-tree-model="modfile.views"
+                         data-node-id="path"
+                         data-node-click=""
+                         data-node-children=""
+                         data-tree-actions="treeActions"
+                    >
+                    </div>
+                </div>
             </div>
             <div class="modfiles">
                 <span class="glyphicon glyphicon-cog"> Operations</span>
@@ -65,32 +100,56 @@
                         </div>
                     </li>
                 </ul>
+                <div class="">
+                    <div class="null"
+                         data-angular-treeview="true"
+                         data-tree-id="views"
+                         data-tree-model="modfile.operations"
+                         data-node-id="path"
+                         data-node-click=""
+                         data-node-children=""
+                         data-tree-actions="treeActions"
+                    >
+                    </div>
+                </div>
             </div>
             <div class="modfiles">
-                    <span class="glyphicon glyphicon-file"> README</span>
+                <ul class="act">
+                    <li>
+                        <span  class="glyphicon glyphicon-plus"></span>
+                    </li>
+                </ul>
+                <span class="glyphicon glyphicon-file"> README</span>
             </div>
         </div>
         <div class="col-md-4" style=" background-color: #E9EBEE; height: 100%">
             <div class="desc">
-                <span class="glyphicon glyphicon-th"> Module</span>
+                <!--<span class="glyphicon glyphicon-th"> Module</span>-->
+                <span style="text-transform: uppercase"> stockmanager</span>
                 <span class="fa fa-code-fork" style="float: right; font-size: 20px; font-weight: 900;color: black;"> </span>
             </div>
             <div class="desc">
-                <span class="glyphicon glyphicon-user"> owner</span>
+                <span class="glyphicon glyphicon-user title"> OGOULOLA Marlin</span>
             </div>
             <div class="desc"  >
-                <span class=""><i class="fa fa-users"></i> contributors</span>
-                <span class="glyphicon glyphicon-chevron-down" style="float: right"> </span>
+                <span class="title"><i class="fa fa-users"></i> contributors</span>
+                <span class="glyphicon glyphicon-chevron-down" style="float: right" popover-placement="bottom" uib-popover-template="dynamicPopover.templateUrl" popover-title="Select a branch"> </span>
+                <ul class="">
+                    <li ng-repeat="item in contributors">{{item.name}}</li>
+                </ul>
             </div>
             <div class="desc"  >
-                <span class="glyphicon glyphicon-link"> linked modules</span>
+                <span class="title"><i class="glyphicon glyphicon-link "></i> linked modules</span>
+                <ul class="">
+                    <li ng-repeat="item in contributors">{{item.name}}</li>
+                </ul>
             </div>
              <div class="desc"  >
-                <span class=""><i class="fa fa-paper-plane-o"></i>  pull requests</span>
+                <span class="title"><i class="fa fa-paper-plane-o"></i>  pull requests</span>
                 <span class="badge" style="float: right"> 25</span>
             </div>
              <div class="desc"  >
-                <span class=""><i class="fa fa-exclamation-triangle"></i> issues</span>
+                <span class="title"><i class="fa fa-exclamation-triangle"></i> issues</span>
                 <span class="badge" style="float: right"> 3</span>
             </div>
 
@@ -109,4 +168,30 @@
             </li>
         </ul>
     </div>
+</script>
+<script type="text/ng-template" id="upload.html" >
+    <div class="modal-module-editing" style="top: 200px !important; ">
+        <div class="modal-header">
+            <h5 class="modal-title" id="modal-title1">
+                <i class="glyphicon glyphicon-th"></i>
+                upload module
+            </h5>
+        </div>
+        <div class="modal-body" id="modal-body1">
+            <div class="form-group">
+                <input type="file" class="form-control" value="Browse"  file-model="fileModel">
+            </div>
+            <div  class="form-group">
+            <label for="select188" class="form-control-label">type</label>
+            <select name="select188" id="select188" ng-model="type" class="form-control" >
+                <option ng-repeat='item in filetype' value="{{item}}"> {{item.type}}</option>
+            </select>
+        </div>
+        </div>
+
+        <div class="modal-footer">
+            <button class="floatingPanel" type="button" ng-click="editModule('upload')">Create</button>
+        </div>
+    </div>
+
 </script>

@@ -5,9 +5,10 @@ require.config({
      baseUrl: "app",
     packages: [{
         name: "codemirror",
-        location: "../assets/codemirror/lib/codemirror",
+        location: "assets/codemirror",
         main: "lib/codemirror"
-    }],
+    }
+	],
     paths : {
 
         "angular" : "assets/angular/angular.min",
@@ -15,12 +16,11 @@ require.config({
         "angular-animate" : "assets/angular/angular-animate",
         "ui-router" : "assets/angular/angular-ui-router.min",
         "ui-bootstrap" : "assets/bootstrap/js/ui-bootstrap.min",
-        "treeview": "js/directives/angular.treeview.js",
-        "infinit-scroll": "js/directives/ng-infinite-scroll.min",
-        "slim-scroll": "js/directives/ng-slim-scroll",
-        "jquery":"assets/jquery/jquery.min",
-        // "sidebar":"assets/js/sidebar",
-        // "bootstrap": "assets/bootstrap/js/bootstrap.min",
+        "treeview": "js/directives/angular.treeview.js" ,
+        // "codemirror":"assets/codemirror/lib/codemirror",
+		"uicodemirror":"assets/codemirror/lib/ui-codemirror.min",
+		// 'lib/codemirror': 'assets/codemirror/lib/codemirror',
+		'mode/javascript/javascript': 'assets/codemirror/mode/javascript/javascript'
     },
     shim : {
         "angular": {
@@ -42,32 +42,39 @@ require.config({
             deps: ["angular"],
             exports:"ui-bootstrap"
         },
-        "jquery": {
-            exports:"jquery"
+        // "codemirror":{
+			// exports:"CodeMirror"
+        // },
+        "mode_javascript":{
+            deps:["codemirror"] ,
+			exports:"mode_javascript"
         },
-        "infinit-scroll": {
-             deps: ["angular"],
-            exports:"infinit-scroll"
+        "uicodemirror": {
+            deps:["angular","codemirror"],
+            // exports:"uicodemirror",
+			init: function(angular, codemirror) {
+				window.CodeMirror = codemirror;
+			}
         },
-        "slim-scroll": {
-             deps: ["angular"],
-            exports:"slim-scroll"
-        }
+	
     },
     waitSecond: 0
 });
 
 
 require([
-    "configs/app",
+	"configs/app",
     "configs/route",
     "ui-bootstrap",
-    "jquery",
-    "infinit-scroll",
-    "slim-scroll",
     "angular-animate",
-    "toaster"
+    "toaster" ,
+	// "codemirror",
+	"uicodemirror",
+	// "assets/codemirror/mode/javascript/javascript",
+	
+	// "codemirror/lib/codemirror", "codemirror/mode/javascript/javascript"
 ], function(app) {
-     app.init();
+	 app.init();
 
+	
 });

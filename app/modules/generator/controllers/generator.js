@@ -12,7 +12,7 @@ define(['configs/app', '../services/generatorFactory'], function (app) {
                     name:"new",
                     icon:"glyphicon glyphicon-edit",
                     action:function () {
-                        $scope.openModal(100, 'new.html', 'create')
+                        $scope.openModal('sm', 'new.html', 'create')
                     }
                 },
                 {
