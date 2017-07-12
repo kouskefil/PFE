@@ -18,9 +18,7 @@ define(['configs/app'], function (app){
                     lineNumbers: true,
                     indentWithTabs: true,
                     onLoad : function(_cm){
-                        _cm.setOption("mode", 'sql');
-                        console.log('codemirror onload');
-                        console.log(_cm);
+                        _cm.setOption("mode", "javascript");
                     }
                 };
 

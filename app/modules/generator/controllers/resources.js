@@ -1,9 +1,9 @@
 /**
  * Created by kefil on 18/01/17.
  */
-define(['configs/app'], function (app) {
+define(['configs/app', 'assets/js/lodash'], function (app) {
     'use strict';
-    app.register.controller('resources', ['$scope','globalVarFactory','$log', function ($scope, globalVarFactory,$log) {
+    app.register.controller('resources', ['$scope','globalVarFactory','$log',function ($scope, globalVarFactory,$log) {
         //variables to be adding in the model
         /**methodAdd dropdown control*/
         $scope.selected = '';
@@ -49,6 +49,11 @@ define(['configs/app'], function (app) {
                 "rvalue":"appjs"
             }
         ];
+        $scope.styles = [
+            "template",
+            "query",
+            "plain"
+        ];
         $scope.resources = globalVarFactory.getResources();
         $scope.RscParent = globalVarFactory.generateParent();
         $scope.currentRsc = globalVarFactory.rscSkeleton({});
@@ -62,6 +67,7 @@ define(['configs/app'], function (app) {
             globalVarFactory.setCurrentRsc(rsc);
         };
         $scope.cclick = function (selectedNode) {
+            console.log(selectedNode);
             if(!selectedNode.methods)
                 selectedNode.methods = [];
             // if(!selectedNode.requests)
@@ -71,15 +77,13 @@ define(['configs/app'], function (app) {
             $scope.methods = $scope.currentRsc.methods;
             // $scope.requests = $scope.currentRsc.requests;
         };
-        $scope.treeActions =
-            [
+        $scope.treeActions = [
                 {
                     name:"delete",
                     icon:"glyphicon glyphicon-trash",
                     title:'delete resource'
                 }
             ];
-       
         var gp = function (collection, path, resource) {
             for(var i = 0; i < collection.length; i++){
                 if (collection[i].path === path) {
@@ -100,14 +104,11 @@ define(['configs/app'], function (app) {
             }
             else  $scope.resources.splice($scope.resources.indexOf(rsc), 1);
         };
+	    $scope.updatersc = globalVarFactory.getupdatersc();
         $scope.addMethod = function () {
             console.log($scope.method);
             globalVarFactory.addMethod($scope.method);
-            // $scope.method =  angular.copy(method);
-            // method.name = '';
-            // method.id = '';
-            // method.role = '';
-            // $scope.currentRsc.method = {};
+            $scope.method = {};
         };
         $scope.addResponse = function(method){
             var i, found = -1;
@@ -166,7 +167,7 @@ define(['configs/app'], function (app) {
             $scope.selected = method.id;
             $scope.method = method;
             $scope.trigger = $scope.method;
-            $scope.requests = globalVarFactory.gLookupByAttribute(globalVarFactory.getOperations(),'name', method.id).inputs;
+            $scope.requests = method.request.params;
             $scope.responses.length = 0;
             if(method.responses) {
                 console.log(method.responses);

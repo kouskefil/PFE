@@ -171,6 +171,8 @@ define(['configs/app'], function (app) {
                 {
                     templateUrl: 'upload.html',
                     controller: ['$uibModalInstance','$scope','$state',function ($uibModalInstance, $scope, $state) {
+                    
+						$scope.text = "toto";
                         $scope.filetype = [
                             {type:"service"},
                             {type:"controller"},
@@ -179,6 +181,34 @@ define(['configs/app'], function (app) {
                             {type:"workflow"},
                             {type:"database"}
                         ];
+	
+						$scope.mode =
+							{
+								lineNumbers: true,
+								indentWithTabs: true,
+								onLoad : function(_cm){
+									_cm.setOption("mode", "javascript");
+									
+								}
+							};
+						
+						$scope.fic = function(){
+							var reader = new FileReader();
+	                         console.log('reazder');
+							reader.onload = function(e) {
+								$scope.$apply(function () {
+									console.log($scope.text);
+									$scope.text = reader.result;
+									console.log('data');
+									console.log($scope.text);
+								});
+								// console.log($scope.text);
+								// $scope.text = reader.result;
+								// console.log('data');
+								// console.log($scope.text);
+							};
+							reader.readAsText($scope.fileModel, 'utf-8');
+                        };
                         $scope.cancel = function () {
                             $uibModalInstance.dismiss('cancel');
                         };

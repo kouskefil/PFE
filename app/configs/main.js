@@ -3,12 +3,12 @@
  */
 require.config({
      baseUrl: "app",
-    packages: [{
-        name: "codemirror",
-        location: "assets/codemirror",
-        main: "lib/codemirror"
-    }
-	],
+	// packages: [{
+     //    name: "jquery",
+     //    location: "assets/codemirror",
+     //    main: "lib/codemirror"
+	// }
+	// ],
     paths : {
 
         "angular" : "assets/angular/angular.min",
@@ -17,13 +17,18 @@ require.config({
         "ui-router" : "assets/angular/angular-ui-router.min",
         "ui-bootstrap" : "assets/bootstrap/js/ui-bootstrap.min",
         "treeview": "js/directives/angular.treeview.js" ,
-        // "codemirror":"assets/codemirror/lib/codemirror",
+        "codemirror":"assets/codemirror/lib/codemirror",
+        "jquery":"assets/jquery/jquery.min",
 		"uicodemirror":"assets/codemirror/lib/ui-codemirror.min",
-		// 'lib/codemirror': 'assets/codemirror/lib/codemirror',
-		'mode/javascript/javascript': 'assets/codemirror/mode/javascript/javascript'
+		'lib/codemirror': 'assets/codemirror/lib/codemirror',
+		'mode/javascript/javascript': 'assets/codemirror/mode/javascript/javascript',
+		'mode/css/css': 'assets/codemirror/mode/css/css',
+		'mode/sql/sql': 'assets/codemirror/mode/sql/sql'
+		// 'mode/html/html': 'assets/codemirror/mode/html/html'
     },
     shim : {
         "angular": {
+            deps : ["jquery"],
             exports: "angular"
         },
         "toaster": {
@@ -42,20 +47,29 @@ require.config({
             deps: ["angular"],
             exports:"ui-bootstrap"
         },
-        // "codemirror":{
-			// exports:"CodeMirror"
+        // "lodash":{
+			// // exports:"CodeMirror"
         // },
-        "mode_javascript":{
-            deps:["codemirror"] ,
-			exports:"mode_javascript"
+        "mode/javascript/javascript":{
+            deps:["codemirror"] 
         },
+         "mode/css/css":{
+            deps:["codemirror"]
+        },
+         "mode/html/html":{
+            deps:["codemirror"]
+        },
+        "mode/sql/sql":{
+            deps:["codemirror"]
+        },
+        
         "uicodemirror": {
-            deps:["angular","codemirror"],
+            deps:["angular","codemirror", "mode/javascript/javascript","mode/css/css", "mode/sql/sql"],
             // exports:"uicodemirror",
 			init: function(angular, codemirror) {
 				window.CodeMirror = codemirror;
 			}
-        },
+        }
 	
     },
     waitSecond: 0
@@ -69,7 +83,7 @@ require([
     "angular-animate",
     "toaster" ,
 	// "codemirror",
-	"uicodemirror",
+	"uicodemirror"
 	// "assets/codemirror/mode/javascript/javascript",
 	
 	// "codemirror/lib/codemirror", "codemirror/mode/javascript/javascript"

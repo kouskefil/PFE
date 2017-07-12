@@ -179,18 +179,21 @@
         </div>
         <div class="modal-body" id="modal-body1">
             <div class="form-group">
-                <input type="file" class="form-control" value="Browse"  file-model="fileModel">
+                <input type="file" class="form-control" value="Browse"  file-model="fileModel" >
             </div>
             <div  class="form-group">
             <label for="select188" class="form-control-label">type</label>
             <select name="select188" id="select188" ng-model="type" class="form-control" >
                 <option ng-repeat='item in filetype' value="{{item}}"> {{item.type}}</option>
             </select>
+                <div style="border: 1px solid cadetblue;">
+                    <textarea  id="textarea184" class="form-control" name="textarea184" ui-codemirror="mode" ng-model="text"></textarea>
+                </div>
         </div>
         </div>
 
         <div class="modal-footer">
-            <button class="floatingPanel" type="button" ng-click="editModule('upload')">Create</button>
+            <button class="floatingPanel" type="button" data-ng-click="fic()">upload</button>
         </div>
     </div>
 

@@ -2,285 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0ce9437-dc48-408e-85d8-8bdb3a4bcc24" name="Default" comment="initial version">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/angular/ui-codemirror.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/bin/upload-release.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/lib/ui-codemirror.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/cypher/test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/sass/test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/soy/test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/swift/test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/rollup.config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/codemirror.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/display/Display.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/display/focus.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/display/gutters.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/display/highlight_worker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/display/line_numbers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/display/mode_state.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/display/operations.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/display/scroll_events.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/display/scrollbars.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/display/scrolling.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/display/selection.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/display/update_display.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/display/update_line.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/display/update_lines.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/display/view_tracking.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/edit/CodeMirror.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/edit/commands.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/edit/deleteNearSelection.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/edit/drop_events.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/edit/fromTextArea.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/edit/global_events.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/edit/key_events.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/edit/legacy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/edit/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/edit/methods.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/edit/mouse_events.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/edit/options.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/edit/utils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/input/ContentEditableInput.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/input/TextareaInput.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/input/indent.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/input/input.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/input/keymap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/input/keynames.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/input/movement.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/line/highlight.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/line/line_data.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/line/pos.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/line/saw_special_spans.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/line/spans.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/line/utils_line.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/measurement/position_measurement.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/measurement/widgets.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/model/Doc.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/model/change_measurement.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/model/changes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/model/chunk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/model/document_data.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/model/history.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/model/line_widget.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/model/mark_text.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/model/selection.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/model/selection_updates.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/modes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/util/StringStream.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/util/bidi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/util/browser.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/util/dom.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/util/event.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/util/feature_detection.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/util/misc.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/src/util/operation_group.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/test/contenteditable_test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/theme/duotone-dark.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/theme/duotone-light.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/codemirror/theme/panda-syntax.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/generator/services/fileupload.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/codemirror/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/codemirror/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/codemirror/doc/compress.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/modules/generator/controllers/menus.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/modules/generator/services/menusFactory.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/jade/index.html" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/pug/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/jade/jade.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/pug/pug.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/.npmignore" afterPath="$PROJECT_DIR$/app/assets/codemirror/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/AUTHORS" afterPath="$PROJECT_DIR$/app/assets/codemirror/AUTHORS" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/CHANGELOG.md" afterPath="$PROJECT_DIR$/app/assets/codemirror/CHANGELOG.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/app/assets/codemirror/CONTRIBUTING.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/LICENSE" afterPath="$PROJECT_DIR$/app/assets/codemirror/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/README.md" afterPath="$PROJECT_DIR$/app/assets/codemirror/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/addon/comment/comment.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/addon/comment/comment.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/addon/display/panel.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/addon/display/panel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/addon/display/rulers.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/addon/display/rulers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/addon/edit/closebrackets.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/addon/edit/closebrackets.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/addon/edit/continuelist.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/addon/edit/continuelist.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/addon/edit/matchbrackets.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/addon/edit/matchbrackets.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/addon/fold/comment-fold.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/addon/fold/comment-fold.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/addon/fold/foldcode.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/addon/fold/foldcode.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/addon/fold/foldgutter.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/addon/fold/foldgutter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/addon/fold/indent-fold.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/addon/fold/indent-fold.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/addon/fold/xml-fold.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/addon/fold/xml-fold.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/addon/hint/javascript-hint.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/addon/hint/javascript-hint.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/addon/hint/show-hint.css" afterPath="$PROJECT_DIR$/app/assets/codemirror/addon/hint/show-hint.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/addon/hint/show-hint.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/addon/hint/show-hint.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/addon/hint/sql-hint.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/addon/hint/sql-hint.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/addon/lint/lint.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/addon/lint/lint.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/addon/lint/yaml-lint.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/addon/lint/yaml-lint.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/addon/merge/merge.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/addon/merge/merge.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/addon/mode/overlay.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/addon/mode/overlay.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/addon/mode/simple.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/addon/mode/simple.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/addon/runmode/runmode-standalone.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/addon/runmode/runmode-standalone.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/addon/runmode/runmode.node.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/addon/runmode/runmode.node.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/addon/scroll/annotatescrollbar.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/addon/scroll/annotatescrollbar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/addon/scroll/scrollpastend.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/addon/scroll/scrollpastend.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/addon/search/match-highlighter.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/addon/search/match-highlighter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/addon/search/search.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/addon/search/search.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/addon/search/searchcursor.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/addon/search/searchcursor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/addon/selection/active-line.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/addon/selection/active-line.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/addon/selection/mark-selection.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/addon/selection/mark-selection.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/addon/wrap/hardwrap.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/addon/wrap/hardwrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/bin/authors.sh" afterPath="$PROJECT_DIR$/app/assets/codemirror/bin/authors.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/bin/compress" afterPath="$PROJECT_DIR$/app/assets/codemirror/bin/compress" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/bin/lint" afterPath="$PROJECT_DIR$/app/assets/codemirror/bin/lint" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/bin/release" afterPath="$PROJECT_DIR$/app/assets/codemirror/bin/release" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/bin/source-highlight" afterPath="$PROJECT_DIR$/app/assets/codemirror/bin/source-highlight" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/demo/activeline.html" afterPath="$PROJECT_DIR$/app/assets/codemirror/demo/activeline.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/demo/bidi.html" afterPath="$PROJECT_DIR$/app/assets/codemirror/demo/bidi.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/demo/complete.html" afterPath="$PROJECT_DIR$/app/assets/codemirror/demo/complete.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/demo/folding.html" afterPath="$PROJECT_DIR$/app/assets/codemirror/demo/folding.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/demo/merge.html" afterPath="$PROJECT_DIR$/app/assets/codemirror/demo/merge.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/demo/panel.html" afterPath="$PROJECT_DIR$/app/assets/codemirror/demo/panel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/demo/search.html" afterPath="$PROJECT_DIR$/app/assets/codemirror/demo/search.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/demo/simplemode.html" afterPath="$PROJECT_DIR$/app/assets/codemirror/demo/simplemode.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/demo/tern.html" afterPath="$PROJECT_DIR$/app/assets/codemirror/demo/tern.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/demo/theme.html" afterPath="$PROJECT_DIR$/app/assets/codemirror/demo/theme.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/doc/logo.svg" afterPath="$PROJECT_DIR$/app/assets/codemirror/doc/logo.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/doc/manual.html" afterPath="$PROJECT_DIR$/app/assets/codemirror/doc/manual.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/doc/realworld.html" afterPath="$PROJECT_DIR$/app/assets/codemirror/doc/realworld.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/doc/releases.html" afterPath="$PROJECT_DIR$/app/assets/codemirror/doc/releases.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/index.html" afterPath="$PROJECT_DIR$/app/assets/codemirror/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/keymap/emacs.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/keymap/emacs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/keymap/sublime.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/keymap/sublime.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/keymap/vim.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/keymap/vim.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/lib/codemirror.css" afterPath="$PROJECT_DIR$/app/assets/codemirror/lib/codemirror.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/lib/codemirror.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/lib/codemirror.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/clike/clike.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/clike/clike.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/clike/test.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/clike/test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/commonlisp/commonlisp.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/commonlisp/commonlisp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/crystal/crystal.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/crystal/crystal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/crystal/index.html" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/crystal/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/css/css.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/css/css.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/css/index.html" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/css/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/cypher/cypher.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/cypher/cypher.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/dart/dart.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/dart/dart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/dylan/dylan.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/dylan/dylan.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/elm/elm.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/elm/elm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/erlang/erlang.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/erlang/erlang.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/factor/factor.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/factor/factor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/gfm/gfm.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/gfm/gfm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/gfm/test.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/gfm/test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/go/go.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/go/go.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/groovy/groovy.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/groovy/groovy.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/haskell/haskell.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/haskell/haskell.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/haxe/haxe.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/haxe/haxe.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/htmlmixed/htmlmixed.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/htmlmixed/htmlmixed.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/htmlmixed/index.html" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/htmlmixed/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/index.html" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/javascript/javascript.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/javascript/javascript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/javascript/test.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/javascript/test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/javascript/typescript.html" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/javascript/typescript.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/jinja2/jinja2.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/jinja2/jinja2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/jsx/index.html" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/jsx/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/jsx/jsx.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/jsx/jsx.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/jsx/test.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/jsx/test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/julia/julia.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/julia/julia.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/livescript/livescript.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/livescript/livescript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/markdown/markdown.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/markdown/markdown.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/markdown/test.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/markdown/test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/meta.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/meta.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/mirc/mirc.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/mirc/mirc.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/mllike/mllike.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/mllike/mllike.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/mscgen/index.html" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/mscgen/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/mscgen/mscgen.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/mscgen/mscgen.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/mscgen/mscgen_test.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/mscgen/mscgen_test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/mscgen/msgenny_test.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/mscgen/msgenny_test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/mscgen/xu_test.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/mscgen/xu_test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/nsis/nsis.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/nsis/nsis.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/octave/octave.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/octave/octave.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/oz/oz.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/oz/oz.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/powershell/powershell.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/powershell/powershell.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/powershell/test.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/powershell/test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/python/index.html" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/python/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/python/python.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/python/python.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/q/q.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/q/q.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/r/index.html" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/r/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/r/r.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/r/r.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/ruby/ruby.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/ruby/ruby.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/ruby/test.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/ruby/test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/rust/rust.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/rust/rust.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/sas/sas.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/sas/sas.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/sass/index.html" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/sass/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/sass/sass.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/sass/sass.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/scheme/scheme.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/scheme/scheme.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/shell/shell.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/shell/shell.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/shell/test.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/shell/test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/sieve/sieve.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/sieve/sieve.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/solr/solr.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/solr/solr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/soy/soy.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/soy/soy.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/sql/sql.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/sql/sql.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/stylus/stylus.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/stylus/stylus.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/swift/swift.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/swift/swift.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/textile/textile.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/textile/textile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/tiki/tiki.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/tiki/tiki.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/twig/twig.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/twig/twig.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/vb/index.html" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/vb/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/vb/vb.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/vb/vb.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/verilog/verilog.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/verilog/verilog.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/vue/index.html" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/vue/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/vue/vue.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/vue/vue.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/yacas/yacas.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/yacas/yacas.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/mode/yaml/yaml.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/mode/yaml/yaml.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/package.json" afterPath="$PROJECT_DIR$/app/assets/codemirror/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/test/comment_test.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/test/comment_test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/test/doc_test.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/test/doc_test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/test/driver.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/test/driver.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/test/emacs_test.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/test/emacs_test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/test/index.html" afterPath="$PROJECT_DIR$/app/assets/codemirror/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/test/lint.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/test/lint.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/test/mode_test.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/test/mode_test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/test/multi_test.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/test/multi_test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/test/phantom_driver.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/test/phantom_driver.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/test/run.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/test/run.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/test/scroll_test.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/test/scroll_test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/test/search_test.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/test/search_test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/test/sql-hint-test.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/test/sql-hint-test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/test/sublime_test.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/test/sublime_test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/test/test.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/test/test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/test/vim_test.js" afterPath="$PROJECT_DIR$/app/assets/codemirror/test/vim_test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/theme/abcdef.css" afterPath="$PROJECT_DIR$/app/assets/codemirror/theme/abcdef.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/theme/ambiance.css" afterPath="$PROJECT_DIR$/app/assets/codemirror/theme/ambiance.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/theme/cobalt.css" afterPath="$PROJECT_DIR$/app/assets/codemirror/theme/cobalt.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/theme/colorforth.css" afterPath="$PROJECT_DIR$/app/assets/codemirror/theme/colorforth.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/theme/dracula.css" afterPath="$PROJECT_DIR$/app/assets/codemirror/theme/dracula.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/theme/eclipse.css" afterPath="$PROJECT_DIR$/app/assets/codemirror/theme/eclipse.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/theme/erlang-dark.css" afterPath="$PROJECT_DIR$/app/assets/codemirror/theme/erlang-dark.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/theme/icecoder.css" afterPath="$PROJECT_DIR$/app/assets/codemirror/theme/icecoder.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/theme/lesser-dark.css" afterPath="$PROJECT_DIR$/app/assets/codemirror/theme/lesser-dark.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/theme/liquibyte.css" afterPath="$PROJECT_DIR$/app/assets/codemirror/theme/liquibyte.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/theme/material.css" afterPath="$PROJECT_DIR$/app/assets/codemirror/theme/material.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/theme/mdn-like.css" afterPath="$PROJECT_DIR$/app/assets/codemirror/theme/mdn-like.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/theme/monokai.css" afterPath="$PROJECT_DIR$/app/assets/codemirror/theme/monokai.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/theme/night.css" afterPath="$PROJECT_DIR$/app/assets/codemirror/theme/night.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/theme/pastel-on-dark.css" afterPath="$PROJECT_DIR$/app/assets/codemirror/theme/pastel-on-dark.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/theme/rubyblue.css" afterPath="$PROJECT_DIR$/app/assets/codemirror/theme/rubyblue.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/theme/seti.css" afterPath="$PROJECT_DIR$/app/assets/codemirror/theme/seti.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/theme/solarized.css" afterPath="$PROJECT_DIR$/app/assets/codemirror/theme/solarized.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/theme/the-matrix.css" afterPath="$PROJECT_DIR$/app/assets/codemirror/theme/the-matrix.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/theme/ttcn.css" afterPath="$PROJECT_DIR$/app/assets/codemirror/theme/ttcn.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/theme/twilight.css" afterPath="$PROJECT_DIR$/app/assets/codemirror/theme/twilight.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/theme/vibrant-ink.css" afterPath="$PROJECT_DIR$/app/assets/codemirror/theme/vibrant-ink.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/theme/xq-dark.css" afterPath="$PROJECT_DIR$/app/assets/codemirror/theme/xq-dark.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/theme/xq-light.css" afterPath="$PROJECT_DIR$/app/assets/codemirror/theme/xq-light.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/theme/yeti.css" afterPath="$PROJECT_DIR$/app/assets/codemirror/theme/yeti.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/css/style.css" afterPath="$PROJECT_DIR$/app/assets/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/common-views/dashboard.html" afterPath="$PROJECT_DIR$/app/common-views/dashboard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/configs/app.js" afterPath="$PROJECT_DIR$/app/configs/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/configs/main.js" afterPath="$PROJECT_DIR$/app/configs/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/generator/controllers/generator.js" afterPath="$PROJECT_DIR$/app/modules/generator/controllers/generator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/generator/controllers/operations.js" afterPath="$PROJECT_DIR$/app/modules/generator/controllers/operations.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/generator/controllers/overview.js" afterPath="$PROJECT_DIR$/app/modules/generator/controllers/overview.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/generator/controllers/resources.js" afterPath="$PROJECT_DIR$/app/modules/generator/controllers/resources.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/generator/controllers/view.js" afterPath="$PROJECT_DIR$/app/modules/generator/controllers/view.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/generator/services/config.js" afterPath="$PROJECT_DIR$/app/modules/generator/services/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/generator/views/generator.html" afterPath="$PROJECT_DIR$/app/modules/generator/views/generator.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/generator/services/global_var.js" afterPath="$PROJECT_DIR$/app/modules/generator/services/global_var.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/generator/views/operations.html" afterPath="$PROJECT_DIR$/app/modules/generator/views/operations.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/generator/views/overview.html" afterPath="$PROJECT_DIR$/app/modules/generator/views/overview.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/generator/views/resources.html" afterPath="$PROJECT_DIR$/app/modules/generator/views/resources.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/generator/views/views.html" afterPath="$PROJECT_DIR$/app/modules/generator/views/views.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="PFE.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -314,63 +53,45 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="30">
+              <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
               <folding>
+                <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/configs/main.js">
+      <file leaf-file-name="overview.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/modules/generator/controllers/overview.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+            <state relative-caret-position="330">
+              <caret line="209" column="47" lean-forward="false" selection-start-line="209" selection-start-column="47" selection-end-line="209" selection-end-column="47" />
               <folding>
-                <element signature="e#1997#2017#0" expanded="true" />
-                <marker date="1499518628720" expanded="true" signature="83:203" ph="//..." />
-                <marker date="1499518628720" expanded="true" signature="197:199" ph="{&quot;name&quot;: &quot;codemirror&quot;...}" />
-                <marker date="1499518628720" expanded="true" signature="197:202" ph="[...]" />
-                <marker date="1499518628720" expanded="true" signature="1906:1979" ph="//..." />
+                <element signature="e#346#519#0" expanded="false" />
+                <element signature="e#554#2313#0" expanded="false" />
+                <element signature="e#2343#3574#0" expanded="false" />
+                <element signature="e#3605#3984#0" expanded="false" />
+                <element signature="e#4020#4993#0" expanded="false" />
+                <element signature="e#6499#6841#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/configs/app.js">
+      <file leaf-file-name="overview.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/modules/generator/views/overview.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="12" column="127" lean-forward="false" selection-start-line="12" selection-start-column="127" selection-end-line="12" selection-end-column="127" />
+            <state relative-caret-position="-100">
+              <caret line="181" column="23" lean-forward="false" selection-start-line="181" selection-start-column="23" selection-end-line="181" selection-end-column="23" />
               <folding>
-                <element signature="e#0#40#0" expanded="true" />
-                <element signature="e#465#520#0" expanded="true" />
+                <element signature="n#ul#0;n#div#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#ul#0;n#div#0;n#li#3;n#ul#0;n#div#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#5;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#script#0;n#!!top" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/modules/generator/controllers/view.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="20" column="50" lean-forward="false" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
-              <folding>
-                <element signature="e#3988#4743#0" expanded="false" />
-                <element signature="e#4774#5091#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/modules/generator/views/views.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="11" column="58" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="59" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -389,12 +110,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>model.j</find>
-      <find>models</find>
-      <find>gene</find>
-      <find>modules</find>
-      <find>save</find>
-      <find>stude</find>
       <find>stu</find>
       <find>toa</find>
       <find>toast-w</find>
@@ -407,18 +122,24 @@
       <find>open</find>
       <find>moda</find>
       <find>glyphicon-upload</find>
-      <find>select</find>
       <find>detail</find>
       <find>opera</find>
       <find>fil</find>
       <find>arbr</find>
       <find>tree</find>
       <find>treea</find>
-      <find>code</find>
       <find>ui-v</find>
       <find>window.code</find>
       <find>wind</find>
       <find>ui-code</find>
+      <find>code</find>
+      <find>cmop</find>
+      <find>cre</find>
+      <find>addmethod</find>
+      <find>select</find>
+      <find>sty</find>
+      <find>datal</find>
+      <find>path</find>
     </findStrings>
     <replaceStrings>
       <replace>nav-options</replace>
@@ -464,11 +185,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/modules/admin/controllers/partner.js" />
-        <option value="$PROJECT_DIR$/app/modules/admin/views/userdetails.html" />
-        <option value="$PROJECT_DIR$/app/modules/admin/controllers/userDetails.js" />
-        <option value="$PROJECT_DIR$/app/modules/generator/views/partials/accordion.html" />
-        <option value="$PROJECT_DIR$/app/modules/generator/views/partials/old_view.html" />
         <option value="$PROJECT_DIR$/app/modules/generator/services/components.json" />
         <option value="$PROJECT_DIR$/app/modules/generator/views/operation_old.html" />
         <option value="$PROJECT_DIR$/app/modules/generator/views/resources_old.html" />
@@ -490,8 +206,6 @@
         <option value="$PROJECT_DIR$/app/login.html" />
         <option value="$PROJECT_DIR$/app/modules/generator/gen/resource.html" />
         <option value="$PROJECT_DIR$/app/modules/generator/controllers/moduleCtrl.js" />
-        <option value="$PROJECT_DIR$/app/modules/generator/views/operations.html" />
-        <option value="$PROJECT_DIR$/app/modules/generator/controllers/operations.js" />
         <option value="$PROJECT_DIR$/app/modules/generator/gen/globalView.json" />
         <option value="$PROJECT_DIR$/app/modules/generator/views/tasks.html" />
         <option value="$PROJECT_DIR$/app/js/controllers/layoutCtrl.js" />
@@ -500,21 +214,28 @@
         <option value="$PROJECT_DIR$/app/assets/angular/toaster.js" />
         <option value="$PROJECT_DIR$/app/assets/css/style.css" />
         <option value="$PROJECT_DIR$/app/modules/generator/views/generator.html" />
-        <option value="$PROJECT_DIR$/app/modules/generator/services/config.js" />
         <option value="$PROJECT_DIR$/app/modules/generator/services/fileupload.js" />
-        <option value="$PROJECT_DIR$/app/modules/generator/views/resources.html" />
-        <option value="$PROJECT_DIR$/app/modules/generator/controllers/resources.js" />
-        <option value="$PROJECT_DIR$/app/modules/generator/views/overview.html" />
         <option value="$PROJECT_DIR$/app/modules/generator/controllers/generator.js" />
         <option value="$PROJECT_DIR$/app/common-views/dashboard.html" />
-        <option value="$PROJECT_DIR$/app/modules/generator/services/global_var.js" />
-        <option value="$PROJECT_DIR$/app/modules/generator/controllers/overview.js" />
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/app/assets/codemirror/mode/javascript/javascript.js" />
+        <option value="$PROJECT_DIR$/app/assets/codemirror/lib/codemirror.css" />
+        <option value="$PROJECT_DIR$/app/assets/codemirror/mode/sql/sql.js" />
+        <option value="$PROJECT_DIR$/app/assets/codemirror/mode/css/css.js" />
         <option value="$PROJECT_DIR$/app/modules/generator/controllers/view.js" />
+        <option value="$PROJECT_DIR$/app/assets/codemirror/mode/htmlmixed/htmlmixed.js" />
+        <option value="$PROJECT_DIR$/app/modules/generator/views/operations.html" />
+        <option value="$PROJECT_DIR$/app/modules/generator/controllers/operations.js" />
+        <option value="$PROJECT_DIR$/app/modules/generator/views/views.html" />
+        <option value="$PROJECT_DIR$/app/modules/generator/services/config.js" />
         <option value="$PROJECT_DIR$/app/configs/app.js" />
         <option value="$PROJECT_DIR$/app/configs/main.js" />
-        <option value="$PROJECT_DIR$/app/modules/generator/views/views.html" />
+        <option value="$PROJECT_DIR$/app/modules/generator/views/resources.html" />
+        <option value="$PROJECT_DIR$/app/modules/generator/controllers/resources.js" />
+        <option value="$PROJECT_DIR$/app/modules/generator/services/global_var.js" />
+        <option value="$PROJECT_DIR$/app/modules/generator/views/overview.html" />
+        <option value="$PROJECT_DIR$/app/modules/generator/controllers/overview.js" />
       </list>
     </option>
   </component>
@@ -543,10 +264,19 @@
           <State>
             <id />
           </State>
+          <State>
+            <id>Code style issuesJavaScript</id>
+          </State>
+          <State>
+            <id>ECMAScript 6 migration aidsJavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
         </expanded-state>
         <selected-state>
           <State>
-            <id>AngularJS</id>
+            <id>Code style issuesJavaScript</id>
           </State>
         </selected-state>
       </profile-state>
@@ -568,6 +298,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -615,6 +346,32 @@
               <option name="myItemId" value="generator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PFE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PFE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -634,95 +391,35 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PFE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PFE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PFE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PFE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="codemirror" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PFE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PFE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="codemirror" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mode" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../modules" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/PROJECT/paf" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="settings.editor.splitter.proportion" value="0.28145695" />
+    <property name="settings.editor.splitter.proportion" value="0.272351" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="" />
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.standard" value="" />
+    <property name="ToolWindowDocumentation.ShowToolbar" value="false" />
+    <property name="node.js.path.for.package.jscs" value="project" />
+    <property name="node.js.detected.package.jscs" value="true" />
+    <property name="node.js.selected.package.jscs" value="" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.selected.package.stylelint" value="" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -1040,7 +737,8 @@
       <workItem from="1499305325751" duration="30000" />
       <workItem from="1499305417748" duration="1490000" />
       <workItem from="1499341323684" duration="18000" />
-      <workItem from="1499341545352" duration="37795000" />
+      <workItem from="1499341545352" duration="37969000" />
+      <workItem from="1499520564380" duration="40622000" />
     </task>
     <task id="LOCAL-00001" summary="initial version">
       <created>1491005149686</created>
@@ -1060,7 +758,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1682263000" />
+    <option name="totallyTimeSpent" value="1723059000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1074,23 +772,23 @@
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="746" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18866518" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19835943" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32441473" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33779263" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="99" y="100" width="1168" height="546" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33779263" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24981357" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35117057" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34991708" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="99" y="100" width="1168" height="546" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24961948" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925898" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1141,99 +839,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/modules/generator/gen/view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5276">
-          <caret line="91" column="60" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="262" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/generator/gen/resource.html" />
-    <entry file="file://$PROJECT_DIR$/app/modules/generator/gen/resources.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="6" column="71" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="237" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/generator/gen/views.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="262" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/generator/controllers/database.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="6" column="54" lean-forward="false" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/angular/angular.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="25" column="237" lean-forward="false" selection-start-line="25" selection-start-column="237" selection-end-line="25" selection-end-column="237" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/generator/gen/operations.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3542">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/generator/gen/globalView.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="83105" lean-forward="true" selection-start-line="0" selection-start-column="83105" selection-end-line="0" selection-end-column="83105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/generator/views/tasks.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="7" column="31" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/angular/ngToast.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/generator/views/operations.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/generator/services/actionsFactory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/generator/controllers/menus.js" />
-    <entry file="file://$PROJECT_DIR$/app/modules/generator/controllers/operations.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="5" column="128" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="128" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/controllers/layoutCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="64" column="22" lean-forward="false" selection-start-line="64" selection-start-column="15" selection-end-line="64" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/configs/route.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="621">
@@ -1304,39 +909,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/generator/services/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="70" column="18" lean-forward="false" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/generator/views/resources.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2624">
-          <caret line="82" column="130" lean-forward="false" selection-start-line="82" selection-start-column="130" selection-end-line="82" selection-end-column="130" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/generator/controllers/resources.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="822">
-          <caret line="106" column="32" lean-forward="false" selection-start-line="106" selection-start-column="32" selection-end-line="106" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/generator/controllers/moduleCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/generator/controllers/generator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="29" column="27" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1352,7 +928,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="358">
           <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1360,51 +935,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="2" column="26" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="26" />
-          <folding>
-            <element signature="e#147#2917#0" expanded="false" />
-            <element signature="e#224#2908#0" expanded="false" />
-            <element signature="e#2285#2796#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/generator/services/global_var.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-          <folding>
-            <element signature="e#352#1111#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/generator/views/overview.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-314">
-          <caret line="24" column="71" lean-forward="false" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
-          <folding>
-            <element signature="n#ul#0;n#div#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#ul#0;n#div#0;n#li#3;n#ul#0;n#div#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#5;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#script#0;n#!!top" expanded="false" />
-            <element signature="n#script#1;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/generator/controllers/overview.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="161" column="58" lean-forward="false" selection-start-line="161" selection-start-column="58" selection-end-line="161" selection-end-column="58" />
-          <folding>
-            <element signature="e#346#519#0" expanded="false" />
-            <element signature="e#554#2313#0" expanded="false" />
-            <element signature="e#2343#3574#0" expanded="false" />
-            <element signature="e#3605#3984#0" expanded="false" />
-            <element signature="e#4020#4993#0" expanded="false" />
-            <element signature="e#5427#5467#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1412,7 +942,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-38252">
           <caret line="6" column="52" lean-forward="false" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1420,36 +949,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="79">
           <caret line="78" column="8" lean-forward="false" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/codemirror/ui-codemirror.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="151" column="0" lean-forward="true" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/codemirror/lib/ui-codemirror.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/codemirror/ui-codemirror.js" />
+    <entry file="file://$PROJECT_DIR$/app/assets/codemirror/lib/ui-codemirror.js" />
     <entry file="file://$PROJECT_DIR$/app/assets/codemirror/lib/codemirror.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7890">
@@ -1462,7 +966,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1470,7 +973,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1479,7 +981,7 @@
         <state relative-caret-position="-36">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#191#0" expanded="true" />
+            <element signature="e#0#191#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1500,47 +1002,288 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/codemirror/mode/javascript/javascript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/codemirror/lib/codemirror.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="286" column="0" lean-forward="true" selection-start-line="286" selection-start-column="0" selection-end-line="286" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/codemirror/mode/css/css.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/codemirror/mode/htmlmixed/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/codemirror/mode/htmlmixed/htmlmixed.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/codemirror/mode/sql/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="48" column="21" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="48" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/codemirror/mode/sql/sql.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#419#36375#0" expanded="false" />
+            <element signature="e#496#7243#0" expanded="false" />
+            <element signature="e#7259#36368#0" expanded="false" />
+            <element signature="e#7330#7673#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/generator/controllers/operations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="106" column="53" lean-forward="false" selection-start-line="106" selection-start-column="53" selection-end-line="106" selection-end-column="53" />
+          <folding>
+            <element signature="e#290#658#0" expanded="false" />
+            <element signature="e#681#1257#0" expanded="false" />
+            <element signature="e#1281#1453#0" expanded="false" />
+            <element signature="e#1480#1655#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/admin/views/user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1446">
+          <caret line="2" column="14" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/admin/views/newUser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-36">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/admin/views/partner.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="9" column="112" lean-forward="false" selection-start-line="9" selection-start-column="111" selection-end-line="9" selection-end-column="112" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/admin/views/pw.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-317">
+          <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/admin/views/new_user/contact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="17" column="42" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="17" selection-end-column="40" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/generator/services/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding>
+            <element signature="e#755#10432#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/generator/controllers/generator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12">
+          <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <folding>
+            <element signature="e#477#1414#0" expanded="false" />
+            <element signature="e#1146#1382#0" expanded="false" />
+            <element signature="e#1470#2881#0" expanded="false" />
+            <element signature="e#1698#2824#0" expanded="false" />
+            <element signature="e#1758#2671#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/generator/views/operations.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="40" column="27" lean-forward="true" selection-start-line="38" selection-start-column="20" selection-end-line="40" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/generator/controllers/view.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="20" column="50" lean-forward="false" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
+        <state relative-caret-position="562">
+          <caret line="23" column="18" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="23" selection-end-column="0" />
           <folding>
-            <element signature="e#3988#4743#0" expanded="false" />
-            <element signature="e#4774#5091#0" expanded="false" />
+            <element signature="e#905#989#0" expanded="true" />
+            <element signature="e#3895#4650#0" expanded="false" />
+            <element signature="e#4681#4998#0" expanded="false" />
+            <element signature="e#5058#5397#0" expanded="true" />
+            <element signature="e#7171#7273#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/configs/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="12" column="127" lean-forward="false" selection-start-line="12" selection-start-column="127" selection-end-line="12" selection-end-column="127" />
+        <state relative-caret-position="60">
+          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
-            <element signature="e#465#520#0" expanded="true" />
+            <element signature="e#229#462#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/configs/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        <state relative-caret-position="290">
+          <caret line="20" column="42" lean-forward="false" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
           <folding>
-            <element signature="e#1997#2017#0" expanded="true" />
-            <marker date="1499518628720" expanded="true" signature="83:203" ph="//..." />
-            <marker date="1499518628720" expanded="true" signature="197:199" ph="{&quot;name&quot;: &quot;codemirror&quot;...}" />
-            <marker date="1499518628720" expanded="true" signature="197:202" ph="[...]" />
-            <marker date="1499518628720" expanded="true" signature="1906:1979" ph="//..." />
+            <element signature="e#2123#2165#0" expanded="true" />
+            <element signature="e#2493#2513#0" expanded="true" />
+            <marker date="1499700901866" expanded="true" signature="83:211" ph="//..." />
+            <marker date="1499700901866" expanded="true" signature="203:204" ph="{&quot;name&quot;: &quot;codemirror&quot;...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/generator/views/resources.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="16" column="129" lean-forward="false" selection-start-line="16" selection-start-column="129" selection-end-line="16" selection-end-column="129" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/generator/controllers/resources.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="106" column="59" lean-forward="false" selection-start-line="106" selection-start-column="59" selection-end-line="106" selection-end-column="59" />
+          <folding>
+            <element signature="e#538#924#0" expanded="false" />
+            <element signature="e#953#1379#0" expanded="false" />
+            <element signature="e#1405#1481#0" expanded="false" />
+            <element signature="e#1691#1770#0" expanded="false" />
+            <element signature="e#2501#2685#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/generator/services/global_var.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="153" column="69" lean-forward="true" selection-start-line="153" selection-start-column="69" selection-end-line="153" selection-end-column="69" />
+          <folding>
+            <element signature="e#319#742#0" expanded="false" />
+            <element signature="e#2551#2686#0" expanded="false" />
+            <element signature="e#5382#5410#0" expanded="true" />
+            <element signature="e#5442#5903#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/generator/views/views.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="11" column="58" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="59" />
-          <folding />
+        <state relative-caret-position="344">
+          <caret line="46" column="27" lean-forward="false" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#uib-tab#1;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/generator/views/overview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-100">
+          <caret line="181" column="23" lean-forward="false" selection-start-line="181" selection-start-column="23" selection-end-line="181" selection-end-column="23" />
+          <folding>
+            <element signature="n#ul#0;n#div#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#ul#0;n#div#0;n#li#3;n#ul#0;n#div#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#5;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#script#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/generator/controllers/overview.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="209" column="47" lean-forward="false" selection-start-line="209" selection-start-column="47" selection-end-line="209" selection-end-column="47" />
+          <folding>
+            <element signature="e#346#519#0" expanded="false" />
+            <element signature="e#554#2313#0" expanded="false" />
+            <element signature="e#2343#3574#0" expanded="false" />
+            <element signature="e#3605#3984#0" expanded="false" />
+            <element signature="e#4020#4993#0" expanded="false" />
+            <element signature="e#6499#6841#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

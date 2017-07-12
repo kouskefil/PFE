@@ -14,7 +14,7 @@
                 </div>
                 <div class="form-group">
                     <label for="input156">path</label>
-                    <input class=" form-control"  placeholder="path" name="input156" id="input156" type="text" ng-model="currentRsc.path"/>
+                    <input class=" form-control"  placeholder="path" name="input156" id="input156" type="text" ng-blur="updatersc()" ng-model="currentRsc.path"/>
                 </div> <!-- div id:input156 -->
             </div> <!-- rsc_def_content ends-->
         </div> <!-- rsc_definition ends-->
@@ -70,12 +70,23 @@
                                 </option>
                                 </select>
                             </div>
-                            <div  class="form-group">
-                                <label for="select298">id</label>
-                                <select name="select298" id="select298" ng-model="method.id" class="form-control" ><option ng-repeat='item in ids' value="{{item.name}}"> {{item.name}}
-                                </option>
-                                </select>
-                            </div>
+                            <!--<div  class="form-group">-->
+                                <!--<label for="select298">id</label>-->
+                                <!--<select name="select298" id="select298" ng-model="method.id" class="form-control" ><option ng-repeat='item in ids' value="{{item.name}}"> {{item.name}}-->
+                                <!--</option>-->
+                                <!--</select>-->
+                            <!--</div>-->
+    
+                            <div class="form-group">
+                                <label for="input_country">operation</label>
+                                <input class="form-control" ng-model="method.id" list="ids" placeholder="user country" name="input_country" id="input_country">
+                                <datalist id="ids">
+                                    <option ng-repeat='item in ids' value="{{item.name}}">
+                                </datalist>
+                                <!--<input class=" form-control" ng-change="ddd(user.defaultCountry)" placeholder="user country" name="input_country" id="input_country" type="text" ng-model="user.defaultCountry"/>-->
+                            </div> <!-- div id:input_country -->
+                            
+                            
                             <div class="form-group">
                                 <label for="input299">role</label>
                                 <input class=" form-control"  placeholder="role" name="input299" id="input299" type="text" ng-model="method.role"/>
@@ -114,11 +125,15 @@
                                     <span  class="value" id="span204" >{{item.name}}</span>
                                 </p>
                                 <p>
-                                    <span  class="param" id="span205" >Type</span>
-                                    <span  class="value" id="span206" >{{item.type}}, {{item.style}}</span>
+                                    <span  class="param" id="span205" >style</span>
+                                    <span  class="value" id="span206" >{{item.style}}</span>
+                                    <select name="select210" id="select10" ng-model="item.style" class="form-control" >
+                                        <option ng-repeat='s in styles' value="{{s}}"> {{s}}
+                                    </option>
+                                    </select>
                                 </p>
                                 <p>
-                                    <span  class="param"  id="span207" >Default</span>
+                                    <span  class="param"  id="span207" >required</span>
                                     <span  class="value" id="span208" >{{item.defaultValue}}</span>
                                 </p>
                             </div> <!-- request ends-->
