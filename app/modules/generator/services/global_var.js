@@ -2,7 +2,7 @@
  * Created by kefil on 05/11/16.
  */
 define(['configs/app'], function (app){
-	app.register.factory('globalVarFactory',['componentSet','$q','$log' ,function (componentSet, $q,$log) {
+	app.register.factory('globalVarFactory',['componentSet','$q','$log','$uibModal' ,function (componentSet, $q, $log, $uibModal) {
 		
 		var module = {name:'', models:[], resources:[], operations:[] };
 		var defer = null;
@@ -41,7 +41,7 @@ define(['configs/app'], function (app){
 		];
 		/**operations vars**/
 		var skel;
-		var currentOp;
+		// var currentOp;
 		
 		var lookup = function (name) {
 			var obj = null ;
@@ -54,8 +54,7 @@ define(['configs/app'], function (app){
 		/**operations vars end**/
 		
 		/**resources vars **/
-		var currentRsc , RscParent = [];
-		var resourcesParents = [];
+		var currentRsc ,method, /*RscParent = [],*/resourcesParents = [];
 		var genParent = function (rsc,root) {
 			var realpath, i ;
 			if(!rsc.methods.length){
@@ -96,12 +95,12 @@ define(['configs/app'], function (app){
 			
 			return null;
 		};
-		var getParents = function (resources) {
+		var getParents = function (/*resources*/) {
 			
 			return resourcesParents;
 		};
 		var getparams = function (str, params) {
-			var i, tmp,j;
+			var i, /*tmp*/j;
 			console.log(str);
 			for (i = 0; i < str.length; i++){
 				if (str.charAt(i) == "{"){
@@ -146,7 +145,7 @@ define(['configs/app'], function (app){
 			}
 		};
 		var updatersc = function () {
-			var params = [],i,j,k, op = null;
+			var params = [],i,j, op = null;
 			getparams(currentRsc.parent, params);
 			getparams(currentRsc.path, params);
 			console.log('params');
@@ -158,7 +157,7 @@ define(['configs/app'], function (app){
 					if (currentRsc.methods[i].request !== null &&
 						currentRsc.methods[i].request !== undefined){
 						for (j = 0; j < params.length; j++){
-							console.log('old='+	currentRsc.methods[i].request.params[j].name + ' new='+params[j])
+							console.log('old='+	currentRsc.methods[i].request.params[j].name + ' new='+params[j]);
 							currentRsc.methods[i].request.params[j].name = params[j];
 						}
 						
@@ -180,7 +179,6 @@ define(['configs/app'], function (app){
 				}
 		};
 		/** resources vars end*/
-		
 		var global = {
             /*operations methods*/
 			skeleton : function (obj) {
@@ -223,8 +221,11 @@ define(['configs/app'], function (app){
 			getupdatersc: function () {
 				return updatersc;
 			},
+			setCurrentMethod: function (mtd) {
+				method = mtd;
+			},
 			addMethod : function (mtd) {
-				var i, found = false, params = [];
+				var i, /*found = false,*/ params = [];
 				if(!currentRsc.methods)
 					currentRsc.methods = [];
 				currentRsc.methods.push(mtd);
@@ -259,9 +260,9 @@ define(['configs/app'], function (app){
 			getResources : function () {
 				return module.resources;
 			},
-			getCurrentRsc : function () {
-				return currentRsc;
-			},
+			// getCurrentRsc : function () {
+			// 	return currentRsc;
+			// },
 			getParent : function () {
 				return  getParents(module.resources);
 			},
@@ -300,9 +301,9 @@ define(['configs/app'], function (app){
 			setName : function (name) {
 				module.name =  name;
 			},
-			getcurrentComponent : function () {
-				return componentSet.currentComponent;
-			},
+			// getcurrentComponent : function () {
+			// 	return componentSet.currentComponent;
+			// },
 			getTreeAction : function () {
 				return treeActions;
 			},
@@ -334,25 +335,38 @@ define(['configs/app'], function (app){
 					}
 				}
 			},
-			gLookup : function (collection, obj) {
-				var i, find;
-				for(i = 0; i < collection.length; i++){
-					if(collection[i] === obj){
-						find = true;
-					}
-				}
-				return find;
-			}   ,
-			gLookupByAttribute : function (collection, attribute, value) {
-				var i, find = null;
-				for(i = 0; i < collection.length; i++){
-					if(collection[i][attribute] === value){
-						find = collection[i];
-						break;
-					}
-				}
-				return find;
+			// gLookup : function (collection, obj) {
+			// 	var i, find;
+			// 	for(i = 0; i < collection.length; i++){
+			// 		if(collection[i] === obj){
+			// 			find = true;
+			// 		}
+			// 	}
+			// 	return find;
+			// }   ,
+			// gLookupByAttribute : function (collection, attribute, value) {
+			// 	var i, find = null;
+			// 	for(i = 0; i < collection.length; i++){
+			// 		if(collection[i][attribute] === value){
+			// 			find = collection[i];
+			// 			break;
+			// 		}
+			// 	}
+			// 	return find;
+			// },
+			addTrigger :function(template){
+				 $uibModal.open({
+					templateUrl:template,
+					controller: ['$scope', '$uibModalInstance', function($scope, $uibModalInstance) {
+						$scope.setMethodTrigger = function(){
+							method.trigger = $scope.trigger;
+							console.log(method);
+							$uibModalInstance.close();
+						};
+					}]
+				});
 			}
+			
 		};
 		return global;
 	}])

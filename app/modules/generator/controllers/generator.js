@@ -27,7 +27,7 @@ define(['configs/app', '../services/generatorFactory'], function (app) {
                     icon: "glyphicon glyphicon-floppy-disk",
                     action:function () {
                         //console.log(containerFactory.module);
-                        fileFactory.saveAsJson(angular.toJson(globalVarFactory.getModule()),'models');
+                        fileFactory.saveAsJson(angular.toJson(globalVarFactory.getModule()),globalVarFactory.getModule().name);
                         // $state.go('root');
                     }
                 }

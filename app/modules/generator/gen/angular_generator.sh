@@ -145,6 +145,30 @@ function dropdown {
     echo  "</div>" >>$2
     echo  "</script>" >>$2
 }
+
+function datalist {
+
+    local    collection=`echo $1 | jq -r '.collection'`
+    local    model=`echo $1 | jq -r '.model'`
+    local    returned=`echo $1 | jq -r '.returned'`
+    local    class=`echo $1 | jq -r '.class'`
+    local    style=`echo $1 | jq -r '.style'`
+    local    id=`echo $1 | jq -r '.id'`
+    local    label=`echo $1 | jq -r '.label'`
+    
+    echo -n "<div class=\"form-group " >> $2
+    classmaker2 "$1" $2 $3
+    echo  "\" >" >> $2
+    echo "<label class=\"form-control-label\">$label</label>" >> $2
+    echo "<input class=\"form-control\" ng-model=\"$model\" list=\"$id\" placeholder=\"$label\" name=\"$id \" >" >> $2
+    echo "<datalist id=\"$id\">" >> $2
+    echo "<option ng-repeat=\"item in $collection\" value=\"{{item.$returned}}\">" >> $2
+    echo "</datalist>" >> $2
+    echo "</div>"   >> $2
+    
+}
+
+
 function modal {
     local    label=`echo $1 | jq -r '.label'`
     local    id=`echo $1 | jq -r '.id'`
@@ -760,6 +784,8 @@ function view_generator {
 	"modal")  modal "$1" $2 $3
             ;;
 	"dropdown")  dropdown "$1" $2 $3
+            ;;
+	"datalist")  datalist "$1" $2 $3
             ;;
 	*)  echo "type: $type not expected"
 	    ;;

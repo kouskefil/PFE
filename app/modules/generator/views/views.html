@@ -3,23 +3,21 @@
     <div id="recepteur"  style=""  class="floatingPanel recepteur col-md-7 "> <!-- recepteur begins-->
         <uib-tabset >
             <uib-tab index="13"  heading="Treeview"> <!--begins-->
-                <div id="tree_content"  style="padding:20px"  class=""> <!-- tree_content begins-->
-                    <div id="Heading"  class=" row "> <!-- Heading begins-->
-                        <div id="treeHeading"  style="float:left"  class=" col-md-3 "> <!-- treeHeading begins-->
-                            <span  style="margin-bottom:15px"  class="fa fa-window-restore" id="span138" ></span>
-                            <span  id="span143" >components</span>
-                        </div> <!-- treeHeading ends-->
-                        <div  class="col-md-5 form-group" >
-                            <input class=" form-control"  placeholder="search" name="input174" id="input174" type="text" ng-model="wantedcomp"/>
-                        </div> <!-- div id:input174 -->
-                        <div id="propertiesHeading"  style="float:right"  class=" col-md-4 "> <!-- propertiesHeading begins-->
-                            <span  style="margin-bottom:15px"  class="fa fa-cogs" id="span146_copy1" ></span>
-                            <span  id="span147_copy1" >properties</span>
-                        </div> <!-- propertiesHeading ends-->
-                    </div> <!-- Heading ends-->
-                    <div id="group136"  style="padding:0; margin-left:0;"  class=" row  col-md-12 "> <!-- group136 begins-->
+                <div id="Heading" style="margin-bottom:5px;height: 35px; padding-top: 5px; padding-bottom: 5px;" class="floatingPanel col-md-12 "> <!-- Heading begins-->
+                    <div id="treeHeading"  style="border-right: 1px solid #ddd"  class=" col-md-5 "> <!-- treeHeading begins-->
+                        <div  > {{currentModel.label}} <span ng-hide="!currentModel" style=" color: lightslategray;"><i class="fa fa-chevron-right"></i> {{ currentComponent.id }}</span></div>
+                    </div> <!-- treeHeading ends-->
+                    <div class="col-md-3" style="border-right: 1px solid #ddd">
+                        <span>{{ currentComponent.type }}</span>
+                    </div>
+                    <div  class="col-md-4 form-group" style="margin-bottom: 0">
+                        <input class=" form-control"  placeholder="search" name="input174" id="input174" type="text" ng-model="wantedcomp"/>
+                    </div> <!-- div id:input174 -->
+                   
+                </div> <!-- Heading ends-->
+                <div id="group136"  style="padding:0; margin-left:0;"  class="col-md-12 "> <!-- group136 begins-->
                         <div id="group137"  style="overflow-y: auto; max-height: 405px;padding:0"  class=" col-md-8 "> <!-- group137 begins-->
-                            <div id="group132"  style="margin-left:0"  class=" row  col-md-12 "> <!-- group132 begins-->
+                            <div id="group132"  style="margin-left:0"  class="col-md-12 "> <!-- group132 begins-->
                                 <div class=""
                                      data-angular-treeview="true"
                                      data-tree-id="tree1"
@@ -32,125 +30,126 @@
                                 </div>
                             </div> <!-- group132 ends-->
                         </div> <!-- group137 ends-->
-                        <div id="group159"  style="border-left:1px solid gainsboro; max-width:230px; border-right:1px solid gainsboro; overflow-y:auto; max-height: 405px;padding:6px;"  class=" col-md-4 "> <!-- group159 begins-->
+                        <div id="group159"  style="border-left:1px solid gainsboro; border-right:1px solid gainsboro; overflow-y:auto; max-height: 405px;padding:6px;"  class=" col-md-4 "> <!-- group159 begins-->
                             <div id="group161"  ui-view="" class=""> <!-- group161 begins-->
                             </div> <!-- group161 ends-->
                         </div> <!-- group159 ends-->
                     </div> <!-- group136 ends-->
-                </div> <!-- tree_content ends-->
             </uib-tab> <!--end-->
             <uib-tab index="14"  heading="functions"> <!--begins-->
-                <div id="func_content"  style="padding:20px;"  class=""> <!-- func_content begins-->
-                   <div>
-                       <div class="form-group">
-                           <label for="input17">Name</label>
-                           <input class=" form-control"  placeholder="name" name="input17" id="input17" type="text" ng-model="function.name"/>
-                       </div> <!-- div id:input17 -->
-                   </div>
-                    <div class="form-group" >
-                        <label for="textarea18">content</label>
-                        <div style="border: 1px solid cadetblue;">
-                            <textarea id="textarea18" class="form-control"    name="textarea18" ui-codemirror="cmOption" ng-model="function.content"></textarea>
+                <div id="func_content"  style="padding:20px;"  class="col-md-12"> <!-- func_content begins-->
+                    <div class="col-md-8">
+                        <span id="mtoggler">toto</span>
+                        <div>
+                            <div class="form-group">
+                                <label for="input17">Name</label>
+                                <input class=" form-control"  placeholder="name" name="input17" id="input17" type="text" ng-model="function.name"/>
+                            </div> <!-- div id:input17 -->
                         </div>
+                        <div class="form-group" >
+                            <label for="textarea18">content</label>
+                            <div style="border: 1px solid cadetblue;">
+                                <textarea id="textarea18" class="form-control"    name="textarea18" ui-codemirror="cmOption" ng-model="function.content"></textarea>
+                            </div>
+                        </div>
+                        <div id="action"  class=""> <!-- action begins-->
+                            <button style="float: right;"  class="floatingPanel button custom" ng-click="add">Add function</button>
+                        </div> <!-- action ends-->
                     </div>
-                    <div id="action"  class=""> <!-- action begins-->
-                        <button  class="floatingPanel" ng-click="clear">Clear</button>
-                        <button  class="floatingPanel" ng-click="add">Add</button>
-                    </div> <!-- action ends-->
-                    <ul >
-                        <li  ng-repeat='item in currentComponent.functions'>
-                            <a >
-                                {{item.name}}</a>
-                        </li>
-                    </ul>
+                    <div id="list" class="col-md-4">
+                        <ul >
+                            <li  ng-repeat='item in currentComponent.functions'>
+                                <a >
+                                    {{item.name}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                   
+                    
                 </div> <!-- func_content ends-->
             </uib-tab> <!--end-->
             <uib-tab index="15"  heading="actions"> <!--begins-->
                 <div id="op_content"  style="padding:20px;"  class=""> <!-- op_content begins-->
-                    <div id="title_copy1"  class=""> <!-- title_copy1 begins-->
-                        <span  style="margin-bottom:15px"  class="fa fa-cogs" id="span146_copy1" ></span>
-                        <span  id="span147_copy" >state operations</span>
-                    </div> <!-- title_copy1 ends-->
                     <div id="group117"  style=""  class=" col-md-12 "> <!-- group117 begins-->
-                        <div id="data"  class=""> <!-- data begins-->
-                            <div class="form-group">
-                                <label for="input23">Name</label>
-                                <input class=" form-control"  placeholder="name" name="input23" id="input23" type="text" ng-model="operation.name"/>
-                            </div> <!-- div id:input23 -->
-                            <div class="form-group">
-                                <label for="input24">Icon</label>
-                                <input class=" form-control"  placeholder="icon" name="input24" id="input24" type="text" ng-model="operation.icon"/>
-                            </div> <!-- div id:input24 -->
-                            <div class="form-group" >
-                                <label for="textarea27_copy2">dependances</label>
-                                <!--<div>-->
-                                    <!--<textarea id="textarea27_copy2" class="form-control" name="textarea27_copy2" ui-codemirror="cmOption" ng-model="operation.dependances"></textarea>-->
-                                <!--</div>-->
-                            </div>
-                            <div class="form-group" >
-                                <label for="textarea27">Action</label>
-                                <!--<div>-->
-                                    <!--<textarea id="textarea27" class="form-control" name="textarea27" ui-codemirror="cmOption" ng-model="operation.action"></textarea>-->
-                                <!--</div>-->
-                            </div>
-                        </div> <!-- data ends-->
-                        <div id="actions"  class=""> <!-- actions begins-->
-                            <button  class="floatingPanel" ng-click="clear()">clear</button>
-                            <button  class="floatingPanel" ng-click="addoperation()">add operation</button>
-                            <button  class="floatingPanel" ng-click="deleteoperation()">delete</button>
-                        </div> <!-- actions ends-->
-                        <ul >
-                            <li  ng-repeat='item in currentComponent.operations'>
-                                <a  ng-click='setoperation(item)'>
-                                    {{item.name}}</a>
-                            </li>
-                        </ul>
+                       <div class="col-md-8">
+                           <div id="data"  class=""> <!-- data begins-->
+                               <div class="form-group">
+                                   <label for="input23">Name</label>
+                                   <input class=" form-control"  placeholder="name" name="input23" id="input23" type="text" ng-model="operation.name"/>
+                               </div> <!-- div id:input23 -->
+                               <div class="form-group">
+                                   <label for="input24">Icon</label>
+                                   <input class=" form-control"  placeholder="icon" name="input24" id="input24" type="text" ng-model="operation.icon"/>
+                               </div> <!-- div id:input24 -->
+                               <div class="form-group" >
+                                   <label for="textarea27_copy2">dependances</label>
+                                   <!--<div>-->
+                                   <!--<textarea id="textarea27_copy2" class="form-control" name="textarea27_copy2" ui-codemirror="cmOption" ng-model="operation.dependances"></textarea>-->
+                                   <!--</div>-->
+                               </div>
+                               <div class="form-group" >
+                                   <label for="textarea27">Action</label>
+                                   <!--<div>-->
+                                   <!--<textarea id="textarea27" class="form-control" name="textarea27" ui-codemirror="cmOption" ng-model="operation.action"></textarea>-->
+                                   <!--</div>-->
+                               </div>
+                           </div> <!-- data ends-->
+                           <div id="actions"  class=""> <!-- actions begins-->
+                               <button  class="floatingPanel button custom" style="float: right;" ng-click="addoperation()">add action</button>
+                           </div> <!-- actions ends-->
+                       </div>
+                       <div class="col-md-4">
+                           <ul >
+                               <li  ng-repeat='item in currentComponent.operations'>
+                                   <a  ng-click='setoperation(item)'>
+                                       {{item.name}}</a>
+                               </li>
+                           </ul>
+                       </div>
                     </div> <!-- group117 ends-->
                 </div> <!-- op_content ends-->
             </uib-tab> <!--end-->
             <uib-tab index="16"  heading="variables"> <!--begins-->
-                <div id="var_content"  style="padding:20px;"  class=""> <!-- var_content begins-->
-                    <div id="title_copy2"  class=""> <!-- title_copy2 begins-->
-                        <span  style="margin-bottom:15px"  class="fa fa-cogs" id="span146_copy2" ></span>
-                        <span  id="span147_copy2" >state variables</span>
-                    </div> <!-- title_copy2 ends-->
-                    <div >
-                        <label for="input30_copy2">async</label>
-                        <input class=" "  placeholder="async" name="input30_copy2" id="input30_copy2" type="checkbox" ng-model="variable.async"/>
-                    </div> <!-- div id:input30_copy2 -->
-                    <div >
-                        <label for="input30">resolve</label>
-                        <input class=" "  placeholder="resolve" name="input30" id="input30" type="checkbox" ng-model="variable.resolve"/>
-                    </div> <!-- div id:input30 -->
-                    <div class="form-group">
-                        <label for="input29">Name</label>
-                        <input class=" form-control"  placeholder="name" name="input29" id="input29" type="text" ng-model="variable.name"/>
-                    </div> <!-- div id:input29 -->
-                    <div class="form-group">
-                        <label for="input162">service form</label>
-                        <input class=" form-control"  placeholder="serviceform" name="input162" id="input162" type="text" ng-model="variable.servform"/>
-                    </div> <!-- div id:input162 -->
-                    <div class="form-group">
-                        <label for="input163">service module</label>
-                        <input class=" form-control"  placeholder="service module" name="input163" id="input163" type="text" ng-model="variable.servmodule"/>
-                    </div> <!-- div id:input163 -->
-                    <div class="form-group" >
-                        <label for="textarea124">value</label>
-                        <div>
-                            <textarea id="textarea124" class="form-control" name="textarea124" ng-model="variable.value"></textarea>
-                        </div>
-                    </div>
-                    <div id="_action"  class=""> <!-- action begins-->
-                        <button  ng-click="addv">Add</button>
-                        <button  class="floatingPanel" ng-click="delv">delete</button>
-                        <button  class="floatingPanel" ng-click="clear">Clear</button>
-                    </div> <!-- action ends-->
-                    <ul >
-                        <li  ng-repeat='item in components.variables'>
-                            <a  ng-click='setv(item)'>
-                                {{item.name}}</a>
-                        </li>
-                    </ul>
+                <div id="var_content"  style="padding:20px;"  class="col-md-12"> <!-- var_content begins-->
+                     <div class="col-md-8">
+                         <div >
+                             <label for="input30_copy2">async</label>
+                             <input class=" "  placeholder="async" name="input30_copy2" id="input30_copy2" type="checkbox" ng-model="variable.async"/>
+                         </div> <!-- div id:input30_copy2 -->
+                         <div >
+                             <label for="input30">resolve</label>
+                             <input class=" "  placeholder="resolve" name="input30" id="input30" type="checkbox" ng-model="variable.resolve"/>
+                         </div> <!-- div id:input30 -->
+                         <div class="form-group">
+                             <label for="input29">Name</label>
+                             <input class=" form-control"  placeholder="name" name="input29" id="input29" type="text" ng-model="variable.name"/>
+                         </div> <!-- div id:input29 -->
+                         <div class="form-group">
+                             <label for="input162">service form</label>
+                             <input class=" form-control"  placeholder="serviceform" name="input162" id="input162" type="text" ng-model="variable.servform"/>
+                         </div> <!-- div id:input162 -->
+                         <div class="form-group">
+                             <label for="input163">service module</label>
+                             <input class=" form-control"  placeholder="service module" name="input163" id="input163" type="text" ng-model="variable.servmodule"/>
+                         </div> <!-- div id:input163 -->
+                         <div class="form-group" >
+                             <label for="textarea124">value</label>
+                             <div>
+                                 <textarea id="textarea124" class="form-control" name="textarea124" ng-model="variable.value"></textarea>
+                             </div>
+                         </div>
+                         <div id="_action"  class=""> <!-- action begins-->
+                             <button  ng-click="addv" class="floatingPanel button custom">Add var</button>
+                         </div> <!-- action ends-->
+                     </div>
+                     <div class="col-md-4">
+                         <ul >
+                             <li  ng-repeat='item in components.variables'>
+                                 <a  ng-click='setv(item)'>
+                                     {{item.name}}</a>
+                             </li>
+                         </ul>
+                     </div>                   
                 </div> <!-- var_content ends-->
             </uib-tab> <!--end-->
             <uib-tab index="77"  heading="configs"> <!--begins-->
@@ -165,7 +164,7 @@
                     </div> <!-- div id:input152 -->
                     <div class="form-group">
                         <label for="input153">role</label>
-                        <input class=" form-control"  placeholder="role" name="input153" id="input153" type="null" ng-model="currentComponent.role"/>
+                        <input class=" form-control"  placeholder="role" name="input153" id="input153" type="text" ng-model="currentComponent.role"/>
                     </div> <!-- div id:input153 -->
                     <div class="form-group">
                         <label for="input78">state</label>
@@ -249,13 +248,20 @@
                 </div> <!-- widget ends-->
             </uib-tab> <!--end-->
             <uib-tab index="9"  heading="views"> <!--begins-->
-                <ul  class="list-group partial-view">
-                    <li  class="list-group-item"ng-repeat=" item in models">
+                <ul  class="items">
+                    <li class="_item" data-ng-click="cclick(item)" ng-class="{selectedItem:item.name==selected}" ng-repeat=" item in models">
                         <a ui-sref="root.generator.views.properties({label:item.label, type:item.type, num:currentComponent.num})" ng-click='setModel(item)'>
-                            {{item.label}}</a>
-                        <span  class="glyphicon glyphicon-trash item-label" data-ng-click="deleteModel(item)" id="span158" ></span>
+                            {{item.label}}
+                        </a>
+                        <span  style="float: right" class="glyphicon glyphicon-trash action-item action-delete" data-ng-click="deleteModel(item)" id="span219" ></span>
                     </li>
                 </ul>
+                <!--<ul  class="list-group partial-view">-->
+                    <!--<li  class="list-group-item"ng-repeat=" item in models">-->
+                       <!---->
+                        <!--<span  class="glyphicon glyphicon-trash item-label" data-ng-click="deleteModel(item)" id="span158" ></span>-->
+                    <!--</li>-->
+                <!--</ul>-->
             </uib-tab> <!--end-->
         </uib-tabset>
     </div> <!-- composant ends-->

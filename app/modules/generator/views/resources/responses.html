@@ -1,0 +1,31 @@
+	<div class="modal-module-editing" style="top: 200px !important; ">
+		<div class="modal-header">
+			<h5 class="modal-title" id="modal-title">
+				<i class="fa fa-reply"></i>
+				Method response
+			</h5>
+		</div>
+		<div class="modal-body" id="modal-body">
+			<div  class="form-group">
+				<label for="select210">Media Type</label>
+				<select name="select210" id="select210" ng-model="rsptmp.mediatype" class="form-control" ><option ng-repeat='item in mediatype' value="{{item.rvalue}}"> {{item.dvalue}}
+				</option>
+				</select>
+			</div>
+			<div  class="form-group">
+				<label for="select211">Param name</label>
+				<select name="select211" id="select211" ng-model="rsptmp.name" class="form-control" >
+					<option ng-repeat='item in requests' value="{{item.name}}"> {{item.name}}
+				</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="input212">Param value</label>
+				<input class=" form-control"  placeholder="paramValue" name="input212" id="input212" type="text" ng-model="rsptmp.value"/>
+			</div> <!-- div id:input212 -->
+		
+		</div>
+		<div class="modal-footer ">
+			<button  class="floatingPanel button custom" ng-click="addResponse()">Add Response</button>
+		</div>
+	</div>

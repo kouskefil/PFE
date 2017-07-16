@@ -19,6 +19,7 @@ require.config({
         "treeview": "js/directives/angular.treeview.js" ,
         "codemirror":"assets/codemirror/lib/codemirror",
         "jquery":"assets/jquery/jquery.min",
+        "myjq":"assets/js/myjq",
 		"uicodemirror":"assets/codemirror/lib/ui-codemirror.min",
 		'lib/codemirror': 'assets/codemirror/lib/codemirror',
 		'mode/javascript/javascript': 'assets/codemirror/mode/javascript/javascript',
@@ -47,9 +48,9 @@ require.config({
             deps: ["angular"],
             exports:"ui-bootstrap"
         },
-        // "lodash":{
-			// // exports:"CodeMirror"
-        // },
+        "myjq":{
+            deps : ["jquery"]
+        },
         "mode/javascript/javascript":{
             deps:["codemirror"] 
         },

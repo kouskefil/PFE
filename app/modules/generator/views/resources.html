@@ -1,253 +1,141 @@
 <!-- Generated html file -->
 <div id="resources"  style="padding:0"  class=" row content-inner col-md-10 col-md-offset-1 "> <!-- resources begins-->
-    <div id="resources_params"  style="padding:0;"  class=" col-md-7 "> <!-- resources_params begins-->
-        <div id="rsc_definition"  style="margin-bottom: 15px; padding: 0"  class="floatingPanel col-md-12 "> <!-- rsc_definition begins-->
-            <div id="rsc_def_header"  style="padding: 10px 15px; margin: 0"  class="g_header"> <!-- rsc_def_header begins-->
-                <span  style="padding-right: 10px;"  class="glyphicon glyphicon-link" id="span152" ></span>
-                <span  style="font-size: small; color: #0084bf;"  id="span153" >Resources definition</span>
-            </div> <!-- rsc_def_header ends-->
-            <div id="rsc_def_content"  style="padding: 15px 15px"  class=""> <!-- rsc_def_content begins-->
-                <div  class="form-group">
-                    <select name="select155" id="select155" ng-model="currentRsc.parent" class="form-control" ><option ng-repeat='item in RscParent' value="{{item.realpath}}"> {{item.realpath}}
-                    </option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="input156">path</label>
-                    <input class=" form-control"  placeholder="path" name="input156" id="input156" type="text" ng-blur="updatersc()" ng-model="currentRsc.path"/>
-                </div> <!-- div id:input156 -->
-            </div> <!-- rsc_def_content ends-->
-        </div> <!-- rsc_definition ends-->
-        <div id="rsc_params"  style="padding: 0; min-height:302px;margin-bottom: 50px;"  class="floatingPanel col-md-12 "> <!-- rsc_params begins-->
-            <div id="params_header"  style="padding: 10px 15px; margin: 0"  class="g_header"> <!-- params_header begins-->
-                <span  style="padding-right: 10px;"  class="glyphicon glyphicon-cog" id="span158" ></span>
-                <span  style="font-size: small; color: #0084bf;"  id="span159" >methods</span>
-                <ul  style="list-style: none; float: right; font-size: xx-small; display: flex; margin-bottom: 0px; width: 60px;height: 20px;padding-left: 50px;" >
-                    <li  style="margin: 0"  class="dropdown nav-options" uib-dropdown auto-close="disabled" on-toggle="toggled(open) ">
-                        <span  class="glyphicon glyphicon-plus g-action" uib-dropdown-toggle data-ng-click="setmethoddropdownstyle()" id="simple-dropdownr" ></span>
-                        <ul  class="dropdown-menu" template-url="methods_dropd.html" uib-dropdown-menu aria-labelledby="dropdownMenu3" >
-                        </ul>
-                    </li>
-                </ul>
-            </div> <!-- params_header ends-->
-            <div id="params_content"  style="padding: 0;"  class=" row  col-md-12 "> <!-- params_content begins-->
-                <div id="methods_list"  style="padding-left: 20px; padding-right: 5px;"  class=" col-md-4 "> <!-- methods_list begins-->
-                    <ul  class="items">
-                        <li  style="padding-left: 10px;"  class="" ng-class="{selectedItem:item.id==selected}" data-ng-click="getMethod(item)"ng-repeat=" item in methods">
-                            <span  class="item-label" id="span179" >{{item.id}}</span>
-                        </li>
-                    </ul>
-                </div> <!-- methods_list ends-->
-                <div id="params"  style="border-left:2px solid lightgray"  class=" col-md-8 "> <!-- params begins-->
-                    <div id="method-action"  class=""> <!-- method-action begins-->
-                        <ul  style="padding-top:5px"  class="method-action">
-                            <li >
-                                <div id="trig"  class="dropdown" uib-dropdown auto-close="disabled"> <!-- trig begins-->
-                                    <span  class="glyphicon glyphicon-share-alt" uib-dropdown-toggle id="span242" ></span>
-                                    <ul  class="dropdown-menu" template-url="trigger.html" uib-dropdown-menu aria-labelledby="dropdownMenu1" >
-                                    </ul>
-                                </div> <!-- trig ends-->
-                            </li>
-                            <li >
-                                <div id="resp"  class="dropdown" uib-dropdown auto-close="disabled"> <!-- resp begins-->
-                                    <span  class="glyphicon glyphicon-plus" uib-dropdown-toggle id="span243" ></span>
-                                    <ul  class="dropdown-menu" template-url="response_dropd.html" uib-dropdown-menu aria-labelledby="dropdownMenu2" >
-                                    </ul>
-                                </div> <!-- resp ends-->
-                            </li>
-                            <li >
-                                <div id="del"  class="dropdown" uib-dropdown auto-close="disabled"> <!-- del begins-->
-                                    <span  class="glyphicon glyphicon-trash" ng-click="delete(methods, item)" id="span245" ></span>
-                                </div> <!-- del ends-->
-                            </li>
-                        </ul>
-                    </div> <!-- method-action ends-->
-                    <uib-tabset >
-                        <uib-tab index="293"  heading="details"> <!--begins-->
-                            <div  class="form-group">
-                                <label for="select297">name</label>
-                                <select name="select297" id="select297" ng-model="method.name" class="form-control" ><option ng-repeat='item in resourceMethod' value="{{item.rvalue}}"> {{item.dvalue}}
-                                </option>
-                                </select>
-                            </div>
-                            <!--<div  class="form-group">-->
-                                <!--<label for="select298">id</label>-->
-                                <!--<select name="select298" id="select298" ng-model="method.id" class="form-control" ><option ng-repeat='item in ids' value="{{item.name}}"> {{item.name}}-->
-                                <!--</option>-->
-                                <!--</select>-->
-                            <!--</div>-->
+ <div id="resources_params"  style="padding:0;"  class=" col-md-7 "> <!-- resources_params begins-->
+  <div id="rsc_definition"  style="margin-bottom: 15px; padding: 0"  class="floatingPanel col-md-12 "> <!-- rsc_definition begins-->
+   <div id="rsc_def_header"  style="padding: 10px 15px; margin: 0"  class="g_header"> <!-- rsc_def_header begins-->
+    <span  style="padding-right: 10px;"  class="glyphicon glyphicon-link" id="span152" ></span>
+    <span  style="font-size: small; color: #0084bf;"  id="span153" >Resources definition</span>
+   </div> <!-- rsc_def_header ends-->
+   <div id="rsc_def_content"  style="padding: 15px 15px"  class=""> <!-- rsc_def_content begins-->
+    <div  class="form-group">
+     <select name="select155" id="select155" ng-model="currentRsc.parent" class="form-control" ><option ng-repeat='item in RscParent' value="{{item.realpath}}"> {{item.realpath}}
+     </option>
+     </select>
+    </div>
+    <div class="form-group">
+     <label for="input156">path</label>
+     <input class=" form-control"  placeholder="path" name="input156" id="input156" type="text" ng-model="currentRsc.path"/>
+    </div> <!-- div id:input156 -->
+   </div> <!-- rsc_def_content ends-->
+  </div> <!-- rsc_definition ends-->
+  <div id="rsc_params"  style="padding: 0; min-height:302px;margin-bottom: 50px;"  class="floatingPanel col-md-12 "> <!-- rsc_params begins-->
+   <div id="params_header"  style="padding: 10px 15px; margin: 0"  class="g_header"> <!-- params_header begins-->
+    <span  style="padding-right: 10px;"  class="glyphicon glyphicon-cog" id="span158" ></span>
+    <span  style="font-size: small; color: #0084bf;"  id="span159" >Resource parameters</span>
+   </div> <!-- params_header ends-->
+   <div id="params_content"  style="padding: 0;"  class="col-md-12 "> <!-- params_content begins-->
+    <div id="methods_list"  class="method-list col-md-4 "> <!-- methods_list begins-->
+     <div  class="method-list-header floatingPanel"><span>Methods</span></div>
+     <ul  class="items">
+      <li  style="padding-left: 10px;"  class="method" ng-class="{selectedItem:item.id==selected}" ng-repeat=" item in methods">
+       <div id="group303"  class=""> <!-- group303 begins-->
+        <span  class="item-label" data-ng-click="getMethod(item)" id="span179" >{{item.id}}</span>
+        <div id="method-action floatingPanel"  class="method-actions"> <!-- method-action begins-->
+         <ul  style="padding-top:5px"  class="method-action">
+          <li >
+           <div id="resp_copy1"  class="dropdown" uib-dropdown auto-close="disabled"> <!-- resp_copy1 begins-->
+            <span  class="fa fa-bolt" uib-dropdown-toggle id="span243_copy1" data-ng-click="addtrigger('app/modules/generator/views/resources/trigger.html',item)" ></span>
+           </div> <!-- resp_copy1 ends-->
+          </li>
+          <li >
+           <div id="resp" > <!-- resp begins-->
+            <span  class="fa fa-share"  data-ng-click="addresp('app/modules/generator/views/resources/responses.html', item)"></span>
+           </div> <!-- resp ends-->
+          </li>
+          <li >
+           <div id="del"  class="dropdown" uib-dropdown auto-close="disabled"> <!-- del begins-->
+            <span  class="glyphicon glyphicon-trash" ng-click="delMethod(methods, item)" id="span245" ></span>
+           </div> <!-- del ends-->
+          </li>
+         </ul>
+        </div> <!-- method-action ends-->
+       </div> <!-- group303 ends-->
+      </li>
+     </ul>
+    </div> <!-- methods_list ends-->
+    <div id="params"  class="method-params col-md-8 "> <!-- params begins-->
+     <uib-tabset >
+      <uib-tab index="293"  heading="method"> <!--begins-->
+       <div  class="form-group">
+        <label for="select297">name</label>
+        <select name="select297" id="select297" ng-model="method.name" class="form-control" ><option ng-repeat='item in resourceMethod' value="{{item.rvalue}}"> {{item.dvalue}}
+        </option>
+        </select>
+       </div>
+       <div class="form-group " >
+        <label class="form-control-label">operation</label>
+        <input class="form-control" ng-model="method.id" list="datalist300" placeholder="operation" name="datalist300 " >
+        <datalist id="datalist300">
+         <option ng-repeat="item in ids" value="{{item.name}}">
+        </datalist>
+       </div>
+       <div class="form-group">
+        <label for="input299">role</label>
+        <input class=" form-control"  placeholder="role" name="input299" id="input299" type="text" ng-model="method.role"/>
+       </div> <!-- div id:input299 -->
+       <button  class="button custom" ng-click="addmethod()">add method</button>
+      </uib-tab> <!--end-->
+      <uib-tab index="220"  heading="trigger"> <!--begins-->
+       <div id="trigger"  class=""> <!-- trigger begins-->
+        <div class="col-md-12" style="margin-top: 10px; border: 1px solid #ddd">
+             <div class="col-md-5">
+               name : <span style="font-size: medium;"> {{method.trigger.name}}</span>
+             </div>
+             <div class="col-md-6">
+               from :  <span style="font-size: medium;"> {{method.trigger.from}}</span>
+            </div>
+             <div class="col-md-1">
+               <span class="fa fa-plus-circle"></span>
+             </div>
+        </div>
+       </div> <!-- trigger ends-->
+      </uib-tab> <!--end-->
+      <uib-tab index="164"  heading="requests"> <!--begins-->
     
-                            <div class="form-group">
-                                <label for="input_country">operation</label>
-                                <input class="form-control" ng-model="method.id" list="ids" placeholder="user country" name="input_country" id="input_country">
-                                <datalist id="ids">
-                                    <option ng-repeat='item in ids' value="{{item.name}}">
-                                </datalist>
-                                <!--<input class=" form-control" ng-change="ddd(user.defaultCountry)" placeholder="user country" name="input_country" id="input_country" type="text" ng-model="user.defaultCountry"/>-->
-                            </div> <!-- div id:input_country -->
-                            
-                            
-                            <div class="form-group">
-                                <label for="input299">role</label>
-                                <input class=" form-control"  placeholder="role" name="input299" id="input299" type="text" ng-model="method.role"/>
-                            </div> <!-- div id:input299 -->
-                            <button  class="floatingPanel button blue" ng-click="addMethod(currentRsc.method)">Add method</button>
-                        </uib-tab> <!--end-->
-                        <uib-tab index="220"  heading="trigger"> <!--begins-->
-                            <div id="group254"  class=" row dropdown trigger" > <!-- group254 begins-->
-                                <div id="group278"  class=" col-md-5 "> <!-- group278 begins-->
-                                    <span  id="name" >name :</span>
-                                    <span  id="span236" >{{item.name}}</span>
-                                </div> <!-- group278 ends-->
-                                <div id="group279"  class=" col-md-5 "> <!-- group279 begins-->
-                                    <span  style="margin: 0 0 15px 30px"  id="from" >from :</span>
-                                    <span  id="span255" >{{item.frame}}</span>
-                                </div> <!-- group279 ends-->
-                                <div id="group280"  class=" col-md-2 " uib-dropdown auto-close="disabled"> <!-- group280 begins-->
-                                    <span  style="float:right"  class="glyphicon glyphicon-plus" uib-dropdown-toggle id="span256" ></span>
-                                    <ul  template-url="trigger-param.html" uib-dropdown-menu aria-labelledby="dropdownMenu4" >
-                                    </ul>
-                                </div> <!-- group280 ends-->
-                            </div> <!-- group254 ends-->
-                            <div id="group257"  style="margin-top:20px"  class=""> <!-- group257 begins-->
-                                <ul >
-                                    <li ng-repeat=" item in method.trigger.in">
-                                        <span  id="span268" >{{ item.name}}</span>
-                                        <span  id="span269" >{{item.value}}</span>
-                                    </li>
-                                </ul>
-                            </div> <!-- group257 ends-->
-                        </uib-tab> <!--end-->
-                        <uib-tab index="164"  heading="requests"> <!--begins-->
-                            <div id="request"  class="floatingPanel request" ng-repeat="item in requests"> <!-- request begins-->
-                                <p>
-                                    <span  class="param" id="span203" >name</span>
-                                    <span  class="value" id="span204" >{{item.name}}</span>
-                                </p>
-                                <p>
-                                    <span  class="param" id="span205" >style</span>
-                                    <span  class="value" id="span206" >{{item.style}}</span>
-                                    <select name="select210" id="select10" ng-model="item.style" class="form-control" >
-                                        <option ng-repeat='s in styles' value="{{s}}"> {{s}}
-                                    </option>
-                                    </select>
-                                </p>
-                                <p>
-                                    <span  class="param"  id="span207" >required</span>
-                                    <span  class="value" id="span208" >{{item.defaultValue}}</span>
-                                </p>
-                            </div> <!-- request ends-->
-                        </uib-tab> <!--end-->
-                        <uib-tab index="165"  heading="responses"> <!--begins-->
-                            <div id="response"  class="floatingPanel request" ng-repeat="item in responses"> <!-- response begins-->
-                                <p>
-                                    <span  class="param" id="span203_copy1" >name</span>
-                                    <span  class="value" id="span204_copy1" >{{item.name}}</span>
-                                </p>
-                                <p>
-                                    <span  class="param" id="span205_copy1" >Value</span>
-                                    <span  class="value" id="span206_copy1" >{{item.value}}</span>
-                                </p>
-                                <p>
-                                    <span  class="param"  id="span207_copy1" >Media Type</span>
-                                    <span  class="value" id="span208_copy1" >{{item.mediatype}}</span>
-                                </p>
-                            </div> <!-- response ends-->
-                        </uib-tab> <!--end-->
-                    </uib-tabset>
-                </div> <!-- params ends-->
-            </div> <!-- params_content ends-->
-        </div> <!-- rsc_params ends-->
-    </div> <!-- resources_params ends-->
-    <div id="resources_tree"  style="padding:0; min-height:465px;max-height:465px;margin-left:15px"  class="floatingPanel col-md-3 "> <!-- resources_tree begins-->
-        <div id="tree_header"  style="padding: 10px 15px; margin: 0"  class="g_header"> <!-- tree_header begins-->
-            <span  style="padding-right: 10px;"  class="fa fa-cogs" id="span177" ></span>
-            <span  style="font-size: small; color: #0084bf;"  id="span178" >Resources</span>
-        </div> <!-- tree_header ends-->
-        <div class="null"
-             data-angular-treeview="true"
-             data-tree-id="rsc_tree"
-             data-tree-model="resources"
-             data-node-id="path"
-             data-node-click="cclick"
-             data-node-children="resources"
-             data-tree-actions="treeActions"
-        >
-        </div>
-    </div> <!-- resources_tree ends-->
+        <table class="table">
+         <tbody>
+         <tr ng-repeat="item in requests">
+          <td>{{item.name}}</td>
+          <td>{{item.type}}</td>
+          <td>{{item.defaultValue}}</td>
+          <td><span class="glyphicon glyphicon-trash" data-ng-click="deleteRole(role)"></span></td>
+         </tr>
+         </tbody>
+        </table>
+      </uib-tab> <!--end-->
+      <uib-tab index="165"  heading="responses"> <!--begins-->
+       <table class="table">
+        <tbody>
+        <tr ng-repeat="item in responses">
+         <td>{{item.name}}</td>
+         <td>{{item.value}}</td>
+         <td>{{item.mediatype}}</td>
+         <td><span class="glyphicon glyphicon-trash" data-ng-click="deleteRole(role)"></span></td>
+        </tr>
+        </tbody>
+       </table>
+      </uib-tab> <!--end-->
+     </uib-tabset>
+    </div> <!-- params ends-->
+   </div> <!-- params_content ends-->
+  </div> <!-- rsc_params ends-->
+ </div> <!-- resources_params ends-->
+ <div id="resources_tree"  style="padding:0; min-height:465px;max-height:465px;margin-left:15px"  class="floatingPanel col-md-3 "> <!-- resources_tree begins-->
+  <div id="tree_header"  style="padding: 10px 15px; margin: 0"  class="g_header"> <!-- tree_header begins-->
+   <span  style="padding-right: 10px;"  class="fa fa-cogs" id="span177" ></span>
+   <span  style="font-size: small; color: #0084bf;"  id="span178" >Resources</span>
+  </div> <!-- tree_header ends-->
+  <div class="null"
+          data-angular-treeview="true"
+          data-tree-id="rsc_tree"
+          data-tree-model="resources"
+          data-node-id="path"
+          data-node-click="cclick"
+          data-node-children="resources"
+          data-tree-actions="treeActions"
+  >
+  </div>
+ </div> <!-- resources_tree ends-->
 </div> <!-- resources ends-->
-<script type="text/ng-template" id="methods_dropd.html">
-    <div class="dropdown-menu floatingPanel method-dropdown" ng-class="editMethod" uib-dropdown-menu role="menu" aria-labelledby="button-template-url"
-    >
-        <div  class="form-group">
-            <label for="select188">method name</label>
-            <select name="select188" id="select188" ng-model="currentRsc.method.name" class="form-control" ><option ng-repeat='item in resourceMethod' value="{{item.rvalue}}"> {{item.rvalue}}
-            </option>
-            </select>
-        </div>
-        <div  class="form-group">
-            <label for="select189">method id</label>
-            <select name="select189" id="select189" ng-model="currentRsc.method.id" class="form-control" ><option ng-repeat='item in ids' value="{{item.name}}"> {{item.name}}
-            </option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="input190">role</label>
-            <input class=" form-control"  placeholder="role" name="input190" id="input190" type="text" ng-model="currentRsc.method.role"/>
-        </div> <!-- div id:input190 -->
-        <button  class="floatingPanel button blue" ng-click="addMethod(currentRsc.method)">Add method</button>
-        <span  style="float: right;"  uib-dropdown-toggle id="span192" >Cancel</span>
-    </div>
-</script>
-<script type="text/ng-template" id="response_dropd.html">
-    <div class="dropdown-menu responsedropdown floatingPanel">
-        <div  class="form-group">
-            <label for="select210">Media Type</label>
-            <select name="select210" id="select210" ng-model="rsptmp.mediatype" class="form-control" ><option ng-repeat='item in mediatype' value="{{item.rvalue}}"> {{item.dvalue}}
-            </option>
-            </select>
-        </div>
-        <div  class="form-group">
-            <label for="select211">Param name</label>
-            <select name="select211" id="select211" ng-model="rsptmp.name" class="form-control" ><option ng-repeat='item in requests' value="{{item.name}}"> {{item.name}}
-            </option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="input212">Param value</label>
-            <input class=" form-control"  placeholder="paramValue" name="input212" id="input212" type="text" ng-model="rsptmp.value"/>
-        </div> <!-- div id:input212 -->
-        <button  class="floatingPanel button blue" ng-click="addResponse(method)">Add Response</button>
-        <span  style="float: right"  uib-dropdown-toggle id="span283" >cancel</span>
-    </div>
-</script>
-<script type="text/ng-template" id="trigger.html">
-    <div class="dropdown-menu responsedropdown floatingPanel"
-    >
-        <div class="form-group">
-            <label for="input271">name</label>
-            <input class=" form-control"  placeholder="name" name="input271" id="input271" type="text" ng-model="method.trigger.name"/>
-        </div> <!-- div id:input271 -->
-        <div class="form-group">
-            <label for="input272">from</label>
-            <input class=" form-control"  placeholder="from" name="input272" id="input272" type="text" ng-model="method.trigger.from"/>
-        </div> <!-- div id:input272 -->
-        <button  class="floatingPanel button blue" uib-dropdown-toggle>save</button>
-        <span  style="float: right"  uib-dropdown-toggle id="span282" >cancel</span>
-    </div>
-</script>
-<script type="text/ng-template" id="trigger-param.html">
-    <div class="dropdown-menu trigger-param-dropdown floatingPanel" ng-class="editMethod" uib-dropdown-menu role="menu" aria-labelledby="button-template-url"
-    >
-        <div class="form-group">
-            <label for="input275">name</label>
-            <input class=" form-control"  placeholder="name" name="input275" id="input275" type="text" ng-model="param.name"/>
-        </div> <!-- div id:input275 -->
-        <div class="form-group">
-            <label for="input276">value</label>
-            <input class=" form-control"  placeholder="value" name="input276" id="input276" type="text" ng-model="param.value"/>
-        </div> <!-- div id:input276 -->
-        <button  class="floatingPanel button blue" ng-click="addtriggerParam(param)">add</button>
-        <span  style="float: right"  uib-dropdown-toggle id="span281" >cancel</span>
-    </div>
-</script>
+
+

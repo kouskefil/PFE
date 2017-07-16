@@ -166,6 +166,7 @@ define(['configs/app',
                             icon: "glyphicon glyphicon-floppy-disk",
                             action:function () {
                                 var module = globalVarFactory.getModule();
+                                console.log(module);
                                 fileFactory.saveAsJson(angular.toJson(module),module.name);
                             }
                         }

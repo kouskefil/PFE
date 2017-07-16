@@ -4,6 +4,7 @@ define(['configs/app'], function (app){
             $scope.HTMLcomponents = HTMLcomponents;
             $scope.components = null;
             $scope.operation = {};
+            $scope.selected = '';
             //variables to add in the model
             $scope.currentComponent = globalVarFactory.getModelHead().then(function (data) {
                 $scope.currentComponent = data;
@@ -11,8 +12,6 @@ define(['configs/app'], function (app){
 
             });
             console.log(CodeMirror);
-		    // CodeMirror().setOption('mode', 'javascript');
-            // The ui-codemirror option
             $scope.cmOption =
                 {
                     lineNumbers: true,
@@ -21,12 +20,13 @@ define(['configs/app'], function (app){
                         _cm.setOption("mode", "javascript");
                     }
                 };
-
+          
             $scope.setModel = function (model) {
                 globalVarFactory.setModel(model);
                 $scope.components = model;
                 $scope.currentModel = model;
                 $scope.currentComponent = model;
+				$scope.selected = $scope.currentModel.label;
                 console.log($scope.components);
             } ;
             //**************************************** fonctions à ajouter dans le model----------
@@ -184,6 +184,7 @@ define(['configs/app'], function (app){
                 $scope.setcurrentContainer(selectedNode);
                 componentSet.currentComponent = selectedNode;
                 $scope.go($scope.currentComponent);
+				
             };
             $scope.addcol = function () {
                 if(!$scope.currentComponent.columns)
