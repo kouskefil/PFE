@@ -2,35 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0ce9437-dc48-408e-85d8-8bdb3a4bcc24" name="Default" comment="initial version">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/myjq.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/generator/views/partials/datalist.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/generator/views/resources/responses.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/generator/views/resources/trigger.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/sidebar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/modules/generator/views/database_old.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/modules/generator/views/menus.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/modules/generator/views/operation_old.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/modules/generator/views/resources.html" afterPath="$PROJECT_DIR$/app/modules/generator/views/resources_old.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/css/buttons.css" afterPath="$PROJECT_DIR$/app/assets/css/buttons.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/codemirror/lib/codemirror.css" afterPath="$PROJECT_DIR$/app/assets/codemirror/lib/codemirror.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/css/style.css" afterPath="$PROJECT_DIR$/app/assets/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/configs/app.js" afterPath="$PROJECT_DIR$/app/configs/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/configs/main.js" afterPath="$PROJECT_DIR$/app/configs/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/login.html" afterPath="$PROJECT_DIR$/app/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/generator/controllers/generator.js" afterPath="$PROJECT_DIR$/app/modules/generator/controllers/generator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers/layoutCtrl.js" afterPath="$PROJECT_DIR$/app/js/controllers/layoutCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/generator/controllers/overview.js" afterPath="$PROJECT_DIR$/app/modules/generator/controllers/overview.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/generator/controllers/resources.js" afterPath="$PROJECT_DIR$/app/modules/generator/controllers/resources.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/generator/controllers/view.js" afterPath="$PROJECT_DIR$/app/modules/generator/controllers/view.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/generator/gen/angular_generator.sh" afterPath="$PROJECT_DIR$/app/modules/generator/gen/angular_generator.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/generator/gen/globalView.json" afterPath="$PROJECT_DIR$/app/modules/generator/gen/globalView.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/generator/gen/resources.html" afterPath="$PROJECT_DIR$/app/modules/generator/gen/resources.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/generator/gen/views.html" afterPath="$PROJECT_DIR$/app/modules/generator/gen/views.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/generator/services/components.json" afterPath="$PROJECT_DIR$/app/modules/generator/services/components.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/generator/services/config.js" afterPath="$PROJECT_DIR$/app/modules/generator/services/config.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/generator/services/global_var.js" afterPath="$PROJECT_DIR$/app/modules/generator/services/global_var.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/generator/views/operations.html" afterPath="$PROJECT_DIR$/app/modules/generator/views/operations.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/generator/views/overview.html" afterPath="$PROJECT_DIR$/app/modules/generator/views/overview.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/generator/views/resources.html" afterPath="$PROJECT_DIR$/app/modules/generator/views/resources.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/generator/views/views.html" afterPath="$PROJECT_DIR$/app/modules/generator/views/views.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="PFE.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,7 +51,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
@@ -82,11 +66,30 @@
       <file leaf-file-name="view.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/modules/generator/controllers/view.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+            <state relative-caret-position="600">
+              <caret line="30" column="30" lean-forward="false" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
               <folding>
-                <element signature="e#3893#4648#0" expanded="false" />
-                <element signature="e#4679#4996#0" expanded="false" />
+                <element signature="e#597#824#0" expanded="false" />
+                <element signature="e#917#1023#0" expanded="false" />
+                <element signature="e#1444#1615#0" expanded="false" />
+                <element signature="e#1669#2601#0" expanded="false" />
+                <element signature="e#2659#3192#0" expanded="false" />
+                <element signature="e#2783#2891#0" expanded="false" />
+                <element signature="e#2942#3050#0" expanded="false" />
+                <element signature="e#3253#3624#0" expanded="false" />
+                <element signature="e#3680#4490#0" expanded="false" />
+                <element signature="e#3727#3940#0" expanded="false" />
+                <element signature="e#3991#4204#0" expanded="false" />
+                <element signature="e#4225#4432#0" expanded="false" />
+                <element signature="e#4539#5161#0" expanded="false" />
+                <element signature="e#5226#5359#0" expanded="false" />
+                <element signature="e#5472#5811#0" expanded="false" />
+                <element signature="e#5880#6677#0" expanded="false" />
+                <element signature="e#6722#6867#0" expanded="false" />
+                <element signature="e#6919#7021#0" expanded="false" />
+                <element signature="e#7075#7306#0" expanded="false" />
+                <element signature="e#7348#7608#0" expanded="false" />
+                <element signature="e#7656#7749#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -95,78 +98,100 @@
       <file leaf-file-name="views.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/modules/generator/views/views.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="254" column="33" lean-forward="true" selection-start-line="254" selection-start-column="33" selection-end-line="254" selection-end-column="33" />
+            <state relative-caret-position="240">
+              <caret line="163" column="49" lean-forward="false" selection-start-line="163" selection-start-column="49" selection-end-line="163" selection-end-column="49" />
               <folding>
-                <element signature="n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#uib-tab#0;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#0;n#uib-tab#0;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#div#0;n#uib-tab#0;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#uib-tab#0;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#uib-tab#0;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#uib-tab#0;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#uib-tab#0;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#div#1;n#uib-tab#0;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#1;n#uib-tab#0;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#uib-tab#0;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#1;n#uib-tab#0;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#uib-tab#1;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#0;n#div#0;n#uib-tab#1;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#0;n#div#0;n#uib-tab#1;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#uib-tab#1;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#2;n#div#0;n#div#0;n#uib-tab#1;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#uib-tab#1;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#uib-tab#1;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#uib-tab#1;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#uib-tab#1;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#uib-tab#1;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#2;n#div#1;n#uib-tab#1;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#2;n#div#1;n#uib-tab#1;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#1;n#div#2;n#div#1;n#uib-tab#1;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#2;n#div#2;n#div#1;n#uib-tab#1;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#uib-tab#2;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#uib-tab#2;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#0;n#div#0;n#uib-tab#2;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#ul#0;n#div#1;n#div#0;n#div#0;n#uib-tab#2;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#uib-tab#2;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#uib-tab#2;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#uib-tab#2;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#uib-tab#2;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#div#1;n#uib-tab#2;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#4;n#div#1;n#uib-tab#2;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#uib-tab#3;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#uib-tab#3;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#uib-tab#3;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#uib-tab#3;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#uib-tab#3;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#5;n#div#1;n#uib-tab#3;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#5;n#div#1;n#uib-tab#3;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#uib-tab#4;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#uib-tab#4;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#uib-tab#4;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#uib-tab#4;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#uib-tab#4;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#uib-tab#4;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#div#1;n#uib-tab#4;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#2;n#div#1;n#uib-tab#4;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#3;n#div#1;n#uib-tab#4;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#4;n#div#1;n#uib-tab#4;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#5;n#div#1;n#uib-tab#4;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#6;n#div#1;n#uib-tab#4;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#7;n#div#1;n#uib-tab#4;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#0;n#!!top" expanded="false" />
                 <element signature="n#uib-tab#0;n#uib-tabset#0;n#div#1;n#div#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#span#0;n#li#0;n#ul#0;n#uib-tab#1;n#uib-tabset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#script#0;n#!!top" expanded="false" />
+                <element signature="n#script#1;n#!!top" expanded="false" />
+                <element signature="n#script#2;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="operations.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/modules/generator/views/operations.html">
+      <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/modules/generator/services/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="98" column="126" lean-forward="false" selection-start-line="98" selection-start-column="126" selection-end-line="98" selection-end-column="126" />
-              <folding>
-                <element signature="n#div#1;n#div#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="myjq.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/js/myjq.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+            <state relative-caret-position="1500">
+              <caret line="50" column="25" lean-forward="false" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/configs/app.js">
+      <file leaf-file-name="layoutCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/js/controllers/layoutCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+            <state relative-caret-position="137">
+              <caret line="7" column="76" lean-forward="false" selection-start-line="7" selection-start-column="76" selection-end-line="7" selection-end-column="76" />
               <folding>
-                <element signature="e#405#460#0" expanded="true" />
+                <element signature="e#308#4015#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/configs/main.js">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="51" column="23" lean-forward="false" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
-              <folding />
+            <state relative-caret-position="600">
+              <caret line="54" column="80" lean-forward="false" selection-start-line="54" selection-start-column="80" selection-end-line="54" selection-end-column="80" />
+              <folding>
+                <element signature="n#div#0;n#nav#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -185,15 +210,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>data</find>
-      <find>tree</find>
-      <find>datal</find>
-      <find>method-</find>
-      <find>method-act</find>
-      <find>responsed</find>
-      <find>responsedropdown</find>
-      <find>trigd</find>
-      <find>method</find>
       <find>$app</find>
       <find>open</find>
       <find>editus</find>
@@ -215,6 +231,15 @@
       <find>selected</find>
       <find>sele</find>
       <find>items</find>
+      <find>methods</find>
+      <find>chan</find>
+      <find>go</find>
+      <find>delete :</find>
+      <find>next</find>
+      <find>ui</find>
+      <find>group117</find>
+      <find>textarea</find>
+      <find>generator'</find>
     </findStrings>
     <replaceStrings>
       <replace>nav-options</replace>
@@ -261,7 +286,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/modules/admin/services/userFactory.js" />
-        <option value="$PROJECT_DIR$/app/js/directives/angular.treeview.js" />
         <option value="$PROJECT_DIR$/app/modules/generator/gen/operation.html" />
         <option value="$PROJECT_DIR$/app/modules/generator/views/database.html" />
         <option value="$PROJECT_DIR$/app/assets/css/angular.treeview.css" />
@@ -272,22 +296,16 @@
         <option value="$PROJECT_DIR$/app/modules/generator/gen/resource.html" />
         <option value="$PROJECT_DIR$/app/modules/generator/controllers/moduleCtrl.js" />
         <option value="$PROJECT_DIR$/app/modules/generator/views/tasks.html" />
-        <option value="$PROJECT_DIR$/app/js/controllers/layoutCtrl.js" />
         <option value="$PROJECT_DIR$/app/modules/generator/services/generatorFactory.js" />
         <option value="$PROJECT_DIR$/app/assets/angular/toaster.js" />
         <option value="$PROJECT_DIR$/app/modules/generator/views/generator.html" />
         <option value="$PROJECT_DIR$/app/modules/generator/services/fileupload.js" />
         <option value="$PROJECT_DIR$/app/common-views/dashboard.html" />
-        <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/assets/codemirror/mode/javascript/javascript.js" />
-        <option value="$PROJECT_DIR$/app/assets/codemirror/lib/codemirror.css" />
         <option value="$PROJECT_DIR$/app/assets/codemirror/mode/sql/sql.js" />
         <option value="$PROJECT_DIR$/app/assets/codemirror/mode/css/css.js" />
         <option value="$PROJECT_DIR$/app/assets/codemirror/mode/htmlmixed/htmlmixed.js" />
-        <option value="$PROJECT_DIR$/app/modules/generator/views/operations.html" />
         <option value="$PROJECT_DIR$/app/modules/generator/controllers/operations.js" />
-        <option value="$PROJECT_DIR$/app/modules/generator/views/overview.html" />
-        <option value="$PROJECT_DIR$/app/modules/generator/controllers/overview.js" />
         <option value="$PROJECT_DIR$/app/login.html" />
         <option value="$PROJECT_DIR$/app/assets/css/buttons.css" />
         <option value="$PROJECT_DIR$/app/modules/generator/services/components.json" />
@@ -298,19 +316,26 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/app/modules/admin/services/groupFactory.js" />
         <option value="$PROJECT_DIR$/app/modules/generator/views/resources/trigger.html" />
-        <option value="$PROJECT_DIR$/app/modules/generator/services/global_var.js" />
         <option value="$PROJECT_DIR$/app/modules/generator/views/resources/responses.html" />
-        <option value="$PROJECT_DIR$/app/modules/generator/controllers/resources.js" />
         <option value="$PROJECT_DIR$/app/modules/generator/controllers/generator.js" />
         <option value="$PROJECT_DIR$/app/modules/generator/services/config.js" />
         <option value="$PROJECT_DIR$/app/modules/generator/services/fileFactory.js" />
-        <option value="$PROJECT_DIR$/app/modules/generator/views/resources.html" />
-        <option value="$PROJECT_DIR$/app/assets/css/style.css" />
-        <option value="$PROJECT_DIR$/app/modules/generator/controllers/view.js" />
         <option value="$PROJECT_DIR$/app/assets/js/myjq.js" />
         <option value="$PROJECT_DIR$/app/configs/main.js" />
         <option value="$PROJECT_DIR$/app/configs/app.js" />
+        <option value="$PROJECT_DIR$/app/modules/generator/views/resources.html" />
+        <option value="$PROJECT_DIR$/app/modules/generator/controllers/overview.js" />
+        <option value="$PROJECT_DIR$/app/modules/generator/controllers/resources.js" />
+        <option value="$PROJECT_DIR$/app/js/directives/angular.treeview.js" />
+        <option value="$PROJECT_DIR$/app/modules/generator/views/overview.html" />
+        <option value="$PROJECT_DIR$/app/modules/generator/services/global_var.js" />
+        <option value="$PROJECT_DIR$/app/modules/generator/controllers/view.js" />
+        <option value="$PROJECT_DIR$/app/modules/generator/views/operations.html" />
+        <option value="$PROJECT_DIR$/app/assets/codemirror/lib/codemirror.css" />
+        <option value="$PROJECT_DIR$/app/assets/css/style.css" />
         <option value="$PROJECT_DIR$/app/modules/generator/views/views.html" />
+        <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/js/controllers/layoutCtrl.js" />
       </list>
     </option>
   </component>
@@ -373,6 +398,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -438,12 +464,22 @@
               <option name="myItemId" value="modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="generator" />
+              <option name="myItemId" value="PFE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PFE" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -461,20 +497,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
@@ -819,7 +858,13 @@
       <workItem from="1500040577540" duration="28068000" />
       <workItem from="1500141873248" duration="6755000" />
       <workItem from="1500157530297" duration="10650000" />
-      <workItem from="1500216335763" duration="4214000" />
+      <workItem from="1500216335763" duration="8409000" />
+      <workItem from="1500282128866" duration="4283000" />
+      <workItem from="1500484352063" duration="12580000" />
+      <workItem from="1500626926911" duration="1255000" />
+      <workItem from="1500680618776" duration="188000" />
+      <workItem from="1500740341774" duration="29754000" />
+      <workItem from="1500873025685" duration="11000" />
     </task>
     <task id="LOCAL-00001" summary="initial version">
       <created>1491005149686</created>
@@ -839,7 +884,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1798854000" />
+    <option name="totallyTimeSpent" value="1851120000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -852,14 +897,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="746" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14869888" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17620818" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32441473" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33779263" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33779263" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24981357" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35820895" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35679215" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -867,31 +913,12 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="99" y="100" width="1168" height="546" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24961948" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925898" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32718122" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33781514" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.69630873" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16430172" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925898" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24981357" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -937,45 +964,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/codemirror/mode/htmlmixed/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/codemirror/mode/htmlmixed/htmlmixed.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/codemirror/mode/sql/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="48" column="21" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="48" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/codemirror/mode/sql/sql.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/generator/views/overview.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="181" column="23" lean-forward="false" selection-start-line="181" selection-start-column="23" selection-end-line="181" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1074,13 +1066,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="12" column="85" lean-forward="false" selection-start-line="12" selection-start-column="85" selection-end-line="12" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/generator/controllers/overview.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="218" column="17" lean-forward="true" selection-start-line="168" selection-start-column="8" selection-end-line="218" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -1185,27 +1170,101 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/generator/services/fileFactory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="15" column="55" lean-forward="false" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/admin/views/group.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="37" column="26" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="37" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/generator/controllers/operations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="108" column="15" lean-forward="true" selection-start-line="101" selection-start-column="4" selection-end-line="108" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/js/myjq.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/configs/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="51" column="23" lean-forward="false" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/configs/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="14" column="6" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/generator/controllers/generator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/directives/angular.treeview.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="54" column="60" lean-forward="false" selection-start-line="54" selection-start-column="60" selection-end-line="54" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/generator/controllers/resources.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2550">
-          <caret line="201" column="34" lean-forward="false" selection-start-line="201" selection-start-column="34" selection-end-line="201" selection-end-column="34" />
-          <folding>
-            <element signature="e#560#946#0" expanded="false" />
-            <element signature="e#972#1048#0" expanded="false" />
-            <element signature="e#1258#1337#0" expanded="false" />
-            <element signature="e#2068#2252#0" expanded="false" />
-            <element signature="e#8191#8821#0" expanded="false" />
-            <element signature="e#9525#11086#0" expanded="false" />
-            <element signature="e#11115#11304#0" expanded="false" />
-            <element signature="e#11407#11519#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="30">
+          <caret line="51" column="33" lean-forward="false" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/generator/views/resources.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-577">
+          <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/generator/controllers/overview.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="14" column="3" lean-forward="false" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/generator/views/overview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4800">
+          <caret line="160" column="0" lean-forward="false" selection-start-line="160" selection-start-column="0" selection-end-line="173" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/admin/views/userdetails.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" column="79" lean-forward="false" selection-start-line="14" selection-start-column="75" selection-end-line="14" selection-end-column="79" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/generator/services/global_var.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2310">
-          <caret line="293" column="12" lean-forward="false" selection-start-line="293" selection-start-column="12" selection-end-line="293" selection-end-column="12" />
+        <state relative-caret-position="272">
+          <caret line="384" column="59" lean-forward="false" selection-start-line="384" selection-start-column="59" selection-end-line="384" selection-end-column="59" />
           <folding>
             <element signature="e#343#766#0" expanded="false" />
             <element signature="e#770#791#0" expanded="false" />
@@ -1217,79 +1276,175 @@
             <element signature="e#4782#4818#0" expanded="false" />
             <element signature="e#5482#5506#0" expanded="false" />
             <element signature="e#5538#6003#0" expanded="false" />
+            <element signature="e#6037#6234#0" expanded="false" />
+            <element signature="e#6270#6299#0" expanded="false" />
+            <element signature="e#6331#6366#0" expanded="false" />
+            <element signature="e#6466#6514#0" expanded="false" />
+            <element signature="e#6543#6773#0" expanded="false" />
+            <element signature="e#6806#6942#0" expanded="false" />
+            <element signature="e#6973#7127#0" expanded="false" />
             <element signature="e#7224#7249#0" expanded="false" />
+            <element signature="e#7279#7320#0" expanded="false" />
+            <element signature="e#7351#7382#0" expanded="false" />
+            <element signature="e#7387#7425#0" expanded="false" />
+            <element signature="e#7511#7541#0" expanded="false" />
+            <element signature="e#7580#7765#0" expanded="false" />
+            <element signature="e#7797#7853#0" expanded="false" />
+            <element signature="e#7886#7926#0" expanded="false" />
+            <element signature="e#7969#8019#0" expanded="false" />
             <element signature="e#8092#8273#0" expanded="false" />
-            <element signature="e#8814#9127#0" expanded="false" />
-            <element signature="e#8950#9113#0" expanded="false" />
-            <element signature="e#8994#9105#0" expanded="false" />
+            <element signature="e#8559#8749#0" expanded="false" />
+            <element signature="e#8784#9097#0" expanded="false" />
+            <element signature="e#8920#9083#0" expanded="false" />
+            <element signature="e#8964#9075#0" expanded="false" />
+            <element signature="e#9139#9409#0" expanded="false" />
+            <element signature="e#9447#9488#0" expanded="false" />
+            <element signature="e#9529#9595#0" expanded="false" />
+            <element signature="e#9647#9900#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/generator/services/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2700">
-          <caret line="168" column="50" lean-forward="false" selection-start-line="168" selection-start-column="50" selection-end-line="168" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/generator/controllers/generator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="29" column="125" lean-forward="false" selection-start-line="29" selection-start-column="125" selection-end-line="29" selection-end-column="125" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/generator/services/fileFactory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="15" column="55" lean-forward="false" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/controllers/layoutCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/admin/views/group.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="37" column="26" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="37" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/generator/views/resources.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="68" lean-forward="true" selection-start-line="7" selection-start-column="68" selection-end-line="7" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="1032" column="19" lean-forward="false" selection-start-line="1032" selection-start-column="19" selection-end-line="1032" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/generator/controllers/operations.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="108" column="15" lean-forward="true" selection-start-line="101" selection-start-column="4" selection-end-line="108" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/generator/controllers/view.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+        <state relative-caret-position="600">
+          <caret line="30" column="30" lean-forward="false" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
           <folding>
-            <element signature="e#3893#4648#0" expanded="false" />
-            <element signature="e#4679#4996#0" expanded="false" />
+            <element signature="e#597#824#0" expanded="false" />
+            <element signature="e#917#1023#0" expanded="false" />
+            <element signature="e#1444#1615#0" expanded="false" />
+            <element signature="e#1669#2601#0" expanded="false" />
+            <element signature="e#2659#3192#0" expanded="false" />
+            <element signature="e#2783#2891#0" expanded="false" />
+            <element signature="e#2942#3050#0" expanded="false" />
+            <element signature="e#3253#3624#0" expanded="false" />
+            <element signature="e#3680#4490#0" expanded="false" />
+            <element signature="e#3727#3940#0" expanded="false" />
+            <element signature="e#3991#4204#0" expanded="false" />
+            <element signature="e#4225#4432#0" expanded="false" />
+            <element signature="e#4539#5161#0" expanded="false" />
+            <element signature="e#5226#5359#0" expanded="false" />
+            <element signature="e#5472#5811#0" expanded="false" />
+            <element signature="e#5880#6677#0" expanded="false" />
+            <element signature="e#6722#6867#0" expanded="false" />
+            <element signature="e#6919#7021#0" expanded="false" />
+            <element signature="e#7075#7306#0" expanded="false" />
+            <element signature="e#7348#7608#0" expanded="false" />
+            <element signature="e#7656#7749#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/generator/views/operations.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-739">
+          <caret line="29" column="47" lean-forward="false" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/codemirror/lib/codemirror.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="163" column="2" lean-forward="false" selection-start-line="163" selection-start-column="2" selection-end-line="163" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="216" column="17" lean-forward="false" selection-start-line="216" selection-start-column="17" selection-end-line="216" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/generator/services/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1500">
+          <caret line="50" column="25" lean-forward="false" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/generator/views/views.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="163" column="49" lean-forward="false" selection-start-line="163" selection-start-column="49" selection-end-line="163" selection-end-column="49" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#uib-tab#0;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#uib-tab#0;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#uib-tab#0;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#uib-tab#0;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#uib-tab#0;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#uib-tab#0;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#uib-tab#0;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#uib-tab#0;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#uib-tab#0;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#uib-tab#1;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#uib-tab#1;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#uib-tab#1;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#uib-tab#1;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#uib-tab#1;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#uib-tab#1;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#uib-tab#1;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#2;n#div#1;n#uib-tab#1;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#div#2;n#div#1;n#uib-tab#1;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#2;n#div#2;n#div#1;n#uib-tab#1;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#uib-tab#2;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#uib-tab#2;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#uib-tab#2;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#uib-tab#2;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#uib-tab#2;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#1;n#uib-tab#2;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#4;n#div#1;n#uib-tab#2;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#uib-tab#3;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#uib-tab#3;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#uib-tab#3;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#uib-tab#3;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#uib-tab#3;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#1;n#uib-tab#3;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#5;n#div#1;n#uib-tab#3;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#uib-tab#4;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#uib-tab#4;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#uib-tab#4;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#uib-tab#4;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#uib-tab#4;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#uib-tab#4;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#1;n#uib-tab#4;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#1;n#uib-tab#4;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#div#1;n#uib-tab#4;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#div#1;n#uib-tab#4;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#5;n#div#1;n#uib-tab#4;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#6;n#div#1;n#uib-tab#4;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#7;n#div#1;n#uib-tab#4;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#uib-tab#0;n#uib-tabset#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#li#0;n#ul#0;n#uib-tab#1;n#uib-tabset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#script#0;n#!!top" expanded="false" />
+            <element signature="n#script#1;n#!!top" expanded="false" />
+            <element signature="n#script#2;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="54" column="80" lean-forward="false" selection-start-line="54" selection-start-column="80" selection-end-line="54" selection-end-column="80" />
+          <folding>
+            <element signature="n#div#0;n#nav#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/layoutCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="7" column="76" lean-forward="false" selection-start-line="7" selection-start-column="76" selection-end-line="7" selection-end-column="76" />
+          <folding>
+            <element signature="e#308#4015#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1300,75 +1455,6 @@
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
             <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/js/myjq.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/configs/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="51" column="23" lean-forward="false" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/configs/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding>
-            <element signature="e#405#460#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/generator/views/views.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="254" column="33" lean-forward="true" selection-start-line="254" selection-start-column="33" selection-end-line="254" selection-end-column="33" />
-          <folding>
-            <element signature="n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#uib-tab#0;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#uib-tab#0;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#uib-tab#0;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#uib-tab#0;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#uib-tab#0;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#uib-tab#0;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#div#1;n#uib-tab#0;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#uib-tab#0;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#uib-tab#0;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#uib-tab#1;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#uib-tab#1;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#uib-tab#1;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#uib-tab#1;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#2;n#div#0;n#div#0;n#uib-tab#1;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#uib-tab#2;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#uib-tab#2;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#0;n#div#0;n#uib-tab#2;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#ul#0;n#div#1;n#div#0;n#div#0;n#uib-tab#2;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#uib-tab#3;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#uib-tab#3;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#uib-tab#4;n#uib-tabset#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#uib-tab#0;n#uib-tabset#0;n#div#1;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#span#0;n#li#0;n#ul#0;n#uib-tab#1;n#uib-tabset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/generator/views/operations.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="98" column="126" lean-forward="false" selection-start-line="98" selection-start-column="126" selection-end-line="98" selection-end-column="126" />
-          <folding>
-            <element signature="n#div#1;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>

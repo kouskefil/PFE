@@ -151,9 +151,9 @@ define(['configs/app'], function (app) {
             ];
             $scope.date = new Date();
             $scope.dynamicPopover = {
-                content: 'Hello, World!',
-                templateUrl: 'branch.html',
-                title: 'Title'
+                // content: 'Hello, World!',
+                templateUrl: 'branch.html'
+                // title: 'Title'
             };
 
 

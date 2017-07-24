@@ -8,6 +8,17 @@ body{
     margin: 0;
     overflow: hidden;
 }
+input[type=checkbox], input[type=radio] {
+     margin: 0;
+}
+.deactivate{
+    color: lightgray;
+    cursor: no-drop;
+}
+.cmirror{
+    border:1px solid lightsteelblue;
+}
+
 
 .task{
     font-weight: bold;
@@ -203,7 +214,7 @@ label {
 }
 
 .spacer {
-    margin-top: 15px;
+    margin-top: 6px;
     margin-bottom: 15px;
 }
 
@@ -849,6 +860,40 @@ label {
     text-align: -webkit-center;
 }
 /*partial listview*/
+
+.view-heading{
+    height: 35px;
+    padding-right: 0;
+}
+.view-heading .hblock{
+    padding-top: 7px;
+}
+.view-heading i{
+    color: lightgray;
+    font-size: xx-small;
+}
+.haction{
+   list-style: none;
+    display: flex;
+    float: right;
+    height: 100%;
+}
+.haction li:first-child{
+    border-left: 1px solid #ddd;
+}
+
+.haction li:nth-child(2){
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+.haction li{
+     padding:7px 10px;
+}
+.view-heading .hblock{
+    /*padding:7px 0 5px 0;*/
+    height: 100%;
+    border-right: 1px solid #ddd;
+}
 .partial-view {
     padding: 0;
 }
@@ -1438,56 +1483,6 @@ th{
     flex-flow: row wrap;
     justify-content: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/********************TOASTER*************************/
-/*
- * Toastr
- * Version 2.0.1
- * Copyright 2012 John Papa and Hans Fjallemark.
- * All Rights Reserved.
- * Use, reproduction, distribution, and modification of this code is subject to the terms and
- * conditions of the MIT license, available at http://www.opensource.org/licenses/mit-license.php
- *
- * Author: John Papa and Hans Fjallemark
- * Project: https://github.com/CodeSeven/toastr
- */
 .toast-title {
     color: #01A8BF;
     font-weight: bold;

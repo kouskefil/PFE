@@ -48,8 +48,8 @@ define(['configs/app', 'assets/js/lodash'], function (app) {
         $scope.setCurrentRsc = function (rsc) {
             globalVarFactory.setCurrentRsc(rsc);
         };
-        $scope.cclick = function (selectedNode) {
-            console.log(selectedNode);
+        $scope.cclick = function (selectedNode, treemodel) {
+            console.log(treemodel);
             if(!selectedNode.methods)
                 selectedNode.methods = [];
             // if(!selectedNode.requests)

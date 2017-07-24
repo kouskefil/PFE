@@ -54,7 +54,7 @@ define(['angular'], function (angular) {
                 item.action();
             };
              $scope.go = function () {
-                // $state.go('root.install',{module:'admin'});
+                $state.go('root.install',{module:'admin'});
                   $state.go('root.app');
              };
              $scope.isauthorized = function (menu) {

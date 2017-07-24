@@ -3,23 +3,24 @@ define(['configs/app'], function (app){
     app.register.controller('view',['$scope','$state','globalVarFactory', 'HTMLcomponents','componentSet', function($scope,$state,globalVarFactory, HTMLcomponents, componentSet){
             $scope.HTMLcomponents = HTMLcomponents;
             $scope.components = null;
-            $scope.operation = {};
+            $scope.updateparam = false;
+            $scope.action = {};
+            $scope.variable = {};
+            $scope.function = {};
             $scope.selected = '';
-            //variables to add in the model
-            $scope.currentComponent = globalVarFactory.getModelHead().then(function (data) {
-                $scope.currentComponent = data;
-                $scope.components = data;
-
-            });
-            console.log(CodeMirror);
-            $scope.cmOption =
-                {
+            $scope.treeActions = globalVarFactory.getTreeAction();
+            $scope.cmOption =    {
                     lineNumbers: true,
                     indentWithTabs: true,
                     onLoad : function(_cm){
                         _cm.setOption("mode", "javascript");
                     }
                 };
+            $scope.currentComponent = globalVarFactory.getModelHead().then(function (data) {
+                $scope.currentComponent = data;
+                $scope.components = data;
+
+            });
           
             $scope.setModel = function (model) {
                 globalVarFactory.setModel(model);
@@ -27,107 +28,99 @@ define(['configs/app'], function (app){
                 $scope.currentModel = model;
                 $scope.currentComponent = model;
 				$scope.selected = $scope.currentModel.label;
+				$scope.init();
                 console.log($scope.components);
             } ;
-            //**************************************** fonctions à ajouter dans le model----------
-            $scope.addoperation = function () {
-                if( !$scope.currentModel.operations)
-                    $scope.currentModel.operations = [];
-                $scope.currentModel.operations.push($scope.operation);
-                $scope.operation = {};
-            };
-            $scope.deleteoperation = function(){
-               for(var i=0; i<$scope.currentModel.operations.length; i++)
-                   if($scope.operation === $scope.currentModel.operations[i]){
-                       $scope.currentModel.operations.splice($scope.currentModel.operations.indexOf($scope.currentoperation,1));
-                       $scope.operation = {};
-               }
-               console.log('operations');
-               console.log( $scope.currentModel.operations);
-            } ;
-            $scope.setoperation = function (operation) {
-                $scope.operation = operation;
-                $scope.currentoperation = operation;
-            };
-            $scope.addv = function () {
-                $scope.currentModel.variables.push($scope.variable);
+
+            $scope.init = function () {
+                $scope.updateparam = false;
+                $scope.action = {};
                 $scope.variable = {};
+                $scope.function = {};
             };
-            $scope.delv = function () {
-                if($scope.variable !== null){
-                    var pos = $scope.currentModel.variables.indexOf($scope.variable);
-                    $scope.currentModel.variables.splice(pos,1);
+            $scope.addParams = function (paramName) {
+                if(paramName == 'function'){
+                    if (!$scope.currentModel.functions)
+                        $scope.currentModel.functions = [];
+                    globalVarFactory.add($scope.function, $scope.currentModel.functions);
+                    $scope.function = {};
+                }
+                else if (paramName == 'variable'){
+                    if (!$scope.currentModel.variables)
+                        $scope.currentModel.variables = [];
+                    globalVarFactory.add($scope.variable, $scope.currentModel.variables);
+                    console.log($scope.variable);
+                }
+                else {
+                     if(!$scope.currentModel.actions)
+                         $scope.currentModel.actions = [];
+                    globalVarFactory.add($scope.action, $scope.currentModel.actions);
+                    $scope.action = {};
+                }
+
+            };
+            $scope.setParam = function (obj, typeofobj) {
+                console.log(obj);
+                $scope.updateparam = true;
+                 if (typeofobj == 'function'){
+                     $scope.oldParam = obj;
+                     $scope.function = obj;
+                 }
+                 else if (typeofobj == 'variable'){
+                     $scope.oldParam = obj;
+                     $scope.variable = obj;
+                 }
+                 else{
+                     $scope.oldParam = obj;
+                     $scope.action = obj;
+                 }
+            };
+            $scope.deleteParam = function (paramName, obj) {
+                if (paramName == 'function')
+                   globalVarFactory.delete(obj, $scope.currentModel.functions);
+                else if (paramName == 'variable')
+                    globalVarFactory.delete(obj, $scope.currentModel.variables);
+                else
+                    globalVarFactory.delete(obj, $scope.currentModel.actions);
+            };
+            $scope.updateParam = function (paramName) {
+                if (paramName == 'function') {
+                    globalVarFactory.update($scope.oldParam, $scope.function, $scope.currentModel.functions);
+                    $scope.function = {};
+                    $scope.oldParam = {};
+                }
+                else if (paramName == 'variable') {
+                    globalVarFactory.update($scope.oldParam, $scope.variable, $scope.currentModel.variables);
                     $scope.variable = {};
-                    $scope.variable = null;
+                    $scope.oldParam = {};
+                }
+                else{
+                    globalVarFactory.update($scope.oldParam, $scope.action, $scope.currentModel.actions);
+                    $scope.action = {};
+                    $scope.oldParam = {};
+                }
+                $scope.updateparam = false;
+            };
+            $scope.next = function (paramName) {
+                var index;
+                switch (paramName){
+                    case "function":
+                        index = globalVarFactory.memberOf($scope.function, $scope.currentModel.functions).index;
+                        if (index != -1 && $scope.currentModel.functions.length > index ) {
+                            console.log("long"+$scope.currentModel.functions.length);
+                            $scope.function = $scope.currentModel.functions[index + 1];
+                        }
+                        break;
+                    default: console.log(paramName);
                 }
             };
-            $scope.setv = function (variable) {
-                $scope.variable  =  variable;
-            };
-            $scope.clear = function () {
-                $scope.operation = {};
-            };
-            $scope.collection = [];
-            $scope.select_option = [];
 
-            $scope.g_Add = function (int, obj) {
-                $scope.components.variables.push(obj);
-                console.log(obj);
-                $scope.g_Clear(int);
-
-            };
-            $scope.delModel = function (model) {
-                globalVarFactory.gDelete($scope.models, model);
-                $scope.currentModel = {};
-            };
-            $scope.treeActions = globalVarFactory.getTreeAction();
             $scope.setcurrentContainer = function (component) {
                 globalVarFactory.setcurrentContainer(component);
                 $scope.currentComponent = component;
             };
             $scope.models = globalVarFactory.getModule().models;
-            $scope.receptab =  [
-                {
-                    "id":"0" ,
-                    "label": "config",
-                    "anchor": "config"
-                },
-                {
-                    "id":"1" ,
-                    "label": "tree",
-                    "anchor": "tree"
-                },
-                {
-                    "id":"2" ,
-                    "label": "function",
-                    "anchor": "function"
-                },
-                {
-                    "id":"3" ,
-                    "label": "operation",
-                    "anchor": "operations"
-                },
-                {
-                    "id":"4" ,
-                    "label": "variable",
-                    "anchor": "variable"
-                }
-            ];
-            $scope.comptab = [
-                {
-                    "id":"comp" ,
-                    "label": "component",
-                    "anchor": "component"
-                },
-                {
-                    "id":"view" ,
-                    "label": "views",
-                    "anchor": "views"
-                }
-
-            ];
-            $scope.add = function (component)
-            {
+            $scope.add = function (component) {
                 console.log('composant ajouté');
                 console.log(component);
                 var c = componentSet.add(component);
@@ -135,24 +128,22 @@ define(['configs/app'], function (app){
                 if(c !== null)
                     $state.go("root.generator.views.properties",{label:c.label, type:c.type, num:c.num});
             };
-            //*******************************************FONCTIONS À METTRE DANS LA DIRECTIVE treeview
-            // function à ajouter dans le controller
             $scope.applytreeActions = function (action, component) {
                 switch(action.todo){
                     case 1:
-                        $scope.up(component);
+                        componentSet.getActions().moveup(component);
                         break;
                     case 2:
-                        $scope.down(component);
+                        componentSet.getActions().movedown(component);
                         break;
                     case 3:
-                        $scope.clone(component);
+                        componentSet.getActions().clone(component);
                         break;
                     case 4:
-                        $scope.cut(component);
+                        componentSet.getActions().cut(component);
                         break;
                     case 5:
-                        $scope.delete(component);
+                        componentSet.getActions().delete(component);
                         break;
                     default:
                         console.log("unknown case option");
@@ -160,21 +151,6 @@ define(['configs/app'], function (app){
             };
             $scope.go = function(component){
                 $state.go("root.generator.views.properties", {label: component.label, type: component.type, num: component.num});
-            };
-            $scope.up = function(component){
-                componentSet.getActions().moveup(component);
-            };
-            $scope.cut = function(component){
-                componentSet.getActions().cut(component);
-            };
-            $scope.delete = function(component){
-                componentSet.getActions().delete(component);
-            };
-            $scope.clone = function(component){
-                componentSet.getActions().clone(component);
-            };
-            $scope.down = function(component){
-                componentSet.getActions().movedown(component);
             };
             $scope.deleteModel = function (model) {
                  globalVarFactory.gDelete(globalVarFactory.getModule().models, model);
@@ -184,7 +160,7 @@ define(['configs/app'], function (app){
                 $scope.setcurrentContainer(selectedNode);
                 componentSet.currentComponent = selectedNode;
                 $scope.go($scope.currentComponent);
-				
+
             };
             $scope.addcol = function () {
                 if(!$scope.currentComponent.columns)
@@ -195,7 +171,6 @@ define(['configs/app'], function (app){
             $scope.deleteCol = function (col) {
               globalVarFactory.gDelete($scope.currentComponent.columns, col);
             };
-
             $scope.oneAtATime = true;
 
         }]

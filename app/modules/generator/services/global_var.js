@@ -344,16 +344,16 @@ define(['configs/app'], function (app){
 			// 	}
 			// 	return find;
 			// }   ,
-			// gLookupByAttribute : function (collection, attribute, value) {
-			// 	var i, find = null;
-			// 	for(i = 0; i < collection.length; i++){
-			// 		if(collection[i][attribute] === value){
-			// 			find = collection[i];
-			// 			break;
-			// 		}
-			// 	}
-			// 	return find;
-			// },
+			gLookupByAttribute : function (collection, attribute, value) {
+				var i, find = null;
+				for(i = 0; i < collection.length; i++){
+					if(collection[i][attribute] === value){
+						find = collection[i];
+						break;
+					}
+				}
+				return find;
+			},
 			addTrigger :function(template){
 				 $uibModal.open({
 					templateUrl:template,
@@ -365,7 +365,32 @@ define(['configs/app'], function (app){
 						};
 					}]
 				});
-			}
+			},
+			memberOf: function (obj, collection) {
+				var i, found = {obj:{}, index:-1};
+				for (i = 0; i < collection.length; i++){
+					if (collection[i] == obj) {
+                        found = {obj:collection[i], index:i};
+                        break;
+                    }
+				}
+				return found
+            },
+			add : function (obj, collection) {
+				collection.push(obj);
+            },
+			delete : function (obj, collection) {
+				collection.splice(collection.indexOf(obj), 1);
+            },
+			update : function (oldObj, newObj, collection) {
+				var i;
+                for (i = 0; i < collection.length; i++){
+                    if (collection[i] == oldObj) {
+                        collection[i] = newObj;
+                        break;
+                    }
+                }
+            }
 			
 		};
 		return global;

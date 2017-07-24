@@ -52,7 +52,7 @@
         </ul>
         <ul class="item" >
             <!--&lt;!&ndash;ng-show="showSidebarItems==true"&ndash;&gt;            ui-sref="{{item.state}}"-->
-            <li ng-repeat="item in items" ng-show="isauthorized(item.role)">
+            <li ng-repeat="item in items" ng-show=" currentModule.name != '' && isauthorized(item.role)">
                 <a ui-sref="{{item.state}}">
                     <i class="{{item.icon}}" style="padding-right:15px "></i>
                     {{item.name}}
@@ -68,7 +68,7 @@
             </li>
         </ul>
     </div>
-    <div id="page-content-wrapper" ng-class="layout" style="margin-bottom: 50px;    height: 100%; overflow-y: scroll;">
+    <div id="page-content-wrapper" ng-class="layout" style="   height: 100%; overflow-y: scroll;">
         <!--operation bar-->
         <div class=" operation-bar col-md-10 col-md-offset-1" style=" margin-top: 20px;">
             <span >{{location[0]}}</span>
@@ -76,7 +76,7 @@
                 <li style="padding: 3px;" ng-repeat="item in actions" uib-tooltip="{{item.name}}"  tooltip-placement="bottom"><span class="{{item.icon}}" ng-click="doAction(item)" ng-show="isauthorized(item.role)"></span></li>
             </ul>
         </div>
-        <div ui-view></div>
+        <div ui-view ></div>
     </div>
     <!--</div>-->
 </div>
