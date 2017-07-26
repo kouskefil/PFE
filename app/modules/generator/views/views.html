@@ -53,6 +53,12 @@
                 </div> <!-- Heading ends-->
                 <div id="func_content"  style="padding:20px;"  class="col-md-12"> <!-- func_content begins-->
                     <!--<div class="col-md-8">-->
+                    <div class="checkbox">
+                        <label class="checkbox-inline"><input  type="checkbox"  value="local" ng-model="function.local">
+                            <span class="box"></span>
+                            local
+                        </label>
+                    </div> <!-- div id:input30 -->
                     <div>
                         <div class="form-group">
                             <label for="input17">Name</label>
@@ -94,6 +100,10 @@
                         <input class=" form-control"  placeholder="name" name="input23" id="input23" type="text" ng-model="action.name"/>
                     </div> <!-- div id:input23 -->
                     <div class="form-group">
+                        <label for="input2i">Role</label>
+                        <input class=" form-control"  placeholder="role" name="input2i" id="input2i" type="text" ng-model="action.role"/>
+                    </div> <!-- div id:input23 -->
+                    <div class="form-group">
                         <label for="input24">Icon</label>
                         <input class=" form-control"  placeholder="icon" name="input24" id="input24" type="text" ng-model="action.icon"/>
                     </div> <!-- div id:input24 -->
@@ -132,10 +142,37 @@
 
                 </div> <!-- Heading ends-->
                 <div id="var_content"  style="padding:20px;"  class="col-md-12"> <!-- var_content begins-->
-                    <div class="checkbox">
-                        <label class="checkbox-inline"><input  type="checkbox"  value="resolve" ng-model="variable.resolve">resolve</label>
-                        <label class="checkbox-inline"><input  type="checkbox"  value="async" ng-model="variable.async">async</label>
-                    </div> <!-- div id:input30 -->
+                    <div >
+                        <div class="checkbox">
+                            <label class="checkbox-inline"><input  type="checkbox"  value="resolve" ng-model="variable.resolve">
+                                <span class="box"></span>
+                                resolve
+                            </label>
+                            <label class="checkbox-inline">
+                                <input  type="checkbox"  value="async" ng-model="variable.async">
+                                <span class="box"></span>
+                                async
+                            </label>
+                            <label class="checkbox-inline">
+                                <input  type="checkbox"  value="local" ng-model="variable.local">
+                                <span class="box"></span>
+                                local
+                            </label>
+                        </div> <!-- div id:input30 -->
+                    </div>
+                    <div>
+                        <div class="md-radio md-radio-inline">
+                            <p>cache</p>
+                            <input id="2" ng-model="default" type="radio" name="g2" checked>
+                            <label for="2">default</label>
+                            <input id="3" ng-model="new" type="radio" name="g2" >
+                            <label for="3">new</label>
+                            <input id="4" ng-model="to" type="radio" name="g2">
+                            <label for="4">to</label>
+                            <input id="5" ng-model="from" type="radio" name="g2">
+                            <label for="5">from</label>
+                        </div>
+                    </div>
                     <div class="form-group">
                         <label for="input29">Name</label>
                         <input class=" form-control"  placeholder="name" name="input29" id="input29" type="text" ng-model="variable.name"/>
