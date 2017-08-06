@@ -12,7 +12,7 @@
             <div class="header-actions" style="height: 50px; margin-top: 5px">
                 <!--<span><h1>{{date | date:'dd-MM-yyyy:hh-mm-ss'}}</h1></span>-->
                <button popover-placement="bottom" uib-popover-template="dynamicPopover.templateUrl" popover-title="Select a branch" class="button default">Branch<i class="glyphicon glyphicon-chevron-down" style="margin-left: 8px"></i> {{branch}}</button>
-               <button class="button default" data-ng-click="pop()">New pull request</button>
+               <button class="button default" data-ng-click="pop('error')">New pull request</button>
                <button class="button default" data-ng-click="openModal()" style="float: right">Upload files</button>
             </div>
             <div>
@@ -22,7 +22,7 @@
                 <span class="glyphicon glyphicon-tasks"> Database</span>
                 <ul class="act">
                     <li>
-                        <span  class="glyphicon glyphicon-plus"></span>
+                        <span uib-tooltip="{{dynamicTooltip}}" class="glyphicon glyphicon-plus"></span>
                     </li>
                 </ul>
                 <div class="">
@@ -50,7 +50,7 @@
                         <span  class="glyphicon glyphicon-check"></span>
                     </li>
                     <li>
-                        <span  class="glyphicon glyphicon-cog"></span>
+                        <span   class="glyphicon glyphicon-cog" popover-placement="bottom" uib-popover-template="'viewsgenpopover.templateUrl'" popover-trigger="'focus'"></span>
                     </li>
                     <li>
                         <div  class="" uib-dropdown dropdown-append-to-body>

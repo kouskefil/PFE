@@ -107,36 +107,36 @@ input[type=checkbox], input[type=radio] {
 }
 /***********************************/
 
-.form-control{
-    padding: 0 6px !important;
-    /*height: 25px !important;*/
-}
+/*.form-control{*/
+    /*padding: 0 6px !important;*/
+    /*!*height: 25px !important;*!*/
+/*}*/
 
-input[type="text"]{
-    font-size: 14px !important;
-    height: 25px !important;
-}
-input[type="number"]{
-    font-size: 14px !important;
-    height: 25px !important;
-}
-input[type="password"]{
-    font-size: 14px !important;
-    height: 25px !important;
-}
-input[type="email"]{
-    font-size: 14px !important;
-    height: 25px !important;
-}
-select{
-    height: 25px !important;
-}
+/*input[type="text"]{*/
+    /*font-size: 14px !important;*/
+    /*height: 25px !important;*/
+/*}*/
+/*input[type="number"]{*/
+    /*font-size: 14px !important;*/
+    /*height: 25px !important;*/
+/*}*/
+/*input[type="password"]{*/
+    /*font-size: 14px !important;*/
+    /*height: 25px !important;*/
+/*}*/
+/*input[type="email"]{*/
+    /*font-size: 14px !important;*/
+    /*height: 25px !important;*/
+/*}*/
+/*select{*/
+    /*height: 25px !important;*/
+/*}*/
 
 
 label {
     font-size: 15px;
     line-height: 1;
-    font-weight: 100;
+    font-weight: normal;
 }
 
 .list li{
@@ -385,7 +385,8 @@ label {
     font-weight: 600;
 }
 #sidebar-wrapper i{
-    font-size: 18px
+    font-size: 18px;
+    color: #2196F3;
 }
 
 
@@ -736,13 +737,17 @@ label {
 /******OPERATION BAR ******/
 .operation-bar{
     /*font-family: 'Open Sans', sans-serif;*/
-    /*color: #999;*/
+    color: #2196F3;
     font-size: 20px;
     height: 35px;
     padding-left: 0 ;
     /*margin-top: 70px;*/
     /*margin-left: 20px;*/
-    /*margin-bottom: 20px;*/
+    margin-bottom: 20px;
+}
+.operation-bar .location{
+    color: black;
+    font-weight: bold;
 }
 
 .operation-bar ul{
@@ -1146,9 +1151,7 @@ ul.nav.nav-tabs {
 #params ul.nav.nav-tabs{
     background-color: transparent;
 }
-#params .tab-content{
-    padding: 0;
-}
+
 .request {
     padding: 5px 5px;
     font-family: Cantarell, Arial, sans-serif;
@@ -1423,6 +1426,9 @@ th{
 }
 .method-params{
     border-left:1px solid #ddd;
+}
+.method-params .tab-content{
+    padding-top: 10px;
 }
 /*#method-action ul{*/
     /*padding: 0;*/

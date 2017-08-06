@@ -103,16 +103,32 @@
         </table>
       </uib-tab> <!--end-->
       <uib-tab index="165"  heading="responses"> <!--begins-->
-       <table class="table">
-        <tbody>
-        <tr ng-repeat="item in responses">
-         <td>{{item.name}}</td>
-         <td>{{item.value}}</td>
-         <td>{{item.mediatype}}</td>
-         <td><span class="glyphicon glyphicon-trash" data-ng-click="deleteRole(role)"></span></td>
-        </tr>
-        </tbody>
-       </table>
+
+       <div class="floatingPanel" ng-repeat="item in responses">
+        <div><label >Name</label> <span style="float: right">{{ item.name }}</span></div>
+        <div><label >Value</label> <span style="float: right">{{ item.value }}</span></div>
+        <div><label >Mediatype</label> <span style="float: right">{{ item.mediatype }}</span></div>
+
+       </div>
+       <!--<table class="table">-->
+        <!--<thead>-->
+        <!--<tr>-->
+         <!--<th>Name</th>-->
+         <!--<th>Value</th>-->
+         <!--<th>Mediatype</th>-->
+         <!--<th>Delete</th>-->
+
+        <!--</tr>-->
+        <!--</thead>-->
+        <!--<tbody>-->
+        <!--<tr ng-repeat="item in responses">-->
+         <!--<td>{{item.name || 'undefined'}}</td>-->
+         <!--<td>{{item.value}}</td>-->
+         <!--<td>{{item.mediatype}}</td>-->
+         <!--<td><span class="glyphicon glyphicon-trash" data-ng-click="deleteRole(role)"></span></td>-->
+        <!--</tr>-->
+        <!--</tbody>-->
+       <!--</table>-->
       </uib-tab> <!--end-->
      </uib-tabset>
     </div> <!-- params ends-->

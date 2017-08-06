@@ -81,14 +81,14 @@
             </uib-tab> <!--end-->
             <uib-tab index="15"  heading="actions"> <!--begins-->
                 <div id="aHeading" class="floatingPanel col-md-12 view-heading"> <!-- Heading begins-->
-                    <div id="functionHeading"  class=" col-md-4 hblock"> <!-- treeHeading begins-->
+                    <div id="fuctionHeading"  class=" col-md-4 hblock"> <!-- treeHeading begins-->
                         <div  > {{currentModel.label}} <span style=" color: lightslategray;"><i class="fa fa-chevron-right style"></i> functions </span></div>
                     </div> <!-- treeHeading ends-->
 
                     <div class="col-md-8 hblock" style="padding:0;border:none" >
                         <ul class="haction" >
                             <li><span class="fa fa-chevron-left" ng-class="prev_state" data-ng-click="previous()"> </span></li>
-                            <li popover-placement="bottom" uib-popover-template="'functionlist.html'" ><span class="fa fa-list"></span></li>
+                            <li uib-tooltip="generate"    tooltip-placement="bottom"  popover-placement="bottom" uib-popover-template="'functionlist.html'" ><span class="fa fa-list"></span></li>
                             <li><span class="fa fa-chevron-right" ng-class="next_state" data-ng-click="next('function')"></span></li>
                         </ul>
                     </div>
@@ -160,31 +160,24 @@
                             </label>
                         </div> <!-- div id:input30 -->
                     </div>
-                    <div>
-                        <div class="md-radio md-radio-inline">
-                            <p>cache</p>
-                            <input id="2" ng-model="default" type="radio" name="g2" checked>
-                            <label for="2">default</label>
-                            <input id="3" ng-model="new" type="radio" name="g2" >
-                            <label for="3">new</label>
-                            <input id="4" ng-model="to" type="radio" name="g2">
-                            <label for="4">to</label>
-                            <input id="5" ng-model="from" type="radio" name="g2">
-                            <label for="5">from</label>
-                        </div>
-                    </div>
+                    <div class="form-group">
+                        <label for="input29" class="form-control-label">Cache</label>
+                        <select class="form-control" name="cache" id="cache">
+                            <option value=""></option>
+                            <option value="default">default</option>
+                            <option value="new">new</option>
+                            <option value="from">from</option>
+                            <option value="to">to</option>
+                        </select>
+                    </div> <!-- div id:input29 -->
                     <div class="form-group">
                         <label for="input29">Name</label>
                         <input class=" form-control"  placeholder="name" name="input29" id="input29" type="text" ng-model="variable.name"/>
                     </div> <!-- div id:input29 -->
                     <div class="form-group">
-                        <label for="input162">service form</label>
-                        <input class=" form-control"  placeholder="serviceform" name="input162" id="input162" type="text" ng-model="variable.servform"/>
+                        <label for="input162">service</label>
+                        <input class=" form-control"  placeholder="serviceform" name="input162" id="input162" type="text" ng-model="variable.service"/>
                     </div> <!-- div id:input162 -->
-                    <div class="form-group">
-                        <label for="input163">service module</label>
-                        <input class=" form-control"  placeholder="service module" name="input163" id="input163" type="text" ng-model="variable.servmodule"/>
-                    </div> <!-- div id:input163 -->
                     <div class="form-group" >
                         <label for="textarea124">value</label>
                         <div class="cmirror">
@@ -211,11 +204,13 @@
 
                 </div> <!-- Heading ends-->
                 <div id="group93" style="" class=" col-md-12 "> <!-- group93 begins-->
-                    <div>
-                        <label for="input152">view in main menu</label>
-                        <input class=" " placeholder="view in main menu" name="input152" id="input152" type="checkbox"
-                               ng-model="currentComponent.mainmenu"/>
-                    </div> <!-- div id:input152 -->
+                    <div class="checkbox">
+                        <label class="checkbox-inline">
+                            <input  type="checkbox"  value="local" ng-model="currentComponent.mainmenu"/>
+                            <span class="box"></span>
+                            Module menu
+                        </label>
+                    </div>
                     <div class="form-group">
                         <label for="input179">icon</label>
                         <input class=" form-control" placeholder="icon" name="input179" id="input179" type="text"
@@ -237,18 +232,14 @@
                                ng-model="currentComponent.url"/>
                     </div> <!-- div id:input105 -->
                     <div>
-                        <label for="radio111">template type</label>
-                        <div class="spacer">
-                            <label class=" radio-inline">
-                                <input id="radio111" type="radio" value="static"
-                                       ng-model="currentComponent.templatetype"> static
-                            </label>
-                            <label class=" radio-inline">
-                                <input id="radio11" type="radio" value="function"
-                                       ng-model="currentComponent.templatetype"> function
-                            </label>
+                        <div class="md-radio md-radio-inline">
+                            <p>Template type</p>
+                            <input id="2a" value="static" vng-model="currentComponent.templatetype" type="radio" name="g2" checked>
+                            <label for="2a">static</label>
+                            <input id="3b" value="function" ng-model="currentComponent.templatetype" type="radio" name="g2" >
+                            <label for="3b">function</label>
                         </div>
-                    </div> <!-- div id:radio111 -->
+                    </div>
                     <div class="form-group">
                         <label for="textarea110">templateUrl</label>
                         <div class="cmirror">
@@ -344,7 +335,7 @@
 <script type="text/ng-template" id="varlist.html">
     <div class="form-group">
         <div class="form-group">
-            <input type="text"  class="input-group">
+            <span data-ng-click="generatevars()"><i class="glyphicon glyphicon-cog"></i>generate</span>
         </div>
         <ul style="list-style:none; padding: 0">
             <li style="border: initial;" ng-repeat='item in currentComponent.variables' data-ng-click="setParam(item, 'variable')">

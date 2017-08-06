@@ -3,7 +3,7 @@
  */
 define(['configs/app'], function (app) {
     'use strict';
-    app.register.controller('overview', ['$scope', 'layoutFactory','globalVarFactory','$sce','toaster','$window','$uibModal', function ($scope, layoutFactory,globalVarFactory, $sce, toaster, $window,$uibModal) {
+    app.register.controller('overview', ['$scope', 'layoutFactory','globalVarFactory','toaster','$window','$uibModal', function ($scope, layoutFactory,globalVarFactory,  toaster, $window,$uibModal) {
 
             $scope.treeActions = [
                 {
@@ -157,9 +157,9 @@ define(['configs/app'], function (app) {
             };
 
 
-        $scope.pop = function(){
-            // toaster.pop('error', "title", "myTemplate.html", 5000, 'template');
-            toaster.pop('wait', "title", "myTemplate.html");
+        $scope.pop = function(type){
+            toaster.pop(type,"", "Mangezszferzxvrtry etyhhrgerthrgrth rt rhrthr bien", 5000);
+            // toaster.pop('wait', "title", "myTemplate.html");
         };
 
         $scope.clear = function(){
@@ -181,7 +181,6 @@ define(['configs/app'], function (app) {
                             {type:"workflow"},
                             {type:"database"}
                         ];
-	
 						$scope.mode =
 							{
 								lineNumbers: true,

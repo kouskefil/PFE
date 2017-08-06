@@ -21,7 +21,6 @@ define(['configs/app'], function (app){
                 $scope.components = data;
 
             });
-          
             $scope.setModel = function (model) {
                 globalVarFactory.setModel(model);
                 $scope.components = model;
@@ -31,7 +30,6 @@ define(['configs/app'], function (app){
 				$scope.init();
                 console.log($scope.components);
             } ;
-
             $scope.init = function () {
                 $scope.updateparam = false;
                 $scope.action = {};
@@ -172,6 +170,50 @@ define(['configs/app'], function (app){
               globalVarFactory.gDelete($scope.currentComponent.columns, col);
             };
             $scope.oneAtATime = true;
+
+            var _generatevar = function (component, vars) {
+                var i, comp;
+                console.log(component.model);
+
+                if(component.model != null && component.model != undefined) {
+                    comp = component.model.split('.');
+                    if (comp.length >= 2) {
+                        for (i = 0; i < vars.length; i++)
+                            if (vars[i].id == component.id) {
+                                vars[i].name = comp;
+                                return;
+                            }
+                        vars.push(
+                            {
+                                id: component.id,
+                                name: comp[0],
+                                value: "{}"
+                            })
+                    }
+                }
+
+            };
+            var _generatevars = function (composants, vars) {
+                var i,j;
+
+                for (i = 0; i < composants.length; i++){
+                    console.log('_generatevars') ;
+                    console.log(composants[i].type) ;
+                    console.log(composants[i].children) ;
+
+                    _generatevar(composants[i], vars);
+                    if (composants[i].children != null && composants[i].children != undefined){
+                        console.log('in the if') ;
+                        _generatevars(composants[i].children, vars);
+
+                    }
+
+                }
+            };
+            $scope.generatevars = function () {
+                console.log($scope.currentModel.children);
+                _generatevars($scope.currentModel.children, $scope.currentModel.variables);
+            }
 
         }]
 

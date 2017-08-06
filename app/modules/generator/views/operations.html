@@ -4,7 +4,7 @@
         <div id="operation-editing"  style="margin-bottom: 15px; padding:0"  class="floatingPanel col-md-12 "> <!-- operation-editing begins-->
             <div id="group185_copy1"  style="height: 35px; border-bottom: 1px solid lightgray; margin-bottom: 5px"  class=""> <!-- group185_copy1 begins-->
                 <div id="header_copy1"  style="padding: 10px 15px; margin: 0"  class="g_header"> <!-- header_copy1 begins-->
-                    <span  class="glyphicon-cog" id="span188_copy1" ></span>
+                    <span  class=" glyphicon glyphicon-edit" id="span188_copy1" ></span>
                     <span  id="span189_copy1" >Edit</span>
                 </div> <!-- header_copy1 ends-->
             </div> <!-- group185_copy1 ends-->
@@ -23,17 +23,16 @@
                     <label for="input183">reply</label>
                     <input class=" form-control"  placeholder="reply" name="input183" id="input183" type="text" ng-model="currentOp.out"/>
                 </div> <!-- div id:input183 -->
-                <div  >
-                    <label for="radio292">static</label>
-                    <div  class="spacer">
-                        <label class=" radio-inline">
-                            <input id="radio293" type="radio" value="true" ng-model="currentOp.sql.static"> true
-                        </label>
-                        <label class=" radio-inline">
-                            <input id="radio292" type="radio" value="false" ng-model="currentOp.sql.static"> false
-                        </label>
+
+                <div>
+                    <div class="md-radio md-radio-inline">
+                        <p>Static</p>
+                        <input id="2a" value="true" ng-model="currentOp.sql.static" type="radio" name="g2" checked>
+                        <label for="2a">true</label>
+                        <input id="3b" value="false" ng-model="currentOp.sql.static" type="radio" name="g2" >
+                        <label for="3b">false</label>
                     </div>
-                </div> <!-- div id:radio292 -->
+                </div>
                 <div class="form-group" >
                     <label for="textarea184">sql</label>
                     <div style="border: 1px solid cadetblue;">
@@ -65,6 +64,12 @@
                     </ul>
                 </div> <!-- op-inputs ends-->
                 <div id="group201"  style="padding: 0 0px 6px 15px;border-left: 1px solid lightgray;"  class=" col-md-7 "> <!-- group201 begins-->
+                    <div class="checkbox">
+                        <label class="checkbox-inline"><input  type="checkbox"  value="local" ng-model="in.optional">
+                            <span class="box"></span>
+                            optional
+                        </label>
+                    </div> <!-- div id:input30 -->
                     <div class="form-group">
                         <label for="input202">name</label>
                         <input class=" form-control"  placeholder="name" name="input202" id="input202" type="text" ng-model="in.name"/>
@@ -87,11 +92,8 @@
                         </option>
                         </select>
                     </div>
-                    <div >
-                        <label for="input206">optional</label>
-                        <input class=" "  placeholder="optional" name="input206" id="input206" type="checkbox" ng-model="in.optional"/>
-                    </div> <!-- div id:input206 -->
-                    <button  class="floatingPanel button blue" ng-click="addInput()">add input</button>
+
+                    <button  class="floatingPanel button custom" style="float: right" ng-click="addInput()">add input</button>
                 </div> <!-- group201 ends-->
             </div> <!-- group186 ends-->
         </div> <!-- parameters ends-->
