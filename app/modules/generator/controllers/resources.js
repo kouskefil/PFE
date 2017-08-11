@@ -92,56 +92,7 @@ define(['configs/app', 'assets/js/lodash'], function (app) {
             globalVarFactory.addMethod($scope.method);
             $scope.method = {};
         };
-        // $scope.addResponse = function(method){
-        //     var i, found = -1;
-        //     var resp;
-        //     if(!method.responses)
-        //         method.responses = [];
-        //     if($scope.rsptmp.mediatype === '')
-        //         $scope.rsptmp.mediatype = 'application/json';
-        //     if($scope.rsptmp.name){
-        //         for(i=0; i < method.responses.length; i++){
-        //             console.log(method.responses[i].representations[0]);
-        //             if(method.responses[i].representations[0].param.name === $scope.rsptmp.name){
-        //                 found = i;
-        //                 break;
-        //             }
-        //         }
-        //         if(found === -1){
-        //             resp = {
-        //                 representations: [{"param": {
-        //                     name: $scope.rsptmp.name,
-        //                     options : [
-        //                         {
-        //                             mediatype: $scope.rsptmp.mediatype,
-        //                             value : $scope.rsptmp.value
-        //                         }
-        //                     ]
-        //                 }}]
-        //             };
-        //             method.responses.push(resp);
-        //         }
-        //         else{
-        //             resp = {
-        //                 mediatype: $scope.rsptmp.mediatype,
-        //                 value : $scope.rsptmp.value
-        //             };
-        //             method.responses[found].representations[0].param.options.push(resp);
-        //         }
-		//
-        //     }
-        //     else{
-        //         method.responses.push({
-        //             representations: [{"mediatype": "text/html"}]
-        //         });
-        //     }
-        //     $scope.responses.push($scope.rsptmp);
-        //     $scope.rsptmp = {
-        //         mediatype:'',
-        //         name:'',
-        //         value:''
-        //     };
-        // };
+      
         $scope.getMethod = function (method) {
             var i;
             console.log('method');
@@ -149,8 +100,11 @@ define(['configs/app', 'assets/js/lodash'], function (app) {
             $scope.selected = method.id;
             $scope.method = method;
             $scope.trigger = $scope.method;
-            if(method.request)
+            if(method.request){
                 $scope.requests = method.request.params;
+                console.log($scope.requests);
+            }
+
             $scope.responses.length = 0;
             if(method.responses) {
                 console.log(method.responses);

@@ -8,7 +8,7 @@ define(["angular",
     "../js/services/layoutFactory"
     // "ui-bootstrap"
     /*******************************/
-], function(angular, $ ){
+], function(angular, $){
     var app = angular.module("myapp", ['ui.router', 'ui.bootstrap','layoutModule', 'layoutCtrlModule','toaster',"ui.codemirror"]);
     app.init = function() {
         angular.bootstrap(document, ["myapp"]);

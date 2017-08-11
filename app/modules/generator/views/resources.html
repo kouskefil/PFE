@@ -53,63 +53,95 @@
      </ul>
     </div> <!-- methods_list ends-->
     <div id="params"  class="method-params col-md-8 "> <!-- params begins-->
-     <uib-tabset >
-      <uib-tab index="293"  heading="method"> <!--begins-->
-       <div  class="form-group">
-        <label for="select297">name</label>
-        <select name="select297" id="select297" ng-model="method.name" class="form-control" ><option ng-repeat='item in resourceMethod' value="{{item.rvalue}}"> {{item.dvalue}}
-        </option>
-        </select>
+     <uib-accordion close-others="true">
+      <div uib-accordion-group class="panel-default" heading="Simple components">
+       <div  class="components" ng-repeat='item in HTMLcomponents.simple'>
+        <a ui-sref="root.generator.views.properties({label:item.label, type:item.type, num:currentComponent.num})" ng-click='add(item)'>
+         <div id="group39"  class="sizer col-md-6 "> <!-- group39 begins-->
+          <span  id="span40" >{{item.type}}</span>
+          <span  class="{{item.img}}" id="span41" ></span>
+         </div> <!-- group39 ends-->
+        </a>
        </div>
-       <div class="form-group " >
-        <label class="form-control-label">operation</label>
-        <input class="form-control" ng-model="method.id" list="datalist300" placeholder="operation" name="datalist300 " >
-        <datalist id="datalist300">
-         <option ng-repeat="item in ids" value="{{item.name}}">
-        </datalist>
+      </div>
+      <div uib-accordion-group class="panel-default" heading="Containers components">
+       <div  class="components" ng-repeat='item in HTMLcomponents.container'>
+        <a ui-sref="root.generator.views.properties({label:item.label, type:item.type, num:currentComponent.num})" ng-click='add(item)'>
+         <div id="group50"  class="sizer col-md-6 "> <!-- group50 begins-->
+          <span  id="span51" >{{item.type}}</span>
+          <span  class="{{item.img}}" id="span52" ></span>
+         </div> <!-- group50 ends-->
+        </a>
        </div>
-       <div class="form-group">
-        <label for="input299">role</label>
-        <input class=" form-control"  placeholder="role" name="input299" id="input299" type="text" ng-model="method.role"/>
-       </div> <!-- div id:input299 -->
-       <button  class="button custom" ng-click="addmethod()">add method</button>
-      </uib-tab> <!--end-->
-      <uib-tab index="220"  heading="trigger"> <!--begins-->
-       <div id="trigger"  class=""> <!-- trigger begins-->
-        <div class="col-md-12" style="margin-top: 10px; border: 1px solid #ddd">
-             <div class="col-md-5">
-               name : <span style="font-size: medium;"> {{method.trigger.name}}</span>
-             </div>
-             <div class="col-md-6">
-               from :  <span style="font-size: medium;"> {{method.trigger.from}}</span>
-            </div>
-             <div class="col-md-1">
-               <span class="fa fa-plus-circle"></span>
-             </div>
-        </div>
-       </div> <!-- trigger ends-->
-      </uib-tab> <!--end-->
-      <uib-tab index="164"  heading="requests"> <!--begins-->
-    
-        <table class="table">
-         <tbody>
-         <tr ng-repeat="item in requests">
-          <td>{{item.name}}</td>
-          <td>{{item.type}}</td>
-          <td>{{item.defaultValue}}</td>
-          <td><span class="glyphicon glyphicon-trash" data-ng-click="deleteRole(role)"></span></td>
-         </tr>
-         </tbody>
-        </table>
-      </uib-tab> <!--end-->
-      <uib-tab index="165"  heading="responses"> <!--begins-->
+      </div>
+      <div uib-accordion-group class="panel-default" heading="Widgets components">
+       <div  class="components" ng-repeat='item in HTMLcomponents.widget'>
+        <a ui-sref="root.generator.views.properties({label:item.label, type:item.type, num:currentComponent.num})" ng-click='add(item)'>
+         <div id="group55"  class="sizer col-md-6 "> <!-- group55 begins-->
+          <span  id="span56" >{{item.type}}</span>
+          <span  class="{{item.img}}" id="span57" >{{item.views}}</span>
+         </div> <!-- group55 ends-->
+        </a>
+       </div>
+      </div>
+     </uib-accordion>
+     <!--<uib-tabset >-->
+      <!--<uib-tab index="293"  heading="method"> &lt;!&ndash;begins&ndash;&gt;-->
+       <!--<div  class="form-group">-->
+        <!--<label for="select297">name</label>-->
+        <!--<select name="select297" id="select297" ng-model="method.name" class="form-control" ><option ng-repeat='item in resourceMethod' value="{{item.rvalue}}"> {{item.dvalue}}-->
+        <!--</option>-->
+        <!--</select>-->
+       <!--</div>-->
+       <!--<div class="form-group " >-->
+        <!--<label class="form-control-label">operation</label>-->
+        <!--<input class="form-control" ng-model="method.id" list="datalist300" placeholder="operation" name="datalist300 " >-->
+        <!--<datalist id="datalist300">-->
+         <!--<option ng-repeat="item in ids" value="{{item.name}}">-->
+        <!--</datalist>-->
+       <!--</div>-->
+       <!--<div class="form-group">-->
+        <!--<label for="input299">role</label>-->
+        <!--<input class=" form-control"  placeholder="role" name="input299" id="input299" type="text" ng-model="method.role"/>-->
+       <!--</div> &lt;!&ndash; div id:input299 &ndash;&gt;-->
+       <!--<button  class="button custom" ng-click="addmethod()">add method</button>-->
+      <!--</uib-tab> &lt;!&ndash;end&ndash;&gt;-->
+      <!--<uib-tab index="220"  heading="Trigger"> &lt;!&ndash;begins&ndash;&gt;-->
+       <!--<div id="trigger"  class=""> &lt;!&ndash; trigger begins&ndash;&gt;-->
+        <!--<div class="col-md-12" style="margin-top: 10px; border: 1px solid #ddd">-->
+             <!--<div class="col-md-5">-->
+               <!--name : <span style="font-size: medium;"> {{method.trigger.name}}</span>-->
+             <!--</div>-->
+             <!--<div class="col-md-6">-->
+               <!--from :  <span style="font-size: medium;"> {{method.trigger.from}}</span>-->
+            <!--</div>-->
+             <!--<div class="col-md-1">-->
+               <!--<span class="fa fa-plus-circle"></span>-->
+             <!--</div>-->
+        <!--</div>-->
+       <!--</div> &lt;!&ndash; trigger ends&ndash;&gt;-->
+      <!--</uib-tab> &lt;!&ndash;end&ndash;&gt;-->
+      <!--<uib-tab index="164"  heading="Requests"> &lt;!&ndash;begins&ndash;&gt;-->
+        <!--<table class="table">-->
+         <!--<tbody>-->
+         <!--<tr ng-repeat="item in requests">-->
+          <!--<td>{{item.name}}</td>-->
+          <!--<td>{{item.style}}</td>-->
+          <!--<td>{{item.type}}</td>-->
+          <!--<td>{{item.defaultValue}}</td>-->
+          <!--<td><span class="glyphicon glyphicon-trash" data-ng-click="deleteRole(role)"></span></td>-->
+         <!--</tr>-->
+         <!--</tbody>-->
+        <!--</table>-->
+      <!--</uib-tab> &lt;!&ndash;end&ndash;&gt;-->
+      <!--<uib-tab index="165"  heading="Responses"> &lt;!&ndash;begins&ndash;&gt;-->
+       <!--<p ng-show="method != null">{{ method.id }} responses</p>-->
+       <!--<div class="floatingPanel" ng-repeat="item in responses">-->
+        <!--<div><label >Name</label> <span style="float: right">{{ item.name }}</span></div>-->
+        <!--<div><label >Value</label> <span style="float: right">{{ item.value }}</span></div>-->
+        <!--<div><label >Mediatype</label> <span style="float: right">{{ item.mediatype }}</span></div>-->
 
-       <div class="floatingPanel" ng-repeat="item in responses">
-        <div><label >Name</label> <span style="float: right">{{ item.name }}</span></div>
-        <div><label >Value</label> <span style="float: right">{{ item.value }}</span></div>
-        <div><label >Mediatype</label> <span style="float: right">{{ item.mediatype }}</span></div>
-
-       </div>
+       <!--</div>-->
        <!--<table class="table">-->
         <!--<thead>-->
         <!--<tr>-->
@@ -129,8 +161,8 @@
         <!--</tr>-->
         <!--</tbody>-->
        <!--</table>-->
-      </uib-tab> <!--end-->
-     </uib-tabset>
+      <!--</uib-tab> &lt;!&ndash;end&ndash;&gt;-->
+     <!--</uib-tabset>-->
     </div> <!-- params ends-->
    </div> <!-- params_content ends-->
   </div> <!-- rsc_params ends-->
@@ -152,5 +184,3 @@
   </div>
  </div> <!-- resources_tree ends-->
 </div> <!-- resources ends-->
-
-

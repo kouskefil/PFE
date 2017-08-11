@@ -3,6 +3,7 @@
     <div id="recepteur"  style="margin-bottom: 150px;"  class="floatingPanel recepteur col-md-7 "> <!-- recepteur begins-->
         <uib-tabset >
             <uib-tab index="13"  heading="Treeview"> <!--begins-->
+
                 <div id="Heading" style="margin-bottom:5px;height: 35px; padding-top: 5px; padding-bottom: 5px;" class="floatingPanel col-md-12 "> <!-- Heading begins-->
                     <div id="treeHeading"  style="border-right: 1px solid #ddd"  class=" col-md-5 "> <!-- treeHeading begins-->
                         <div  > {{currentModel.label}} <span ng-hide="!currentModel" style=" color: lightslategray;"><i class="fa fa-chevron-right"></i> {{ currentComponent.id }}</span></div>
@@ -37,161 +38,174 @@
                 </div> <!-- group136 ends-->
             </uib-tab> <!--end-->
             <uib-tab index="14"  heading="functions"> <!--begins-->
-                <div id="fHeading" class="floatingPanel col-md-12 view-heading"> <!-- Heading begins-->
-                    <div id="functionHeading"  class=" col-md-4 hblock"> <!-- treeHeading begins-->
-                        <div  > {{currentModel.label}} <span style=" color: lightslategray;"><i class="fa fa-chevron-right style"></i> functions </span></div>
-                    </div> <!-- treeHeading ends-->
 
-                    <div class="col-md-8 hblock" style="padding:0;border:none" >
-                        <ul class="haction" >
-                            <li><span class="fa fa-chevron-left" ng-class="prev_state" data-ng-click="previous()"> </span></li>
-                            <li popover-placement="bottom" uib-popover-template="'functionlist.html'" ><span class="fa fa-list"></span></li>
-                            <li><span class="fa fa-chevron-right" ng-class="next_state" data-ng-click="next('function')"></span></li>
+                <div id="func_content"  class="tab_content "> <!-- func_content begins-->
+                    <div class="content">
+                        <span style="float: right; font-size: medium" class="glyphicon glyphicon-list" onclick="changeLayout('functionlist', 'functionlist')"></span>
+                        <div class="checkbox">
+                            <label class="checkbox-inline"><input  type="checkbox"  value="local" ng-model="function.local">
+                                <span class="box"></span>
+                                local
+                            </label>
+
+                        </div> <!-- div id:input30 -->
+                        <div>
+                            <div class="form-group">
+                                <label for="input17">Name</label>
+                                <input class=" form-control"  placeholder="name" name="input17" id="input17" type="text" ng-model="function.name"/>
+                            </div> <!-- div id:input17 -->
+                        </div>
+                        <div class="form-group" >
+                            <label for="textarea18">content</label>
+                            <div class="cmirror">
+                                <textarea id="textarea18" class="form-control"    name="textarea18" ui-codemirror="cmOption" ng-model="function.content"></textarea>
+                            </div>
+                        </div>
+                        <div id="action"  class="" style="float: right"> <!-- action begins-->
+                            <button style="margin: 0 10px;"  class="floatingPanel button " ng-click="cancel()">Cancel</button>
+                            <button style="margin: 0 10px;" ng-hide="updateparam==true" class="floatingPanel button custom" ng-click="addParams('function')">Add function</button>
+                            <button style="margin: 0 10px;" ng-show="updateparam==true" class="floatingPanel button custom" ng-click="updateParam('function')">Save function</button>
+                        </div> <!-- action ends-->
+                    </div>
+                    <div class="functionlist floatingPanel list" id="functionlist">
+                        <div class="generation">
+                            <i class="glyphicon glyphicon-cog"></i>
+                            <span style="margin-left: 15px; cursor: pointer" data-ng-click="generatefunctions()">Generate functions</span>
+                        </div>
+                        <ul style="list-style:none; padding: 0">
+                            <li style="border: initial;" ng-repeat='item in currentComponent.functions' data-ng-click="setParam(item, 'function')">
+                                {{item.name}}
+                                <span style="float: right" class="fa fa-trash" data-ng-click="deleteParam('function', item)"></span>
+                            </li>
                         </ul>
                     </div>
-
-                </div> <!-- Heading ends-->
-                <div id="func_content"  style="padding:20px;"  class="col-md-12"> <!-- func_content begins-->
-                    <!--<div class="col-md-8">-->
-                    <div class="checkbox">
-                        <label class="checkbox-inline"><input  type="checkbox"  value="local" ng-model="function.local">
-                            <span class="box"></span>
-                            local
-                        </label>
-                    </div> <!-- div id:input30 -->
-                    <div>
-                        <div class="form-group">
-                            <label for="input17">Name</label>
-                            <input class=" form-control"  placeholder="name" name="input17" id="input17" type="text" ng-model="function.name"/>
-                        </div> <!-- div id:input17 -->
-                    </div>
-                    <div class="form-group" >
-                        <label for="textarea18">content</label>
-                        <div class="cmirror">
-                            <textarea id="textarea18" class="form-control"    name="textarea18" ui-codemirror="cmOption" ng-model="function.content"></textarea>
-                        </div>
-                    </div>
-                    <div id="action"  class="" style="float: right"> <!-- action begins-->
-                        <button style="margin: 0 10px;"  class="floatingPanel button " ng-click="cancel()">Cancel</button>
-                        <button style="margin: 0 10px;" ng-hide="updateparam==true" class="floatingPanel button custom" ng-click="addParams('function')">Add function</button>
-                        <button style="margin: 0 10px;" ng-show="updateparam==true" class="floatingPanel button custom" ng-click="updateParam('function')">Save function</button>
-                    </div> <!-- action ends-->
 
                 </div> <!-- func_content ends-->
             </uib-tab> <!--end-->
             <uib-tab index="15"  heading="actions"> <!--begins-->
-                <div id="aHeading" class="floatingPanel col-md-12 view-heading"> <!-- Heading begins-->
-                    <div id="fuctionHeading"  class=" col-md-4 hblock"> <!-- treeHeading begins-->
-                        <div  > {{currentModel.label}} <span style=" color: lightslategray;"><i class="fa fa-chevron-right style"></i> functions </span></div>
-                    </div> <!-- treeHeading ends-->
 
-                    <div class="col-md-8 hblock" style="padding:0;border:none" >
-                        <ul class="haction" >
-                            <li><span class="fa fa-chevron-left" ng-class="prev_state" data-ng-click="previous()"> </span></li>
-                            <li uib-tooltip="generate"    tooltip-placement="bottom"  popover-placement="bottom" uib-popover-template="'functionlist.html'" ><span class="fa fa-list"></span></li>
-                            <li><span class="fa fa-chevron-right" ng-class="next_state" data-ng-click="next('function')"></span></li>
-                        </ul>
+                <div id="action_content"   class="tab_content"> <!-- func_content begins-->
+                    <div class="content" style="margin-top: 15px">
+                        <span style="float: right; font-size: medium" class="glyphicon glyphicon-list" onclick="changeLayout('actionlist', 'actionlist')"></span>
+                        <div class="form-group">
+                            <label for="input23">Name</label>
+                            <input class=" form-control"  placeholder="name" name="input23" id="input23" type="text" ng-model="action.name"/>
+                        </div> <!-- div id:input23 -->
+                        <div class="form-group">
+                            <label for="input2i">Role</label>
+                            <input class=" form-control"  placeholder="role" name="input2i" id="input2i" type="text" ng-model="action.role"/>
+                        </div> <!-- div id:input23 -->
+                        <div class="form-group">
+                            <label for="input24">Icon</label>
+                            <input class=" form-control"  placeholder="icon" name="input24" id="input24" type="text" ng-model="action.icon"/>
+                        </div> <!-- div id:input24 -->
+                        <div class="form-group" >
+                            <label for="textarea27_copy2">dependances</label>
+                            <div class="cmirror">
+                                <textarea id="textarea27_copy2" class="form-control" name="textarea27_copy2" ui-codemirror="cmOption" ng-model="action.dependances"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group" >
+                            <label for="textarea27">Action</label>
+                            <div class="cmirror">
+                                <textarea id="textarea27" class="form-control" name="textarea27" ui-codemirror="cmOption" ng-model="action.action"></textarea>
+                            </div>
+                        </div>
+                        <div id="actions" style="float: right" > <!-- actions begins-->
+                            <button  class="floatingPanel button " style="margin: 0 10px" ng-click="cancel()">Cancel</button>
+                            <button ng-hide="updateparam==true" class="floatingPanel button custom"  ng-click="addParams('action')">add action</button>
+                            <button ng-show="updateparam==true" class="floatingPanel button custom"  ng-click="updateParam('action')">save action</button>
+                        </div> <!-- actions ends-->
+                    </div>
+                    <div id="actionlist" class="list floatingPanel actionlist">
+                        <div class="listcontent">
+                            <div class="generation">
+                                <i class="glyphicon glyphicon-cog"></i>
+                                <span style="margin-left: 15px; cursor: pointer" data-ng-click="generateactions()">Generate actions</span>
+                            </div>
+                            <ul style="list-style:none; padding: 0">
+                                <li style="border: initial;"   ng-repeat='item in currentComponent.actions' data-ng-click="setParam(item, 'variable')">
+                                    {{item.name}}
+                                    <span style="float: right" class="fa fa-trash" data-ng-click="deleteParam('action', item)"></span>
+                                </li>
+                            </ul>
+                        </div>
+
                     </div>
 
-                </div> <!-- Heading ends-->
-                <div id="action_content"  style="padding:20px;"  class="col-md-12"> <!-- func_content begins-->
-                    <div class="form-group">
-                        <label for="input23">Name</label>
-                        <input class=" form-control"  placeholder="name" name="input23" id="input23" type="text" ng-model="action.name"/>
-                    </div> <!-- div id:input23 -->
-                    <div class="form-group">
-                        <label for="input2i">Role</label>
-                        <input class=" form-control"  placeholder="role" name="input2i" id="input2i" type="text" ng-model="action.role"/>
-                    </div> <!-- div id:input23 -->
-                    <div class="form-group">
-                        <label for="input24">Icon</label>
-                        <input class=" form-control"  placeholder="icon" name="input24" id="input24" type="text" ng-model="action.icon"/>
-                    </div> <!-- div id:input24 -->
-                    <div class="form-group" >
-                        <label for="textarea27_copy2">dependances</label>
-                        <div class="cmirror">
-                            <textarea id="textarea27_copy2" class="form-control" name="textarea27_copy2" ui-codemirror="cmOption" ng-model="action.dependances"></textarea>
-                        </div>
-                    </div>
-                    <div class="form-group" >
-                        <label for="textarea27">Action</label>
-                        <div class="cmirror">
-                            <textarea id="textarea27" class="form-control" name="textarea27" ui-codemirror="cmOption" ng-model="action.action"></textarea>
-                        </div>
-                    </div>
-                    <div id="actions" style="float: right" > <!-- actions begins-->
-                        <button  class="floatingPanel button " style="margin: 0 10px" ng-click="cancel()">Cancel</button>
-                        <button ng-hide="updateparam==true" class="floatingPanel button custom"  ng-click="addParams('action')">add action</button>
-                        <button ng-show="updateparam==true" class="floatingPanel button custom"  ng-click="updateParam('action')">save action</button>
-                    </div> <!-- actions ends-->
                 </div> <!-- data ends-->
-
             </uib-tab> <!--end-->
             <uib-tab index="16"  heading="variables"> <!--begins-->
-                <div id="vHeading" class="floatingPanel col-md-12 view-heading"> <!-- Heading begins-->
-                    <div id="variableHeading"  class=" col-md-4 hblock"> <!-- treeHeading begins-->
-                        <div  > {{currentModel.label}} <span style=" color: lightslategray;"><i class="fa fa-chevron-right style"></i> variables </span></div>
-                    </div> <!-- treeHeading ends-->
-                    <div class="col-md-8 hblock" style="padding:0;border:none" >
-                        <ul class="haction" >
-                            <li><span class="fa fa-chevron-left" data-ng-click="previous()"></span></li>
-                            <li popover-placement="bottom" uib-popover-template="'varlist.html'"  popover-trigger="outsideClick"><span class="fa fa-list"></span></li>
-                            <li><span class="fa fa-chevron-right" data-ng-click="next()"></span></li>
-                        </ul>
-                    </div>
 
-                </div> <!-- Heading ends-->
-                <div id="var_content"  style="padding:20px;"  class="col-md-12"> <!-- var_content begins-->
-                    <div >
-                        <div class="checkbox">
-                            <label class="checkbox-inline"><input  type="checkbox"  value="resolve" ng-model="variable.resolve">
-                                <span class="box"></span>
-                                resolve
-                            </label>
-                            <label class="checkbox-inline">
-                                <input  type="checkbox"  value="async" ng-model="variable.async">
-                                <span class="box"></span>
-                                async
-                            </label>
-                            <label class="checkbox-inline">
-                                <input  type="checkbox"  value="local" ng-model="variable.local">
-                                <span class="box"></span>
-                                local
-                            </label>
-                        </div> <!-- div id:input30 -->
-                    </div>
-                    <div class="form-group">
-                        <label for="input29" class="form-control-label">Cache</label>
-                        <select class="form-control" name="cache" id="cache">
-                            <option value=""></option>
-                            <option value="default">default</option>
-                            <option value="new">new</option>
-                            <option value="from">from</option>
-                            <option value="to">to</option>
-                        </select>
-                    </div> <!-- div id:input29 -->
-                    <div class="form-group">
-                        <label for="input29">Name</label>
-                        <input class=" form-control"  placeholder="name" name="input29" id="input29" type="text" ng-model="variable.name"/>
-                    </div> <!-- div id:input29 -->
-                    <div class="form-group">
-                        <label for="input162">service</label>
-                        <input class=" form-control"  placeholder="serviceform" name="input162" id="input162" type="text" ng-model="variable.service"/>
-                    </div> <!-- div id:input162 -->
-                    <div class="form-group" >
-                        <label for="textarea124">value</label>
-                        <div class="cmirror">
-                            <textarea id="textarea124" class="form-control" name="textarea124" ui-codemirror="cmOption" ng-model="variable.value"></textarea>
+                <div id="tab_content"   class="tab_content "> <!-- tab_content begins-->
+                    <div id="_content" class="content">
+                        <div >
+                            <div class="checkbox">
+                                <label class="checkbox-inline"><input  type="checkbox"  value="resolve" ng-model="variable.resolve">
+                                    <span class="box"></span>
+                                    resolve
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input  type="checkbox"  value="async" onclick="test()" ng-model="variable.async">
+                                    <span class="box"></span>
+                                    async
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input  type="checkbox"  value="local" ng-model="variable.local">
+                                    <span class="box"></span>
+                                    local
+                                </label>
+                                <span style="float: right; font-size: medium" class="glyphicon glyphicon-list" onclick="changeLayout('varlist', 'varlist')"></span>
+                            </div> <!-- div id:input30 -->
+                        </div>
+                        <div class="form-group">
+                            <label for="input29" class="form-control-label">Cache</label>
+                            <select class="form-control" name="cache" id="cache" >
+                                <option value=""></option>
+                                <option value="default">default</option>
+                                <option value="new">new</option>
+                                <option value="from">from</option>
+                                <option value="to">to</option>
+                            </select>
+                        </div> <!-- div id:input29 -->
+                        <div class="form-group">
+                            <label for="input29">Name</label>
+                            <input class=" form-control"  placeholder="name" name="input29" id="input29" type="text" ng-model="variable.name"/>
+                        </div> <!-- div id:input29 -->
+                        <div class="form-group">
+                            <label for="input162">service</label>
+                            <input class=" form-control"  placeholder="serviceform" name="input162" id="input162" type="text" ng-model="variable.service"/>
+                        </div> <!-- div id:input162 -->
+                        <div class="form-group" >
+                            <label for="textarea124">value</label>
+                            <div class="cmirror">
+                                <textarea id="textarea124" class="form-control" name="textarea124" ui-codemirror="cmOption" ng-model="variable.value"></textarea>
+                            </div>
+                        </div>
+                        <div id="_action"  style="float: right"> <!-- action begins-->
+                            <button  ng-click="cancel('variable')" class="floatingPanel button " style="margin: 0 10px">cancel</button>
+                            <button ng-hide="updateparam==true" ng-click="addParams('variable')" class="floatingPanel button custom" >Add variable</button>
+                            <button ng-show="updateparam==true" ng-click="updateParam('variable')" class="floatingPanel button custom" >save variable</button>
                         </div>
                     </div>
-                    <div id="_action"  style="float: right"> <!-- action begins-->
-                        <button  ng-click="cancel('variable')" class="floatingPanel button " style="margin: 0 10px">cancel</button>
-                        <button ng-hide="updateparam==true" ng-click="addParams('variable')" class="floatingPanel button custom" >Add variable</button>
-                        <button ng-show="updateparam==true" ng-click="updateParam('variable')" class="floatingPanel button custom" >save variable</button>
-                    </div> <!-- action ends-->
-                </div> <!-- var_content ends-->
+                    <div  id="varlist" class="list floatingPanel varlist" >
+                        <div id="toto" style=" ">
+                            <div class="generation">
+                                <i class="glyphicon glyphicon-cog"></i>
+                                <span style="margin-left: 15px; cursor: pointer" data-ng-click="generatevars()">Generate vars</span>
+                            </div>
+                            <ul style="list-style:none; padding: 0">
+                                <li style="border: initial; cursor: pointer" ng-repeat='item in currentComponent.variables' data-ng-click="setParam(item, 'variable')">
+                                    {{item.name}}
+                                    <span style="float: right" class="fa fa-trash" data-ng-click="deleteParam('variable', item)"></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- tab_content ends-->
             </uib-tab> <!--end-->
             <uib-tab index="77" heading="configs">
+
                 <div id="cHeading" style="margin-bottom:5px;height: 35px; padding-top: 5px; padding-bottom: 5px;"
                      class="floatingPanel col-md-12 "> <!-- Heading begins-->
                     <div id="config" style="border-right: 1px solid #ddd" class=" col-md-5 "> <!-- treeHeading begins-->
@@ -252,10 +266,11 @@
                             <textarea id="textarea151" class="form-control" ui-codemirror="cmOption" name="textarea151"  ng-model="currentComponent.dependances"></textarea>
                         </div>
                     </div>
-                   
+
                 </div> <!-- group93 ends-->
             </uib-tab> <!--end-->
         </uib-tabset>
+
     </div> <!-- recepteur ends-->
     <div id="composant"  style="margin-left:15px"  class=" row floatingPanel composants composant col-md-3 "> <!-- composant begins-->
         <uib-tabset >
@@ -292,12 +307,12 @@
                         </div>
                     </div>
                 </uib-accordion>
-                <div id="simple"  class=""> <!-- simple begins-->
-                </div> <!-- simple ends-->
-                <div id="container"  class=""> <!-- container begins-->
-                </div> <!-- container ends-->
-                <div id="widget"  class=""> <!-- widget begins-->
-                </div> <!-- widget ends-->
+                <!--<div id="simple"  class=""> &lt;!&ndash; simple begins&ndash;&gt;-->
+                <!--</div> &lt;!&ndash; simple ends&ndash;&gt;-->
+                <!--<div id="container"  class=""> &lt;!&ndash; container begins&ndash;&gt;-->
+                <!--</div> &lt;!&ndash; container ends&ndash;&gt;-->
+                <!--<div id="widget"  class=""> &lt;!&ndash; widget begins&ndash;&gt;-->
+                <!--</div> &lt;!&ndash; widget ends&ndash;&gt;-->
             </uib-tab> <!--end-->
             <uib-tab index="9"  heading="views"> <!--begins-->
                 <ul  class="items">
@@ -319,42 +334,10 @@
     </div> <!-- composant ends-->
 </div> <!-- racine ends-->
 
-<script type="text/ng-template" id="functionlist.html">
-    <div class="form-group">
-        <div class="form-group">
-            <input type="text" name="" id="" class="input-group">
-        </div>
-        <ul style="list-style:none; padding: 0">
-            <li style="border: initial;" ng-repeat='item in currentComponent.functions' data-ng-click="setParam(item, 'function')">
-                {{item.name}}
-                <span style="float: right" class="fa fa-trash" data-ng-click="deleteParam('function', item)"></span>
-            </li>
-        </ul>
-    </div>
-</script>
-<script type="text/ng-template" id="varlist.html">
-    <div class="form-group">
-        <div class="form-group">
-            <span data-ng-click="generatevars()"><i class="glyphicon glyphicon-cog"></i>generate</span>
-        </div>
-        <ul style="list-style:none; padding: 0">
-            <li style="border: initial;" ng-repeat='item in currentComponent.variables' data-ng-click="setParam(item, 'variable')">
-                {{item.name}}
-                <span style="float: right" class="fa fa-trash" data-ng-click="deleteParam('variable', item)"></span>
-            </li>
-        </ul>
-    </div>
-</script>
-<script type="text/ng-template" id="actionlist.html">
-    <div class="form-group">
-        <div class="form-group">
-            <input type="text"  class="input-group">
-        </div>
-        <ul style="list-style:none; padding: 0">
-            <li style="border: initial;"   ng-repeat='item in currentComponent.actions' data-ng-click="setParam(item, 'variable')">
-                {{item.name}}
-                <span style="float: right" class="fa fa-trash" data-ng-click="deleteParam('action', item)"></span>
-            </li>
-        </ul>
-    </div>
+<script>
+    $(document).ready(function () {
+        document.getElementById("varlist").style.display = "none";
+        document.getElementById("actionlist").style.display = "none";
+        document.getElementById("functionlist").style.display = "none";
+    });
 </script>

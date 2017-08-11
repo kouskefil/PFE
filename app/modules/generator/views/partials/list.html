@@ -18,9 +18,12 @@
 <div class="section">
   <h6>Controller</h6>
   <div ng-include="'app/modules/generator/views/partials/_genericCtrl.html'"></div>
-  <div class="checkbox-inline" >
-    <label><div><input name="resolve" type="checkbox" value="resolve"  ng-model="currentComponent.resolve"/></div>resolve</label>
-  </div>
+  <div class="checkbox">
+    <label class="checkbox"><input  type="checkbox" ng-model="currentComponent.resolve">
+      <span class="box"></span>
+      resolve
+    </label>
+  </div> <!-- div id:input30 -->
 </div>
 
 

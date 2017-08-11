@@ -6,9 +6,13 @@
 <div class="section">
     <h6>View</h6>
     <div ng-include="'app/modules/generator/views/partials/_genericView.html'"></div>
-    <div class="checkbox-inline">
-        <label> <div class=""><input type="checkbox" ng-model="currentComponent.required"></div> required</label><br/>
-        <label> <div class=""><input type="checkbox" ng-model="currentComponent.codesource"></div> code editor</label>
+    <div class="checkbox">
+        <label class="checkbox" > <input type="checkbox" ng-model="currentComponent.codesource"> code editor</label>
+        <span class="box"></span>
+    </div>
+    <div class="checkbox">
+        <label class="checkbox"> <input type="checkbox" ng-model="currentComponent.codesource">code editor</label>
+        <span class="box"></span>
     </div>
 </div>
 

@@ -12,11 +12,12 @@
         <div class="input-group">
             <input type="text" placeholder="input name" id="name" ng-model="currentComponent.name" class="form-control"/>
         </div>
-        <div class="checkbox-inline">
-            <label>
-                <div class=""><input type="checkbox" ng-model="currentComponent.ronly"></div>read only
+        <div class="checkbox">
+            <label class="checkbox"><input  type="checkbox" ng-model="currentComponent.ronly">
+                <span class="box"></span>
+                read only
             </label>
-        </div>
+        </div> <!-- div id:input30 -->
         <div class="form-group">
             <label for="type" >Type</label>
             <select class="form-control" name="" ng-model="currentComponent.selectedtype" id="type" >

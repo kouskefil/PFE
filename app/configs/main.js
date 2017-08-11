@@ -3,14 +3,8 @@
  */
 require.config({
      baseUrl: "app",
-	// packages: [{
-     //    name: "jquery",
-     //    location: "assets/codemirror",
-     //    main: "lib/codemirror"
-	// }
-	// ],
+	
     paths : {
-
         "angular" : "assets/angular/angular.min",
         "toaster" : "assets/angular/toaster",
         "angular-animate" : "assets/angular/angular-animate",
@@ -19,7 +13,7 @@ require.config({
         "treeview": "js/directives/angular.treeview.js" ,
         "codemirror":"assets/codemirror/lib/codemirror",
         "jquery":"assets/jquery/jquery.min",
-        "myjq":"assets/js/myjq",
+        "jquery-ui":"assets/jquery/jquery-ui.min",
 		"uicodemirror":"assets/codemirror/lib/ui-codemirror.min",
 		'lib/codemirror': 'assets/codemirror/lib/codemirror',
 		'mode/javascript/javascript': 'assets/codemirror/mode/javascript/javascript',
@@ -48,9 +42,6 @@ require.config({
             deps: ["angular"],
             exports:"ui-bootstrap"
         },
-        "myjq":{
-            deps : ["jquery"]
-        },
         "mode/javascript/javascript":{
             deps:["codemirror"] 
         },
@@ -63,7 +54,6 @@ require.config({
         "mode/sql/sql":{
             deps:["codemirror"]
         },
-        
         "uicodemirror": {
             deps:["angular","codemirror", "mode/javascript/javascript","mode/css/css", "mode/sql/sql"],
             // exports:"uicodemirror",
@@ -82,11 +72,10 @@ require([
     "configs/route",
     "ui-bootstrap",
     "angular-animate",
-    "toaster" ,
-	// "codemirror",
-	"uicodemirror"
-	// "assets/codemirror/mode/javascript/javascript",
-	
+    "toaster",
+	"uicodemirror",
+	"jquery-ui"
+
 	// "codemirror/lib/codemirror", "codemirror/mode/javascript/javascript"
 ], function(app) {
 	 app.init();

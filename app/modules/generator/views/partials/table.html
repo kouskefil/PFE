@@ -11,14 +11,15 @@
 <div class="section">
     <h6>Controller</h6>
     <div class="checkbox-inline">
-        <label>
+        <label class="checkbox">
             <input type="checkbox" ng-model="currentComponent.htype">dynamic header
+            <span class="box"></span>
         </label>
     </div>
     <!-- static header-->
     <div>
         <div class="form-group">
-            <label >column</label>
+            <label >Column</label>
             <div class="input-group" >
                 <input class="form-control"  type="text" ng-keyup="$event.keyCode == 13 && addcol()" ng-model="currentComponent.c" placeholder="component column" />
             </div>
@@ -33,9 +34,11 @@
         </div>
     </div>    
   <div class="form-group">
-    <label><div><input name="resolve" type="checkbox" value="resolve"  ng-model="currentComponent.resolve"/></div>resolve</label>
+    <label class="checkbox"><div><input name="resolve" type="checkbox" value="resolve"  ng-model="currentComponent.resolve"/></div>resolve
+    <span class="box"></span>
+    </label>
     <div style="padding-top:10px" class="form-group  input-group">
-      <label  for="collection" title="">collection</label>
+      <label  for="collection" title="">Collection</label>
       <input id="collection" class="form-control" placeholder="table collection" name="method" type="text"  ng-model="currentComponent.collection">
     </div>
   </div>
