@@ -112,6 +112,7 @@ define(['configs/app',
                             {
                                 name:"new",
                                 icon:"glyphicon glyphicon-edit",
+                                img:"app/assets/images/ic_action_add_circle.png",
                                 action:function () {
                                     var module = globalVarFactory.getModule();
                                     var model =  globalVarFactory.getDefaultComponent();
@@ -123,6 +124,7 @@ define(['configs/app',
                             {
                                 name: "save",
                                 icon: "glyphicon glyphicon-floppy-disk",
+                                img:"app/assets/images/ic_action_save.png",
                                 action:function () {
                                     var module = globalVarFactory.getModule();
                                     fileFactory.saveAsJson(angular.toJson(module),module.name);
@@ -158,6 +160,7 @@ define(['configs/app',
                         {
                             name:"new",
                             icon:"glyphicon glyphicon-edit",
+                            img:"app/assets/images/ic_action_add_circle.png",
                             action:function () {
                                 globalVarFactory.AddOperation();
                             }
@@ -165,6 +168,7 @@ define(['configs/app',
                         {
                             name: "save",
                             icon: "glyphicon glyphicon-floppy-disk",
+                            img:"app/assets/images/ic_action_save.png",
                             action:function () {
                                 var module = globalVarFactory.getModule();
                                 console.log(module);
@@ -186,6 +190,7 @@ define(['configs/app',
                         {
                             name:"new",
                             icon:"glyphicon glyphicon-edit",
+                            img:"app/assets/images/ic_action_add_circle.png",
                             action:function () {
                                 globalVarFactory.newresource();
                             }
@@ -195,11 +200,13 @@ define(['configs/app',
                             icon: "glyphicon glyphicon-plus",
                             action:function () {
                                 globalVarFactory.addResource();
+                                globalVarFactory.newresource();
                             }
                         },
                         {
                             name: "save",
                             icon: "glyphicon glyphicon-floppy-disk",
+                            img:"app/assets/images/ic_action_save.png",
                             action:function () {
                                 var module = globalVarFactory.getModule();
                                 fileFactory.saveAsJson(angular.toJson(module),module.name);

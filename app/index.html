@@ -9,9 +9,9 @@
                 <span class="icon-bar"></span>
             </button>
             <div  class="navbar-brand">
-                    <span id="menu-toggle"  data-ng-click="changeLayout()" class="fa fa-bars btn-menu toggle">
+                    <span style="transform: scale(1.2,1);" id="menu-toggle"  data-ng-click="changeLayout()" class="fa fa-bars btn-menu toggle">
                     </span>
-                <span href="#" class="navbar-text stateTitle ">{{moduleName[0]}}</span>
+                    <span style="font-size: 24px; font-weight: 500; line-height: 24px;" href="#" class="navbar-text stateTitle ">{{moduleName[0]}}</span>
             </div>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
@@ -44,19 +44,19 @@
         <ul class="item" ng-hide="location =='Admin'">
             <li>
                 <a ui-sref="root.generator.overview" >
-                    <i class="glyphicon glyphicon-dashboard" style="padding-right: 15px ">
+                    <i class="glyphicon glyphicon-dashboard" style="color: cadetblue;padding-right: 15px ">
                     </i>
                     Overview
                 </a>
             </li>
         </ul>
-        <ul class="item" >
+        <ul class="item" id="menu" >
             <!--&lt;!&ndash;ng-show="showSidebarItems==true"&ndash;&gt;            ui-sref="{{item.state}}"-->
-            <li ng-repeat="item in items" ng-show=" currentModule.name != '' && isauthorized(item.role)">
-                <a ui-sref="{{item.state}}">
-                    <i class="{{item.icon}}" style="padding-right:15px "></i>
+            <li ng-repeat="item in items" id="{{ item.name }}"  ui-sref="{{item.state}}" onclick="setSelected(this.id)" ng-show=" currentModule.name != '' && isauthorized(item.role)" >
+                <span   >
+                    <i class="{{item.icon}} menu" style="padding-right:15px "></i>
                     {{item.name}}
-                </a>
+                </span>
             </li>
         </ul>
         <ul >
@@ -73,7 +73,10 @@
         <div class=" operation-bar col-md-10 col-md-offset-1" style=" margin-top: 20px;">
             <span class="location">{{location[0]}}</span>
             <ul >
-                <li style="padding: 3px;" ng-repeat="item in actions" uib-tooltip="{{item.name}}"  tooltip-placement="bottom"><span class="{{item.icon}}" ng-click="doAction(item)" ng-show="isauthorized(item.role)"></span></li>
+                <li style="padding: 1px;" ng-repeat="item in actions" ng-click="doAction(item)" uib-tooltip="{{item.name}}" ng-show="isauthorized(item.role)"  tooltip-placement="bottom">
+                    <span ng-hide="item.img!=null" class="{{item.icon}}"  ></span>
+                    <img src="{{item.img}}" alt="add">
+                </li>
             </ul>
         </div>
         <div ui-view ></div>
@@ -130,3 +133,4 @@
 
     </ul>
 </script>
+

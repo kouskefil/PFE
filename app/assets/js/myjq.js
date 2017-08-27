@@ -12,7 +12,11 @@ function changeLayout (id, cls) {
 
     // alert(elt.style.display);
 }
-function test() {
-    alert('toto');
+
+
+function setSelected(id) {
+   // var menu = document.getElementById(id);
+   //  menu.className += " selectedmenu";
+    $("#"+id).addClass("selectedmenu").siblings("li").removeClass("selectedmenu") ;
 }
 

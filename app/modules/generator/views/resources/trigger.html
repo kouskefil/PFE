@@ -8,13 +8,21 @@
 		</div>
 		<div class="modal-body" id="modal-body">
 			<div class="form-group">
-				<label for="input271">name</label>
+				<label for="input271">Name</label>
 				<input class=" form-control"  placeholder="name" name="input271" id="input271" type="text" ng-model="trigger.name"/>
 			</div> <!-- div id:input271 -->
 			<div class="form-group">
-				<label for="input272">from</label>
+				<label for="input272">From</label>
 				<input class=" form-control"  placeholder="from" name="input272" id="input272" type="text" ng-model="trigger.from"/>
 			</div> <!-- div id:input272 -->
+			<div  class="form-group">
+				<label for="select210">Type</label>
+				<select name="select210" id="select210" ng-model="trigger.type" class="form-control" >
+					<option  value="user define"> user defined </option>
+					<option	value="task completed"> task completed </option>
+					<option value="process openning">process openning </option>
+				</select>
+			</div>
 		</div>
 		<div class="modal-footer ">
 			<button  class="floatingPanel button custom" uib-dropdown-toggle data-ng-click="setMethodTrigger()">save</button>

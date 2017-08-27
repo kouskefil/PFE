@@ -179,6 +179,7 @@ define(['configs/app', 'assets/js/myjq'], function (app){
                 if (comp.length >= 2) {
                     for (i = 0; i < vars.length; i++)
                         if (vars[i].id == component.id) {
+                        console.log(vars[i].id);
                             vars[i].name = comp;
                             return;
                         }
@@ -194,15 +195,13 @@ define(['configs/app', 'assets/js/myjq'], function (app){
         };
         var _generatevars = function (composants, vars) {
             var i,j;
-
             for (i = 0; i < composants.length; i++){
-                console.log('_generatevars') ;
-                console.log(composants[i].type) ;
-                console.log(composants[i].children) ;
-
+                // console.log('_generatevars') ;
+                // console.log(composants[i].type) ;
+                // console.log(composants[i].children) ;
                 _generatevar(composants[i], vars);
                 if (composants[i].children != null && composants[i].children != undefined){
-                    console.log('in the if') ;
+                    // console.log('in the if') ;
                     _generatevars(composants[i].children, vars);
 
                 }
@@ -210,7 +209,6 @@ define(['configs/app', 'assets/js/myjq'], function (app){
             }
         };
         $scope.generatevars = function () {
-            console.log($scope.currentModel.children);
             _generatevars($scope.currentModel.children, $scope.currentModel.variables);
         };
         $scope.isNavCollapsed = true;

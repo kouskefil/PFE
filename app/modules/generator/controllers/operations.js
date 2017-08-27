@@ -109,6 +109,9 @@ define(['configs/app'], function (app) {
 			};
 		//end
 		/*********functions to be added to the model **/
+        // $scope.toot = function () {
+			// $scope.currentOp.sql.static = true;
+        // };
 		$scope.operations = globalVarFactory.getOperations();
 		$scope.currentOp = globalVarFactory.skeleton({});
 		$scope.edition = false;

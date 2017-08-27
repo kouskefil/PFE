@@ -1,186 +1,150 @@
 <!-- Generated html file -->
 <div id="resources"  style="padding:0"  class=" row content-inner col-md-10 col-md-offset-1 "> <!-- resources begins-->
- <div id="resources_params"  style="padding:0;"  class=" col-md-7 "> <!-- resources_params begins-->
-  <div id="rsc_definition"  style="margin-bottom: 15px; padding: 0"  class="floatingPanel col-md-12 "> <!-- rsc_definition begins-->
-   <div id="rsc_def_header"  style="padding: 10px 15px; margin: 0"  class="g_header"> <!-- rsc_def_header begins-->
-    <span  style="padding-right: 10px;"  class="glyphicon glyphicon-link" id="span152" ></span>
-    <span  style="font-size: small; color: #0084bf;"  id="span153" >Resources definition</span>
-   </div> <!-- rsc_def_header ends-->
-   <div id="rsc_def_content"  style="padding: 15px 15px"  class=""> <!-- rsc_def_content begins-->
-    <div  class="form-group">
-     <select name="select155" id="select155" ng-model="currentRsc.parent" class="form-control" ><option ng-repeat='item in RscParent' value="{{item.realpath}}"> {{item.realpath}}
-     </option>
-     </select>
-    </div>
-    <div class="form-group">
-     <label for="input156">path</label>
-     <input class=" form-control"  placeholder="path" name="input156" id="input156" type="text" ng-model="currentRsc.path"/>
-    </div> <!-- div id:input156 -->
-   </div> <!-- rsc_def_content ends-->
-  </div> <!-- rsc_definition ends-->
-  <div id="rsc_params"  style="padding: 0; min-height:302px;margin-bottom: 50px;"  class="floatingPanel col-md-12 "> <!-- rsc_params begins-->
-   <div id="params_header"  style="padding: 10px 15px; margin: 0"  class="g_header"> <!-- params_header begins-->
-    <span  style="padding-right: 10px;"  class="glyphicon glyphicon-cog" id="span158" ></span>
-    <span  style="font-size: small; color: #0084bf;"  id="span159" >Resource parameters</span>
-   </div> <!-- params_header ends-->
-   <div id="params_content"  style="padding: 0;"  class="col-md-12 "> <!-- params_content begins-->
-    <div id="methods_list"  class="method-list col-md-4 "> <!-- methods_list begins-->
-     <ul  class="items">
-      <li  style="padding-left: 10px;"  class="method" ng-class="{selectedItem:item.id==selected}" ng-repeat=" item in methods">
-       <div id="group303"  class=""> <!-- group303 begins-->
-        <span  class="item-label" data-ng-click="getMethod(item)" id="span179" >{{item.id}}</span>
-        <div id="method-action floatingPanel"  class="method-actions"> <!-- method-action begins-->
-         <ul  style="padding-top:5px"  class="method-action">
-          <li >
-           <div id="resp_copy1"  class="dropdown" uib-dropdown auto-close="disabled"> <!-- resp_copy1 begins-->
-            <span  class="fa fa-bolt" uib-dropdown-toggle id="span243_copy1" data-ng-click="addtrigger('app/modules/generator/views/resources/trigger.html',item)" ></span>
-           </div> <!-- resp_copy1 ends-->
-          </li>
-          <li >
-           <div id="resp" > <!-- resp begins-->
-            <span  class="fa fa-share"  data-ng-click="addresp('app/modules/generator/views/resources/responses.html', item)"></span>
-           </div> <!-- resp ends-->
-          </li>
-          <li >
-           <div id="del"  class="dropdown" uib-dropdown auto-close="disabled"> <!-- del begins-->
-            <span  class="glyphicon glyphicon-trash" ng-click="delMethod(methods, item)" id="span245" ></span>
-           </div> <!-- del ends-->
-          </li>
-         </ul>
-        </div> <!-- method-action ends-->
-       </div> <!-- group303 ends-->
-      </li>
-     </ul>
-    </div> <!-- methods_list ends-->
-    <div id="params"  class="method-params col-md-8 "> <!-- params begins-->
-     <uib-accordion close-others="true">
-      <div uib-accordion-group class="panel-default" heading="Simple components">
-       <div  class="components" ng-repeat='item in HTMLcomponents.simple'>
-        <a ui-sref="root.generator.views.properties({label:item.label, type:item.type, num:currentComponent.num})" ng-click='add(item)'>
-         <div id="group39"  class="sizer col-md-6 "> <!-- group39 begins-->
-          <span  id="span40" >{{item.type}}</span>
-          <span  class="{{item.img}}" id="span41" ></span>
-         </div> <!-- group39 ends-->
-        </a>
-       </div>
-      </div>
-      <div uib-accordion-group class="panel-default" heading="Containers components">
-       <div  class="components" ng-repeat='item in HTMLcomponents.container'>
-        <a ui-sref="root.generator.views.properties({label:item.label, type:item.type, num:currentComponent.num})" ng-click='add(item)'>
-         <div id="group50"  class="sizer col-md-6 "> <!-- group50 begins-->
-          <span  id="span51" >{{item.type}}</span>
-          <span  class="{{item.img}}" id="span52" ></span>
-         </div> <!-- group50 ends-->
-        </a>
-       </div>
-      </div>
-      <div uib-accordion-group class="panel-default" heading="Widgets components">
-       <div  class="components" ng-repeat='item in HTMLcomponents.widget'>
-        <a ui-sref="root.generator.views.properties({label:item.label, type:item.type, num:currentComponent.num})" ng-click='add(item)'>
-         <div id="group55"  class="sizer col-md-6 "> <!-- group55 begins-->
-          <span  id="span56" >{{item.type}}</span>
-          <span  class="{{item.img}}" id="span57" >{{item.views}}</span>
-         </div> <!-- group55 ends-->
-        </a>
-       </div>
-      </div>
-     </uib-accordion>
-     <!--<uib-tabset >-->
-      <!--<uib-tab index="293"  heading="method"> &lt;!&ndash;begins&ndash;&gt;-->
-       <!--<div  class="form-group">-->
-        <!--<label for="select297">name</label>-->
-        <!--<select name="select297" id="select297" ng-model="method.name" class="form-control" ><option ng-repeat='item in resourceMethod' value="{{item.rvalue}}"> {{item.dvalue}}-->
-        <!--</option>-->
-        <!--</select>-->
-       <!--</div>-->
-       <!--<div class="form-group " >-->
-        <!--<label class="form-control-label">operation</label>-->
-        <!--<input class="form-control" ng-model="method.id" list="datalist300" placeholder="operation" name="datalist300 " >-->
-        <!--<datalist id="datalist300">-->
-         <!--<option ng-repeat="item in ids" value="{{item.name}}">-->
-        <!--</datalist>-->
-       <!--</div>-->
-       <!--<div class="form-group">-->
-        <!--<label for="input299">role</label>-->
-        <!--<input class=" form-control"  placeholder="role" name="input299" id="input299" type="text" ng-model="method.role"/>-->
-       <!--</div> &lt;!&ndash; div id:input299 &ndash;&gt;-->
-       <!--<button  class="button custom" ng-click="addmethod()">add method</button>-->
-      <!--</uib-tab> &lt;!&ndash;end&ndash;&gt;-->
-      <!--<uib-tab index="220"  heading="Trigger"> &lt;!&ndash;begins&ndash;&gt;-->
-       <!--<div id="trigger"  class=""> &lt;!&ndash; trigger begins&ndash;&gt;-->
-        <!--<div class="col-md-12" style="margin-top: 10px; border: 1px solid #ddd">-->
-             <!--<div class="col-md-5">-->
-               <!--name : <span style="font-size: medium;"> {{method.trigger.name}}</span>-->
-             <!--</div>-->
-             <!--<div class="col-md-6">-->
-               <!--from :  <span style="font-size: medium;"> {{method.trigger.from}}</span>-->
-            <!--</div>-->
-             <!--<div class="col-md-1">-->
-               <!--<span class="fa fa-plus-circle"></span>-->
-             <!--</div>-->
-        <!--</div>-->
-       <!--</div> &lt;!&ndash; trigger ends&ndash;&gt;-->
-      <!--</uib-tab> &lt;!&ndash;end&ndash;&gt;-->
-      <!--<uib-tab index="164"  heading="Requests"> &lt;!&ndash;begins&ndash;&gt;-->
-        <!--<table class="table">-->
-         <!--<tbody>-->
-         <!--<tr ng-repeat="item in requests">-->
-          <!--<td>{{item.name}}</td>-->
-          <!--<td>{{item.style}}</td>-->
-          <!--<td>{{item.type}}</td>-->
-          <!--<td>{{item.defaultValue}}</td>-->
-          <!--<td><span class="glyphicon glyphicon-trash" data-ng-click="deleteRole(role)"></span></td>-->
-         <!--</tr>-->
-         <!--</tbody>-->
-        <!--</table>-->
-      <!--</uib-tab> &lt;!&ndash;end&ndash;&gt;-->
-      <!--<uib-tab index="165"  heading="Responses"> &lt;!&ndash;begins&ndash;&gt;-->
-       <!--<p ng-show="method != null">{{ method.id }} responses</p>-->
-       <!--<div class="floatingPanel" ng-repeat="item in responses">-->
-        <!--<div><label >Name</label> <span style="float: right">{{ item.name }}</span></div>-->
-        <!--<div><label >Value</label> <span style="float: right">{{ item.value }}</span></div>-->
-        <!--<div><label >Mediatype</label> <span style="float: right">{{ item.mediatype }}</span></div>-->
-
-       <!--</div>-->
-       <!--<table class="table">-->
-        <!--<thead>-->
-        <!--<tr>-->
-         <!--<th>Name</th>-->
-         <!--<th>Value</th>-->
-         <!--<th>Mediatype</th>-->
-         <!--<th>Delete</th>-->
-
-        <!--</tr>-->
-        <!--</thead>-->
-        <!--<tbody>-->
-        <!--<tr ng-repeat="item in responses">-->
-         <!--<td>{{item.name || 'undefined'}}</td>-->
-         <!--<td>{{item.value}}</td>-->
-         <!--<td>{{item.mediatype}}</td>-->
-         <!--<td><span class="glyphicon glyphicon-trash" data-ng-click="deleteRole(role)"></span></td>-->
-        <!--</tr>-->
-        <!--</tbody>-->
-       <!--</table>-->
-      <!--</uib-tab> &lt;!&ndash;end&ndash;&gt;-->
-     <!--</uib-tabset>-->
-    </div> <!-- params ends-->
-   </div> <!-- params_content ends-->
-  </div> <!-- rsc_params ends-->
- </div> <!-- resources_params ends-->
- <div id="resources_tree"  style="padding:0; min-height:465px;max-height:465px;margin-left:15px"  class="floatingPanel col-md-3 "> <!-- resources_tree begins-->
-  <div id="tree_header"  style="padding: 10px 15px; margin: 0"  class="g_header"> <!-- tree_header begins-->
-   <span  style="padding-right: 10px;"  class="fa fa-cogs" id="span177" ></span>
-   <span  style="font-size: small; color: #0084bf;"  id="span178" >Resources</span>
-  </div> <!-- tree_header ends-->
-  <div class="null"
-          data-angular-treeview="true"
-          data-tree-id="rsc_tree"
-          data-tree-model="resources"
-          data-node-id="path"
-          data-node-click="cclick"
-          data-node-children="resources"
-          data-tree-actions="treeActions"
-  >
-  </div>
- </div> <!-- resources_tree ends-->
+    <div id="resources_params"  style="padding:0;"  class=" col-md-7 "> <!-- resources_params begins-->
+        <div id="rsc_definition"  style="margin-bottom: 15px; padding: 0"  class="floatingPanel col-md-12 "> <!-- rsc_definition begins-->
+            <div id="rsc_def_header"  class="panel-header"> <!-- rsc_def_header begins-->
+                <span  class="glyphicon glyphicon-link" id="span152" ></span>
+                <span  id="span153" >Resources definition</span>
+            </div> <!-- rsc_def_header ends-->
+            <div id="rsc_def_content"  style="padding: 15px 15px"  class=""> <!-- rsc_def_content begins-->
+                <div  class="form-group">
+                    <select name="select155" id="select155" ng-model="currentRsc.parent" class="form-control" ><option ng-repeat='item in RscParent' value="{{item.realpath}}"> {{item.realpath}}
+                    </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="input156">path</label>
+                    <input class=" form-control"  placeholder="path" name="input156" id="input156" type="text" ng-model="currentRsc.path"/>
+                </div> <!-- div id:input156 -->
+            </div> <!-- rsc_def_content ends-->
+        </div> <!-- rsc_definition ends-->
+        <div id="rsc_params"  style="padding: 0; min-height:302px;margin-bottom: 50px;"  class="floatingPanel col-md-12 "> <!-- rsc_params begins-->
+            <div id="params_header"  class="panel-header"> <!-- params_header begins-->
+                <span   class="glyphicon glyphicon-cog" id="span158" ></span>
+                <span    id="span159" >Resource parameters</span>
+            </div> <!-- params_header ends-->
+            <div id="params_content"  style="padding: 0;"  class="col-md-12 "> <!-- params_content begins-->
+                <div id="methods_list"  class="method-list col-md-4 "> <!-- methods_list begins-->
+                    <ul  class="items" style="list-style: none">
+                        <li  style="padding-left: 10px;"  class="method"  ng-repeat=" item in methods">
+                            <span  class="item-label" data-ng-click="getMethod(item)" id="span179" >{{item.id}}</span>
+                            <span   uib-dropdown style="float: right; margin-top: 10px">
+                                <i class="glyphicon glyphicon-option-vertical"  id="simple-dropdown" uib-dropdown-toggle></i>
+                                 <ul class="dropdown-menu floatingPanel method-action" uib-dropdown-menu aria-labelledby="simple-dropdown">
+                                    <li data-ng-click="addresp('app/modules/generator/views/resources/responses.html', item)"> <span class=""> Add response</span> </li>
+                                    <li data-ng-click="addtrigger('app/modules/generator/views/resources/trigger.html',item)"> <span class=""> Add trigger</span> </li>
+                                    <li data-ng-click="delMethod(methods, item)"> <span class=""> Delete method</span> </li>
+                                 </ul>
+                            </span>
+                        </li>
+                    </ul>
+                </div> <!-- methods_list ends-->
+                <div id="params"  class="method-params col-md-8 "> <!-- params begins-->
+                    <div class="method" style="margin-bottom: 10px">
+                        <div  class="form-group">
+                            <label for="select297">name</label>
+                            <select name="select297" id="select297" ng-model="method.name" class="form-control" ><option ng-repeat='item in resourceMethod' value="{{item.rvalue}}"> {{item.dvalue}}
+                            </option>
+                            </select>
+                        </div>
+                        <div class="form-group " >
+                            <label class="form-control-label">operation</label>
+                            <input class="form-control" ng-model="method.id" list="datalist300" placeholder="operation" name="datalist300 " >
+                            <datalist id="datalist300">
+                                <option ng-repeat="item in ids" value="{{item.name}}">
+                            </datalist>
+                        </div>
+                        <div class="form-group">
+                            <label for="input299">role</label>
+                            <input class=" form-control"  placeholder="role" name="input299" id="input299" type="text" ng-model="method.role"/>
+                        </div> <!-- div id:input299 -->
+                        <button  class="button custom" ng-click="addmethod()">add method</button>
+                    </div>
+                    <uib-accordion close-others="true">
+                        <div uib-accordion-group class="panel-default" heading="Requests">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Style</th>
+                                    <th>Type</th>
+                                    <th>Default</th>
+                                    <th><span class="fa fa-wrench"></span></th>
+                                
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr ng-repeat="item in requests">
+                                    <td>{{item.name}}</td>
+                                    <td>{{item.style}}</td>
+                                    <td>{{item.type}}</td>
+                                    <td>{{item.defaultValue}}</td>
+                                    <td><span class="glyphicon glyphicon-trash" data-ng-click="deleteRole(role)"></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div uib-accordion-group class="panel-default" heading="Responses">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Value</th>
+                                    <th>Mediatype</th>
+                                    <th><span class="fa fa-wrench"></span></th>
+                                
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr ng-repeat="item in responses">
+                                    <td>{{item.name || 'undefined'}}</td>
+                                    <td>{{item.value}}</td>
+                                    <td>{{item.mediatype}}</td>
+                                    <td><span class="glyphicon glyphicon-trash" data-ng-click="deleteRole(role)"></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div uib-accordion-group class="panel-default" heading="Trigger">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>From</th>
+                                    <th>Type</th>
+                                    <th><span class="fa fa-wrench"></span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr >
+                                    <td>{{method.trigger.name}}</td>
+                                    <td>{{method.trigger.from}}</td>
+                                    <td>{{method.trigger.type}}</td>
+                                    <td><span class="glyphicon glyphicon-trash" data-ng-click="deleteRole(role)"></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            
+                        </div>
+                    </uib-accordion>
+                </div> <!-- params ends-->
+            </div> <!-- params_content ends-->
+        </div> <!-- rsc_params ends-->
+    </div> <!-- resources_params ends-->
+    <div id="resources_tree"  style="padding:0; min-height:465px;max-height:465px;margin-left:15px"  class="floatingPanel col-md-3 "> <!-- resources_tree begins-->
+        <div id="tree_header"    class="panel-header"> <!-- tree_header begins-->
+            <span    class="fa fa-cogs" id="span177" ></span>
+            <span   id="span178" >Resources</span>
+        </div> <!-- tree_header ends-->
+        <div class="null"
+             data-angular-treeview="true"
+             data-tree-id="rsc_tree"
+             data-tree-model="resources"
+             data-node-id="path"
+             data-node-click="cclick"
+             data-node-children="resources"
+             data-tree-actions="treeActions"
+        >
+        </div>
+    </div> <!-- resources_tree ends-->
 </div> <!-- resources ends-->

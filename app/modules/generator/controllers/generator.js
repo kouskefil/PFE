@@ -11,6 +11,7 @@ define(['configs/app', '../services/generatorFactory'], function (app) {
                 {
                     name:"new",
                     icon:"glyphicon glyphicon-edit",
+                    img:"app/assets/images/ic_action_add_circle.png",
                     action:function () {
                         $scope.openModal('sm', 'new.html', 'create')
                     }
@@ -18,6 +19,7 @@ define(['configs/app', '../services/generatorFactory'], function (app) {
                 {
                     name:"upload",
                     icon:"glyphicon glyphicon-upload",
+                    img:"app/assets/images/ic_action_file_upload.png",
                     action:function () {
                         $scope.openModal(100, 'upload.html', 'upload')
                     }
@@ -25,6 +27,7 @@ define(['configs/app', '../services/generatorFactory'], function (app) {
                 {
                     name: "save",
                     icon: "glyphicon glyphicon-floppy-disk",
+                    img:"app/assets/images/ic_action_save.png",
                     action:function () {
                         //console.log(containerFactory.module);
                         fileFactory.saveAsJson(angular.toJson(globalVarFactory.getModule()),globalVarFactory.getModule().name);

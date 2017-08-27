@@ -74,37 +74,8 @@ define(['configs/app', 'assets/js/lodash'], function (app) {
                     gp(collection[i].resources, path);
             }
         };
-        $scope.applytreeActions = function(action, rsc){
-            var array, parentPath;
-            if(rsc.parent){
-                array = rsc.parent.split('/');
-                if(array.length > 1)
-                    parentPath = array[array.length-1];
-                else
-                    parentPath = array[0];
-                gp($scope.resources, parentPath, rsc);
-            }
-            else  $scope.resources.splice($scope.resources.indexOf(rsc), 1);
-        };
-	    $scope.updatersc = globalVarFactory.getupdatersc();
-        $scope.addMethod = function () {
-            console.log($scope.method);
-            globalVarFactory.addMethod($scope.method);
-            $scope.method = {};
-        };
-      
-        $scope.getMethod = function (method) {
+        var updateResponses = function (method) {
             var i;
-            console.log('method');
-            console.log(method);
-            $scope.selected = method.id;
-            $scope.method = method;
-            $scope.trigger = $scope.method;
-            if(method.request){
-                $scope.requests = method.request.params;
-                console.log($scope.requests);
-            }
-
             $scope.responses.length = 0;
             if(method.responses) {
                 console.log(method.responses);
@@ -129,6 +100,38 @@ define(['configs/app', 'assets/js/lodash'], function (app) {
                 // $scope.editMethod = 'editMethod';
             }
         };
+        $scope.applytreeActions = function(action, rsc){
+            var array, parentPath;
+            if(rsc.parent){
+                array = rsc.parent.split('/');
+                if(array.length > 1)
+                    parentPath = array[array.length-1];
+                else
+                    parentPath = array[0];
+                gp($scope.resources, parentPath, rsc);
+            }
+            else  $scope.resources.splice($scope.resources.indexOf(rsc), 1);
+        };
+	    $scope.updatersc = globalVarFactory.getupdatersc();
+        $scope.addMethod = function () {
+            console.log($scope.method);
+            globalVarFactory.addMethod($scope.method);
+            $scope.method = {};
+        };
+        $scope.getMethod = function (method) {
+            console.log('method');
+            console.log(method);
+            $scope.selected = method.id;
+            $scope.method = method;
+            $scope.trigger = $scope.method;
+            if(method.request){
+                $scope.requests = method.request.params;
+                console.log($scope.requests);
+            }
+            updateResponses(method) ;
+
+        };
+
         $scope.delMethod = function (collection, method) {
             globalVarFactory.gDelete(collection, method);
             $scope.method = {};
@@ -156,26 +159,41 @@ define(['configs/app', 'assets/js/lodash'], function (app) {
 			$scope.getMethod(mtd);
 		};
 		$scope.addresp = function(template,method){
+
 		     var  resourceMethod = $scope.resourceMethod, rsptmp = $scope.rsptmp, responses = $scope.responses;
 			$uibModal.open({
 				templateUrl:template,
 				controller: ['$scope', '$uibModalInstance', function($scope, $uibModalInstance) {
+                    console.log(method);
+                    $scope.params = method.request.params;
                     $scope.mediatype = [
                         {
                             "dvalue":"text/html",
-                            "rvalue":"txthtml"
+                            "rvalue":"text/html"
                         },
                         {
                             "dvalue":"text/css",
-                            "rvalue":"txtcss"
+                            "rvalue":"text/css"
                         },
                         {
                             "dvalue":"application/json",
-                            "rvalue":"appjson"
+                            "rvalue":"application/json"
                         },
                         {
-                            "dvalue":"application/js",
-                            "rvalue":"appjs"
+                            "dvalue":"text/plain",
+                            "rvalue":"text/plain"
+                        },
+                        {
+                            "dvalue":"image/jpeg",
+                            "rvalue":"image/jpeg"
+                        },
+                        {
+                            "dvalue":"image/png",
+                            "rvalue":"image/png"
+                        },
+                        {
+                            "dvalue":"application/javascript",
+                            "rvalue":"application/javascript"
                         }
                     ];
                     $scope.rsptmp = rsptmp;
@@ -193,8 +211,8 @@ define(['configs/app', 'assets/js/lodash'], function (app) {
                             $scope.rsptmp.mediatype = 'application/json';
                         if($scope.rsptmp.name){
                             for(i=0; i < method.responses.length; i++){
-                                console.log(method.responses[i].representations[0]);
-                                if(method.responses[i].representations[0].param.name === $scope.rsptmp.name){
+                                console.log(method.responses[i].representations[0].param);
+                                if(method.responses[i].representations[0].param && method.responses[i].representations[0].param.name == $scope.rsptmp.name){
                                     found = i;
                                     break;
                                 }
@@ -233,6 +251,7 @@ define(['configs/app', 'assets/js/lodash'], function (app) {
                         name:'',
                         value:''
 					};
+                        updateResponses(method);
 					};
      
 				}]
