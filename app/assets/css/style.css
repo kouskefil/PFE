@@ -1,3 +1,4 @@
+
 body{
     /*background-color: #F7F7F7;*/
     /*background-color: #ECEFF1;*/
@@ -245,21 +246,44 @@ label {
     /*flex-flow: row wrap;*/
     /*justify-content: space-around;*/
 /*}*/
+
+
+/*#composant .panel-body{*/
+    /*background-color: #F1F1F1;*/
+/*}*/
 .components{
-    /*background-color: #E2E2E2;*/
+    text-align: center;
+    /*background-color: lightgrey;*/
     color:  #555;
-    border: 1px solid  lightgray;
+    /*border: 3px solid  gainsboro !*whitesmoke*!;*/
     height: 44px;
-    width: /*48%*/ 100px;
-    /*margin: 3px 0 3px 0;*/
-    margin: 5px;
+    width: /*48%*/ 120px;
+    margin: 17px 6px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
+.components .icone{
+    font-size: 30px;
+    color: #616774;
+}
+.components .icone:hover{
+    color: #5F90E2;
+}
+.components .type{
+    display: block;
+}
 
+.components a:hover{
+    transition-property: opacity, transform;
+    transform: scale(1.5,1.5);
+    transition-duration: .25s;
+    transition-timing-function: linear, cubic-bezier(0.33, 2, 0.66, 1);
+
+}
 
 .components a{
-    background-color: #E7E7E7;;
+    text-decoration: none;
+    /*background-color: #E7E7E7;;*/
     width:100%;
     display:block ;
     color: #0a001f;
@@ -287,10 +311,10 @@ label {
     /*padding-left: 0 ;*/
     padding-right: 0 ;
 }
-.components #icon{
-    float: left;
-    margin: 2px;
-}
+/*.components #icon{*/
+    /*float: left;*/
+    /*margin: 2px;*/
+/*}*/
 .composant h4{
     margin: 6px 0 6px 0;
     font-weight: 200;
@@ -1937,4 +1961,7 @@ input[type="checkbox"]:checked + .box:before {
     line-height: 24px;
     padding: 10px 15px; margin: 0;
     color: rgba(0,0,0,0.87);
+}
+.panel-heading a{
+    color: #000;
 }

@@ -4,67 +4,67 @@
               "type": "input",
               "category": "simple",
               "container": false,
-              "img": "fa fa-edit"
+              "img": "icon-input"
           },
           {
               "type": "hx",
               "category": "simple",
               "container": false,
-              "img": "fa fa-header"
+              "img": "icon-hx"
           },
           {
               "type": "i",
               "category": "simple",
               "container": false,
-              "img": "fa fa-italic"
+              "img": "icon-i"
           },
           {
               "type": "radio",
               "category": "simple",
               "container": true,
-              "img": "fa fa-dot-circle-o"
+              "img": "icon-radio"
           },
           {
               "type": "textarea",
               "category": "simple",
               "container": false,
-              "img": "fa fa-text-height"
+              "img": "icon-textarea"
           },
           {
               "type": "button",
               "category": "simple",
               "container": false,
-              "img": "fa fa-square"
+              "img": "icon-button"
           },
           {
               "type": "select",
               "category": "simple",
               "container": false,
-              "img": "fa fa-chevron-down"
+              "img": "icon-select"
           },
           {
               "type": "label",
               "category": "simple",
               "container": false,
-              "img": "fa  fa-font"
+              "img": "icon-label"
           },
           {
               "type": "hr",
               "category": "simple",
               "container": false,
-              "img": "fa fa-minus"
+              "img": "icon-hr"
           },
           {
               "type": "span",
               "category": "simple",
               "container": false,
-              "img": "fa  fa-arrows-h"
+              "img": "icon-span"
           },
           {
               "type": "img",
               "category": "simple",
               "container": false,
-              "img": "fa fa-picture-o"
+              "img": "icon-image"
           }
       ],
       "widget": [
