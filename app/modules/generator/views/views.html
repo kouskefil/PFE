@@ -287,16 +287,16 @@
                     <div uib-accordion-group class="panel-default" heading="Containers components">
                         <div  class="components" ng-repeat='item in HTMLcomponents.container'>
                             <a ui-sref="root.generator.views.properties({label:item.label, type:item.type, num:currentComponent.num})" ng-click='add(item)'>
-                                <span  class="{{item.img}}" id="span52" ></span>
-                                <span  id="span51" >{{item.type}}</span>
+                                <span  class="icone {{item.img}}" id="span52" ></span>
+                                <span class="type" id="span51" >{{item.type}}</span>
                             </a>
                         </div>
                     </div>
                     <div uib-accordion-group class="panel-default" heading="Widgets components">
                         <div  class="components" ng-repeat='item in HTMLcomponents.widget'>
                             <a ui-sref="root.generator.views.properties({label:item.label, type:item.type, num:currentComponent.num})" ng-click='add(item)'>
-                                <span  class="{{item.img}}" id="span57" >{{item.views}}</span>
-                                <span  id="span56" >{{item.type}}</span>
+                                <span  class="icone {{item.img}}" id="span57" >{{item.views}}</span>
+                                <span class="type" id="span56" >{{item.type}}</span>
                             </a>
                         </div>
                     </div>

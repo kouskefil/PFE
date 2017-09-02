@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0ce9437-dc48-408e-85d8-8bdb3a4bcc24" name="Default" comment="initial version">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/css/components_icons/fonts/icomoon.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/css/components_icons/fonts/icomoon.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/css/components_icons/fonts/icomoon.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/css/components_icons/fonts/icomoon.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/css/components_icons/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/generator/gen/example.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/css/components_icons/fonts/icomoon.eot" afterPath="$PROJECT_DIR$/app/assets/css/components_icons/fonts/icomoon.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/css/components_icons/fonts/icomoon.ttf" afterPath="$PROJECT_DIR$/app/assets/css/components_icons/fonts/icomoon.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/css/components_icons/fonts/icomoon.woff" afterPath="$PROJECT_DIR$/app/assets/css/components_icons/fonts/icomoon.woff" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/css/components_icons/fonts/icomoon.svg" afterPath="$PROJECT_DIR$/app/assets/css/components_icons/fonts/icomoon.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/css/components_icons/style.css" afterPath="$PROJECT_DIR$/app/assets/css/components_icons/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/css/style.css" afterPath="$PROJECT_DIR$/app/assets/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/generator/services/components.json" afterPath="$PROJECT_DIR$/app/modules/generator/services/components.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/generator/views/views.html" afterPath="$PROJECT_DIR$/app/modules/generator/views/views.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="PFE.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,7 +52,19 @@
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="11" column="94" lean-forward="false" selection-start-line="11" selection-start-column="86" selection-end-line="11" selection-end-column="94" />
+              <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+              <folding>
+                <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="example.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/modules/generator/gen/example.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -61,9 +73,12 @@
       <file leaf-file-name="components.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/modules/generator/services/components.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-              <folding />
+            <state relative-caret-position="2040">
+              <caret line="178" column="26" lean-forward="false" selection-start-line="178" selection-start-column="26" selection-end-line="178" selection-end-column="26" />
+              <folding>
+                <element signature="e#20#1773#0" expanded="false" />
+                <element signature="e#1791#2905#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -71,8 +86,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="271" column="12" lean-forward="false" selection-start-line="271" selection-start-column="12" selection-end-line="271" selection-end-column="12" />
+            <state relative-caret-position="58440">
+              <caret line="1958" column="34" lean-forward="false" selection-start-line="1958" selection-start-column="34" selection-end-line="1958" selection-end-column="34" />
               <folding>
                 <element signature="e#430#711#0" expanded="false" />
               </folding>
@@ -94,14 +109,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/modules/generator/views/views.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="297" column="32" lean-forward="false" selection-start-line="297" selection-start-column="32" selection-end-line="297" selection-end-column="32" />
-              <folding>
-                <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
-              </folding>
+            <state relative-caret-position="5610">
+              <caret line="187" column="158" lean-forward="false" selection-start-line="187" selection-start-column="28" selection-end-line="187" selection-end-column="158" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -119,7 +132,7 @@
       <file leaf-file-name="myjq.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/js/myjq.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
+            <state relative-caret-position="210">
               <caret line="19" column="79" lean-forward="false" selection-start-line="19" selection-start-column="79" selection-end-line="19" selection-end-column="79" />
               <folding>
                 <element signature="n#!!block;n#changeLayout#0" expanded="true" />
@@ -158,8 +171,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.tab_content .c</find>
-      <find>tab-con</find>
       <find>.list</find>
       <find>floati</find>
       <find>.method</find>
@@ -180,7 +191,6 @@
       <find>text/</find>
       <find>applicat</find>
       <find>ADDRESP</find>
-      <find>selectedm</find>
       <find>compone</find>
       <find>rad</find>
       <find>hx</find>
@@ -188,6 +198,9 @@
       <find>input</find>
       <find>texta</find>
       <find>componen</find>
+      <find>items</find>
+      <find>selectedm</find>
+      <find>butt</find>
     </findStrings>
     <replaceStrings>
       <replace>nav-options</replace>
@@ -281,11 +294,11 @@
         <option value="$PROJECT_DIR$/app/modules/generator/controllers/operations.js" />
         <option value="$PROJECT_DIR$/app/modules/generator/views/operations.html" />
         <option value="$PROJECT_DIR$/app/assets/css/components_icons/icons_components.css" />
-        <option value="$PROJECT_DIR$/app/modules/generator/services/components.json" />
         <option value="$PROJECT_DIR$/app/assets/css/components_icons/components.css" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/app/assets/css/style.css" />
         <option value="$PROJECT_DIR$/app/modules/generator/views/views.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/app/modules/generator/services/components.json" />
+        <option value="$PROJECT_DIR$/app/assets/css/style.css" />
       </list>
     </option>
   </component>
@@ -348,6 +361,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -439,22 +454,12 @@
               <option name="myItemId" value="modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PFE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PFE" />
+              <option name="myItemId" value="generator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="gen" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -472,18 +477,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -512,19 +511,19 @@
     <property name="node.js.selected.package.stylelint" value="" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/js/directives" />
-      <recent name="$PROJECT_DIR$/app/modules" />
-      <recent name="$PROJECT_DIR$/app/admin/views" />
-      <recent name="$PROJECT_DIR$/app" />
-      <recent name="$PROJECT_DIR$/app/modules/admin/views" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/assets/css/components_icons" />
+      <recent name="$PROJECT_DIR$/app/assets/css/components_icons/containers" />
       <recent name="$PROJECT_DIR$/app/assets/images" />
       <recent name="$PROJECT_DIR$/app/assets/jquery" />
       <recent name="$PROJECT_DIR$/app/modules/generator/views" />
-      <recent name="$PROJECT_DIR$/app/assets/codemirror/lib" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/modules/generator/gen" />
+      <recent name="$PROJECT_DIR$/app/assets/css/components_icons/simple" />
+      <recent name="$PROJECT_DIR$/app/js/directives" />
+      <recent name="$PROJECT_DIR$/app/modules" />
+      <recent name="$PROJECT_DIR$/app/admin/views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -539,7 +538,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.group.js">
+  <component name="RunManager" selected="JavaScript Debug.newUser.html">
     <configuration default="false" name="newUser.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/PFE/app/modules/admin/views/newUser.html">
       <method />
     </configuration>
@@ -629,8 +628,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.group.js" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.newUser.html" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.newUser.html" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.group.js" />
       </list>
     </recent_temporary>
   </component>
@@ -876,7 +875,13 @@
       <workItem from="1503931441126" duration="3520000" />
       <workItem from="1503959912257" duration="373000" />
       <workItem from="1503960677886" duration="3756000" />
-      <workItem from="1504017141008" duration="1809000" />
+      <workItem from="1504017141008" duration="4928000" />
+      <workItem from="1504095519933" duration="1220000" />
+      <workItem from="1504175367276" duration="591000" />
+      <workItem from="1504197025790" duration="1229000" />
+      <workItem from="1504202795117" duration="2777000" />
+      <workItem from="1504250971206" duration="1663000" />
+      <workItem from="1504349606568" duration="14000" />
     </task>
     <task id="LOCAL-00001" summary="initial version">
       <created>1491005149686</created>
@@ -896,7 +901,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2042670000" />
+    <option name="totallyTimeSpent" value="2053283000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -981,13 +986,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/modules/generator/views/partials/hx.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="25" column="48" lean-forward="false" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/generator/views/partials/fieldset.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1269,30 +1267,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/js/myjq.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="19" column="79" lean-forward="false" selection-start-line="19" selection-start-column="79" selection-end-line="19" selection-end-column="79" />
-          <folding>
-            <element signature="n#!!block;n#changeLayout#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="54" column="119" lean-forward="false" selection-start-line="54" selection-start-column="89" selection-end-line="54" selection-end-column="119" />
-          <folding>
-            <element signature="n#nav#0;n#!!top" expanded="false" />
-            <element signature="n#ul#2;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#script#0;n#!!top" expanded="false" />
-            <element signature="n#script#1;n#!!top" expanded="false" />
-            <element signature="n#script#2;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/generator/controllers/operations.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
@@ -1315,26 +1289,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/css/components_icons/icons_components.css" />
     <entry file="file://$PROJECT_DIR$/app/assets/css/components_icons/components.css" />
-    <entry file="file://$PROJECT_DIR$/app/modules/generator/services/components.json">
+    <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-          <folding />
+        <state relative-caret-position="540">
+          <caret line="54" column="119" lean-forward="false" selection-start-line="54" selection-start-column="89" selection-end-line="54" selection-end-column="119" />
+          <folding>
+            <element signature="n#nav#0;n#!!top" expanded="false" />
+            <element signature="n#ul#2;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#script#0;n#!!top" expanded="false" />
+            <element signature="n#script#1;n#!!top" expanded="false" />
+            <element signature="n#script#2;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/app/modules/generator/services/components.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="11" column="94" lean-forward="false" selection-start-line="11" selection-start-column="86" selection-end-line="11" selection-end-column="94" />
-          <folding />
+        <state relative-caret-position="2040">
+          <caret line="178" column="26" lean-forward="false" selection-start-line="178" selection-start-column="26" selection-end-line="178" selection-end-column="26" />
+          <folding>
+            <element signature="e#20#1773#0" expanded="false" />
+            <element signature="e#1791#2905#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/js/myjq.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="19" column="79" lean-forward="false" selection-start-line="19" selection-start-column="79" selection-end-line="19" selection-end-column="79" />
+          <folding>
+            <element signature="n#!!block;n#changeLayout#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="271" column="12" lean-forward="false" selection-start-line="271" selection-start-column="12" selection-end-line="271" selection-end-column="12" />
+        <state relative-caret-position="58440">
+          <caret line="1958" column="34" lean-forward="false" selection-start-line="1958" selection-start-column="34" selection-end-line="1958" selection-end-column="34" />
           <folding>
             <element signature="e#430#711#0" expanded="false" />
           </folding>
@@ -1343,11 +1336,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/generator/views/views.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="297" column="32" lean-forward="false" selection-start-line="297" selection-start-column="32" selection-end-line="297" selection-end-column="32" />
+        <state relative-caret-position="5610">
+          <caret line="187" column="158" lean-forward="false" selection-start-line="187" selection-start-column="28" selection-end-line="187" selection-end-column="158" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
           <folding>
-            <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/generator/gen/example.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
