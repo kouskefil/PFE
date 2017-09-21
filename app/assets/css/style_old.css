@@ -2,8 +2,7 @@
 body{
     /*background-color: #F7F7F7;*/
     /*background-color: #ECEFF1;*/
-    /*background-color: #F1F1F1;*/
-    background-color: #FAFAFA;
+    background-color: #F1F1F1;
     /*color: #73879C;*/
     color: rgba(0, 0, 0, 0.68)
 ;
@@ -15,10 +14,6 @@ body{
 input[type=checkbox], input[type=radio] {
      margin: 0;
 }
-.glyphicon {
-    position: relative;
-    top: 0px !important;
-  }
 .form-control, .single-line {
     background-color: #FFFFFF;
     background-image: none;
@@ -109,7 +104,7 @@ button, input, optgroup, select, textarea {
     color: #33cd7b;
 }
 .tab_content .content{
-    padding: 0 15px 15px;
+    padding: 0 15px;
     -ms-flex: 1;
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
@@ -186,7 +181,6 @@ button, input, optgroup, select, textarea {
     border-bottom: 1px solid #ddd;
     box-sizing: border-box;
     list-style: none;
-    font-size: 16px;
     padding: 0 0 8px 0;
     position: relative;
 }
@@ -403,8 +397,8 @@ label {
     background-color: white;
     box-sizing: border-box;
     /*border: 1px solid #aaa;*/
-    /*box-shadow: 0 0 0 0 rgba(0,0,0,.1), 0 1px 1px rgba(0,0,0,0.2);*/
-    box-shadow: 0 0 0 1px rgba(0,0,0,.1),0 2px 3px rgba(0,0,0,.2);
+    box-shadow: 0 0 0 0 rgba(0,0,0,.1), 0 1px 1px rgba(0,0,0,0.2);
+    /*box-shadow: 0 0 0 1px rgba(0,0,0,.1),0 2px 3px rgba(0,0,0,.2);*/
 }
 #wrapper {
     padding-left: -216px;
@@ -433,7 +427,7 @@ label {
 #sidebar-wrapper {
     /*background-color: #E9EBEE;*/
     /*background-color: #F5F5F5;*/
-    background-color: hsl(0, 0%, 93.3%);
+    background-color: #FFF;
     position: fixed;
     top: 51px;
     width: 216px;
@@ -451,18 +445,11 @@ label {
 #sidebar-wrapper li{
     margin-left: 8px;
     margin-right: 8px;
-    padding: 6px 4px 4px 5px;
+    transition: all 0.3s;
 }
 .sidebar-wrapper li:hover{
     background-color: lightgrey;
     /*border-left: 5px solid #eee;*/
-}
-.module-menu .menu-icon{
-    height: 30px;
-    width: 30px;
-    margin-right: 25px;
-    border-radius: 50%;
-    padding: 8px 1px 1px 4px;
 }
 #sidebar-wrapper h3{
     /*text-align: center;*/
@@ -478,6 +465,7 @@ label {
     font-weight: 400;
 }
 #sidebar-wrapper i{
+    font-size: 20px;
     color: #5E5E5E;
 }
 
@@ -508,7 +496,7 @@ label {
 }
 
 .sidebar-nav li {
-    line-height: 30px;
+    line-height: 40px;
     text-indent: 3px;
 }
 
@@ -550,10 +538,9 @@ label {
 #menu-toggle {
     text-decoration: none;
     float: left;
-    font-size: 16px;
-    /*color: #A0A0A0;*/
-    color: #FFF;
-    margin: 0 15px 15px;
+    font-size: 26px;
+    /*color: #fff;*/
+    padding-right: 15px;
 }
 
 
@@ -608,13 +595,11 @@ label {
     border: none;
     box-shadow: 0 0 4px rgba(0,0,0,0.14),0 1px 2px rgba(0,0,0,.28);
     content: "";
-    color: #FFF !important;
     /*background-color: #518FF5;*/
     /*background-color: #01A8BF;*/
     /*background-color: #EDEDED;*/
     /*background-color: #154961;*/
-    /*background-color: #607D8B;*/
-      background-color: #00816C;
+    background-color: #607D8B;
     height: 56px;
 }
 
@@ -666,16 +651,16 @@ label {
      color: #fff;
 }
 .navbar-inverse ul li a{
-     color: #grey;
+     color: #fff;
 }
 /*.navbar-inverse a:hover{*/
      /*color: #fff !important;*/
 /*}*/
 .navbar-inverse .navbar-brand:hover {
-     color: #009688;
+     color: #fff;
 }
 .navbar-inverse .navbar-text {
-    color: #FFF;
+    color: #fff;
 }
 
 
@@ -750,7 +735,7 @@ label {
 .module{
     background-color: #fff;
     margin-bottom:5px;
-    width: 265px;
+    width: 296px;
     height: 204px;
     margin: 5px;
 }
@@ -1040,7 +1025,7 @@ label {
 }
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
     color: darkgrey;
-    font-weight: bold;
+    font-weight: 800;
 }
 /*login style*/
 .login{
@@ -1152,12 +1137,12 @@ label {
 .nav-tabs > li > a { border: none; color: #666; }
 .nav-tabs > li.active > a, .nav-tabs > li > a:hover {
     border: none;
-    color: #000!important;
+    color: #73879C!important;
     background: whitesmoke;
 }
 .nav-tabs > li > a::after {
     content: "";
-    background: #009688;
+    background: #0084bf;
     height: 2px;
     position: absolute;
     width: 100%;
@@ -1172,7 +1157,7 @@ label {
 
 /*.card {background: #FFF none repeat scroll 0% 0%; box-shadow: 0  1px 3px rgba(0, 0, 0, 0.3); margin-bottom: 30px; }*/
 .items{
-    padding: 0 0 0 0 ;
+    padding: 5px  0 0 0 ;
     list-style: none;
 }
 .items li:last-child{
@@ -1196,7 +1181,7 @@ label {
     padding: 0;
 }
 .item-label-g{
-    padding: 0;
+    padding: 0; 
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -1208,9 +1193,9 @@ label {
     font-size: 14px;
     cursor: pointer;
 }
-/*.action-item{
+.action-item{
     padding: 4px 4px;
-}*/
+}
 .action{
     float: right; font-size: 12px;
 }
@@ -1966,19 +1951,12 @@ input[type="checkbox"]:checked + .box:before {
 .selectedmenu{
     color: #000000 !important;
     font-size: 16px;
-    background-color: lightgrey;
-
-}
-.selectedmenu i{
-  color: #FFF !important;
-  background-color: #009688
-}
-.genericselection{
-    background-color: #009688
-}
-.genericselection span {
-  color: #FFF;
-  font-size: x-large;
+    background-color: #EAEAEA;
+    -webkit-transition: background-color 800ms linear;
+    -moz-transition: background-color 800ms linear;
+    -o-transition: background-color 800ms linear;
+    -ms-transition: background-color 800ms linear;
+    transition: background-color 800ms linear;
 }
 
 .panel-header{
@@ -1990,19 +1968,4 @@ input[type="checkbox"]:checked + .box:before {
 }
 .panel-heading a{
     color: #000;
-}
-.treeview-header {
-margin-bottom: 5px;
-margin-top: 1px;
-height: 35px;
-padding-top: 5px;
-padding-bottom: 5px;
-}
-.view-dependance-btn{
-    width:-webkit-fill-available;
-    margin-top: 23px;
-}
-.view-dependance-listpanel{
-    height:410px;
-    margin-top:15px;
 }

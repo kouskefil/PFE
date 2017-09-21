@@ -1,0 +1,28 @@
+<div  class="modal-module-editing"> <!-- rsc_def_content begins-->
+	<div class="modal-header">
+		<h5 class="modal-title" id="modal-title1">
+			<i class="glyphicon glyphicon-pencil"></i>
+			Edit
+		</h5>
+	</div>
+	<div class="modal-body" id="modal-body1">
+		<div  class="form-group">
+			<select  name="select155" id="select155" ng-model="currentRsc.parent" class="form-control" >
+				<option selected >Default</option>
+				<option ng-repeat='item in RscParent' value="{{item.realpath}}"> {{item.realpath}}
+				</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="input156">Path</label>
+			<input class=" form-control"  placeholder="path" name="input156" id="input156" type="text" ng-model="currentRsc.path"/>
+		</div> <!-- div id:input156 -->
+		<div class="form-group">
+			<label for="input157">Inheritance</label>
+			<input readonly class=" form-control"   placeholder=" Resource inheritance" name="input157" id="input157" type="text" ng-model="currentRsc.inherit"/>
+		</div> <!-- div id:input156 -->
+	</div>
+	<div class="modal-footer">
+		<button  class="button custom" ng-click="close()">Close</button>
+	</div>
+</div> <!-- rsc_def_content ends-->

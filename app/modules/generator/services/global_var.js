@@ -4,7 +4,7 @@
 define(['configs/app'], function (app){
 	app.register.factory('globalVarFactory',['componentSet','$q','$log','$uibModal' ,function (componentSet, $q, $log, $uibModal) {
 		
-		var module = {name:'', models:[], resources:[], operations:[] };
+		var module = {name:'', models:[], resources:[], operations:[], dependances:[] };
 		var defer = null;
 		var upload = false;
 		var treeActions =  [
@@ -57,15 +57,18 @@ define(['configs/app'], function (app){
 		var currentRsc ,method, /*RscParent = [],*/resourcesParents = [];
 		var genParent = function (rsc,root) {
 			var realpath, i ;
-			if(!rsc.methods.length){
 				if(root === '')
 					realpath = rsc.path;
 				else
 					realpath = root + '/' +rsc.path;
-				resourcesParents.push({realpath:realpath, resource:rsc}) ;
+				var rrr = {realpath:realpath, resource:rsc};
+				resourcesParents.push(rrr) ;
+				console.log("element pushé");
+				console.log(rrr) ;
+            if(rsc.resources)
 				for(i = 0; i < rsc.resources.length; i++)
 					genParent(rsc.resources[i], realpath);
-			}
+
 			
 			
 			
@@ -178,6 +181,7 @@ define(['configs/app'], function (app){
 					
 				}
 		};
+
 		/** resources vars end*/
 		var global = {
             /*operations methods*/
@@ -257,38 +261,73 @@ define(['configs/app'], function (app){
 			setCurrentRsc : function (rsc) {
 				currentRsc =  rsc;
 			},
+			getCurrentRsc : function () {
+				return currentRsc;
+			},
 			getResources : function () {
 				return module.resources;
 			},
 			// getCurrentRsc : function () {
 			// 	return currentRsc;
 			// },
-			getParent : function () {
-				return  getParents(module.resources);
-			},
-			addResource : function(){
-				var rsc = angular.copy(currentRsc);
-				$log.debug('addresouce');
-				$log.debug(rsc);
-				if(rsc.parent === '')
-					module.resources.push(rsc);
-				else
-					parentLookup(rsc).resources.push(rsc);
-				addParent(rsc) ;
-			},
-			generateParent: function () {
-				var i;
-				for(i = 0; i < module.resources.length; i++)
-					genParent(module.resources[i], '');
-				return resourcesParents;
-			},
 			newresource : function () {
-				currentRsc.path = '';
-				currentRsc.parent = '';
-				currentRsc.resources = [] ;
-				currentRsc.methods = []
-				// currentRsc.responses = [];
+                return $uibModal.open({
+                    templateUrl:'app/modules/generator/views/resources/newResource.html',
+                    controller: ['$scope', '$log', '$uibModalInstance','RscParent', function($scope, $log, $uibModalInstance, RscParent) {
+						 $scope.RscParent = RscParent;
+						$scope.currentRsc = {
+							path : "",
+							parent : "",
+							methods : [],
+                            resources : []
+						};
+                        $scope.addResource = function(){
+                            var rsc = angular.copy($scope.currentRsc);
+                            $log.debug('addresouce');
+                            $log.debug(rsc);
+                            if(rsc.parent === '')
+                                module.resources.push(rsc);
+                            else
+                                parentLookup(rsc).resources.push(rsc);
+                            addParent(rsc) ;
+                        };
+                        $scope.close = function () {
+                            $uibModalInstance.close();
+                        }
+
+                    }],
+					resolve: {
+                        RscParent: function () {
+                            var i;
+                            for(i = 0; i < module.resources.length; i++)
+                                genParent(module.resources[i], '');
+                            return resourcesParents;
+                        }
+					}
+                });
 			},
+			// fonction qui permet de modifier une resource
+			rscUpdater : function () {
+                return $uibModal.open({
+                    templateUrl:'app/modules/generator/views/resources/editResource.html',
+                    controller: ['$scope', '$uibModalInstance', 'globalVarFactory','RscParent', function($scope, $uibModalInstance, globalVarFactory, RscParent) {
+                       $scope.RscParent = RscParent;
+                        $scope.currentRsc = globalVarFactory.getCurrentRsc();
+						console.log(   $scope.currentRsc );
+                    	$scope.close = function () {
+                            $uibModalInstance.close();
+                        }
+                    }],
+                    resolve: {
+                        RscParent: function () {
+                            var i;
+                            for(i = 0; i < module.resources.length; i++)
+                                genParent(module.resources[i], '');
+                            return resourcesParents;
+                        }
+                    }
+                });
+            },
             /*resource methods end*/
             /*module methods*/
 			getModule : function () {
@@ -335,15 +374,6 @@ define(['configs/app'], function (app){
 					}
 				}
 			},
-			// gLookup : function (collection, obj) {
-			// 	var i, find;
-			// 	for(i = 0; i < collection.length; i++){
-			// 		if(collection[i] === obj){
-			// 			find = true;
-			// 		}
-			// 	}
-			// 	return find;
-			// }   ,
 			gLookupByAttribute : function (collection, attribute, value) {
 				var i, find = null;
 				for(i = 0; i < collection.length; i++){
@@ -390,7 +420,56 @@ define(['configs/app'], function (app){
                         break;
                     }
                 }
-            }
+            },
+            inheritance : function () {
+            var modalInstance = $uibModal.open(
+                {
+                    templateUrl: 'app/modules/generator/views/dependance.html',
+                    controller: ['$uibModalInstance','$scope','globalVarFactory',function ($uibModalInstance, $scope, globalVarFactory) {
+                       $scope.type = "simple";
+                        $scope.resources = [];
+                    	function getRsc(rsc, origin) {
+                            var name, cpy;
+                            for (var i = 0; i < rsc.length; i++) {
+                            	rsc[i].type = "inherited";
+                            	rsc[i].origin = origin;
+                                if (rsc[i].resources)
+                                    getRsc(rsc[i].resources, origin);
+                            }
+                        }
+                    	var inherit = function(){
+                            var reader = new FileReader();
+                            reader.readAsText($scope.fileModel);
+                            reader.addEventListener('load', function() {
+                                var m = JSON.parse(reader.result);
+								getRsc( m.resources, m.name);
+                                for (var i = 0; i < m.resources.length; i++)
+                                    // if ($scope.resources[i].type == "inherited")
+                                    globalVarFactory.getModule().resources.push(m.resources[i]);
+                                for(var j = 0; j < m.operations.length; j++) {
+                                	m.operations[j].type = "inherited";
+                                    globalVarFactory.getModule().operations.push(m.operations[j]);
+                                }
+                                globalVarFactory.getModule().dependances.push({name: m.name, type:"inherited"});
+                            });
+                        };
+                    	$scope.creatDependance = function () {
+							if ($scope.type == "simple")
+								globalVarFactory.getModule().dependances.push(
+									{
+										name : $scope.name
+									}
+								);
+							else
+								inherit();
+							console.log(globalVarFactory.getModule());
+                            $uibModalInstance.close();
+                        }
+                    }] ,
+                    size: 'md'
+                });
+        }
+
 			
 		};
 		return global;

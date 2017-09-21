@@ -172,23 +172,37 @@ define(['configs/app', 'assets/js/myjq'], function (app){
         $scope.oneAtATime = true;
         var _generatevar = function (component, vars) {
             var i, comp;
-            console.log(component.model);
+            console.log("component");
+            console.log(component);
 
             if(component.model != null && component.model != undefined) {
                 comp = component.model.split('.');
                 if (comp.length >= 2) {
-                    for (i = 0; i < vars.length; i++)
-                        if (vars[i].id == component.id) {
-                        console.log(vars[i].id);
+                    for (i = 0; i < vars.length; i++) {
+                        console.log("var de i");
+                        console.log(vars[i]);
+                        if (vars[i].id == component.id || vars[i].name == comp) {
+                            // console.log("var id");
+                            // console.log("var");
+                            // console.log(comp);
+                            // console.log(vars[i].id);
                             vars[i].name = comp;
                             return;
                         }
+                    }
+                    console.log("élément pushé");
+                    console.log({
+                        id: component.id,
+                        name: comp[0],
+                        value: "{}"
+                    });
                     vars.push(
                         {
                             id: component.id,
                             name: comp[0],
                             value: "{}"
                         })
+
                 }
             }
 
@@ -196,12 +210,8 @@ define(['configs/app', 'assets/js/myjq'], function (app){
         var _generatevars = function (composants, vars) {
             var i,j;
             for (i = 0; i < composants.length; i++){
-                // console.log('_generatevars') ;
-                // console.log(composants[i].type) ;
-                // console.log(composants[i].children) ;
                 _generatevar(composants[i], vars);
                 if (composants[i].children != null && composants[i].children != undefined){
-                    // console.log('in the if') ;
                     _generatevars(composants[i].children, vars);
 
                 }
@@ -210,17 +220,27 @@ define(['configs/app', 'assets/js/myjq'], function (app){
         };
         $scope.generatevars = function () {
             _generatevars($scope.currentModel.children, $scope.currentModel.variables);
+            console.log("$scope.currentModel.variables");
+            console.log($scope.currentModel.variables);
         };
         $scope.isNavCollapsed = true;
         $scope.isCollapsed = false;
         $scope.isCollapsedHorizontal = false;
-
         $scope.var_content = "var_content";
         $scope.changeLayout = function(){
             if ($scope.var_content == "var_content")
                 $scope.var_content =  "contentpluslist" ;
             else
                 $scope.var_content = "var_content";
+        };
+        $scope.addDependance = function (dependance) {
+             if($scope.currentModel)
+                $scope.currentModel.dependances.push($scope.currentComponent.dependance);
+            $scope.currentComponent.dependance = {};
+            console.log($scope.currentComponent.dependance);
+        };
+        $scope.deleteDependance = function (dpc) {
+            $scope.currentModel.dependances.splice($scope.currentModel.dependances.indexOf(dpc),1);
         }
     }]);
 });

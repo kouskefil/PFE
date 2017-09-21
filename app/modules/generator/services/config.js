@@ -88,8 +88,38 @@ define(['configs/app',
         .state('root.generator.overview',{
                 url: '/module/:name',
                 templateUrl: 'app/modules/generator/views/overview.html',
-                onEnter:function (layoutFactory) {
-
+                onEnter:function (layoutFactory, globalVarFactory) {
+                    layoutFactory.setOperations(
+                        [
+                            {
+                                name:"new",
+                                icon:"glyphicon glyphicon-edit",
+                                img:"app/assets/images/ic_action_add_circle.png",
+                                action:function () {
+                                    var module = globalVarFactory.getModule();
+                                    var model =  globalVarFactory.getDefaultComponent();
+                                    module.models.push(model);
+                                    // globalVarFactory.getModule().models.push(globalVarFactory.getDefaultComponent());
+                                    $state.go("root.generator.views.properties", {label:model.label, type:model.type, num:model.num});
+                                }
+                            },
+                            {
+                                name: "save",
+                                icon: "glyphicon glyphicon-floppy-disk",
+                                img:"app/assets/images/ic_action_save.png",
+                                action:function () {
+                                    var module = globalVarFactory.getModule();
+                                    fileFactory.saveAsJson(angular.toJson(module),module.name);
+                                }
+                            },
+                            {
+                                name: "inherit",
+                                icon: "fa fa-handshake-o",
+                                action:function () {
+                                    globalVarFactory.inheritance();
+                                }
+                            }
+                        ]);
                 },
                 controller:'overview'
             })
@@ -197,10 +227,9 @@ define(['configs/app',
                         },
                         {
                             name: "add resources",
-                            icon: "glyphicon glyphicon-plus",
+                            icon: "glyphicon glyphicon-refresh",
                             action:function () {
-                                globalVarFactory.addResource();
-                                globalVarFactory.newresource();
+                                globalVarFactory.rscUpdater();
                             }
                         },
                         {

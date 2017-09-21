@@ -98,23 +98,17 @@
             </div> <!-- group186 ends-->
         </div> <!-- parameters ends-->
     </div> <!-- group166 ends-->
-    <div id="group167"  style="padding:0; min-height:465px;max-height:465px;margin-left:15px"  class="floatingPanel col-md-3 "> <!-- group167 begins-->
-        <div id="group209"  > <!-- group209 begins-->
+    <div id="group167"  style="padding:0; min-height:450px;max-height:450px;margin-left:15px"  class="floatingPanel col-md-3 "> <!-- group167 begins-->
+        <div id="group209"   > <!-- group209 begins-->
             <div id="group210"   class="panel-header"> <!-- group210 begins-->
                 <span  class="fa fa-gears" id="span211" ></span>
                 <span  id="span212" >Operations</span>
             </div> <!-- group210 ends-->
-            <div id="op-content"  style="height:430px;"  class=""> <!-- op-content begins-->
+            <div id="op-content"  style="overflow-y:scroll; height: 405px"  class=""> <!-- op-content begins-->
                 <ul  class="items">
                     <li  data-ng-click="cclick(item)" ng-repeat=" item in operations" id="{{ item.name }}" onclick="setSelected(this.id)">
-                        <!--<div id="group215"  class=" col-md-12 "> &lt;!&ndash; group215 begins&ndash;&gt;-->
-                            <!--<div id="group216"  class="item-label-g col-md-9 "> &lt;!&ndash; group216 begins&ndash;&gt;-->
-                                <span  class="item-label" id="span217" >{{item.name}}</span>
-                            <!--</div> &lt;!&ndash; group216 ends&ndash;&gt;-->
-                            <!--<div id="group218"  class="action col-md-3 "> &lt;!&ndash; group218 begins&ndash;&gt;-->
-                                <span style="float: right" ng-show="currentOp.name == item.name " class="glyphicon glyphicon-trash action-item action-delete" data-ng-click="delOperation(item)" id="span219" ></span>
-                            <!--</div> &lt;!&ndash; group218 ends&ndash;&gt;-->
-                        <!--</div> &lt;!&ndash; group215 ends&ndash;&gt;-->
+                        <span  class="item-label" id="span217" >{{item.name}}</span>
+                        <span style="float: right" ng-show="currentOp.name == item.name " class="glyphicon glyphicon-trash action-item action-delete" data-ng-click="delOperation(item)" id="span219" ></span>
                     </li>
                 </ul>
             </div> <!-- op-content ends-->

@@ -8,13 +8,16 @@
             </div> <!-- rsc_def_header ends-->
             <div id="rsc_def_content"  style="padding: 15px 15px"  class=""> <!-- rsc_def_content begins-->
                 <div  class="form-group">
-                    <select name="select155" id="select155" ng-model="currentRsc.parent" class="form-control" ><option ng-repeat='item in RscParent' value="{{item.realpath}}"> {{item.realpath}}
-                    </option>
-                    </select>
+                    <label for="input157">Parent</label>
+                    <input class=" form-control" readonly placeholder="parent" name="input155"  id="select155" ng-model="currentRsc.parent" type="text"/>
                 </div>
                 <div class="form-group">
-                    <label for="input156">path</label>
-                    <input class=" form-control"  placeholder="path" name="input156" id="input156" type="text" ng-model="currentRsc.path"/>
+                    <label for="input156">Path</label>
+                    <input class=" form-control" readonly placeholder="path" name="input156" id="input156" type="text" ng-model="currentRsc.path"/>
+                </div> <!-- div id:input156 -->
+                <div class="form-group">
+                    <label for="input157">Inheritance</label>
+                    <input class=" form-control" readonly  placeholder=" Resource inheritance" name="input157" id="input157" type="text" ng-model="currentRsc.inherit"/>
                 </div> <!-- div id:input156 -->
             </div> <!-- rsc_def_content ends-->
         </div> <!-- rsc_definition ends-->

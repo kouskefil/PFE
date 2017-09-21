@@ -1,0 +1,27 @@
+<div class="modal-module-editing" style="top: 200px !important; ">
+	<div class="modal-header">
+		<h5 class="modal-title" id="modal-title">
+			<i class="glyphicon glyphicon-th"></i>
+			New dependance
+		</h5>
+	</div>
+	<div class="modal-body" id="modal-body" style="max-height: 400px">
+		<div class="row">
+			<div class="col-md-12" >
+				<div class="md-radio md-radio-inline">
+					<p>Dependance type</p>
+					<input id="2a" value="simple" ng-model="type" type="radio" name="g2" checked>
+					<label for="2a">Simple</label>
+					<input id="3b" value="inherit" ng-model="type" type="radio" name="g2" >
+					<label for="3b">Inherit</label>
+				</div>
+				<input ng-show="type == 'inherit'" style="margin-bottom: 15px" type="file" class="form-control" value="Browse"  file-model="fileModel">
+				<input ng-show="type == 'simple'" style="margin-bottom: 15px" type="text" class="form-control" ng-model="name">
+			</div>
+		
+		</div>
+	</div>
+	<div class="modal-footer">
+		<button class="button custom" data-ng-click="creatDependance()" style="float: right;">Create dependance</button>
+	</div>
+</div>

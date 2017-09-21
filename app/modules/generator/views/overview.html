@@ -5,19 +5,30 @@
     .title{
         color: #000;
     }
+    .items li{
+        border-left:1px  solid lightgrey;
+        border-right:1px  solid lightgrey;
+    }
+    /*input[type="checkbox"]:checked + .box:before {*/
+        /*top : -8px*/
+    /*}*/
+    .checkbox {
+        margin-top: 5px;
+    }
 </style>
+
 <div  id="content" class="col-md-10 col-md-offset-1" style="margin-bottom: 150px;">  <!--content-->
     <div class="col-md-12 floatingPanel row" style=" padding-right: 0; color: lightslategray;">
         <div class="col-md-8">
             <div class="header-actions" style="height: 50px; margin-top: 5px">
                 <!--<span><h1>{{date | date:'dd-MM-yyyy:hh-mm-ss'}}</h1></span>-->
-               <button popover-placement="bottom" uib-popover-template="dynamicPopover.templateUrl" popover-title="Select a branch" class="button default">Branch<i class="glyphicon glyphicon-chevron-down" style="margin-left: 8px"></i> {{branch}}</button>
-               <button class="button default" data-ng-click="pop('error')">New pull request</button>
-               <button class="button default" data-ng-click="openModal()" style="float: right">Upload files</button>
+                <button popover-placement="bottom" uib-popover-template="dynamicPopover.templateUrl" popover-title="Select a branch" class="button default">Branch<i class="glyphicon glyphicon-chevron-down" style="margin-left: 8px"></i> {{branch}}</button>
+                <button class="button default" data-ng-click="pop('error')">New pull request</button>
+                <button class="button default" data-ng-click="openModal()" style="float: right">Upload files</button>
             </div>
             <div>
                 <toaster-container toaster-options="{'close-button':false, 'time-out':{ 'toast-warning': 2000, 'toast-error': 0 } }"></toaster-container>
-            </div>            
+            </div>
             <div class="modfiles">
                 <span class="glyphicon glyphicon-tasks"> Database</span>
                 <ul class="act">
@@ -144,17 +155,17 @@
                     <li ng-repeat="item in contributors">{{item.name}}</li>
                 </ul>
             </div>
-             <div class="desc"  >
+            <div class="desc"  >
                 <span class="title"><i class="fa fa-paper-plane-o"></i>  pull requests</span>
                 <span class="badge" style="float: right"> 25</span>
             </div>
-             <div class="desc"  >
+            <div class="desc"  >
                 <span class="title"><i class="fa fa-exclamation-triangle"></i> issues</span>
                 <span class="badge" style="float: right"> 3</span>
             </div>
-
+        
         </div>
-
+    
     </div>
 </div>
 
@@ -185,16 +196,16 @@
                 <input type="file" class="form-control" value="Browse"  file-model="fileModel" >
             </div>
             <div  class="form-group">
-            <label for="select188" class="form-control-label">type</label>
-            <select name="select188" id="select188" ng-model="type" class="form-control" >
-                <option ng-repeat='item in filetype' value="{{item}}"> {{item.type}}</option>
-            </select>
+                <label for="select188" class="form-control-label">type</label>
+                <select name="select188" id="select188" ng-model="type" class="form-control" >
+                    <option ng-repeat='item in filetype' value="{{item}}"> {{item.type}}</option>
+                </select>
                 <div style="border: 1px solid cadetblue;">
                     <textarea  id="textarea184" class="form-control" name="textarea184" ui-codemirror="mode" ng-model="text"></textarea>
                 </div>
+            </div>
         </div>
-        </div>
-
+        
         <div class="modal-footer">
             <button class="floatingPanel" type="button" data-ng-click="fic()">upload</button>
         </div>

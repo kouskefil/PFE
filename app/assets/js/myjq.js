@@ -15,8 +15,6 @@ function changeLayout (id, cls) {
 
 
 function setSelected(id) {
-   // var menu = document.getElementById(id);
-   //  menu.className += " selectedmenu";
     $("#"+id).addClass("selectedmenu").siblings("li").removeClass("selectedmenu") ;
 }
 

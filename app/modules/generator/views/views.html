@@ -4,7 +4,7 @@
         <uib-tabset >
             <uib-tab index="13"  heading="Treeview"> <!--begins-->
 
-                <div id="Heading" style="margin-bottom:5px;height: 35px; padding-top: 5px; padding-bottom: 5px;" class="floatingPanel col-md-12 "> <!-- Heading begins-->
+                <div id="Heading" style="margin-top:1px;margin-bottom:5px;height: 35px; padding-top: 5px; padding-bottom: 5px;" class="floatingPanel col-md-12 "> <!-- Heading begins-->
                     <div id="treeHeading"  style="border-right: 1px solid #ddd"  class=" col-md-5 "> <!-- treeHeading begins-->
                         <div  > {{currentModel.label}} <span ng-hide="!currentModel" style=" color: lightslategray;"><i class="fa fa-chevron-right"></i> {{ currentComponent.id }}</span></div>
                     </div> <!-- treeHeading ends-->
@@ -38,11 +38,10 @@
                 </div> <!-- group136 ends-->
             </uib-tab> <!--end-->
             <uib-tab index="14"  heading="functions"> <!--begins-->
-
                 <div id="func_content"  class="tab_content "> <!-- func_content begins-->
                     <div class="content">
                         <span style="float: right; font-size: medium" class="glyphicon glyphicon-list" onclick="changeLayout('functionlist', 'functionlist')"></span>
-                        <div class="checkbox">
+                        <div class="checkbox" >
                             <label class="checkbox-inline"><input  type="checkbox"  value="local" ng-model="function.local">
                                 <span class="box"></span>
                                 local
@@ -206,7 +205,7 @@
             </uib-tab> <!--end-->
             <uib-tab index="77" heading="configs">
 
-                <div id="cHeading" style="margin-bottom:5px;height: 35px; padding-top: 5px; padding-bottom: 5px;"
+                <div id="cHeading" style="margin-bottom:5px;margin-top:1px;height: 35px; padding-top: 5px; padding-bottom: 5px;"
                      class="floatingPanel col-md-12 "> <!-- Heading begins-->
                     <div id="config" style="border-right: 1px solid #ddd" class=" col-md-5 "> <!-- treeHeading begins-->
                         <div> {{currentModel.label}} <span style=" color: lightslategray;"><i
@@ -215,7 +214,6 @@
                     <div class="col-md-3" style="border-right: 1px solid #ddd">
                         <!--<span>{{ currentComponent.type }}</span>-->
                     </div>
-
                 </div> <!-- Heading ends-->
                 <div id="group93" style="" class=" col-md-12 "> <!-- group93 begins-->
                     <div class="checkbox">
@@ -260,11 +258,34 @@
                             <textarea id="textarea110" class="form-control" name="textarea110" ui-codemirror="cmOption" ng-model="currentComponent.templateUrl"></textarea>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="textarea151">Dependances</label>
-                        <div class="cmirror">
-                            <textarea id="textarea151" class="form-control" ui-codemirror="cmOption" name="textarea151"  ng-model="currentComponent.dependances"></textarea>
+                    <div class="row">
+                        <div class="form-group col-md-5">
+                            <label for="dependance">Dependances</label>
+                            <input class="form-control" id="dependance" placeholder="Dependance name" ng-model="currentComponent.dependance.name" type="text" name="dependance" >
                         </div>
+                        <div class="col-md-5" style="margin-top: 10px">
+                            <div class="md-radio md-radio-inline">
+                                <input id="2" value="service" ng-model="currentComponent.dependance.type" type="radio" name="g" checked>
+                                <label for="2">service</label>
+                                <input id="3" value="controller" ng-model="currentComponent.dependance.type" type="radio" name="g" >
+                                <label for="3">controller</label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <button class=" view-dependance-btn button custom" data-ng-click="addDependance(dependance)">Add</button>
+                        </div>
+                        
+                    </div>
+                    <div style="padding: 15px">
+                        <ul style="list-style: none; padding: 0">
+                            <li ng-repeat=" item in currentModel.dependances">
+                                <span  class="item-label" id="span217" >{{item.name}} </span>
+                                <div style="float: right">
+                                    <span style="color: lightgrey;">{{ item.type }}</span>
+                                    <span   class="glyphicon glyphicon-trash action-item action-delete" data-ng-click="deleteDep(item)" id="span21" ></span>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
 
                 </div> <!-- group93 ends-->

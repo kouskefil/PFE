@@ -37,7 +37,7 @@ define(['configs/app', 'assets/js/lodash'], function (app) {
             "plain"
         ];
         $scope.resources = globalVarFactory.getResources();
-        $scope.RscParent = globalVarFactory.generateParent();
+        // $scope.RscParent = globalVarFactory.generateParent();
         $scope.currentRsc = globalVarFactory.rscSkeleton({});
         $scope.rsptmp = {
             mediatype:'',
@@ -48,12 +48,9 @@ define(['configs/app', 'assets/js/lodash'], function (app) {
         $scope.setCurrentRsc = function (rsc) {
             globalVarFactory.setCurrentRsc(rsc);
         };
-        $scope.cclick = function (selectedNode, treemodel) {
-            console.log(treemodel);
+        $scope.cclick = function (selectedNode) {
             if(!selectedNode.methods)
                 selectedNode.methods = [];
-            // if(!selectedNode.requests)
-            //     selectedNode.requests = [];
             globalVarFactory.setCurrentRsc(selectedNode);
             $scope.currentRsc = selectedNode/*globalVarFactory.rscSkeleton(selectedNode)*/;
             $scope.methods = $scope.currentRsc.methods;
@@ -159,7 +156,6 @@ define(['configs/app', 'assets/js/lodash'], function (app) {
 			$scope.getMethod(mtd);
 		};
 		$scope.addresp = function(template,method){
-
 		     var  resourceMethod = $scope.resourceMethod, rsptmp = $scope.rsptmp, responses = $scope.responses;
 			$uibModal.open({
 				templateUrl:template,
