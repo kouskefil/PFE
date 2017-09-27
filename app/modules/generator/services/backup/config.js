@@ -93,8 +93,8 @@ define(['configs/app',
                         [
                             {
                                 name:"new",
-                                icon:"fa fa-sticky-note-o",
-                                // img:"app/assets/images/ic_action_add_circle.png",
+                                icon:"glyphicon glyphicon-edit",
+                                img:"app/assets/images/ic_action_add_circle.png",
                                 action:function () {
                                     var module = globalVarFactory.getModule();
                                     var model =  globalVarFactory.getDefaultComponent();
@@ -105,8 +105,8 @@ define(['configs/app',
                             },
                             {
                                 name: "save",
-                                icon: "fa fa-floppy-o",
-                                // img:"app/assets/images/ic_action_save.png",
+                                icon: "glyphicon glyphicon-floppy-disk",
+                                img:"app/assets/images/ic_action_save.png",
                                 action:function () {
                                     var module = globalVarFactory.getModule();
                                     fileFactory.saveAsJson(angular.toJson(module),module.name);
@@ -114,7 +114,7 @@ define(['configs/app',
                             },
                             {
                                 name: "inherit",
-                                icon: "fa fa-arrow-up",
+                                icon: "fa fa-handshake-o",
                                 action:function () {
                                     globalVarFactory.inheritance();
                                 }
@@ -135,13 +135,14 @@ define(['configs/app',
                     }
                 },
                 onEnter:function (globalVarFactory,layoutFactory, fileFactory, $state) {
+
                     layoutFactory.setLocation('View');
                     layoutFactory.setOperations(
                         [
                             {
                                 name:"new",
-                                icon:"fa fa-sticky-note-o",
-                                // img:"app/assets/images/ic_action_add_circle.png",
+                                icon:"glyphicon glyphicon-edit",
+                                img:"app/assets/images/ic_action_add_circle.png",
                                 action:function () {
                                     var module = globalVarFactory.getModule();
                                     var model =  globalVarFactory.getDefaultComponent();
@@ -152,8 +153,8 @@ define(['configs/app',
                             },
                             {
                                 name: "save",
-                                icon: "fa fa-floppy-o",
-                                // img:"app/assets/images/ic_action_save.png",
+                                icon: "glyphicon glyphicon-floppy-disk",
+                                img:"app/assets/images/ic_action_save.png",
                                 action:function () {
                                     var module = globalVarFactory.getModule();
                                     fileFactory.saveAsJson(angular.toJson(module),module.name);
@@ -172,6 +173,7 @@ define(['configs/app',
                 templateUrl: function ($stateParams){
                     return 'app/modules/generator/views/partials/' + $stateParams.type +'.html';
                 },
+
                 controller: ['$scope','$state', '$stateParams', 'componentSet', function($scope,$state, $stateParams, componentSet){
 
 
@@ -187,16 +189,16 @@ define(['configs/app',
                     [
                         {
                             name:"new",
-                            icon:"fa fa-sticky-note-o",
-                            // img:"app/assets/images/ic_action_add_circle.png",
+                            icon:"glyphicon glyphicon-edit",
+                            img:"app/assets/images/ic_action_add_circle.png",
                             action:function () {
                                 globalVarFactory.AddOperation();
                             }
                         },
                         {
                             name: "save",
-                            icon: "fa fa-floppy-o",
-                            // img:"app/assets/images/ic_action_save.png",
+                            icon: "glyphicon glyphicon-floppy-disk",
+                            img:"app/assets/images/ic_action_save.png",
                             action:function () {
                                 var module = globalVarFactory.getModule();
                                 console.log(module);
@@ -217,23 +219,23 @@ define(['configs/app',
                     [
                         {
                             name:"new",
-                            icon:"fa fa-sticky-note-o",
-                            // img:"app/assets/images/ic_action_add_circle.png",
+                            icon:"glyphicon glyphicon-edit",
+                            img:"app/assets/images/ic_action_add_circle.png",
                             action:function () {
                                 globalVarFactory.newresource();
                             }
                         },
                         {
-                            name: "update resources",
-                            icon: "fa fa-refresh",
+                            name: "add resources",
+                            icon: "glyphicon glyphicon-refresh",
                             action:function () {
                                 globalVarFactory.rscUpdater();
                             }
                         },
                         {
                             name: "save",
-                            icon: "fa fa-floppy-o",
-                            // img:"app/assets/images/ic_action_save.png",
+                            icon: "glyphicon glyphicon-floppy-disk",
+                            img:"app/assets/images/ic_action_save.png",
                             action:function () {
                                 var module = globalVarFactory.getModule();
                                 fileFactory.saveAsJson(angular.toJson(module),module.name);

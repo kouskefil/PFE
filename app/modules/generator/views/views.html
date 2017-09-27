@@ -40,7 +40,7 @@
             <uib-tab index="14"  heading="functions"> <!--begins-->
                 <div id="func_content"  class="tab_content "> <!-- func_content begins-->
                     <div class="content">
-                        <span style="float: right; font-size: medium" class="glyphicon glyphicon-list" onclick="changeLayout('functionlist', 'functionlist')"></span>
+                        <span style="float: right; font-size: medium" class="fa fa-bars" onclick="changeLayout('functionlist', 'functionlist')"></span>
                         <div class="checkbox" >
                             <label class="checkbox-inline"><input  type="checkbox"  value="local" ng-model="function.local">
                                 <span class="box"></span>
@@ -62,8 +62,8 @@
                         </div>
                         <div id="action"  class="" style="float: right"> <!-- action begins-->
                             <button style="margin: 0 10px;"  class="floatingPanel button " ng-click="cancel()">Cancel</button>
-                            <button style="margin: 0 10px;" ng-hide="updateparam==true" class="floatingPanel button custom" ng-click="addParams('function')">Add function</button>
-                            <button style="margin: 0 10px;" ng-show="updateparam==true" class="floatingPanel button custom" ng-click="updateParam('function')">Save function</button>
+                            <button style="margin: 0 10px;" ng-hide="updateparam==true" class="floatingPanel button blue" ng-click="addParams('function')">Add function</button>
+                            <button style="margin: 0 10px;" ng-show="updateparam==true" class="floatingPanel button blue" ng-click="updateParam('function')">Save function</button>
                         </div> <!-- action ends-->
                     </div>
                     <div class="functionlist floatingPanel list" id="functionlist">
@@ -85,7 +85,7 @@
 
                 <div id="action_content"   class="tab_content"> <!-- func_content begins-->
                     <div class="content" style="margin-top: 15px">
-                        <span style="float: right; font-size: medium" class="glyphicon glyphicon-list" onclick="changeLayout('actionlist', 'actionlist')"></span>
+                        <span style="float: right; font-size: medium" class="fa fa-bars" onclick="changeLayout('actionlist', 'actionlist')"></span>
                         <div class="form-group">
                             <label for="input23">Name</label>
                             <input class=" form-control"  placeholder="name" name="input23" id="input23" type="text" ng-model="action.name"/>
@@ -98,12 +98,12 @@
                             <label for="input24">Icon</label>
                             <input class=" form-control"  placeholder="icon" name="input24" id="input24" type="text" ng-model="action.icon"/>
                         </div> <!-- div id:input24 -->
-                        <div class="form-group" >
-                            <label for="textarea27_copy2">dependances</label>
-                            <div class="cmirror">
-                                <textarea id="textarea27_copy2" class="form-control" name="textarea27_copy2" ui-codemirror="cmOption" ng-model="action.dependances"></textarea>
-                            </div>
-                        </div>
+                        <!--<div class="form-group" >-->
+                            <!--<label for="textarea27_copy2">dependances</label>-->
+                            <!--<div class="cmirror">-->
+                                <!--<textarea id="textarea27_copy2" class="form-control" name="textarea27_copy2" ui-codemirror="cmOption" ng-model="action.dependances"></textarea>-->
+                            <!--</div>-->
+                        <!--</div>-->
                         <div class="form-group" >
                             <label for="textarea27">Action</label>
                             <div class="cmirror">
@@ -112,18 +112,14 @@
                         </div>
                         <div id="actions" style="float: right" > <!-- actions begins-->
                             <button  class="floatingPanel button " style="margin: 0 10px" ng-click="cancel()">Cancel</button>
-                            <button ng-hide="updateparam==true" class="floatingPanel button custom"  ng-click="addParams('action')">add action</button>
-                            <button ng-show="updateparam==true" class="floatingPanel button custom"  ng-click="updateParam('action')">save action</button>
+                            <button ng-hide="updateparam==true" class="floatingPanel button blue"  ng-click="addParams('action')">add action</button>
+                            <button ng-show="updateparam==true" class="floatingPanel button blue"  ng-click="updateParam('action')">save action</button>
                         </div> <!-- actions ends-->
                     </div>
                     <div id="actionlist" class="list floatingPanel actionlist">
                         <div class="listcontent">
-                            <div class="generation">
-                                <i class="glyphicon glyphicon-cog"></i>
-                                <span style="margin-left: 15px; cursor: pointer" data-ng-click="generateactions()">Generate actions</span>
-                            </div>
                             <ul style="list-style:none; padding: 0">
-                                <li style="border: initial;"   ng-repeat='item in currentComponent.actions' data-ng-click="setParam(item, 'variable')">
+                                <li style="border: initial;"   ng-repeat='item in currentComponent.actions' data-ng-click="setModelAction(item)">
                                     {{item.name}}
                                     <span style="float: right" class="fa fa-trash" data-ng-click="deleteParam('action', item)"></span>
                                 </li>
@@ -154,7 +150,7 @@
                                     <span class="box"></span>
                                     local
                                 </label>
-                                <span style="float: right; font-size: medium" class="glyphicon glyphicon-list" onclick="changeLayout('varlist', 'varlist')"></span>
+                                <span style="float: right; font-size: medium" class="fa fa-bars" onclick="changeLayout('varlist', 'varlist')"></span>
                             </div> <!-- div id:input30 -->
                         </div>
                         <div class="form-group">
@@ -183,8 +179,8 @@
                         </div>
                         <div id="_action"  style="float: right"> <!-- action begins-->
                             <button  ng-click="cancel('variable')" class="floatingPanel button " style="margin: 0 10px">cancel</button>
-                            <button ng-hide="updateparam==true" ng-click="addParams('variable')" class="floatingPanel button custom" >Add variable</button>
-                            <button ng-show="updateparam==true" ng-click="updateParam('variable')" class="floatingPanel button custom" >save variable</button>
+                            <button ng-hide="updateparam==true" ng-click="addParams('variable')" class="floatingPanel button blue" >Add variable</button>
+                            <button ng-show="updateparam==true" ng-click="updateParam('variable')" class="floatingPanel button blue" >save variable</button>
                         </div>
                     </div>
                     <div  id="varlist" class="list floatingPanel varlist" >
@@ -272,7 +268,7 @@
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <button class=" view-dependance-btn button custom" data-ng-click="addDependance(dependance)">Add</button>
+                            <button class=" view-dependance-btn button blue" data-ng-click="addDependance(dependance)">Add</button>
                         </div>
                         
                     </div>
@@ -291,7 +287,6 @@
                 </div> <!-- group93 ends-->
             </uib-tab> <!--end-->
         </uib-tabset>
-
     </div> <!-- recepteur ends-->
     <div id="composant"  style="margin-left:15px"  class=" row floatingPanel composants composant col-md-3 "> <!-- composant begins-->
         <uib-tabset >
@@ -331,8 +326,8 @@
             </uib-tab> <!--end-->
             <uib-tab index="9"  heading="views"> <!--begins-->
                 <ul  class="items">
-                    <li class="_item" data-ng-click="cclick(item)" ng-class="{selectedItem:item.name==selected}" ng-repeat=" item in models">
-                        <a ui-sref="root.generator.views.properties({label:item.label, type:item.type, num:currentComponent.num})" ng-click='setModel(item)'>
+                    <li class="_item" id="{{ item.id }}" data-ng-click="cclick(item)" onclick="setSelectedItem(this.id)" ng-repeat=" item in models">
+                        <a  ui-sref="root.generator.views.properties({label:item.label, type:item.type, num:currentComponent.num})" ng-click='setModel(item)'>
                             {{item.label}}
                         </a>
                         <span  style="float: right" class="glyphicon glyphicon-trash action-item action-delete" data-ng-click="deleteModel(item)" id="span219" ></span>

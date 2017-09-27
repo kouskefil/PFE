@@ -11,7 +11,7 @@
             <input type="text" class="form-control" placeholder="Enter module name"  ng-model="moduleName">
         </div>
         <div class="modal-footer ">
-            <button class="floatingPanel" type="button" ng-click="editModule('create')">Create</button>
+            <button class="floatingPanel button blue" type="button" ng-click="editModule('create')">Create</button>
         </div>
     </div>
 
@@ -29,12 +29,11 @@
             <input type="file" class="form-control" value="Browse"  file-model="fileModel">
         </div>
         <div class="modal-footer">
-            <button class="floatingPanel" type="button" ng-click="editModule('upload')">Upload</button>
+            <button class="floatingPanel button blue" type="button" ng-click="editModule('upload')">Upload</button>
         </div>
     </div>
 
 </script>
-
 <div class="row" style=" z-index: 0 !important;">
     <div  class="col-md-10 col-md-offset-1">
         <div class="col-md-12">
@@ -45,7 +44,7 @@
                             <span class="glyphicon glyphicon-th-large"></span>
                             <b>{{item.name}} </b>
                         </div>
-                        <div class="group_content" style="padding: 15px 15px 7px 15px; margin-top: 115px;">
+                        <div class="group_content" >
                             <!--<span>Create on </span>-->
                             <div class="moduledesc" style="/* margin-top: 35px;*/">
                                 <small>{{item.date}}</small>

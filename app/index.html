@@ -22,9 +22,10 @@
                     </a>
                     <ul class="dropdown-menu1" template-url="modules.html" uib-dropdown-menu aria-labelledby="dropdownMenu3"></ul>
                 </li>
-                <li class="dropdown nav-options  " uib-dropdown on-toggle="toggled(open)">
+                <li class="dropdown nav-options " uib-dropdown on-toggle="toggled(open)">
                     <a style="color: #FFF;" href id="simple-dropdownr" uib-dropdown-toggle>
-                        <span class="fa fa-bell"></span>
+                        <i class="fa fa-bell"></i>
+                        <span class="option-label-notif">9</span>
                     </a>
                     <ul class="dropdown-menu" template-url="notifications.html" uib-dropdown-menu aria-labelledby="dropdownMenu3"></ul>
                 </li>
@@ -43,7 +44,7 @@
     <div id="sidebar-wrapper" ng-class="sidebar_layout"   >
         <ul class="item module-menu" ng-hide="location =='Admin'">
             <li ui-sref="root.generator.overview">
-                    <i style="font-size: 20px; color: #009688;" class=" menu-icon menu glyphicon glyphicon-dashboard" style="">    </i>
+                    <i style="font-size: 20px; color:#FE6B00;" class=" menu-icon menu glyphicon glyphicon-dashboard" style="">    </i>
                 <span style="font-size: 20px; " class="menu-default">Overview</span>
             </li>
         </ul>

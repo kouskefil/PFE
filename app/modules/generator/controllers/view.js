@@ -48,6 +48,7 @@ define(['configs/app', 'assets/js/myjq'], function (app){
                 if (!$scope.currentModel.variables)
                     $scope.currentModel.variables = [];
                 globalVarFactory.add($scope.variable, $scope.currentModel.variables);
+                $scope.variable = {};
                 console.log($scope.variable);
             }
             else {
@@ -241,6 +242,9 @@ define(['configs/app', 'assets/js/myjq'], function (app){
         };
         $scope.deleteDependance = function (dpc) {
             $scope.currentModel.dependances.splice($scope.currentModel.dependances.indexOf(dpc),1);
+        } ;
+        $scope.setModelAction = function (item) {
+            $scope.action = item;
         }
     }]);
 });

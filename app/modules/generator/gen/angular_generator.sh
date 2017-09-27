@@ -33,11 +33,11 @@ function classmaker2 {
     local    style=`echo $1 | jq -r '.style'`
     #echo "classmaker: $1 class: $class"
     if [ "$style" != "null" ]; then
-	echo -n " style=\"$style\"" >> $2
+	echo -n " style=\"$style\" " >> $2
     fi
 
     if [ "$class" != "null" ]; then
-	echo -n "$class" >> $2
+	echo -n " class=\"$class" >> $2
     fi
 
 }
@@ -49,9 +49,7 @@ function component_label {
     local    id=`echo $1 | jq -r '.id'`
     local    required=`echo $1 | jq -r '.required'`
 
-
     if [  $required == true  ]; then
-
         if [ "$label" != null ]; then
             echo "<label class=\"control-label\" for=\"$id\">$label" >>$2
             echo "<span class=\"required\" aria-required=\"true\"> * </span>" >> $2
@@ -93,9 +91,9 @@ function input {
     classmaker "$1" $2 $3
 
 #    if [ "$class" == "null" ]; then
-	if [ "$type" != "checkbox" ]; then
-	    echo -n "class=\"form-group\"" >> $2
-	fi
+#	if [ "$type" != "checkbox" ]; then
+#	    echo -n "class=\"form-group\"" >> $2
+#	fi
 	echo ">" >>$2
 #    fi
 
@@ -297,17 +295,20 @@ function textarea {
     local    model=`echo $1 | jq -r '.model'`
     local    ronly=`echo $1 | jq -r '.ronly'`
     local    rows=`echo $1 | jq -r '.rows'`
+    local    class=`echo $1 | jq -r '.class'`
 #    local    cmoption=`echo $1 | jq -r '.cmoption'`
     local    codesource=`echo $1 | jq -r '.codesource'`
-    echo -n "<div class=\"form-group\" " >> $2
-    classmaker2 "$1" $2 $3
-    echo ">" >> $2
+    echo -n "<div class=\"form-group \" " >> $2
+    if [ "$class" != "null" ]; then
+        classmaker2 "$1" $2 $3
+    fi
+    echo "\">" >> $2
 
     component_label "$1" $2 $3
     if [ $ronly == true ]; then
-	echo "<p id=\"$id\">{{$model}}</p>"  >> $2
+	    echo "<p id=\"$id\">{{$model}}</p>"  >> $2
     else
-	echo "<div>" >> $2
+#	echo "<div>" >> $2
   	echo -n "<textarea id=\"$id\" class=\"form-control\" name=\"$id\" " >> $2
 	if [ $codesource == true ]; then
 	    echo -n "ui-codemirror=\"cmOption\" " >> $2
@@ -316,7 +317,7 @@ function textarea {
 	    echo -n "rows=\"$rows\"" >> $2
 	fi
 	echo "ng-model=\"$model\"></textarea>" >> $2
-	echo "</div>" >> $2
+#	echo "</div>" >> $2
     fi
     echo "</div>" >> $2
 

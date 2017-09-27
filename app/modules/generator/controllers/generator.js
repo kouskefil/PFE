@@ -10,24 +10,21 @@ define(['configs/app', '../services/generatorFactory'], function (app) {
             [
                 {
                     name:"new",
-                    icon:"glyphicon glyphicon-edit",
-                    img:"app/assets/images/ic_action_add_circle.png",
+                    icon:"fa fa-sticky-note-o",
                     action:function () {
                         $scope.openModal('sm', 'new.html', 'create')
                     }
                 },
                 {
                     name:"upload",
-                    icon:"glyphicon glyphicon-upload",
-                    img:"app/assets/images/ic_action_file_upload.png",
+                    icon:"fa fa-cloud-upload",
                     action:function () {
                         $scope.openModal(100, 'upload.html', 'upload')
                     }
                 },
                 {
                     name: "save",
-                    icon: "glyphicon glyphicon-floppy-disk",
-                    img:"app/assets/images/ic_action_save.png",
+                    icon: "fa fa-floppy-o",
                     action:function () {
                         //console.log(containerFactory.module);
                         fileFactory.saveAsJson(angular.toJson(globalVarFactory.getModule()),globalVarFactory.getModule().name);

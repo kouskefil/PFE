@@ -17,4 +17,7 @@ function changeLayout (id, cls) {
 function setSelected(id) {
     $("#"+id).addClass("selectedmenu").siblings("li").removeClass("selectedmenu") ;
 }
+function setSelectedItem(id) {
+    $("#"+id).addClass("selectedListItem").siblings("li").removeClass("selectedListItem") ;
+}
 
